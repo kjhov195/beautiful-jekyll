@@ -1,16 +1,17 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: About
+subtitle: Interested in Statistics and Computer Science.
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+## Jaehun Kang
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+I'm broadly interested in Statistics, machine learning and deep learning.
 
-What else do you need?
+My research involves statistical models, computer vision, machine learning and prediction model using deep neural networks.
 
-### my history
+I worked as an intern at LG CNS in 2017, and as an trainee at KT in 2018.
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I am currently a Research Scientist at YIDS, Yonsei University Institute of Data Science.
+
+I completed my Bachelor's degree at Yonsei University. And I am studying for a Master's degree advised by Prof. Hyunjoong Kim. At Yonsei, I co-taught STA1001 as a TA, Teaching Assistant: Introduction to Statistics in 2018 and 2019.
