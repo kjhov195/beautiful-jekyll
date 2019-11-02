@@ -145,6 +145,7 @@ L(\mu, \sigma^2|y) &= \prod_{i=1}^{n} f_{\mu}(y_i)\\
 &=\prod_{i=1}^{n} {1\over{\sqrt{2\sigma^2}}}\exp[-{1\over{2\sigma^2}}(y_{i}-\mu)^2]
 \end{aligned}
 $$
+
 이 Likelihood를 Maximize하는 $\beta_0, \beta_1$이 바로 MLE(Maximum Likelihood Estimator)이다.
 
 $$(\hat{\beta_0}_{mle}, \hat{\beta_1}_{mle}) =  argmax_{(\beta_0,\beta_1)}L(\mu, \sigma^2|y)$$
