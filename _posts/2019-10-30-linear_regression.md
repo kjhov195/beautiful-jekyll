@@ -112,12 +112,13 @@ $Q(\beta_0,\beta_1)$를 최소화하기 위하여 $\beta_{0}$와 $\beta_{1}$ 각
 
 회귀분석(Regression Analysis)이나 선형통계모형(Linear Model)에서 공부했던 Gauss Markov Theorem는 바로 이 LSE에 대한 내용이다.
 <br>
+
 - LSE(Least Squared Estimator)인 $\hat{\beta_{0LSE}}$, $\hat{\beta_{1LSE}}$는 Y에 Linear하다.
 <br>
-- $E[\hat{\beta_{0LSE}}] = \beta_0$, $E[\hat{\beta_{1LSE}}]=\beta_1$<br>
+- $E[{\hat{\beta}}_{0LSE}] = \beta_0$, $E[{\hat{\beta}}_{1LSE}]=\beta_1$<br>
 즉, $\hat{\beta_{0LSE}}, \hat{\beta_{1LSE}}$는 Unbiased Estimator이다.
 <br>
-- $Var[\hat{\beta_{0LSE}}]$ $\leq$ $Var[\hat{\beta_{0*}}]$, $Var[\hat{\beta_{1LSE}}]$ $\leq$ $Var[\hat{\beta_{1*}}]$ for any linear unbiased estimators $\hat{\beta_{0*}}, \hat{\beta_{1*}}$  
+- $Var[\hat{\beta_{0LSE}}]$ $\leq$ $Var[\hat{\beta_{0*}}]$, $Var[\hat{\beta_{1LSE}}]$ $\leq$ $Var[\hat{\beta_{1*}}]$ for any linear unbiased estimators $\hat{\beta_{0*}}, \hat{\beta_{1*}}$<br>
 즉, 모든 Unbiased Estimator for $\beta$ 중에서, LSE의 분산이 가장 작다거나 같다는 것이다.
 <br>
 참고로 Unbiased란 Bias가 0이라는 것이고, 어떠한 모수 $\theta$의 추정량 $\hat{\theta}$의 Bias는 다음과 같이 계산할 수 있다.
