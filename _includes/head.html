@@ -128,4 +128,9 @@
   <link rel="stylesheet" href="{{ "/css/staticman.css" | relative_url }}" />
   {% endif %}
 
+  <!-- MathJax -->
+  {% if page.use_math %}
+  {% include mathjax_support.html %}
+  {% endif %}
+
 </head>
