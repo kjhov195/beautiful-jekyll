@@ -111,18 +111,22 @@ $Q(\beta_0,\beta_1)$를 최소화하기 위하여 $\beta_0$와 $\beta_1$ 각각�
 #### c.f. Gauss Markov Theorem
 학부 때 회귀분석(Regression Analysis)이나 선형통계모형(Linear Model) 수업을 들을 때 항상 등장하는 Gauss Markov Theorem는 이 LSE에 대한 내용이다.
 
-[Gauss Markov Theorem]
-1. LSE(Least Squared Estimator)인 $\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}$는 Y에 Linear하다.
-<br>
-2. $E[\hat{\beta_0}_{LSE}] = \beta_0,\;\;E[\hat{\beta_1}_{LSE}]=\beta_1$
-즉, $\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}$는 Unbiased Estimator이다.
-<br>
-3. $Var[\hat{\beta_0}_{LSE}] \leq Var[\hat{\beta_0*}],\;\; Var[\hat{\beta_1}_{LSE}] \leq Var[\hat{\beta_0*}] \;\;\;\;\;$for any linear unbiased estimators $\hat{\beta_0*}, \hat{\beta_1*}$
-즉, 모든 Unbiased Estimator for $\beta$ 중에서, LSE의 분산이 가장 작다거나 같다는 것이다.
+---
+c.f. Gauss Markov Theorem
 
+첫번 째, LSE(Least Squared Estimator)인 $\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}$는 Y에 Linear하다.
+
+두번 째, $E[\hat{\beta_0}_{LSE}] = \beta_0,\;\;E[\hat{\beta_1}_{LSE}]=\beta_1$
+즉, $\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}$는 Unbiased Estimator이다.
+
+세번 째, $Var[\hat{\beta_0}_{LSE}] \leq Var[\hat{\beta_0*}],\;\; Var[\hat{\beta_1}_{LSE}] \leq Var[\hat{\beta_0*}] \;\;\;\;\;$for any linear unbiased estimators $\hat{\beta_0*}, \hat{\beta_1*}$
+즉, 모든 Unbiased Estimator for $\beta$ 중에서, LSE의 분산이 가장 작다거나 같다는 것이다.
+<br>
 참고로 Unbiased란 Bias가 0이라는 것이고, 어떠한 모수 $\theta$의 추정량 $\hat{\theta}$의 Bias는 다음과 같이 계산할 수 있다.
 
 $Bias(\hat{\theta}) = E(\hat{\theta}) - \theta$
+
+---
 
 <br>
 <br>
