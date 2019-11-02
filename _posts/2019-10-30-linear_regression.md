@@ -17,7 +17,7 @@ $$Y=f(X)$$
 
 하지만 이러한 모형은 현실과는 잘 맞지 않는 모형인데, 다음의 경우를 생각해보면 알 수 있다. X축은 Midyear evaluation이고, Y축은 year-end evaluation이다.
 
-<img src = '/post_img/191030/linear_regression_1.jpg' width="600"/>
+<img src = '/post_img/191030/linear_regression_1.jpg' width="200"/>
 
 이 경우 실제 현실에서의 데이터는 하나의 직선 함수로 나타나는 것이 아닌, 그 함수를 중심으로 $\textbf{error}$가 존재한다는 것을 알 수 있다. 즉, $Y=f(X)$으로 모델을 가정하는 것은 변수들간의 관계를 잘못 가정한 것이라 볼 수 있다. 따라서 우리는 오차항을 고려하여, 다음의 모델을 가정하게 된다.
 
