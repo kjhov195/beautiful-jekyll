@@ -112,7 +112,7 @@ $$ Gauss\;Markov\;Theorem $$
 
 회귀분석(Regression Analysis)이나 선형통계모형(Linear Model) 수업을 들을 때 등장하는 Gauss Markov Theorem는 이 LSE에 대한 내용이다.
 <br>
-1. LSE(Least Squared Estimator)인 $\hat{\beta_{0}}_{LSE}, \hat{\beta_{1LSE}}$는 Y에 Linear하다.
+1. LSE(Least Squared Estimator)인 $\hat{\beta_{0LSE}}$, $\hat{\beta_{1LSE}}$는 Y에 Linear하다.
 <br>
 2. $E[\hat{\beta_{0LSE}}] = \beta_0$, $E[\hat{\beta_{1LSE}}]=\beta_1$<br>
 즉, $\hat{\beta_{0LSE}}, \hat{\beta_{1LSE}}$는 Unbiased Estimator이다.
