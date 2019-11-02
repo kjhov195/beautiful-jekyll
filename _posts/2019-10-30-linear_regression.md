@@ -103,10 +103,9 @@ LSE의 컨셉은 실제 값과 예측하는 값의 차이($\epsilon$)를 가장 
 $$Q(\beta_0,\beta_1) = \sum\limits_{n=1}^{n} \epsilon^{2} = \sum\limits_{n=1}^{n} (y_i-\beta_0-\beta_1x_i)^{2}$$
 
 위의 식을 가장 최소화하는 $\beta_0, \beta_1$을 각각 $\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}$라고 하자.
-
-$$(\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}) =  argmin_{(\beta_0,\beta_1)}Q(\beta_0,\beta_1)$$
-
-$Q(\beta_0,\beta_1)$를 최소화하기 위하여 $\beta_{0}$와 $\beta_{1}$ 각각에 대하여 미분한 뒤 0이 되도록 만드는 방정식을 풀면 $\beta_0,\beta_1$의 값들을 구할 수 있고, 그 값들이 바로 $^{\beta_{0LSE}}, \^{\beta_{1}}_{LSE}$가 된다.
+$$(\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}) = argmin_{(\beta_0,\beta_1)}Q(\beta_0,\beta_1)$$
+$Q(\beta_0,\beta_1)$를 최소화하기 위하여 $\beta_{0}$와 $\beta_{1}$ 각각에 대하여 미분한 뒤 0이 되도록 만드는 방정식을 풀면 $\beta_0,\beta_1$의 값들을 구할 수 있고, 그 값들이 바로 $\hat{\beta_{0}}_{LSE}, \hat{\beta_{1}}_{LSE}$가 된다.
+<br>
 
 ---
 $$ Gauss\;Markov\;Theorem $$
@@ -122,8 +121,7 @@ $Var[\hat{\beta_0}_{LSE}] \leq Var[\hat{\beta_0*}]$, $Var[\hat{\beta_1}_{LSE}] \
 즉, 모든 Unbiased Estimator for $\beta$ 중에서, LSE의 분산이 가장 작다거나 같다는 것이다.
 <br>
 참고로 Unbiased란 Bias가 0이라는 것이고, 어떠한 모수 $\theta$의 추정량 $\hat{\theta}$의 Bias는 다음과 같이 계산할 수 있다.
-# asdasd
-* asdf
+
 
 $$Bias(\hat{\theta}) = E(\hat{\theta}) - \theta$$
 
