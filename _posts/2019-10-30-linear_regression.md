@@ -134,9 +134,13 @@ $$Bias(\hat{\theta}) = E(\hat{\theta}) - \theta$$
 
 우리는 앞서 회귀 모형의 모수를 LSE로 추정해 보았다. 한 가지 모수를 추정하는 방법은 무한히 많이 존재할 수 있는데, 이번에는 MLE를 사용하여 $\beta$를 추정해보자.
 
-MLE를 구하기 위해서는 Likelihood를 구해야하고, Likelihood를 구하기 위해서는 Y의 분포를 가정해야 한다.(LSE에서는 분포에 대한 가정 없이도, LSE를 구할 수 있었다.)
+MLE를 구하기 위해서는 Likelihood를 구해야하고, Likelihood를 구하기 위해서는 $\epsilon$의 분포를 가정해야 한다.(LSE에서는 분포에 대한 가정 없이도, LSE를 구할 수 있었다.)
 
-Y의 분포를 다음과 같이 가정해보자.
+$\epsilon$의 분포를 다음과 같이 가정해보자.
+
+$$\epsilon_{i} \overset{iid}{\sim} N(0,\sigma^2) $$
+
+이 때 Y의 분포는 다음과 같다.
 
 $$Y_{i} \overset{iid}{\sim} N(\mu,\sigma^2) $$
 
