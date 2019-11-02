@@ -115,9 +115,11 @@ $Q(\beta_0,\beta_1)$를 최소화하는 $\beta_0,\beta_1$의 값들을 구할 �
 회귀분석(Regression Analysis)이나 선형통계모형(Linear Model)에서 공부했던 Gauss Markov Theorem는 바로 이 LSE에 대한 내용이다.
 <br>
 
-$$\hat{\beta_{0LSE}}, \hat{\beta_{1LSE}}는\;Y에\;Linear하다$$
+- $\hat{\beta_{0LSE}}$, $\hat{\beta_{1LSE}}$는 Y에 Linear하다
+
 $$E[\hat{\beta_{0LSE}}] = \beta_0, E[\hat{\beta_{1LSE}}]=\beta_1$$
-$$Var[\hat{\beta_{0LSE}}] \leq Var[\hat{\beta_{0*}}]\\Var[\hat{\beta_{1LSE}}] \leq Var[\hat{\beta_{1*}}]\\\;for\;any\;linear\;unbiased\;estimators\;\hat{\beta_{0*}}, \hat{\beta_{1*}}$$<br>
+
+$$Var[\hat{\beta_{0LSE}}] \leq Var[\hat{\beta_{0*}}]\\Var[\hat{\beta_{1LSE}}] \leq Var[\hat{\beta_{1*}}]\\\;for\;any\;linear\;unbiased\;estimators\;\hat{\beta_{0*}}, \hat{\beta_{1*}}$$
 
 <br>
 참고로 Unbiased란 Bias가 0이라는 것이고, 어떠한 모수 $\theta$의 추정량 $\hat{\theta}$의 Bias는 다음과 같이 계산할 수 있다.
