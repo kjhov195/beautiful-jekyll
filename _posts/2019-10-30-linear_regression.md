@@ -113,7 +113,7 @@ $Q(\beta_0,\beta_1)$를 최소화하기 위하여 $\beta_{0}$와 $\beta_{1}$ 각
 회귀분석(Regression Analysis)이나 선형통계모형(Linear Model)에서 공부했던 Gauss Markov Theorem는 바로 이 LSE에 대한 내용이다.
 <br>
 
-- LSE(Least Squared Estimator)인 $\hat{\beta_{0LSE}}$, $\hat{\beta_{1LSE}}$는 Y에 Linear하다.
+- LSE(Least Squared Estimator)인 ${\hat{\beta}}_{0LSE}$, ${\hat{\beta}}_{1LSE}$는 Y에 Linear하다.
 <br>
 - $E[{\hat{\beta}}_{0LSE}] = \beta_0$, $E[{\hat{\beta}}_{1LSE}]=\beta_1$<br>
 즉, $\hat{\beta_{0LSE}}, \hat{\beta_{1LSE}}$는 Unbiased Estimator이다.
