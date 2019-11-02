@@ -60,12 +60,16 @@ $Var[Y]=\sigma^2$
 우리는 앞선 내용에서 기본적인 Simple Linear Regression 모형을 생각해보았다. Linear Regression에서 중요한 4가지 가정사항들을 정리해보면 다음과 같다.
 
 a. Linearity
+
 b. Constant Variance
+
 c. Independence of errors
+
 d. Normality of errors($\epsilon$) : for inferences
 
 4가지 가정 사항들에 대하여 차근차근 하나씩 살펴보도록 하겠다.
 
+<br>
 #### a. Linearity
 "$E[Y]=\mu$ 에 대해 선형 모형을 가정한다."
 
@@ -81,6 +85,7 @@ $$E[Y]=\beta_{0}+\beta_{1}X$$
 
 하지만 Logistic Regression의 경우 link function $g(\mu)={\mu \over 1-\mu}=X^T\beta$로 $E[Y]$에 대해 linearity를 가정하지 않는다는 것을 알 수 있다.
 
+<br>
 #### b. Constant Variance
 "$Y$의 분산, 곧 $\epsilon$의 분산은 일정하다"
 
@@ -88,11 +93,13 @@ $$E[Y]=\beta_{0}+\beta_{1}X$$
 
 $Var[Y] = Var[\epsilon] = \sigma^2$
 
+<br>
 #### c. Independence of errors
 "오차항은 서로 독립이다"
 
 $\epsilon_{i} \overset{\text{indep}}{\sim} \cdot,\;\;i=1,2,...,n$
 
+<br>
 #### d. Normality of errors(Inferences를 위한 추가적인 가정 사항)
 "$\epsilon$은 정규분포를 따른다"
 
