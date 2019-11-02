@@ -104,7 +104,7 @@ $$Q(\beta_0,\beta_1) = \sum\limits_{n=1}^{n} \epsilon^{2} = \sum\limits_{n=1}^{n
 
 위의 식을 가장 최소화하는 $\beta_0, \beta_1$을 각각 $\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}$라고 하자.
 $$(\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}) = argmin_{(\beta_0,\beta_1)}Q(\beta_0,\beta_1)$$
-$Q(\beta_0,\beta_1)$를 최소화하기 위하여 $\beta_{0}$와 $\beta_{1}$ 각각에 대하여 미분한 뒤 0이 되도록 만드는 방정식을 풀면 $\beta_0,\beta_1$의 값들을 구할 수 있고, 그 값들이 바로 $\hat{\beta_{0}}_{LSE}, \hat{\beta_{1}}_{LSE}$가 된다.
+$Q(\beta_0,\beta_1)$를 최소화하기 위하여 $\beta_{0}$와 $\beta_{1}$ 각각에 대하여 미분한 뒤 0이 되도록 만드는 방정식을 풀면 $\beta_0,\beta_1$의 값들을 구할 수 있고, 그 값들이 바로 $\hat{\beta_{0LSE}}, \hat{\beta_{1}}_{LSE}$가 된다.
 <br>
 
 ---
