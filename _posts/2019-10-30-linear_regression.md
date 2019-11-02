@@ -34,10 +34,12 @@ $$Y_{i}=\beta_{0}+\beta_{1}X_{i}+\epsilon_{i}\;\;;i=1,\cdots,n$$
 통상적으로 Linear Regression이라 함은, fixed effect linear model을 의미한다. Fixed effect model에서 $\beta$는 분포를 갖지 않는 상수로 가정된다. 따라서 이 글에서 $\beta$의 평균과 분산은 다음과 같다.
 
 $E[\beta]=\beta$
+
 $Var[\beta]=0$
 <br>
 #### $\epsilon$의 평균과 분산에 대한 가정
 $E[\epsilon]=0$
+
 $Var[\epsilon]=\sigma^2$
 
 중요한 것은 아직 우리는 오차 $\epsilon$에 대한 분포를 가정하지 않았다는 것이다. 이 이야기에 대한 후반부에 다시 설명하도록 하겠다.
@@ -46,6 +48,7 @@ $Var[\epsilon]=\sigma^2$
 드디어 위의 결과들로부터, 다음의 결과를 도출해낼 수 있다.
 
 $E[Y]=\beta_{0}+\beta_{1}X$
+
 $Var[Y]=\sigma^2$
 
 <br>
