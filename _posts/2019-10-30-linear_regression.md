@@ -16,7 +16,7 @@ $$Y=f(X)$$
 
 하지만 이러한 모형은 현실과는 잘 맞지 않는 모형인데, 다음의 경우를 생각해보면 알 수 있다. X축은 Midyear evaluation이고, Y축은 year-end evaluation이다.
 
-![1_linear_regression_1](/assets/1_linear_regression_1_pm5zyrlpt.jpg)
+<!-- ![1_linear_regression_1](/assets/1_linear_regression_1_pm5zyrlpt.jpg) -->
 
 이 경우 실제 현실에서의 데이터는 하나의 직선 함수로 나타나는 것이 아닌, 그 함수를 중심으로 $\textbf{error}$가 존재한다는 것을 알 수 있다. 즉, $Y=f(X)$으로 모델을 가정하는 것은 변수들간의 관계를 잘못 가정한 것이라 볼 수 있다. 따라서 우리는 오차항을 고려하여, 다음의 모델을 가정하게 된다.
 
@@ -140,7 +140,7 @@ Likelihood는 다음과 같이 구할 수 있다.
 $$
 \begin{aligned}
 L(\mu, \sigma^2|y) &= \prod_{i=1}^{n} f_{\mu}(y_i)\\
-&=\prod_{i=1}^{n} {{1}\over{\sqrt{2\sigma^2}}}\exp[-{1\over{2\sigma^2}}(y_{i}-\mu)^2]
+&=\prod_{i=1}^{n} {1\over{\sqrt{2\sigma^2}}}\exp[-{1\over{2\sigma^2}}(y_{i}-\mu)^2]
 \end{aligned}
 $$
 이 Likelihood를 Maximize하는 $\beta_0, \beta_1$이 바로 MLE(Maximum Likelihood Estimator)이다.
