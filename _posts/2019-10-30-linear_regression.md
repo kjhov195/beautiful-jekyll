@@ -108,11 +108,9 @@ $$(\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}) =  argmin_{(\beta_0,\beta_1)}Q(\bet
 
 $Q(\beta_0,\beta_1)$를 최소화하기 위하여 $\beta_0$와 $\beta_1$ 각각에 대하여 미분한 뒤 0이 되도록 만드는 방정식을 풀면 $\beta_0,\beta_1$의 값들을 구할 수 있고, 그 값들이 바로 $\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}$가 된다.
 
+<br>
 #### c.f. Gauss Markov Theorem
 학부 때 회귀분석(Regression Analysis)이나 선형통계모형(Linear Model) 수업을 들을 때 항상 등장하는 Gauss Markov Theorem는 이 LSE에 대한 내용이다.
-
----
-c.f. Gauss Markov Theorem
 
 첫번 째, LSE(Least Squared Estimator)인 $\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}$는 Y에 Linear하다.
 
@@ -126,7 +124,7 @@ c.f. Gauss Markov Theorem
 
 $Bias(\hat{\theta}) = E(\hat{\theta}) - \theta$
 
----
+
 
 <br>
 <br>
