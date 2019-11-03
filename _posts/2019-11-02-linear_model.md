@@ -99,7 +99,6 @@ $$
 \end{align*}
 $$
 
-<br>
 만약 $Rank(X) < p$ 여서 $(X^TX)^{-1}$이 존재하지 않는 경우, $\hat{\beta}_{LSE}$는 Generalized Inverse Matrix($M^-$)를 사용하여 다음과 같이 구할 수 있다.
 
 $$
