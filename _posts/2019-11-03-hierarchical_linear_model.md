@@ -33,4 +33,4 @@ $$ Y_i = \beta_{0*} + \beta_{1*} (X_i-\overline{X}) + \gamma_{i*}$$
 
 위와 같은 회귀 모형을 A학교와 B학교에 적용하여 각각 하나의 회귀 모형을 얻을 수 있다.  
 
-<img src = '/post_img/191103/two_schools.png' width="250"/>
+<img src = '/post_img/191103/two_schools.png'/>
