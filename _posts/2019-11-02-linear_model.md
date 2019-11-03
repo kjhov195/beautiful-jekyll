@@ -5,11 +5,7 @@ subtitle: Linear Model
 use_math: true
 ---
 
-# Linear Model
-
-### Linear Models
-
-Linear Models은 Linear Regression(회귀분석), ANOVA(분산분석), ANCOVA(공분산분석)을 모두 포함하는 모델이다. 전통적인 Linear Model에서는 다음을 가정한다.
+Linear Model은 Linear Regression(회귀분석), ANOVA(분산분석), ANCOVA(공분산분석)을 모두 포함하는 모델이다. 전통적인 Linear Model에서는 다음을 가정한다.
 
 ### 1. Model
 

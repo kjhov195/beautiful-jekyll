@@ -5,8 +5,6 @@ subtitle: Simple Linear Regression
 use_math: true
 ---
 
-# Linear Regression
-
 우리는 일상 생활에서 두 변수들 간의 관계에 대한 정보가 궁금할 때가 많다. 예를들어 온도와 아이스크림 판매량 간의 관계라던가, 분기 결산과 연말 결산의 관계가 궁금할 수 있다. 물론 경험에서 얻을 수 있는 정보로 변수들 간의 관계를 추론해볼 수 있지만, mathematical equation을 모델링할 수 있다면 정확한 관계를 파악할 수 있을 것이다.
 
 ### 1. $Y=f(X)+\epsilon$
