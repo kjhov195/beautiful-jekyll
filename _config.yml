@@ -20,7 +20,10 @@ description: A virtual proof that I'm awesome
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  About: "about"
+  Research: "research"
+  Archive: "archive"
+  Project: "project"
   # Resources:
   #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   #   - Learn markdown: "http://www.markdowntutorial.com/"
@@ -156,7 +159,7 @@ date_format: "%B %-d, %Y"
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: 
+timezone:
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
