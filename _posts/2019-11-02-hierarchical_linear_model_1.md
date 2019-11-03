@@ -139,7 +139,7 @@ $$
 
 <br>
 <br>
-### 4. OLS와의 비교
+### 4. Linear Regression(OLS) & Hierarchical Model
 
 위 모델은 OLS(Ordinary Least Squares) linear regression model과는 분명하게 다르다.
 
@@ -167,6 +167,25 @@ $\delta_{ij}$의 분산은 $u_{0j}$와 $u_{1j}$로 이루어진 식으로 나타
 <br>
 <br>
 즉, 오차항에 대하여 independence와 equal variance를 가정하는 일반적인 linear regression으로는 이러한 특징의 자료를 분석하는 것이 부적절하다고 할 수 있다.
+
+<br>
+<br>
+<br>
+### 5. Estimating _level 1 coefficient_
+
+#### a. level 1 coefficient를 추정하는 방법
+#### b. level 1 coefficient 예시
+#### c. reliability
+#### d. $\beta_{0j}^{\star}$ is optimal
+
+<br>
+<br>
+### 6. Empirical Bayes Estimate
+#### a. Definition
+#### b. 왜 이런 경우에 Empirical Bayes Estimate가 되는가?
+
+
+
 
 <br>
 <br>
