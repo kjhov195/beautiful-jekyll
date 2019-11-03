@@ -131,16 +131,3 @@ $$L = L(\beta, \sigma^2 | y) = (2\pi)^{-{1 \over 2}N} \exp[-{1 \over 2}(Y-X\beta
 log likelihoo를 구한 뒤, 미분을 통하여 MLE를 찾아보면,
 
 $$ l = log(L) = {-{1 \over 2}N} \log(2\pi) - {{1 \over 2}N} \log(\sigma^2) -{1 \over 2}(Y-X\beta)^T {1\over{\sigma^2}} (Y-X\beta)$$
-
-$$
-\begin{align}
-\\
-\frac{\partial l}{\partial \beta} &= {1 \over {\sigma^2}}(2X^TY-2X^TX\beta) \overset{let}{=} 0\\\\
-\hat\beta_{mle} &=
-\begin{cases}
-(X^T X)^{-1}X^TY \;\;\; if\;\;(X^TX)^{-1}\;exists\\
-\\
-(X^T X)^{-}X^TY \;\;\;\; else
-\end{cases}
-\end{align}
-$$
