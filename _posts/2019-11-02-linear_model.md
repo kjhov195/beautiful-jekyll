@@ -166,8 +166,7 @@ $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; : (X^TX)^{-}$가 무수히 많이 존재�
 <br>
 하지만  많은 경우 우리는 $\hat{\beta}$ 자체 보다는, $\hat E[Y] = \hat \mu = X\hat{\beta} $ 에 더 관심을 가지고 있으며, $\hat \mu$ 은 Unique하게 구할 수 있다. 즉, $\beta$를 Unique하게 추정할 수는 없지만, $E[Y]$는 Unique하게 추정할 수 있는 것이다.
 
-<br>
-<br>
+
 $$
 \begin{align*}
 \hat{\beta} &: not\;unique\\\\
@@ -176,8 +175,7 @@ $$
 \end{align*}
 $$
 
-<br>
-<br>
+
 이 때 $X\hat\beta$의 평균과 분산을 구해보면 다음과 같다.
 
 $$
