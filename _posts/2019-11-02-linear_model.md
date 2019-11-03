@@ -179,3 +179,6 @@ Var[\hat\mu] = Var[X\hat\beta] &= Var[X(X^T X)^{-}X^TY]\\
 &= X(X^T X)^{-}X^T \sigma^2\;\;\;(\because X(X^TX)^{-}X^T X = X)
 \end{align*}
 $$
+
+### Reference
+Seung-Ho Kang(2019), Generalized Linear Model : Linear models, Yonsei University, 1-4
