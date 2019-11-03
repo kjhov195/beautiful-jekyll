@@ -10,10 +10,10 @@ title: Project
 <br>
 # KT
 ### Music composition based on GAN
-23 May 2018 ~ 8 June 2018  
+23 May 2018 ~ 8 June 2018   
 https://github.com/kjhov195/project_music_generation
 ### 실시간 스팸 발신자 식별 예측 정확도 개선
-26 June 2018 ~ 2 August 2018  
+26 June 2018 ~ 2 August 2018     
 https://github.com/kjhov195/project_realtime_SPAM_calc
 
 <br>
