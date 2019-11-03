@@ -2,7 +2,7 @@
 layout: post
 title: Linear Model
 subtitle: Linear Model
-category: statistics
+category: Statistics
 use_math: true
 ---
 
