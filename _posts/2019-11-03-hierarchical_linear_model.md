@@ -167,3 +167,7 @@ $\delta_{ij}$의 분산은 $u_{0j}$와 $u_{1j}$로 이루어진 식으로 나타
 <br>
 <br>
 즉, 오차항에 대하여 independence와 equal variance를 가정하는 일반적인 linear regression으로는 이러한 특징의 자료를 분석하는 것이 부적절하다고 할 수 있다.
+
+<br>
+<br>
+<br>
