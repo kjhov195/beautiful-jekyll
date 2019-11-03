@@ -1,10 +1,10 @@
 # --- General options --- #
 
 # Name of website
-title: ITT's statistics, CS
+title: ITT statistics, CS
 
 # Short description of your site
-description: A virtual proof that I'm awesome
+description: ""
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -20,6 +20,7 @@ description: A virtual proof that I'm awesome
 
 # List of links in the navigation bar
 navbar-links:
+  Home: "https://kjhov195.github.io"
   About: "about"
   Research: "research"
   Category: "category"
@@ -70,7 +71,7 @@ author:
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
-  rss: false
+  #rss: false
   email: "kjhov195@naver.com"
   facebook: ingtongtong
   github: kjhov195
@@ -96,7 +97,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "kjhov195.github.io"  # eg. "deanattali.com/beautiful-jekyll"
+#url-pretty: "kjhov195.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
@@ -151,7 +152,7 @@ excerpt_length: 50
 
 # Character used to separate site title and description in HTML document title
 # and RSS feed title
-title-separator: "-"
+title-separator: ""
 
 # Ruby Date Format
 date_format: "%B %-d, %Y"
@@ -159,7 +160,7 @@ date_format: "%B %-d, %Y"
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone:
+timezone: "Asia/Seoul"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
