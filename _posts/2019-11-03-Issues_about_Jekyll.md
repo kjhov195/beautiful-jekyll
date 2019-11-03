@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Issues_about_Jekyll
+title: Issues about Jekyll
 subtitle: How to use, Errors
 category: Jekyll
 use_math: true
@@ -19,7 +19,9 @@ c/Windows/System32/chcp.com 65001
 ```
 
 # Using Mathjax
-1. include 폴더에 mathjax_support.html를 다음의 내용으로 작성
+
+1) include 폴더에 mathjax_support.html를 다음의 내용으로 작성  
+
 ```
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -46,7 +48,9 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 ```
-2. Mathjax를 사용할 post에서 다음 옵션을 사용
+
+2. Mathjax를 사용할 post에서 다음 옵션을 사용  
+
 ```
 use_math: true
 ```
