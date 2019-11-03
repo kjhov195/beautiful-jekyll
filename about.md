@@ -6,6 +6,8 @@ subtitle: Interested in Statistics and Computer Science.
 
 ## Jaehun Kang
 
+<img src = '/img/about.jpg' width="200"/>    
+
 I'm broadly interested in Statistics, machine learning and deep learning.
 
 My research involves statistical models, computer vision, machine learning and prediction model using deep neural networks.
