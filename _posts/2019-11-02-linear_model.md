@@ -120,9 +120,6 @@ $$
 <br>
 ### 3. MLE(Maximum Likelihood Estimation)
 MLE를 구하기 위해서는 Normality에 대한 가정이 필요하다. 이제 $y$에 대하여 다음과 같이 다변량 정규분포를 가정해보자.
-<br>
 $$ Y \sim N_{N}(X\beta, \sigma^2 I_N)$$
-<br>
 Likelihood는 다음과 같이 구할 수 있다.
-<br>
 $$L = L(\beta, \sigma^2 | y) = (2\pi)^{-{1 \over 2}N} \exp[-{1 \over 2}(Y-X\beta)^T {1\over{\sigma^2}} (Y-X\beta)]$$
