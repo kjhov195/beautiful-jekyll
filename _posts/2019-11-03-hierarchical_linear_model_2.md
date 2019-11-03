@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Hierarchical linear model : Empirical Bayes Estimate
+title: Hierarchical linear model (2)
 subtitle: Empirical Bayes Estimate
 category: Statistics
 use_math: true
 ---
 
-### 1. Estimating _level 1 coefficient_
+### 1. Estimating level 1 coefficient
 
 #### a. level 1 coefficient를 추정하는 방법
 #### b. level 1 coefficient 예시
 #### c. reliability
-#### d. optimal
+#### d. $\beta_{0j}^{\star}$ is optimal
 
 <br>
 <br>
