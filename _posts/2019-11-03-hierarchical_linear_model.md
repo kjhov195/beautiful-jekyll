@@ -145,20 +145,24 @@ $$
 
 OLS는 OLS에 기반한 Estimation과 Inference(가설검정 등)를 위하여 random errors에 대하여 independent와 normally distributed, constant variance를 가정한다.
 
-반면 우리가 가정한 Hierarchical linear model에서의 random error $(u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot})$의 경우, 그렇지 않다.
+반면 우리가 가정한 Hierarchical linear model에서의 random error
+
+$$\delta_{ij} = (u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot})$$
+
+의 경우, 그렇지 않다.
 
 <br>
 #### dependent
-우선, $(u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot})$는 독립이지 않다.
+우선, $\delta_{ij}$는 Independent하지 않다.
 
 예를들어, $u_{0j}$와 $u_{1j}$는 j번째 학교의 모든 학생들에대하여 같은 값을 가진다. 따라서 독립이라고 볼 수 없다.
 
 <br>
 #### unequal variances
 
-$(u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot})$의 분산은 일정하지 않다.
+$\delta_{ij}$의 분산은 일정하지 않다.
 
-$(u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot})$의 분산은 $u_{0j}$와 $u_{1j}$로 이루어진 식으로 나타낼 수 있다. 하지만 $u_{0j}$와 $u_{1j}$는 학교마다 달라질 것이다. 따라서 Constant Variance라고 볼 수 없다.
+$\delta_{ij}$의 분산은 $u_{0j}$와 $u_{1j}$로 이루어진 식으로 나타낼 수 있다. 하지만 $u_{0j}$와 $u_{1j}$는 학교마다 달라질 것이다. 따라서 Constant Variance라고 볼 수 없다.
 
 <br>
 <br>
