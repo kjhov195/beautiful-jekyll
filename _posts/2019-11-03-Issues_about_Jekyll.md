@@ -12,12 +12,16 @@ bundle exec jekyll server
 bundle exec jekyll server start
 ```
 
+<br>
+<br>
 # Encoding Error
 Windows에서 error가 날 때 Windows cmd에서
 ```
 c/Windows/System32/chcp.com 65001
 ```
 
+<br>
+<br>
 # Using Mathjax
 
 1) include 폴더에 mathjax_support.html를 다음의 내용으로 작성  
