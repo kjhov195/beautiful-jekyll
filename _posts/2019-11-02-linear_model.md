@@ -125,8 +125,70 @@ $$ Y \sim N_{N}(X\beta, \sigma^2 I_N)$$
 
 Likelihood는 다음과 같이 구할 수 있다.
 
-$$L = L(\beta, \sigma^2 | y) = (2\pi)^{-{1 \over 2}N} \exp[-{1 \over 2}(Y-X\beta)^T {1\over{\sigma^2}} (Y-X\beta)]$$
+$$
+\begin{align}
+L = L(\beta, \sigma^2 | y) = (2\pi)^{-{1\over2}N} \exp[-{1\over2}(Y-X\beta)^T {1\over{\sigma^2}} (Y-X\beta)]
+\end{align}
+$$
 
 log likelihood를 구하고,
 
-$$ l = log(L) = {-{1 \over 2}N} \log(2\pi) - {{1 \over 2}N} \log(\sigma^2) -{1 \over 2}(Y-X\beta)^T {1\over{\sigma^2}} (Y-X\beta)$$
+$$
+\begin{align}
+l = log(L) = -{1\over2}N \log(2\pi) - {1\over2}N \log(\sigma^2) -{1\over2}(Y-X\beta)^T {1\over{\sigma^2}} (Y-X\beta)
+\end{align}
+$$
+
+$l$을 미분하여 MLE를 찾아보면,
+
+$$
+\begin{align}
+\\
+\frac{\partial l}{\partial \beta} &= {1 \over {\sigma^2}}(2X^TY-2X^TX\beta) \overset{let}{=} 0\\\\
+\hat\beta_{mle} &=
+\begin{cases}
+(X^T X)^{-1}X^TY \;\;\; if\;\;(X^TX)^{-1}\;exists\\
+\\
+(X^T X)^{-}X^TY \;\;\;\; else
+\end{cases}
+\end{align}
+$$
+
+<br>
+<br>
+#### c.f. $(X^TX)^{-}$ : Not Unique
+$\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; : (X^TX)^{-}$가 무수히 많이 존재할 수 있는데 괜찮을까?
+
+<br>
+이 때 $(X^TX)^{-1}$이 존재하지 않는 경우, Generalized Inverse Matrix $(X^TX)^{-}$는 무수히 많이 존재하여 $\hat{\beta}_{mle}$ 를 Unique하게 구할 수는 없다.
+<br>
+<br>
+하지만  많은 경우 우리는 $\hat{\beta}$ 자체 보다는, $\hat E[Y] = \hat \mu = X\hat{\beta} $ 에 더 관심을 가지고 있으며, $\hat \mu$ 은 Unique하게 구할 수 있다. 즉, $\beta$를 Unique하게 추정할 수는 없지만, $E[Y]$는 Unique하게 추정할 수 있는 것이다.
+
+<br>
+<br>
+$$
+\begin{align}
+\hat{\beta} &: not\;unique\\\\
+\hat{\mu} &= X\hat{\beta}\\ &= X(X^T X)^{-}X^TY \;\;: unique\\
+(&\because\; X(X^TX)^{-}X^T\;is\;invariant\;to\;(X^TX)^{-})
+\end{align}
+$$
+
+<br>
+<br>
+이 때 $X\hat\beta$의 평균과 분산을 구해보면 다음과 같다.
+
+$$
+\begin{align}
+E[\hat\mu] = E[X\hat\beta] &= X(X^TX)^{-}X^T E[Y]\\
+&= X(X^TX)^{-}X^T X\beta \\
+&= X\beta \;\;\;(\because X(X^TX)^{-}X^T X = X)\\
+&= \mu\;\;\;\;\;: unbiased
+\\
+\\
+Var[\hat\mu] = Var[X\hat\beta] &= Var[X(X^T X)^{-}X^TY]\\
+&= X(X^T X)^{-}X^T \sigma^2 I X((X^T X)^{-})^TX^T\\
+&= X(X^T X)^{-}X^T \sigma^2\;\;\;(\because X(X^TX)^{-}X^T X = X)
+\end{align}
+$$
