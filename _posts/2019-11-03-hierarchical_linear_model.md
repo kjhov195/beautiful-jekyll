@@ -27,11 +27,7 @@ $$ Y_i = \beta_{0} + \beta_{1} (X_i-\overline{X}) + \epsilon_{i}$$
 
 즉 $X_i$대신 $X_i-\overline{X}$를 사용하는 것이다. 이 때 slope $\beta_{1}$에 대한 해석은 바뀌지 않지만, intercept $\beta_{0}$에 대한 해석이 바뀌게 된다. 'centering'후 $\beta_{0}$는 '평균 수학 점수'로 해석할 수 있게 된다.
 
-<br>
-<br>
-### 3. Two models
-
-위와 같은 회귀 모형을 두 학교 (School A, School B)에 적용하여 각각 하나의 회귀 모형을 얻을 수 있다.  
+위와 같은 회귀 모형을 두 학교 (School A, School B)에 적용한다면, 각각 하나의 회귀 모형을 얻을 수 있다.  
 
 <img src = '/post_img/191103/two_schools.png'/>
 
@@ -41,7 +37,7 @@ $$ Y_i = \beta_{0} + \beta_{1} (X_i-\overline{X}) + \epsilon_{i}$$
 
 <br>
 <br>
-### 4. J models
+### 3. Hierarchical Model
 
 이제는 모든 학교(J개의 학교, J is large enough)에 대하여 경제학-수학 점수의 관계에 대해 생각해보자. Simplicity를 위하여 각 학교의 분산은 $\sigma^2$로 같다고 하자.(homogeneous variance across schools)
 
@@ -74,7 +70,7 @@ $$
 \end{align*}
 $$
 
-참고로 $\rho(\beta_{0j},\beta_{1j})$는 다음과 같이 구할 수 있을 것이다.
+참고로 $\rho(\beta_{0j},\beta_{1j})$는 다음과 같이 구할 수 있다.
 
 $$\rho(\beta_{0j},\beta_{1j}) = \tau_{01}/(\tau_{00}\tau_{11})^{1/2}$$
 
@@ -123,9 +119,47 @@ u_{1j}
 \end{align*}
 $$
 
-이 $\tau_{00}, \tau_{01}, \tau_{01}, \tau_{11}$를 "Conditional variance-covariance component", 혹은 "Residual variance-covariance component"라고 한다. 즉, $W_j$를 Controlling한 뒤의 $\beta_{0j}$와 $\beta_{1j}$의 variability를 나타낸다.
+이 $\tau_{00}, \tau_{01}, \tau_{11}$를 "Conditional variance-covariance component", 혹은 "Residual variance-covariance component"라고 한다. 즉, $W_j$를 Controlling한 뒤의 $\beta_{0j}$와 $\beta_{1j}$의 variability를 나타낸다.
 (참고로 Random effect model에서 random effect의 분산을 "Variance component"라고 한다.)
 
 $(\beta_0, \beta_1)$가 직접적으로 관측되지 않으므로, 위의 두 regression equations의 parameters를 직접적으로는 추정할 수 없다. 그러나 추정을 위해 필요한 정보는 data에 포함되어 있다.
 
-앞서 나온 식들을 통하여 다음 single prediction equation을 유도할 수 있을 것이다.
+식 (1), (2), (3)을 통하여 다음 single prediction equation을 유도할 수 있다.
+
+$$
+\begin{align*}
+Y_{ij} &= \beta_{0j} + \beta_{1j} (X_{ij}-\overline{X}_{\cdot j}) + \epsilon_{ij}\\
+&= (\gamma_{00}+\gamma_{01}W_j+u_{0j}) + (\gamma_{10}+\gamma_{11}W_j+u_{1j})(X_{ij}-\overline{X}_{\cdot j})+\epsilon_{ij}\\
+&= \gamma_{00}+\gamma_{01}W_j+\gamma_{10}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{11}W_j(X_{ij}-\overline{X}_{\cdot j})+u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot}
+\end{align*}
+\\
+$$
+
+마침내 기본적인 Hierarchical linear model을 구했다. 이 모델에서 Fixed Effect는 $\gamma_{00}, \gamma_{10}, \gamma_{01}, \gamma_{11}$이며, Random Effect는 $\beta_{0j}, \beta_{1j}$라고 볼 수 있다.
+
+<br>
+<br>
+### 4. OLS와의 비교
+
+위 모델은 OLS(Ordinary Least Squares) linear regression model과는 분명하게 다르다.
+
+OLS는 OLS에 기반한 Estimation과 Inference(가설검정 등)를 위하여 random errors에 대하여 independent와 normally distributed, constant variance를 가정한다.
+
+반면 우리가 가정한 Hierarchical linear model에서의 random error $(u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot})$의 경우, 그렇지 않다.
+
+<br>
+#### dependent
+우선, $(u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot})$는 독립이지 않다.
+
+예를들어, $u_{0j}$와 $u_{1j}$는 j번째 학교의 모든 학생들에대하여 같은 값을 가진다. 따라서 독립이라고 볼 수 없다.
+
+<br>
+#### unequal variances
+
+$(u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot})$의 분산은 일정하지 않다.
+
+$(u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot})$의 분산은 $u_{0j}$와 $u_{1j}$로 이루어진 식으로 나타낼 수 있다. 하지만 $u_{0j}$와 $u_{1j}$는 학교마다 달라질 것이다. 따라서 Constant Variance라고 볼 수 없다.
+
+<br>
+<br>
+즉, 오차항에 대하여 independence와 equal variance를 가정하는 일반적인 linear regression으로는 이러한 특징의 자료를 분석하는 것이 부적절하다고 할 수 있다.
