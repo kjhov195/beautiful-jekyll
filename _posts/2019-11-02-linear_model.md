@@ -109,7 +109,9 @@ $$
 &= (X^T X)^{-}X^TY\\
 \end{align*}
 $$
+
 $\hat{Y}$은 다음과 같다.
+
 $$
 \begin{align*}
 \hat{Y} &= X\hat{\beta}_{LSE}\\ &= X(X^T X)^{-}X^TY
