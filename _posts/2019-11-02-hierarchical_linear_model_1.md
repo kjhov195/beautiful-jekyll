@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hierarchical linear model
+title: Hierarchical linear model (1)
 subtitle: Hierarchical linear model
 category: Statistics
 use_math: true
