@@ -30,26 +30,27 @@ $$
 \end{align}
 $$
 
-$$ Y \sim (\mu, V),\;\;\;
+$$
+\begin{align}
+Y &\sim (\mu, V)\\
 where \;\;
-\mu =
+\mu &=
 \begin{bmatrix}
 \mu_1 \\
 \vdots\\
 \mu_n
-\end{bmatrix},\;\;
-V =
+\end{bmatrix} = X\beta\\
+V &=
 \begin{bmatrix}
 \sigma^2 & \cdots & 0 \\
 \vdots & \ddots & \vdots \\
 0 & \cdots & \sigma^2
 \end{bmatrix}
 = \sigma^2 I_n
+\end{align}
 $$
 
 즉, 결국 우리는 다음의 linear model을 가정한다.
-
-$$\mu = X\beta$$
 
 $$ Y \sim (X\beta,\sigma^2 I_n)$$
 
