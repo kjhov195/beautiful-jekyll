@@ -19,9 +19,10 @@ use_math: true
 #### a. Definition
 #### b. 왜 이런 경우에 Empirical Bayes Estimate가 되는가?
 
-
-
-
+<br>
+<br>
+### Reference
+Raudenbush, S. W., & Bryk, A. S. (2002). Hierarchical linear models: Applications and data analysis methods (Vol. 1). Sage. 45-47
 <br>
 <br>
 <br>

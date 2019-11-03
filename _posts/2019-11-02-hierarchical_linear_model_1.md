@@ -172,8 +172,6 @@ $\delta_{ij}$의 분산은 $u_{0j}$와 $u_{1j}$로 이루어진 식으로 나타
 <br>
 ### Reference
 Raudenbush, S. W., & Bryk, A. S. (2002). Hierarchical linear models: Applications and data analysis methods (Vol. 1). Sage. 16-22
-
-Seung-Ho Kang(2019), Generalized Linear Model : Linear models, Yonsei University, 1-4
 <br>
 <br>
 <br>
