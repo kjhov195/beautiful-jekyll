@@ -170,23 +170,10 @@ $\delta_{ij}$의 분산은 $u_{0j}$와 $u_{1j}$로 이루어진 식으로 나타
 
 <br>
 <br>
-<br>
-### 5. Estimating _level 1 coefficient_
+### Reference
+Raudenbush, S. W., & Bryk, A. S. (2002). Hierarchical linear models: Applications and data analysis methods (Vol. 1). Sage. 16-22
 
-#### a. level 1 coefficient를 추정하는 방법
-#### b. level 1 coefficient 예시
-#### c. reliability
-#### d. $\beta_{0j}^{\star}$ is optimal
-
-<br>
-<br>
-### 6. Empirical Bayes Estimate
-#### a. Definition
-#### b. 왜 이런 경우에 Empirical Bayes Estimate가 되는가?
-
-
-
-
+Seung-Ho Kang(2019), Generalized Linear Model : Linear models, Yonsei University, 1-4
 <br>
 <br>
 <br>
