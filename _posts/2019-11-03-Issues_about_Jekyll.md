@@ -49,7 +49,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
 </script>
 ```
 
-2. Mathjax를 사용할 post에서 다음 옵션을 사용  
+2) Mathjax를 사용할 post에서 다음 옵션을 사용  
 
 ```
 use_math: true
