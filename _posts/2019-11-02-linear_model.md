@@ -11,7 +11,7 @@ use_math: true
 
 Linear Models은 Linear Regression(회귀분석), ANOVA(분산분석), ANCOVA(공분산분석)을 모두 포함하는 모델이다. 전통적인 Linear Model에서는 다음을 가정한다.
 
-### 1. Assumptions
+### 1. Model
 
 우선 error의 분포를 다음과 같이 가정해보자.
 
@@ -72,6 +72,10 @@ $$ Y \sim (X\beta,\sigma^2 I_n)$$
 
 <br>
 <br>
-### 2. Linear Models
+### 2. OLS(Ordinary Least Squared estimation)
 
-우리는 Y의 평균을 다음과 같이 가정한다.
+사실 linear regression을 설명할 때 말했듯이, OLS(Ordinary Least Squared Estimation)에서는 error에 대한 분포 가정, 즉 y에 대한 분포 가정이 필요하지 않다.
+
+$$Q(**\beta**) = \sum\limits_{n=1}^{n} \epsilon^{2} = \sum\limits_{n=1}^{n} (y_i-\beta_0-\beta_1x_i)^{2}$$
+
+$$(\hat{\beta_0}_{LSE}, \hat{\beta_1}_{LSE}) = argmin_{(\beta_0,\beta_1)}Q(\beta_0,\beta_1)$$
