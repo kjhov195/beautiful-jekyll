@@ -92,7 +92,7 @@ social-network-links:
 # Select which share links to show in posts
 share-links-active:
   twitter: false
-  facebook: true
+  facebook: false
   linkedin: false
 
 # How to display the link to the website in the footer
@@ -160,7 +160,7 @@ date_format: "%B %-d, %Y"
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: 
+timezone:
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
