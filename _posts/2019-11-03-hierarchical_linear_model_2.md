@@ -11,7 +11,7 @@ use_math: true
 #### a. level 1 coefficient를 추정하는 방법
 #### b. level 1 coefficient 예시
 #### c. reliability
-#### d. $\beta_{0j}^{\star}$ is optimal
+#### d. optimal
 
 <br>
 <br>
