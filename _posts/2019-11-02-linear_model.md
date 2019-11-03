@@ -25,21 +25,31 @@ $$
 
 이 때 우리는 Response의 분포를 다음과 같다는 사실을 알 수 있다.
 
-$$
-\begin{align}
-\end{align}
-$$
+<br>
+$$Y \sim (\mu, V)$$
+
+<br>
 
 $$
 \begin{align}
-Y &\sim (\mu, V)\\
 where \;\;
 \mu &=
 \begin{bmatrix}
 \mu_1 \\
 \vdots\\
 \mu_n
-\end{bmatrix} = X\beta\\
+\end{bmatrix} =
+\begin{bmatrix}
+X_{11} & \cdots & X_{1p} \\
+\vdots & \ddots & \vdots \\
+X_{n1} & \cdots & X_{np}
+\end{bmatrix}
+\begin{bmatrix}
+\beta_1 \\
+\vdots\\
+\beta_p
+\end{bmatrix}
+= X\beta\\
 V &=
 \begin{bmatrix}
 \sigma^2 & \cdots & 0 \\
@@ -50,7 +60,10 @@ V &=
 \end{align}
 $$
 
+<br>
 즉, 결국 우리는 다음의 linear model을 가정한다.
+<br>
+<br>
 
 $$ Y \sim (X\beta,\sigma^2 I_n)$$
 

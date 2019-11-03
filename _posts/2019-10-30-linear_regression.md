@@ -105,7 +105,7 @@ $\epsilon_{i} \overset{\text{indep}}{\sim} \cdot,\;\;i=1,2,...,n$
 
 $\epsilon_{i} \overset{\text{iid}}{\sim} N(0, \sigma^2),\;\;i=1,2,...,n$
 
-마지막 가정 d는 LSE(Least Squared Estimation)을 통한 예측(Prediction)의 문제에는 필요하지 않은 가정이다. 역사적으로 살펴보았을 때에도, 회귀분석 모형을 통한 예측이 나오고 난 이후에야 모수에 대한 C.I.(Confidence Interval)을 구하거나 가설검정을 하기 위하여 $\epsilon$에 대한 분포를 가정하기 시작했다. 따라서 이어서 살펴볼 Least Squared Estimation을 통한 $\beta$의 Estimation에는 가정 d.는 필요하지 않다.
+마지막 가정 d는 LSE(Least Squared Estimation) 자체를 구할 때에는 필요하지 않은 가정이다. 역사적으로 살펴보았을 때에도, 회귀분석 모형을 통한 예측이 나오고 난 이후에야 모수에 대한 C.I.(Confidence Interval)을 구하거나 가설검정을 하기 위하여 $\epsilon$에 대한 분포를 가정하기 시작했다. 따라서 이어서 살펴볼 Least Squared Estimation을 통한 $\beta$의 Estimation에는 가정 d.는 필요하지 않다.
 
 <br>
 <br>
