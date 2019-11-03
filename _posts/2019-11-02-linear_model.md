@@ -12,11 +12,11 @@ Linear Model은 Linear Regression(회귀분석), ANOVA(분산분석), ANCOVA(공
 우선 error의 분포를 다음과 같이 가정해보자.
 
 $$
-\begin{align}
+\begin{align*}
 E(\epsilon) &= 0\\
 Cov(\epsilon) &= \sigma^2 I_n\\
 \epsilon &\sim N(0, \sigma^2 I_n)
-\end{align}
+\end{align*}
 $$
 
 <br>
@@ -28,7 +28,7 @@ $$Y \sim (\mu, V)$$
 <br>
 
 $$
-\begin{align}
+\begin{align*}
 where \;\;
 \mu &=
 \begin{bmatrix}
@@ -54,7 +54,7 @@ V &=
 0 & \cdots & \sigma^2
 \end{bmatrix}
 = \sigma^2 I_n
-\end{align}
+\end{align*}
 $$
 
 <br>
@@ -85,18 +85,18 @@ $Rank(X) < p$ 일 때에는 $(X^TX)^{-1}$가 존재하지 않으며, $GG^{-}G = 
 $$Q(\beta) = (Y-X\beta)^T(Y-X\beta)$$
 
 $$
-\begin{align}
+\begin{align*}
 \hat{\beta}_{LSE} &= argmin_{\beta}Q(\beta)\\
 &= (X^T X)^{-1}X^TY
-\end{align}
+\end{align*}
 $$
 
 이 때 이에 따른 $\hat{Y}$은 다음과 같다.
 
 $$
-\begin{align}
+\begin{align*}
 \hat{Y} &= X\hat{\beta}_{LSE}\\ &= X(X^T X)^{-1}X^TY
-\end{align}
+\end{align*}
 $$
 
 <br>
@@ -104,16 +104,16 @@ $$
 
 <br>
 $$
-\begin{align}
+\begin{align*}
 \hat{\beta}_{LSE} &= argmin_{\beta}Q(\beta)\\
 &= (X^T X)^{-}X^TY\\
-\end{align}
+\end{align*}
 $$
 $\hat{Y}$은 다음과 같다.
 $$
-\begin{align}
+\begin{align*}
 \hat{Y} &= X\hat{\beta}_{LSE}\\ &= X(X^T X)^{-}X^TY
-\end{align}
+\end{align*}
 $$
 
 <br>
@@ -126,23 +126,23 @@ $$ Y \sim N_{N}(X\beta, \sigma^2 I_N)$$
 Likelihood는 다음과 같이 구할 수 있다.
 
 $$
-\begin{align}
+\begin{align*}
 L = L(\beta, \sigma^2 | y) = (2\pi)^{-{1\over2}N} \exp[-{1\over2}(Y-X\beta)^T {1\over{\sigma^2}} (Y-X\beta)]
-\end{align}
+\end{align*}
 $$
 
 log likelihood를 구하고,
 
 $$
-\begin{align}
+\begin{align*}
 l = log(L) = -{1\over2}N \log(2\pi) - {1\over2}N \log(\sigma^2) -{1\over2}(Y-X\beta)^T {1\over{\sigma^2}} (Y-X\beta)
-\end{align}
+\end{align*}
 $$
 
 $l$을 미분하여 MLE를 찾아보면,
 
 $$
-\begin{align}
+\begin{align*}
 \\
 \frac{\partial l}{\partial \beta} &= {1 \over {\sigma^2}}(2X^TY-2X^TX\beta) \overset{let}{=} 0\\\\
 \hat\beta_{mle} &=
@@ -151,7 +151,7 @@ $$
 \\
 (X^T X)^{-}X^TY \;\;\;\; else
 \end{cases}
-\end{align}
+\end{align*}
 $$
 
 <br>
@@ -168,11 +168,11 @@ $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; : (X^TX)^{-}$가 무수히 많이 존재�
 <br>
 <br>
 $$
-\begin{align}
+\begin{align*}
 \hat{\beta} &: not\;unique\\\\
 \hat{\mu} &= X\hat{\beta}\\ &= X(X^T X)^{-}X^TY \;\;: unique\\
 (&\because\; X(X^TX)^{-}X^T\;is\;invariant\;to\;(X^TX)^{-})
-\end{align}
+\end{align*}
 $$
 
 <br>
@@ -180,7 +180,7 @@ $$
 이 때 $X\hat\beta$의 평균과 분산을 구해보면 다음과 같다.
 
 $$
-\begin{align}
+\begin{align*}
 E[\hat\mu] = E[X\hat\beta] &= X(X^TX)^{-}X^T E[Y]\\
 &= X(X^TX)^{-}X^T X\beta \\
 &= X\beta \;\;\;(\because X(X^TX)^{-}X^T X = X)\\
@@ -190,5 +190,5 @@ E[\hat\mu] = E[X\hat\beta] &= X(X^TX)^{-}X^T E[Y]\\
 Var[\hat\mu] = Var[X\hat\beta] &= Var[X(X^T X)^{-}X^TY]\\
 &= X(X^T X)^{-}X^T \sigma^2 I X((X^T X)^{-})^TX^T\\
 &= X(X^T X)^{-}X^T \sigma^2\;\;\;(\because X(X^TX)^{-}X^T X = X)
-\end{align}
+\end{align*}
 $$
