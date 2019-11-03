@@ -2,6 +2,7 @@
 layout: post
 title: Linear Regression
 subtitle: Simple Linear Regression
+category: statistics
 use_math: true
 ---
 
