@@ -31,7 +31,7 @@ $$ Y_i = \beta_{0} + \beta_{1} (X_i-\overline{X}) + \epsilon_{i}$$
 <br>
 ### 3. Two models
 
-위와 같은 회귀 모형을 A학교와 B학교에 적용하여 각각 하나의 회귀 모형을 얻을 수 있다.  
+위와 같은 회귀 모형을 두 학교 (School A, School B)에 적용하여 각각 하나의 회귀 모형을 얻을 수 있다.  
 
 <img src = '/post_img/191103/two_schools.png'/>
 
@@ -46,10 +46,10 @@ $$ Y_i = \beta_{0} + \beta_{1} (X_i-\overline{X}) + \epsilon_{i}$$
 이제는 모든 학교(J개의 학교, J is large enough)에 대하여 경제학-수학 점수의 관계에 대해 생각해보자. Simplicity를 위하여 각 학교의 분산은 $\sigma^2$로 같다고 하자.(homogeneous variance across schools)
 
 $$
-\begin{align*}
+\begin{align}
 Y_{ij} &= \beta_{0j} + \beta_{1j} (X_{ij}-\overline{X}_{\cdot j}) + \epsilon_{ij},\;\;
 \;\epsilon_{ij} \sim N(0, \sigma^2)
-\end{align*}
+\end{align}
 $$
 
 fixed model에서는 $\beta_{0j}$와 $\beta_{1j}$에 대하여 fixed라고 가정한다. 하지만 Hierarchical model에서는 다르다. 두 모수 $\beta_{0j}$와 $\beta_{1j}$에 대하여 bivariate normal distribution을 가정해보자.
@@ -79,3 +79,53 @@ $$
 $$\rho(\beta_{0j},\beta_{1j}) = \tau_{01}/(\tau_{00}\tau_{11})^{1/2}$$
 
 현실에서 우리는 $\beta_{0j}, \beta_{1j}$는 모르는 경우가 대부분이며, $\gamma_0,\gamma_1,\tau_{01},\tau_{00},\tau_{11}$에 대해서도 역시 알 수 없는 경우가 대부분이다. 즉, 이러한 모수들을 추정해야하는 것이다.
+
+만약 학교 간 특성에 차이가 존재한다면(혹은 학생들이 random하게 배정된 것이 아니라면), 이 특성을 반영해줄 수 있는 모델을 만들어야 한다. 이러한 특성을 반영해줄 수 있는 Indicator variable $W_j$를 사용할 수 있다. 다음과 같이 $W_j$를 가정해보자.
+
+$$
+\begin{align*}
+W_j =
+\begin{cases}
+1 \;\;\; if\;School\;j\;is\;Mission\;school\\
+\\
+0 \;\;\;\; if\;School\;j\;is\;Public\;school\\
+\end{cases}
+\end{align*}
+$$
+
+그리고 다음과 같이 두 regression equations를 가정해보자.
+
+$$
+\begin{align}
+\beta_{0j} &= \gamma_{00}+\gamma_{01}W_j+u_{0j}\\
+\beta_{1j} &= \gamma_{10}+\gamma_{11}W_j+u_{1j}
+\end{align}
+$$
+
+$$
+where \;
+\begin{align*}
+\begin{bmatrix}
+u_{0j} \\
+u_{1j}
+\end{bmatrix} \sim
+\begin{pmatrix}
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}
+,
+\begin{bmatrix}
+\tau_{00} & \tau_{01} \\
+\tau_{01} & \tau_{11}
+\end{bmatrix}
+\end{pmatrix}
+\end{align*}
+$$
+
+이 $\tau_{00}, \tau_{01}, \tau_{01}, \tau_{11}$를 "Conditional variance-covariance component", 혹은 "Residual variance-covariance component"라고 한다. 즉, $W_j$를 Controlling한 뒤의 $\beta_{0j}$와 $\beta_{1j}$의 variability를 나타낸다.
+(참고로 Random effect model에서 random effect의 분산을 "Variance component"라고 한다.)
+
+$(\beta_0, \beta_1)$가 직접적으로 관측되지 않으므로, 위의 두 regression equations의 parameters를 직접적으로는 추정할 수 없다. 그러나 추정을 위해 필요한 정보는 data에 포함되어 있다.
+
+앞서 나온 식들을 통하여 다음 single prediction equation을 유도할 수 있을 것이다.
