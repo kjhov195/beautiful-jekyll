@@ -128,7 +128,3 @@ Likelihood는 다음과 같이 구할 수 있다.
 $$L = L(\beta, \sigma^2 | y) = (2\pi)^{-{1 \over 2}N} \exp[-{1 \over 2}(Y-X\beta)^T {1\over{\sigma^2}} (Y-X\beta)]$$
 
 log likelihood를 구하고,
-
-$$ l = log(L) = {-{1 \over 2}N} \log(2\pi) - {{1 \over 2}N} \log(\sigma^2) -{1 \over 2}(Y-X\beta)^T {1\over{\sigma^2}} (Y-X\beta)$$
-
-L을 미분하여 MLE를 찾아보면,
