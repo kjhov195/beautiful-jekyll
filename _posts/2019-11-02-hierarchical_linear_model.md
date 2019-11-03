@@ -135,7 +135,7 @@ Y_{ij} &= \beta_{0j} + \beta_{1j} (X_{ij}-\overline{X}_{\cdot j}) + \epsilon_{ij
 \\
 $$
 
-마침내 기본적인 Hierarchical linear model을 구했다. 이 모델에서 Fixed Effect는 $\gamma_{00}, \gamma_{10}, \gamma_{01}, \gamma_{11}$이며, Random Effect는 $\beta_{0j}, \beta_{1j}$라고 볼 수 있다.
+마침내 기본적인 Hierarchical linear model을 구했다. 이 모델에서 Fixed Effect는 $\gamma_{00}, \gamma_{10}$이며, Random Effect는 $\gamma_{01}, \gamma_{11}$이다.
 
 <br>
 <br>
