@@ -119,8 +119,8 @@ u_{1j}
 \end{align*}
 $$
 
-이 $\tau_{00}, \tau_{01}, \tau_{11}$를 "Conditional variance-covariance component", 혹은 "Residual variance-covariance component"라고 한다. 즉, $W_j$를 Controlling한 뒤의 $\beta_{0j}$와 $\beta_{1j}$의 variability를 나타낸다.
-(참고로 Random effect model에서 random effect의 분산을 "Variance component"라고 한다.)
+이 $\tau_{00}, \tau_{01}, \tau_{11}$를 _Conditional variance-covariance component_, 혹은 _Residual variance-covariance component_ 라고 한다.즉, $W_j$를 Controlling한 뒤의 $\beta_{0j}$와 $\beta_{1j}$의 variability를 나타낸다.
+(참고로 Random effect model에서 random effect의 분산을 _Variance component_ 라고 한다.)
 
 $(\beta_0, \beta_1)$가 직접적으로 관측되지 않으므로, 위의 두 regression equations의 parameters를 직접적으로는 추정할 수 없다. 그러나 추정을 위해 필요한 정보는 data에 포함되어 있다.
 
