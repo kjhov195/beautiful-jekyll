@@ -9,7 +9,7 @@ use_math: true
 ## 2019 빅콘테스트 챔피언리그
 
 
-<center><img src = '/post_img/191104/bigcontest_main.png' width="500"/></center>
+<center><img src = '/post_img/191104/bigcontest_main.png' width="700"/></center>
 
 ___<center>2019 Bigcontest </center>___
 
