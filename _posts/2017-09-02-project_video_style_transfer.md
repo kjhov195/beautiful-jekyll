@@ -38,7 +38,7 @@ Style을 적용하고자 하는 content image와 style image를 네트워크에 
 
 모델 Searching 과정에서 NVIDIA & MIT의 Video-to-Video Synthesis 등의 모델을 찾았지만 Paired Dataset에 대해서만 학습이 가능하다는 한계가 있었다. 우리 팀이 직접 Paired Dataset을 만들 수는 없는 상황이었으므로 안타깝게도 이 모델은 사용할 수 없었다. GAN based model이 아닌 다른 여러 Style Transfer 모델들 또한 Video가 아닌 Image에 대한 연구가 대부분이었다.
 
-결국 다시 처음으로 돌아가서 기본 Base가 되는 모델로 다음 두 모델을 선택하게 되었다.
+결국 다시 처음으로 돌아가서 다음 두 모델을 선택하게 되었다.
 
 
 <br>
@@ -51,6 +51,7 @@ Style을 적용하고자 하는 content image와 style image를 네트워크에 
 
 ___Artistic Style Transfer for Videos(2016, Cornell University)___
 
+<br>
 이 논문에 대한 간단한 설명을 덧붙이면 다음과 같다.
 
 - Image style transfer를 video sequence style transfer로 확장하였음.
@@ -58,7 +59,7 @@ ___Artistic Style Transfer for Videos(2016, Cornell University)___
 - Transfer를 정규화하고, 프레임 간의 자연스러운 전환을 위하여 두 프레임 사이의 편차를 penalize하는 temporal constraint.
 
 논문을 읽었을 때 우리 프로젝트의 목적과 잘 부합해 보이는 모델이라는 생각이 들었다. 하지만 문제는...
-
+<br>
 ---
 
 #### Lua
@@ -79,15 +80,20 @@ ___Lua___
 
 ___연세대학교 응용통계학과 대학원생 S군___
 
+<br>
+
 이 모델을 Video에도 적용해 보았다. training 시간은 프레임당 약 70초로, 20초짜리 동영상(약 500 Frames)을 Training 시키는데 약 10시간이 걸렸다.
 
 <img src = '/post_img/190902/Lua_1.gif' width="210"/>
 <img src = '/post_img/190902/Lua_2.gif' width="210"/>
 <img src = '/post_img/190902/Lua_3.gif' width="210"/>
 
+___벼랑위의포뇨, 김홍도 Style___
+
 가장 왼쪽의 Video가 원본 영상이며, 차례대로 _벼랑위의포뇨_ 와 _김홍도_ 스타일로 해당 영상을 변환해본 모습이다. 처음엔 나름 생각보다 괜찮은 성능을 보여서 놀랐다.
 
-하지만 다양한 input videos를 사용해보던 중 문제점을 발견하게 되었다. 다음 output을 보자.
+<br>
+하지만 다양한 input videos를 사용해보던 중 문제점을 발견하게 되었다.
 
 <img src = '/post_img/190902/Lua_5.gif' width="320"/>
 
@@ -95,6 +101,8 @@ ___Aladdin___
 
 
 알라딘 예고편에 모델을 적용해보았는데, 잔상이 매우 심하게 남아 output이 뭉개지는 현상이 나타났다. Image to Image 모델에서 발전된 이 모델의 특성 상, 자연스럽게 연결을 위해 Temporal Constraint 알고리즘을 사용하였다. 아마도 이 때문에 결과적으로 잔상이 매우 심하게 남게 된 것이지 않을까하는 생각이 들었다.
+
+<br>
 
 <img src = '/post_img/190902/Lua_6.gif' width="320"/>
 <img src = '/post_img/190902/Lua_7.gif' width="320"/>
@@ -145,6 +153,8 @@ Sobel, Canny, Lplacian 3가지 Edge Detection 방법 중 가장 성능이 좋은
 
 <img src = '/post_img/190902/Edge_detection_3.gif' width="320"/>
 <img src = '/post_img/190902/Edge_detection_4.gif' width="320"/>
+
+___Spider-Man___
 
 
 <br>
