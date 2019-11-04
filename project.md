@@ -27,7 +27,7 @@ title: Project
 - 역할: 모델 설계
 - 관련기술: Python, Pytorch, Lua
 - Keyword : Video Style Transfer
-- 프로젝트에 대한 자세한 설명은 [여기](https://kjhov195.github.io/2018-09-02-spam_classification_project/)에 있습니다.
+- 프로젝트에 대한 자세한 설명은 [여기](https://kjhov195.github.io/2019-07-02-animation_generation_project/)에 있습니다.
 
 <br>
 <br>
