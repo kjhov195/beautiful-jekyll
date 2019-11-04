@@ -22,7 +22,7 @@ _Loving Vincent(2017)_
 
 기본적인 Style Transfer 기본적인 Idea를 살펴보자.
 
-<img src = '/post_img/190902/style_transfer_2.png'/>
+<img src = '/post_img/190902/style_transfer_2.png' width="600"/>
 
 _Style Transfer_
 
@@ -47,7 +47,7 @@ Style을 적용하고자 하는 content image와 style image를 네트워크에 
 
 우리가 선택한 첫 번째 모델은 Artistic Style Transfer for Videos(2016, Cornell University)이다.
 
-<img src = '/post_img/190902/style_transfer_3.png'/>
+<img src = '/post_img/190902/style_transfer_3.png' width="600"/>
 
 _Artistic Style Transfer for Videos(2016, Cornell University)_
 
@@ -69,20 +69,20 @@ _Artistic Style Transfer for Videos(2016, Cornell University)_
 
 _Lua_
 
-tf, Pytorch만 접해왔던 나에게는 큰 결심이 필요한 도전이었다. 간단하게나마 Lua를 읽을 수 있기 위해 며칠을 Lua만 쳐다봤는지 모르겠다. 게다가 대학원에 Lua를 써본 사람이 없어서, 환경 구축하는 것도 너무너무 힘들었고 오래 걸렸다. :sob::sob::sob:
+tf, Pytorch만 접해왔던 나에게는 큰 결심이 필요한 도전이었다. 간단하게나마 Lua를 읽을 수 있기 위해 며칠을 Lua만 쳐다봤는지 모르겠다. 게다가 대학원에 Lua를 써본 사람이 없어서, 환경 구축하는 것도 너무너무 힘들었고 오래 걸렸다.
 
 ---
 
 일주일 정도 매달려서 결국 구현에 성공했다. 물론 Lua에 익숙하지 않아 기본적인 setting에서 모델을 사용했지만, Image를 Input으로 사용했을 때에는 꽤나 성능이 잘나왔다. 우리 연구실의 대표 미남 연구원을 Input Image로 사용하여 _van gogh_ 의 _starry night_ 의 Style로 Image Style Transfer를 해보았다.
 
-<img src = '/post_img/190902/style_transfer_5.png'/>
+<img src = '/post_img/190902/style_transfer_5.png' width="600"/>
 _연세대학교 응용통계학과 대학원생 S군_
 
 이 모델을 Video에도 적용해 보았다. training 시간은 프레임당 약 70초로, 20초짜리 동영상(약 500 Frames)을 Training 시키는데 약 10시간이 걸렸다.
 
-<img src = '/post_img/190902/Lua_1.gif' width="200"/>
-<img src = '/post_img/190902/Lua_2.gif' width="200"/>
-<img src = '/post_img/190902/Lua_3.gif' width="200"/>
+<img src = '/post_img/190902/Lua_1.gif' width="210"/>
+<img src = '/post_img/190902/Lua_2.gif' width="210"/>
+<img src = '/post_img/190902/Lua_3.gif' width="210"/>
 
 가장 왼쪽의 Video가 원본 영상이며, 차례대로 '벼랑위의포뇨'와 '김홍도' 스타일로 해당 영상을 변환해본 모습이다. 나름 괜찮은 성능을 보여서 깜짝 놀랐다. 하지만 다양한 input videos를 사용해보던 중 문제점을 발견하게 되었다. 다음 output을 보자.
 
