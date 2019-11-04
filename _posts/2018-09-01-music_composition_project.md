@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Music Composition Project
-subtitle: MUSE GAN
+subtitle: MuseGAN
 category: Project
 use_math: true
 ---
@@ -79,16 +79,15 @@ pretty midi를 통하여 numpy array를 얻었다면 numpy array의 shape을 다
 
 piano roll을 적절한 전처리를 통하여 reshape해주는 과정에서 아주 많은 시행착오가 필요했다. 혹시나 MuseGAN에 관심을 가지고 계신 분이라면 reshape해주는 전처리 파일을 github에 업로드 해놓으므로 참고하면 좋을 것 같다.
 
-
 <br>
 <br>
 ## Output
 Input data, Output data 모두 음악 파일이다보니 저작권 문제로 인하여 업로드할 수는 없었다.
 
-원래 모델에서는 8가지 track의 악기들을 모두 사용하여 풍성한 음악을 만들어냈었지만, 우리의 프로젝트에서는 여건 상 한 track의 midi 파일(Piano)을 사용할 수 밖에 없었다. 그래서 그런건지 빠른 템포의 Rock, Ballad 등의 현대적인 음악에 비하여 느리고 조용한 음악이나, Classic 스타일의 output이 굉장히 결과가 좋았다.
+원래 모델에서는 8가지 track의 악기들을 모두 사용하여 풍성한 음악을 만들어냈었지만, 우리의 프로젝트에서는 여건 상 한 track의 midi 파일(Piano)을 사용할 수 밖에 없었다. 그래서 그런건지 빠른 템포의 Rock, Ballad 등의 현대적인 음악에 비하여 느리고 조용한 음악이나, Classic 스타일의 output이 굉장히 결과가 좋았다. 언젠가 데이터를 구할 수 있게만 된다면 8가지 track을 모두 사용하여 output을 뽑아보고 싶다는 생각이 들었다.
 
 <br>
 <br>
-## setting
+## docker hub
 MuseGAN을 위한 docker image도 업로드 해놓았으니 필요하신 분이 계시다면 사용하시기 바란다.<br>
 <https://hub.docker.com/r/hun1993/mini_musegan/>
