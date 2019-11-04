@@ -39,9 +39,9 @@ MIDI Manufacturers Association(MMA)와 일본의 사단법인 음악전자사업
 
 언제나 그렇듯, 데이터가 문제였다. 주어진 시간은 3주였으며 예산 또한 주어진 바가 없었다. 공개된 유명한 midi dataset이 있었지만, 우리 프로젝트에는 사용할 수 없는 dataset이었다.
 
-결국 무료로 제공되는 sample midi files를 크롤링하여 dataset을 만들었고 이를 통하여 training을 했다. 만약 예산이나 시간이 조금 더 주어졌다면 훨씬 더 좋은 output을 만들어낼 수 있었을 것이라는 아쉬운 생각이 많이 들었다.
+결국 무료로 제공되는 sample midi files를 크롤링하여 dataset을 만들었고 이를 training을 했다. 만약 예산이나 시간이 조금 더 주어졌다면 훨씬 더 좋은 output을 만들어낼 수 있었을 것이라는 아쉬운 생각이 많이 들었다.
 
-고생 끝에 midi file training set을 만들었으나, 전처리가 더 문제였다. 논문을 뒤져봐도, 구글링을 해보아도 midi file을 행렬로 만들 수 있는 방법을 도저히 찾을 수가 없었다. 결국 MuseGAN 저자에게 메일까지 주고받으며 전처리 방법을 알아냈다.
+고생 끝에 midi file training set을 만들었으나, 전처리가 더 문제였다. 논문을 뒤져봐도, 구글링을 해보아도 midi file을 행렬로 만들 수 있는 방법은 도저히 찾을 수가 없었다. 결국 MuseGAN 저자에게 메일까지 주고받으며 전처리 방법을 알아냈다.
 
 <img src = '/post_img/180901/musegan_2.png'/>
 
@@ -91,5 +91,4 @@ Input data, Output data 모두 음악 파일이다보니 저작권 문제로 인
 <br>
 ## setting
 MuseGAN을 위한 docker image도 업로드 해놓았으니 필요하신 분이 계시다면 사용하시기 바란다.
-
-https://hub.docker.com/r/hun1993/mini_musegan/
+<https://hub.docker.com/r/hun1993/mini_musegan/>
