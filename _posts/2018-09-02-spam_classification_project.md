@@ -12,15 +12,15 @@ KT에서의 기나긴 교육기간 끝에 WHOWHO&COMPANY로 파견되어 두 달
 
 ## whowho&compnay
 
-<center><img src = '/post_img/180902/picture_0.png' width="300"/></center>
-
-___<center>WHOWHO&COMPNAY</center>___
-
 KT에서 교육생으로써 마지막 프로젝트를 부여받고 발산역에 위치한 후후앤컴퍼니 본사로 출근을 시작했다.
 
 거의 4~5개월을 판교에 위치한 KT로 출퇴근하다가 가까운 발산역으로 출퇴근하기 시작하니 너무나도 좋았다.(사실 신촌~정자역 출퇴근은 너무 힘들었다...)
 
 후후의 현직자 분들도 너무나도 친절하고 능력있으신 분들이 많아서 너무나도 좋았다.
+
+<center><img src = '/post_img/180902/picture_0.png' width="300"/></center>
+
+___<center>WHOWHO&COMPNAY</center>___
 
 <br>
 <br>
