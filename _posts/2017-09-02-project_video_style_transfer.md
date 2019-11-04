@@ -43,7 +43,7 @@ Style을 적용하고자 하는 content image와 style image를 네트워크에 
 
 <br>
 <br>
-## 1. Artistic Style Transfer for Videos
+## 1. Artistic Style Transfer for Videos(2016)
 
 우리가 선택한 첫 번째 모델은 Artistic Style Transfer for Videos(2016, Cornell University)이다.
 
@@ -69,11 +69,11 @@ _Artistic Style Transfer for Videos(2016, Cornell University)_
 
 _Lua_
 
-tf, Pytorch만 접해왔던 나에게는 큰 결심이 필요한 도전이었다. 간단하게나마 Lua를 읽을 수 있기 위해 며칠을 Lua만 쳐다봤는지 모르겠다. 게다가 대학원에 Lua를 써본 사람이 없어서, 환경 구축하는 것도 너무너무 힘들었고 오래 걸렸다.
+시간이 많았다면 Pytorch로 직접 구현해 보았을 텐데, 시간이 없어 직접 논문을 구현하기 보다는 Lua를 공부하는 것이 더 빠르겠다는 판단이 들었다. 사실 tf, Pytorch만 접해왔던 나에게는 큰 결심이 필요한 도전이었다.
 
 ---
 
-일주일 정도 매달려서 결국 구현에 성공했다. 물론 Lua에 익숙하지 않아 기본적인 setting에서 모델을 사용했지만, Image를 Input으로 사용했을 때에는 꽤나 성능이 잘나왔다. 우리 연구실의 대표 미남 연구원을 Input Image로 사용하여 _van gogh_ 의 _starry night_ 의 Style로 Image Style Transfer를 해보았다.
+일주일 정도 매달려서 결국 output을 만들어 내는데 성공했다. 물론 Lua에 익숙하지 않아 기본적인 setting에서 모델을 사용했지만, Image를 Input으로 사용했을 때에는 꽤나 성능이 잘나왔다. 우리 연구실의 대표 미남 연구원을 Input Image로 사용하여 _van gogh_ 의 _starry night_ 의 Style로 Image Style Transfer를 해보았다.
 
 <img src = '/post_img/190902/style_transfer_5.png' width="600"/>
 
@@ -87,19 +87,28 @@ _연세대학교 응용통계학과 대학원생 S군_
 
 가장 왼쪽의 Video가 원본 영상이며, 차례대로 _벼랑위의포뇨_ 와 _김홍도_ 스타일로 해당 영상을 변환해본 모습이다. 처음엔 나름 생각보다 괜찮은 성능을 보여서 놀랐다. 하지만 다양한 input videos를 사용해보던 중 문제점을 발견하게 되었다. 다음 output을 보자.
 
-<img src = '/post_img/190902/Lua_4.gif' width="320"/>
 <img src = '/post_img/190902/Lua_5.gif' width="320"/>
+
+__Aladdin__
+
 
 알라딘 예고편에 모델을 적용해보았는데, 잔상이 매우 심하게 남아 output이 뭉개지는 현상이 나타났다. Image to Image 모델에서 발전된 이 모델의 특성 상, 자연스럽게 연결을 위해 Temporal Constraint 알고리즘을 사용하였다. 아마도 이 때문에 결과적으로 잔상이 매우 심하게 남게 된 것이지 않을까하는 생각이 들었다.
 
 <img src = '/post_img/190902/Lua_6.gif' width="320"/>
 <img src = '/post_img/190902/Lua_7.gif' width="320"/>
 
+__Spider-Man__
+
+
 스파이더맨 예고편 영상에도 해당 모델을 적용해보았다. 나름 괜찮긴 한데 전체적으로 뭉개지는 건 어쩔 수 없는 모델의 한계인 듯 했다.
 
 
 <br>
 <br>
-## 2. Artistic Style Transfer for Videos
+## 2. Learning Linear Transformation for Fast Image and Video Style Transfer(2019)
 
-<img src = '/post_img/190902/main.gif'/>
+2019 CVPR에서 발표된 __Learning Linear Transformation for Fast Image and Video Style Transfer__ 를 최종적인 모델로 선택하게 되었다. 아무래도 이 모델은 이미 우리에게 익숙한 Pytorch로 구현되어 있었으며, 제한된 시간 내에 다양한 시도 및 앙상블이 가능했기 때문에 이 모델을 최종적으로 선택하게 되었다.
+
+<img src = '/post_img/190902/main.gif' width="600"/>
+
+확실히 앞서 __Artistic Style Transfer for Videos__ 의 output보다는 조금 더 색감도 예쁘고, 뭉개지는 현상이 훨씬 덜했다.
