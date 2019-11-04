@@ -89,5 +89,5 @@ Input data, Output data 모두 음악 파일이다보니 저작권 문제로 인
 <br>
 <br>
 ## docker hub
-MuseGAN을 위한 docker image도 업로드 해놓았으니 필요하신 분이 계시다면 사용하시기 바란다.<br>
+MuseGAN을 위한 docker image도 업로드 해놓았으니 필요하신 분이 계시다면 사용하시면 된다.<br>
 <https://hub.docker.com/r/hun1993/mini_musegan/>
