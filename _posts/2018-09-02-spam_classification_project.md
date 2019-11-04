@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spam Classification Project
-subtitle: DNN
+subtitle: WHOWHO&COMPNAY
 category: Project
 use_math: true
 ---
