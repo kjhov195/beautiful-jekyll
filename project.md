@@ -30,6 +30,7 @@ title: Project
 - 내용: 스팸 문자 여부 실시간 classification
 - 역할: 모델 설계
 - 관련기술: Python, Pytorch, Lua
+- Keyword : Video Style Transfer
 - 프로젝트에 대한 자세한 설명은 [여기](https://kjhov195.github.io/2018-09-02-spam_classification_project/)에 있습니다.
 
 <br>
@@ -46,6 +47,7 @@ title: Project
 - 내용: 스팸 문자 여부 실시간 classification
 - 역할: 데이터분석, 데이터전처리, 모델 설계
 - 관련기술: Python, Tensorflow
+- Keyword : DNN(Deep Neural Networks)
 - 프로젝트에 대한 자세한 설명은 [여기](https://kjhov195.github.io/2018-09-02-spam_classification_project/)에 있습니다.
 
 <br>
@@ -62,6 +64,7 @@ title: Project
 - 내용: Muse GAN을 활용한 음악 작곡
 - 역할: midi 데이터셋 제작, 모델 설계
 - 관련기술: Python, Tensorflow
+- Keyword : GAN
 - 프로젝트에 대한 자세한 설명은 [여기](https://kjhov195.github.io/2018-09-01-music_composition_project/)에 있습니다.
 
 
