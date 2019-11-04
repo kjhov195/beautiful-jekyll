@@ -4,7 +4,18 @@ title: Project
 ---
 
 # LG CNS
-### LG TWINS data analysis
+
+<p>
+<div class=pull-left>
+여기는 사진주소 images URL
+<center>사진정보 Photo info</center>
+</div>
+여기는 글쓰기 Writing
+</p>
+
+<img src = '/post_img/project/lg_twins.jpg' width="300"/>
+
+LG TWINS data analysis
 26 June 2017 ~ 28 July 2017
 
 <br>
