@@ -12,7 +12,7 @@ title: Project
 - 내용: NC SOFT 리니지 유저 잔존가치 예측
 - 역할: 데이터전처리, 모델 설계
 - 관련기술: Python, Pytorch
-- 프로젝트에 대한 자세한 설명은 [여기](https://kjhov195.github.io/2019-11-04-Bigcontest_Lineage_project/)에 있습니다.
+- 프로젝트에 대한 자세한 설명은 [여기](https://kjhov195.github.io/2019-11-04-Bigcontest_Lineage_project/)에 있습니다.  
 (아직 진행 중인 대회 프로젝트로, 자세한 설명은 대회가 마무리된 후에 업데이트할 예정)
 
 <br>
