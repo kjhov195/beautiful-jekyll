@@ -128,8 +128,6 @@ ___Spider-Man___
 <br>
 ## 3. Edge Detection
 
-우리는 앞의 __Learning Linear Transformation for Fast Image and Video Style Transfer(2019)__ 와 __Edge Detection__ 을 앙상블하여 최종 모델을 만들었다.
-
 Boundary가 분명한 애니메이션의 특성을 고려한다면, Edge Detection을 적용하여 output의 경계선을 뚜렷하게 만들어준다면 조금 더 실제 애니메이션에 가깝게 보이지 않을까하는 아이디어였다.
 
 Sobel, Canny, Lplacian 3가지 Edge Detection 방법 중 가장 성능이 좋은 Laplacian Edge Detection을 사용하였다.
@@ -138,4 +136,17 @@ Sobel, Canny, Lplacian 3가지 Edge Detection 방법 중 가장 성능이 좋은
 <br>
 ## 4. Output
 
-__Learning Linear Transformation for Fast Image and Video Style Transfer(2019)__ + __Edge Detection__
+우리는 앞의 __Learning Linear Transformation for Fast Image and Video Style Transfer(2019)__ 와 __Edge Detection__ 을 앙상블하여 최종 모델을 만들었다. 최종 Output은 다음과 같다.
+
+<img src = '/post_img/190902/Edge_detection_1.gif' width="320"/>
+<img src = '/post_img/190902/Edge_detection_2.gif' width="320"/>
+
+<br>
+
+<img src = '/post_img/190902/Edge_detection_3.gif' width="320"/>
+<img src = '/post_img/190902/Edge_detection_4.gif' width="320"/>
+
+
+<br>
+<br>
+<br>
