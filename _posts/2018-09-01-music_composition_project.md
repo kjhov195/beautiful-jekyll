@@ -18,6 +18,8 @@ KT에서 교육생들에게 기가지니에 탑재할 수 있는 프로그램을
 
 ___프로젝트 흐름___
 
+<br>
+<br>
 ## 모델
 '음악 생성', 'GAN'이라는 두 가지 Keyword를 가지고 논문과 모델을 찾기 시작했다. MidiNet과 MuseGAN이라는 두 모델을 찾았고, 해당 모델들을 구현해보았다.
 
@@ -75,9 +77,8 @@ pretty midi를 통하여 numpy array를 얻었다면 numpy array의 shape을 다
 # 8: 8 tracks of MUSE GAN(Drums, Piano, Guitar, Bass, Ensemble, Reed, Synth Lead and Synth Pad)
 ```
 
-이 piano roll을 적절한 전처리를 통하여 reshape해주는 과정에서 아주 많은 시행착오가 필요했다. 혹시나 MuseGAN에 관심을 가지고 계신 분이라면 reshape해주는 전처리 파일을 github에 업로드 해놓으므로 참고하면 좋을 것 같다.
+piano roll을 적절한 전처리를 통하여 reshape해주는 과정에서 아주 많은 시행착오가 필요했다. 혹시나 MuseGAN에 관심을 가지고 계신 분이라면 reshape해주는 전처리 파일을 github에 업로드 해놓으므로 참고하면 좋을 것 같다.
 
-https://github.com/kjhov195/project_music_generation/blob/master/Input_data/data_preprocess/preprocess(MUSE_GAN).py
 
 <br>
 <br>
