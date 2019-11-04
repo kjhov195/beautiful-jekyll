@@ -7,8 +7,6 @@ title: Project
 
 <img src = '/post_img/project/bigcontest_main.png' width="400"/>
 
-<br>
-
 - 소속: 우리팀화이팅(연세대학교 응용통계학과 대학원생 및 학부생 팀)
 - 기간: 3 July 2019 ~ 진행 중
 - 내용: NC SOFT 리니지 유저 잔존가치 예측
@@ -22,8 +20,6 @@ title: Project
 ## Animation Generation Project
 
 <img src = '/post_img/190702/Edge_detection_4.gif' width="320"/>
-
-<br>
 
 - 소속: YBIGTA
 - 기간: 26 June 2018 ~ 3 August 2018
@@ -40,8 +36,6 @@ title: Project
 
 <img src = '/post_img/180902/picture_0.png' width="250"/>
 
-<br>
-
 - 소속: KT, WHOWHO&COMPANY
 - 기간: 26 June 2018 ~ 3 August 2018
 - 내용: 스팸 문자 여부 실시간 classification
@@ -57,8 +51,6 @@ title: Project
 
 <img src = '/post_img/project/musegan.png' width="200"/>
 
-<br>
-
 - 소속: KT
 - 기간: 23 May 2018 ~ 8 June 2018
 - 내용: Muse GAN을 활용한 음악 작곡
@@ -73,8 +65,6 @@ title: Project
 
 ## LG TWINS Data Analysis
 <img src = '/post_img/project/lg_twins.jpg' width="200"/>
-
-<br>
 
 - 소속: LG CNS
 - 기간: 26 June 2017 ~ 28 July 2017
