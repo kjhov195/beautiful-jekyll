@@ -34,11 +34,11 @@ Style을 적용하고자 하는 content image와 style image를 네트워크에 
 
 사실 작년에 KT ATC에서 다양한 프로젝트를 진행하면서 Image에 대한 Style Transfer Model(Vanilla gan, DCGAN, Cycle GAN 등)은 많이 접해보았지만, Video의 Style Transfer는 처음 접해보는 영역이었다.
 
-처음 떠오른 모델은 GAN이였고, 역시 최종적으로 사용한 모델 또한 GAN이었다. 하지만 GAN의 치명적인 단점인 _동일한 image를 input으로 주어도 styled된 결과가 매번 달라지는 단점_ 때문에 조금 더 안정적인 모델이 있지 않을까 하는 생각에 다른 model 또한 searching해 보았다.
+처음 떠오른 모델은 GAN이였고, 역시 최종적으로 사용한 모델 또한 GAN이었다. 하지만 GAN의 __동일한 image를 input으로 주어도 styled된 결과가 매번 달라지는 단점__ 때문에 조금 더 안정적인 모델이 있지 않을까 하는 생각에 다른 model 또한 searching해 보았다.
 
 모델 Searching 과정에서 NVIDIA & MIT의 Video-to-Video Synthesis 등의 모델을 찾았지만 Paired Dataset에 대해서만 학습이 가능하다는 한계가 있었다. 우리 팀이 직접 Paired Dataset을 만들 수는 없는 상황이었으므로 안타깝게도 이 모델은 사용할 수 없었다. GAN based model이 아닌 다른 여러 Style Transfer 모델들 또한 Video가 아닌 Image에 대한 연구가 대부분이었다.
 
-결국 다시 처음으로 돌아가서 다음 두 모델을 선택하게 되었다.
+결과적으로 우리는 __Artistic Style Transfer for Videos(2016)__ 과 GAN Based Model인 __Learning Linear Transformation for Fast Image and Video Style Transfer(2019)__ 를 중심으로 문제를 해결해보기로 했다.
 
 
 <br>
