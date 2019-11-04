@@ -55,6 +55,7 @@ ___<center>팀원이 논문 저자와 주고 받은 메일 중 일부</center>__
 
 ___<center>piano roll</center>___
 
+<br>
 piano roll이란 일반적으로는 세로축에 음의 높이, 가로축에 시간으로 연주 정보를 도식화한 것이다. 음의 움직임이나 음표의 길이를 시각적으로 확인하기 쉬운 특징이 있다.
 
 midi 파일을 piano roll로 바꾸기 위해서는 python의 'pretty_midi' 모듈을 사용하면 된다. 전처리에 사용되는 주요 함수는 아래 두 함수이다.
@@ -88,6 +89,6 @@ Input data, Output data 모두 음악 파일이다보니 저작권 문제로 인
 
 <br>
 <br>
-## docker hub
+## Docker hub
 MuseGAN을 위한 docker image도 업로드 해놓았으니 필요하신 분이 계시다면 사용하시면 된다.<br>
 <https://hub.docker.com/r/hun1993/mini_musegan/>
