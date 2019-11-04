@@ -10,7 +10,7 @@ subtitle: Interested in Statistics and Computer Science.
 
 <br>
 <br>
-#### About Me
+### About Me
 
 I'm broadly interested in Statistics, machine learning and deep learning.
 
@@ -24,7 +24,7 @@ I completed my Bachelor's degree at Yonsei University. And I am studying for a M
 
 <br>
 <br>
-#### Experience
+### Experience
 LG CNS 미래신사업부 AI빅데이터사업담당 제조빅데이터팀 인턴 사원(2017.06.26 ~ 2017.07.28)
 
 KT (AI Tech Center, 융합기술원) AI Academy 교육생(2018.02.26 ~ 2018.08.03)
