@@ -10,6 +10,8 @@ use_math: true
 
 KT에서의 기나긴 교육기간 끝에 WHOWHO&COMPANY로 파견되어 두 달 간의 실전형 프로젝트를 진행했다.
 
+<br>
+<br>
 ## whowho&compnay
 
 KT에서 교육생으로써 마지막 프로젝트를 부여받고 발산역에 위치한 후후앤컴퍼니 본사로 출근을 시작했다.
@@ -42,6 +44,8 @@ ___<center>WHOWHO&COMPNAY</center>___
 후후앤컴퍼니의 선배님들께서 많이 도와주시고 신경써주셔서 너무나도 감사했고, 행복했던 프로젝트 기간이었다. 마지막은 후후앤컴퍼니에서 팀원, 선배님들과 함께 찍은 마지막 날 사진!! :)
 
 <center><img src = '/post_img/180902/picture_1.png' width="300"/></center>
+
+___<center>WHOWHO&COMPANY, August 1, 2018</center>___
 
 <br>
 <br>
