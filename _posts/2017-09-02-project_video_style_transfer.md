@@ -11,7 +11,7 @@ use_math: true
 
 <img src = '/post_img/190902/style_transfer_1.png'/>
 
-_Loving Vincent(2017)_
+___Loving Vincent(2017)___
 
 2017년에 개봉하여 흥행에 성공했었던 _Loving Vincent(2017)_ 에서 아이디어를 착안하여 팀원들과 이 프로젝트를 시작하게 되었다. 러빙빈센트의 경우 107명의 화가가 약 2년 동안 65,000프레임에 달하는 양을 작화했다. 실제 영화를 찍은 뒤, 이를 그림으로 그려내는 작업에 아주 많은 시간과 자원, 노력이 들어간 것이다. 만약 Style Transfer Model이 잘 작동하여 이를 수행해준다면, 혹은 그림으로 그려내는 작업의 밑바탕이 되어준다면 좋지 않을까라는 생각이었다.
 
@@ -24,7 +24,7 @@ _Loving Vincent(2017)_
 
 <img src = '/post_img/190902/style_transfer_2.png' width="600"/>
 
-_Style Transfer_
+___Style Transfer___
 
 Style을 적용하고자 하는 content image와 style image를 네트워크에 통과시킬 때 Feature Map을 얻을 수 있다. 이 각각의 feature map을 바탕으로 새롭게 합성될 영상의 feature map이 비슷하도록 최적화하는 과정을 _Style Transfer_ 라고 할 수 있다.
 
@@ -49,7 +49,7 @@ Style을 적용하고자 하는 content image와 style image를 네트워크에 
 
 <img src = '/post_img/190902/style_transfer_3.png' width="600"/>
 
-_Artistic Style Transfer for Videos(2016, Cornell University)_
+___Artistic Style Transfer for Videos(2016, Cornell University)___
 
 이 논문에 대한 간단한 설명을 덧붙이면 다음과 같다.
 
@@ -67,7 +67,7 @@ _Artistic Style Transfer for Videos(2016, Cornell University)_
 
 <img src = '/post_img/190902/style_transfer_4.png' width="250"/>
 
-_Lua_
+___Lua___
 
 시간이 많았다면 Pytorch로 직접 구현해 보았을 텐데, 시간이 없어 직접 논문을 구현하기 보다는 Lua를 공부하는 것이 더 빠르겠다는 판단이 들었다. 사실 tf, Pytorch만 접해왔던 나에게는 큰 결심이 필요한 도전이었다.
 
@@ -77,7 +77,7 @@ _Lua_
 
 <img src = '/post_img/190902/style_transfer_5.png' width="600"/>
 
-_연세대학교 응용통계학과 대학원생 S군_
+___연세대학교 응용통계학과 대학원생 S군___
 
 이 모델을 Video에도 적용해 보았다. training 시간은 프레임당 약 70초로, 20초짜리 동영상(약 500 Frames)을 Training 시키는데 약 10시간이 걸렸다.
 
@@ -85,11 +85,13 @@ _연세대학교 응용통계학과 대학원생 S군_
 <img src = '/post_img/190902/Lua_2.gif' width="210"/>
 <img src = '/post_img/190902/Lua_3.gif' width="210"/>
 
-가장 왼쪽의 Video가 원본 영상이며, 차례대로 _벼랑위의포뇨_ 와 _김홍도_ 스타일로 해당 영상을 변환해본 모습이다. 처음엔 나름 생각보다 괜찮은 성능을 보여서 놀랐다. 하지만 다양한 input videos를 사용해보던 중 문제점을 발견하게 되었다. 다음 output을 보자.
+가장 왼쪽의 Video가 원본 영상이며, 차례대로 _벼랑위의포뇨_ 와 _김홍도_ 스타일로 해당 영상을 변환해본 모습이다. 처음엔 나름 생각보다 괜찮은 성능을 보여서 놀랐다.
+
+하지만 다양한 input videos를 사용해보던 중 문제점을 발견하게 되었다. 다음 output을 보자.
 
 <img src = '/post_img/190902/Lua_5.gif' width="320"/>
 
-__Aladdin__
+___Aladdin___
 
 
 알라딘 예고편에 모델을 적용해보았는데, 잔상이 매우 심하게 남아 output이 뭉개지는 현상이 나타났다. Image to Image 모델에서 발전된 이 모델의 특성 상, 자연스럽게 연결을 위해 Temporal Constraint 알고리즘을 사용하였다. 아마도 이 때문에 결과적으로 잔상이 매우 심하게 남게 된 것이지 않을까하는 생각이 들었다.
@@ -97,7 +99,7 @@ __Aladdin__
 <img src = '/post_img/190902/Lua_6.gif' width="320"/>
 <img src = '/post_img/190902/Lua_7.gif' width="320"/>
 
-__Spider-Man__
+___Spider-Man___
 
 
 스파이더맨 예고편 영상에도 해당 모델을 적용해보았다. 나름 괜찮긴 한데 전체적으로 뭉개지는 건 어쩔 수 없는 모델의 한계인 듯 했다.
@@ -109,6 +111,31 @@ __Spider-Man__
 
 2019 CVPR에서 발표된 __Learning Linear Transformation for Fast Image and Video Style Transfer__ 를 최종적인 모델로 선택하게 되었다. 아무래도 이 모델은 이미 우리에게 익숙한 Pytorch로 구현되어 있었으며, 제한된 시간 내에 다양한 시도 및 앙상블이 가능했기 때문에 이 모델을 최종적으로 선택하게 되었다.
 
+이 모델의 경우 데이터 중심의 transformation matrix를 학습하는 universal style transfer이며, 또한 Content 연결성을 보존하는 효율적이고 유연하다는 특징이 있다.
+
 <img src = '/post_img/190902/main.gif' width="600"/>
 
-확실히 앞서 __Artistic Style Transfer for Videos__ 의 output보다는 조금 더 색감도 예쁘고, 뭉개지는 현상이 훨씬 덜했다.
+앞서 살펴본 모델에 비하여 속도도 매우 빨라졌으며, 20초 동영상을 training하는데 약 38.5초 밖에 걸리지 않았다. Training 속도, ouput 모두 월등한 성능을 보여서 해당 모델을 프로젝트의 base model로 활용하게 되었다.
+
+역시 스파이더맨 영상에 적용해보았다.
+
+<img src = '/post_img/190902/Pytorch_1.gif' width="320"/>
+<img src = '/post_img/190902/Pytorch_2.gif' width="320"/>
+
+___Spider-Man___
+
+<br>
+<br>
+## 3. Edge Detection
+
+우리는 앞의 __Learning Linear Transformation for Fast Image and Video Style Transfer(2019)__ 와 __Edge Detection__ 을 앙상블하여 최종 모델을 만들었다.
+
+Boundary가 분명한 애니메이션의 특성을 고려한다면, Edge Detection을 적용하여 output의 경계선을 뚜렷하게 만들어준다면 조금 더 실제 애니메이션에 가깝게 보이지 않을까하는 아이디어였다.
+
+Sobel, Canny, Lplacian 3가지 Edge Detection 방법 중 가장 성능이 좋은 Laplacian Edge Detection을 사용하였다.
+
+<br>
+<br>
+## 4. Output
+
+__Learning Linear Transformation for Fast Image and Video Style Transfer(2019)__ + __Edge Detection__
