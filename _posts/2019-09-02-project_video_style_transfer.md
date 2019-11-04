@@ -7,7 +7,7 @@ use_math: true
 ---
 
 ## 2019 Spring, YBIGTA Conference 1st
-2019 YBIGTA Conference에서 우리 팀이 1등을 수상하였다. 우리 팀의 프로젝트 주제는 현실 영상을 애니메이션 스타일로 변환해주는 모델을 만들어보는 것이었다.
+2019 YBIGTA Conference에서 우리 팀이 1등을 수상했다. 우리 팀의 프로젝트 주제는 현실 영상을 애니메이션 스타일로 변환해주는 모델을 만들어보는 것이었다.
 
 <img src = '/post_img/190902/style_transfer_1.png'/>
 
@@ -93,7 +93,7 @@ ___벼랑위의포뇨, 김홍도 Style___
 가장 왼쪽의 Video가 원본 영상이며, 차례대로 _벼랑위의포뇨_ 와 _김홍도_ 스타일로 해당 영상을 변환해본 모습이다. 처음엔 나름 생각보다 괜찮은 성능을 보여서 놀랐다.
 
 <br>
-하지만 다양한 input videos를 사용해보던 중 문제점을 발견하게 되었다.
+하지만 다양한 input videos를 통해 test해보던 중 문제점을 발견하게 되었다.
 
 <img src = '/post_img/190902/Lua_5.gif' width="320"/>
 
