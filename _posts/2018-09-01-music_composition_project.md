@@ -25,7 +25,7 @@ ___프로젝트 흐름___
 
 논문을 읽고 직접 만들어본 MuseGAN의 Model architecture는 다음과 같다.
 
-<img src = '/post_img/180901/musegan_1.png'/>
+<img src = '/post_img/180901/musegan_0.png'/>
 
 ___MuseGAN model Architecture___
 
@@ -41,7 +41,7 @@ MIDI Manufacturers Association(MMA)와 일본의 사단법인 음악전자사업
 
 고생 끝에 midi file training set을 만들었으나, 전처리가 더 문제였다. 논문을 뒤져봐도, 구글링을 해보아도 midi file을 행렬로 만들 수 있는 방법을 도저히 찾을 수가 없었다. 결국 MuseGAN 저자에게 메일까지 주고받으며 전처리 방법을 알아냈다.
 
-<img src = '/post_img/180901/musegan_1.png'/>
+<img src = '/post_img/180901/musegan_2.png'/>
 
 ___팀원이 논문 저자와 주고 받은 메일 중 일부___
 
@@ -49,7 +49,7 @@ ___팀원이 논문 저자와 주고 받은 메일 중 일부___
 #### Piano roll
 처음에는 midi file을 바로 numpy array로 변환하는 것이라고 생각했는데, 아무리 찾아봐도 directly 변환할 수 있는 방법이 없었다. 막막한 와중에 논문 저자와 연락을 주고 받으며 piano roll의 형태를 거쳐서 array로 바꿔야 한다는 사실을 알게 되었다.
 
-<img src = '/post_img/180901/musegan_1.png'/>
+<img src = '/post_img/180901/musegan_3.png'/>
 
 ___piano roll___
 
