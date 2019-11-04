@@ -70,11 +70,11 @@ ___Artistic Style Transfer for Videos(2016, Cornell University)___
 <img src = '/post_img/190902/style_transfer_4.png' width="250"/>
 
 
-시간이 많았다면 Pytorch로 직접 구현해 보았을 텐데, 시간이 없어 직접 논문을 구현하기 보다는 Lua를 공부하는 것이 더 빠르겠다는 판단이 들었다. 사실 tf, Pytorch만 접해왔던 나에게는 큰 결심이 필요한 도전이었다.
+시간이 많았다면 Pytorch로 직접 구현해 보았을 텐데, 시간이 없어 직접 논문을 구현하기 보다는 Lua를 공부하는 것이 더 빠르겠다는 판단이 들었다. Pytorch, tf에만 익숙했었기 때문에, Lua 공부하자고 결심하기까지는 큰 결심이 필요했다.
 
 ---
 
-일주일 정도 매달려서 결국 output을 만들어 내는데 성공했다. 물론 Lua에 익숙하지 않아 기본적인 setting에서 모델을 사용했지만, Image를 Input으로 사용했을 때에는 꽤나 성능이 잘나왔다. 우리 연구실의 대표 미남 연구원을 Input Image로 사용하여 _van gogh_ 의 _starry night_ 의 Style로 Image Style Transfer를 해보았다.
+결국 output을 만들어 내는데 성공했다. 물론 Lua에 익숙하지 않아 기본적인 setting에서 모델을 사용했지만, Image를 Input으로 사용했을 때에는 꽤나 성능이 잘나왔다. 우리 연구실의 대표 미남 연구원을 Input Image로 사용하여 _van gogh_ 의 _starry night_ 의 Style로 Image Style Transfer를 해보았다.
 
 <img src = '/post_img/190902/style_transfer_5.png' width="600"/>
 
