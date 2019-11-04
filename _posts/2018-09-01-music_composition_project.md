@@ -14,9 +14,9 @@ KT의 기가지니의 경우, 다른 AI 스피커들과는 다르게 집 안의 
 
 KT에서 교육생들에게 기가지니에 탑재할 수 있는 프로그램을 주제로 프로젝트가 주어졌고, 우리 팀은 AI를 활용한 작곡 프로그램을 만들어보기로 했다. Input으로 기존의 음악들을 주면 이를 학습하여 기존에 존재하지 않았던, 하지만 기존의 음악의 스타일을 가진 새로운 음악을 생성해내는 것이 우리 프로젝트의 목표였다.
 
-<img src = '/post_img/180901/musegan_1.png'/>
+<center><img src = '/post_img/180901/musegan_1.png'/></center>
 
-___프로젝트 흐름___
+___<center>프로젝트 흐름</center>___
 
 <br>
 <br>
@@ -27,9 +27,9 @@ ___프로젝트 흐름___
 
 논문을 읽고 직접 만들어본 MuseGAN의 Model architecture는 다음과 같다.
 
-<img src = '/post_img/180901/musegan_0.png'/>
+<center><img src = '/post_img/180901/musegan_0.png'/></center>
 
-___MuseGAN model Architecture___
+___<center>MuseGAN model Architecture</center>___
 
 <br>
 #### MIDI(Musical Instrument Digital Interface)
@@ -43,17 +43,17 @@ MIDI Manufacturers Association(MMA)와 일본의 사단법인 음악전자사업
 
 고생 끝에 midi file training set을 만들었으나, 전처리가 더 문제였다. 논문을 뒤져봐도, 구글링을 해보아도 midi file을 행렬로 만들 수 있는 방법은 도저히 찾을 수가 없었다. 결국 MuseGAN 저자에게 메일까지 주고받으며 전처리 방법을 알아냈다.
 
-<img src = '/post_img/180901/musegan_2.png'/>
+<center><img src = '/post_img/180901/musegan_2.png'/></center>
 
-___팀원이 논문 저자와 주고 받은 메일 중 일부___
+___<center>팀원이 논문 저자와 주고 받은 메일 중 일부</center>___
 
 <br>
 #### Piano roll
 처음에는 midi file을 바로 numpy array로 변환하는 것이라고 생각했는데, 아무리 찾아봐도 directly 변환할 수 있는 방법이 없었다. 막막한 와중에 논문 저자와 연락을 주고 받으며 piano roll의 형태를 거쳐서 array로 바꿔야 한다는 사실을 알게 되었다.
 
-<img src = '/post_img/180901/musegan_3.png'/>
+<center><img src = '/post_img/180901/musegan_3.png'/></center>
 
-___piano roll___
+___<center>piano roll</center>___
 
 piano roll이란 일반적으로는 세로축에 음의 높이, 가로축에 시간으로 연주 정보를 도식화한 것이다. 음의 움직임이나 음표의 길이를 시각적으로 확인하기 쉬운 특징이 있다.
 
