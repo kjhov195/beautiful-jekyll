@@ -22,7 +22,7 @@ title: Project
 <img src = '/post_img/190702/Edge_detection_4.gif' width="320"/>
 
 - 소속: YBIGTA
-- 기간: 26 June 2018 ~ 3 August 2018
+- 기간: 28 May 2019 ~ 29 June 2019
 - 내용: 스팸 문자 여부 실시간 classification
 - 역할: 모델 설계
 - 관련기술: Python, Pytorch, Lua
