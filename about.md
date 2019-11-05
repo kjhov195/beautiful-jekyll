@@ -26,6 +26,9 @@ I completed my Bachelor's degree at Yonsei University. And I am studying for a M
 ### Experience
 
 Intern, LG CNS(2017.06.26 ~ 2017.07.28)
+
 Trainee, KT AI Tech Center(2018.02.26 ~ 2018.08.03)
+
 Researcher, YIDS(Yonsei Institute of Data Science)(2018.09.01 ~ )
+
 Data Engineering team member, YBIGTA(2019.02.01 ~)
