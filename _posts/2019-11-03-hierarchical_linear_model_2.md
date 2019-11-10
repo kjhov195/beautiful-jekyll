@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hierarchical linear model (2)
-subtitle: Empirical Bayes Estimate
+subtitle: Bayes Estimate
 category: Statistics
 use_math: true
 ---
