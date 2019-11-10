@@ -130,7 +130,7 @@ Bayes Estimator $\hat{\beta_{0j}}^* $를 추정하기 위해서는  $\lambda_j$�
 <br>
 #### b. level 1 coefficient : SES-수학성적 Example
 
-writing...
+level 1 coefficient $\beta_{0j}$는 j번째 학교에서 SES가 0점인 학생의 수학 성적의 기대값을 의미한다.
 
 <br>
 #### c. $\lambda_j$ (reliability)
