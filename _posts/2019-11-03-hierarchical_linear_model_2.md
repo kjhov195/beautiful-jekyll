@@ -166,16 +166,18 @@ $\lambda_j \approx 1$인 경우는 다음 두 가지 경우 중 하나로 생각
 
 $$
 \begin{align*}
-\\\\
+\\
 \lambda_j &= {Var(\beta_{0j}) \over Var(\overline {Y_{\cdot j}})}\\\\
 &= {\tau_{00} \over (\tau_{00} + V_j)}\\\\
 &= {V_j^{-1} \over (V_j^{-1} + \tau_{00}^{-1})}\\\\
 1-\lambda_j &= 1 - {V_j^{-1} \over (V_j^{-1} + \tau_{00}^{-1})}\\
-&= {\tau_{00}^{-1} \over (V_j^{-1} + \tau_{00}^{-1})}
+&= {\tau_{00}^{-1} \over (V_j^{-1} + \tau_{00}^{-1})}\\\\
 \end{align*}
 $$
 
-즉, $\hat{\beta_{0j}}^* $를 구성하는 $\overline {Y_{\cdot j}}$에 대한 weight는 $V_j^{-1}$에 proportional하다고 볼 수 있다.
+$\hat{\beta_{0j}}^* $를 구성하는 $\overline {Y_{\cdot j}}$에 대한 weight($\lambda_j$)는 $V_j^{-1}$에 proportional하다. 즉, $\overline {Y_{\cdot j}}$가 $\beta_{0j}$에 대한 더 정확한 estimator라면, $\lambda_j$가 1에 가까워질 것이다.
+
+한편, $\hat{\beta_{0j}}^* $를 구성하는 $\hat {\tau_{00}}$에 대한 weight($1-\lambda_j$)는 $\tau_{00}^{-1}$에 proportional하다. $\tau_{00}$는 $\beta_{0j}$의 분산(중심으로부터 얼마나 흩어져있는지에 대한 척도)이므로, $\tau_{00}^{-1}$은 $\beta_{0j}$가 평균($\gamma_{00}$) 근처에 얼마나 집중되어 있는가에 대한 척도(Concentration around centeral tendency $\gamma_{00}$)로 볼 수 있다. 즉, $\beta_{0j}$의 분산이 작다면, 즉 $\beta_{0j}$가 중심(평균) 근처에 많이 몰려있다면 $1-\lambda_j$가 1에 가까워질 것이다.
 
 <br>
 #### d. $ \beta_{0j}^* $ is optimal 하다는 것의 의미
