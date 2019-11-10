@@ -8,7 +8,7 @@ use_math: true
 
 ### 1. Estimating level 1 coefficient
 
-앞서 [Hierarchical linear model (1)](https://kjhov195.github.io/2019-11-02-hierarchical_linear_model_1/) post에서 Hierarchical model의 기본적인 형태에 대하여 간략하게 살펴보았다. 이제 Hierarchical model에서 1 level coefficients를 estimate하는 방법을 살펴보도록 하자.
+[Hierarchical linear model (1)](https://kjhov195.github.io/2019-11-02-hierarchical_linear_model_1/) 에서 Hierarchical model의 기본적인 형태에 대하여 간략하게 살펴보았다. 이제 Hierarchical model에서 1 level coefficients를 estimate하는 방법을 살펴보도록 하자.
 
 앞서 살펴본 학생들의 SES-수학성적의 예제에서는 다음과 같은 two-level model을 세워보았다.
 
