@@ -79,6 +79,8 @@ $$
 
 이 모델에서는 두 가지 alternative estimators for $\beta_{0j}$가 존재한다.
 
+<br>
+<br>
 #### a. level 1 coefficient를 추정하는 방법
 
 <br>
