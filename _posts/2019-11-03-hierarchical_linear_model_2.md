@@ -81,6 +81,7 @@ $$
 
 #### a. level 1 coefficient를 추정하는 방법
 
+<br>
 ##### 첫 번째 방법 : simple approach
 
 $$\overline {Y_{\cdot j}} = \beta_{0j}+\overline{\epsilon_{\cdot j}}$$
@@ -93,6 +94,8 @@ $$ E[\overline {Y_{\cdot j}}] = \beta_{0j}$$
 
 $$ Var[\overline {Y_{\cdot j}}] = \tau_{00} + V_j$$
 
+<br>
+<br>
 ##### 두 번째 방법 : bayes estimator(Lindley & Smith, 1972)
 
 
