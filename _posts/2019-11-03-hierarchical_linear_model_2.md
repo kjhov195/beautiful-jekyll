@@ -103,7 +103,7 @@ $$ Var[\overline {Y_{\cdot j}}] = \tau_{00} + V_j$$
 
 $$
 \begin{align*}
-\hat{\beta_{0j}}^* = {\sum {\Delta_j}^{-1} \overline {Y_{\cdot j}}} \over {\sum {\Delta_j}^{-1}}
+\hat{\beta_{0j}}^* = {\sum {\Delta_j}^{-1} \overline {Y_{\cdot j}} \over \sum {\Delta_j}^{-1}}
 \end{align*}
 $$
 
@@ -111,12 +111,11 @@ $$
 
 Bayes Estimator는 다음과 같은 두 부분의 적절한 weigted sum(weighted combination)으로 이루어진 optimal한 point에서 구할 수 있는 Estimator이다.
 
-$$ \hat{\beta_{0j}}^* = \sum \lambda_j \overline {Y_{\cdot j}} + (1-\lambda_j) \hat {\gamma_{00 \cdot}} $$
+$$ \hat{\beta_{0j}}^* = \lambda_j \overline {Y_{\cdot j}} + (1-\lambda_j) \hat {\gamma_{00 \cdot}} $$
 
 여기서 $\lambda_j$를 $\hat{\beta_{0j}}_{LSE} =\overline {Y_{\cdot j}}$ 의 ___reliablility___ 라고 한다.(Kelley, 1927)
 
 $\lambda_j$(Reliability)는 다음과 같이 얻을 수 있다.
-
 
 $$
 \begin{align*}
@@ -125,10 +124,13 @@ $$
 \end{align*}
 $$
 
+Bayes Estimator $\hat{\beta_{0j}}^* $를 추정하기 위해서는  $\lambda_j$를 알아야 한다. 하지만 분산이 unknown이라면 우리는 확실한 $\lambda_j$를 알 수 없다. 결국 $\lambda_j$ 또한 추정해야하는데, 이 과정을 __Empirical Bayes Estimates__ (Morris, 1983)라고 한다. Empirical Bayes Estimates에 대한 자세한 내용은 다음 포스트에서 설명하도록 하겠다.
+
+
 <br>
 #### b. level 1 coefficient : SES-수학성적 Example
 
-writing...
+level 1 coefficient $\beta_{0j}$는 j번째 학교에서 SES가 0점인 학생의 수학 성적의 기대값을 의미한다.
 
 <br>
 #### c. $\lambda_j$ (reliability)
@@ -207,18 +209,6 @@ $$
 - Shrinkage Estimator(James and Stein, 1961)
 
   $ \beta_{0j}^* $가 $\overline {Y_{\cdot j}}$를 $\gamma_{00}$쪽으로 "pulls"하기 때문에 붙여진 이름이다.
-
-<br>
-<br>
-### 2. Empirical Bayes Estimate
-#### a. Definition
-
-writing...
-
-<br>
-#### b. 왜 이런 경우에 Empirical Bayes Estimate가 되는가?
-
-writing...
 
 <br>
 <br>
