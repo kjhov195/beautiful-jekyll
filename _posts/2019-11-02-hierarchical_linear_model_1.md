@@ -13,6 +13,8 @@ use_math: true
 
 [Empirical Bayes Estimate](https://kjhov195.github.io/2019-11-11-Empirical_Bayes/)
 
+---
+
 <br>
 <br>
 우선, Hierarchical Linear Model을 살펴보기 위하여 linear regression의 간단한 example부터 이야기를 시작해보도록 하자.  

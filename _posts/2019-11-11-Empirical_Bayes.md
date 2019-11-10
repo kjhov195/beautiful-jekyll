@@ -13,10 +13,18 @@ use_math: true
 
 [Empirical Bayes Estimate](https://kjhov195.github.io/2019-11-11-Empirical_Bayes/)
 
+---
+
 <br>
 <br>
 ### 1. Definition
 
+writing...
+
 ### 2. Example
 
+writing...
+
 ### 3. Hierarchical model에서...
+
+writing...

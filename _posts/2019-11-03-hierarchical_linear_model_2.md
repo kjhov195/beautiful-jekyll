@@ -13,6 +13,8 @@ use_math: true
 
 [Empirical Bayes Estimate](https://kjhov195.github.io/2019-11-11-Empirical_Bayes/)
 
+---
+
 <br>
 <br>
 ### 1. Estimating level 1 coefficient
