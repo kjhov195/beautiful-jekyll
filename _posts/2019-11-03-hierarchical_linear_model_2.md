@@ -6,6 +6,13 @@ category: Statistics
 use_math: true
 ---
 
+### Related Post
+[Hierarchical linear model (1)](https://kjhov195.github.io/2019-11-02-hierarchical_linear_model_1/)
+[Hierarchical linear model (2)](https://kjhov195.github.io/2019-11-03-hierarchical_linear_model_2/)
+[Empirical Bayes Estimate](https://kjhov195.github.io/2019-11-11-Empirical_Bayes/)
+
+<br>
+<br>
 ### 1. Estimating level 1 coefficient
 
 [Hierarchical linear model (1)](https://kjhov195.github.io/2019-11-02-hierarchical_linear_model_1/) 에서 Hierarchical model의 기본적인 형태에 대하여 간략하게 살펴보았다. 이제 Hierarchical model에서 1 level coefficients를 estimate하는 방법을 살펴보도록 하자.
