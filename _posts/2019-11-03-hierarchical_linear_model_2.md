@@ -113,7 +113,7 @@ Bayes Estimator는 다음과 같은 두 부분의 적절한 weigted sum(weighted
 
 $$ \hat{\beta_{0j}}^* = \lambda_j \overline {Y_{\cdot j}} + (1-\lambda_j) \hat {\gamma_{00 \cdot}} $$
 
-여기서 $\lambda_j$를 ${\hat \beta_{0j}}_{LSE} =\overline {Y_{\cdot j}}$ 의 ___reliablility___ 라고 한다.(Kelley, 1927)
+여기서 $\lambda_j$를 $\overline {Y_{\cdot j}}$(LSE of $\beta_{0j}$) 의 ___reliablility___ 라고 한다.(Kelley, 1927)
 
 $\lambda_j$(Reliability)는 다음과 같이 얻을 수 있다.
 
