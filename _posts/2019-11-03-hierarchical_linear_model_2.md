@@ -144,8 +144,28 @@ $$
 
 $\lambda_j \approx 1$인 경우는 다음 두 가지 경우 중 하나로 생각할 수 있다.
 
-1. constant sample size per group을 가정하였을 때, group means($\beta_{0j}$)이 level-2 units간 상당한 차이를 보이는 경우  
+- constant sample size per group을 가정하였을 때, group means($\beta_{0j}$)이 level-2 units간 상당한 차이를 보이는 경우  
 
+- sample size $n_j$ 가 충분히 큰 경우
+
+만약 sample mean이 'highly reliable estimate'라면($\lambda_j \approx 1$ 이라면) $\overline {Y_{\cdot j}}$에 큰 weight를 주어 $\beta_{0j}$를 추정하게 된다. ,
+
+반면, sample mean이 'unreliable'하다면($\lambda_j \approx 0$ 이라면) $\hat {\tau_{00}}$에 큰 weight를 주어 $\beta_{0j}$를 추정하게 된다.
+
+한편, 식의 변형을 통하여 $\lambda_j$에 대해 다음과 같이 생각해 볼 수도 있다.
+
+$$
+\begin{align*}
+\\\\
+\lambda_j &= {{Var(\beta_{0j})} \over Var(\overline {Y_{\cdot j}})}\\\\
+&= {\tau_{00} \over (\tau_{00} + V_j)}\\\\
+&= {V_j^{-1} \over (V_j^{-1} + \tau_{00}^{-1})}\\\\
+1-\lambda_j &= 1 - {V_j^{-1} \over (V_j^{-1} + \tau_{00}^{-1})}\\
+&= {\tau_{00}^{-1} \over (V_j^{-1} + \tau_{00}^{-1})}
+\end{align*}
+$$
+
+즉, $\hat{\beta_{0j}}^* $를 구성하는 $\overline {Y_{\cdot j}}$에 대한 weight는 $V_j^{-1}$에 proportional하다고 볼 수 있다.
 
 <br>
 #### d. $ \beta_{0j}^* $ is optimal 하다는 것의 의미
