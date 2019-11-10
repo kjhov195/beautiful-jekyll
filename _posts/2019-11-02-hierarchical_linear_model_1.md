@@ -132,7 +132,7 @@ $$
 \begin{align*}
 Y_{ij} &= \beta_{0j} + \beta_{1j} (X_{ij}-\overline{X}_{\cdot j}) + \epsilon_{ij}\\
 &= (\gamma_{00}+\gamma_{01}W_j+u_{0j}) + (\gamma_{10}+\gamma_{11}W_j+u_{1j})(X_{ij}-\overline{X}_{\cdot j})+\epsilon_{ij}\\
-&= \gamma_{00}+\gamma_{01}W_j+\gamma_{10}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{11}W_j(X_{ij}-\overline{X}_{\cdot j})+u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot}
+&= \gamma_{00}+\gamma_{01}W_j+\gamma_{10}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{11}W_j(X_{ij}-\overline{X}_{\cdot j})+u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\epsilon_{ij\cdot}
 \end{align*}
 \\
 $$
@@ -149,7 +149,7 @@ OLS는 OLS에 기반한 Estimation과 Inference(가설검정 등)를 위하여 r
 
 반면 우리가 가정한 Hierarchical linear model에서의 random error
 
-$$\delta_{ij} = (u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\gamma_{ij\cdot})$$
+$$\delta_{ij} = (u_{0j}+u_{1j}(X_{ij}-\overline{X}_{\cdot j})+\epsilon_{ij\cdot})$$
 
 의 경우, 그렇지 않다.
 
