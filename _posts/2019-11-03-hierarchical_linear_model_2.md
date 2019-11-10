@@ -95,7 +95,12 @@ $$ Var[\overline {Y_{\cdot j}}] = \tau_{00} + V_j$$
 
 ##### 두 번째 방법 : bayes estimator(Lindley & Smith, 1972)
 
-$$ \hat{\beta_{0j}}^* = {{\sum \Delta_{j}^{-1} \overline {Y_{\cdot j}}} \over {\sum \Delta_{j}^{-1}}}$$
+
+$$
+\begin{align*}
+\hat{\beta_{0j}}^* = {\sum {\Delta_j}^{-1} \overline {Y_{\cdot j}}} \over {\sum {\Delta_j}^{-1}}
+\end{align*}
+$$
 
 우리는 Bayes Estimator $\hat{\beta_{0j}}^* $를 또 다른 Estimator로 생각할 수 있다.
 
@@ -110,7 +115,7 @@ $\lambda_j$(Reliability)는 다음과 같이 얻을 수 있다.
 
 $$
 \begin{align*}
-\lambda_j &= {{Var(\beta_{0j})} \over Var(\overline {Y_{\cdot j}})}\\
+\lambda_j &= {Var(\beta_{0j}) \over Var(\overline {Y_{\cdot j}})}\\
 &= {\tau_{00} \over (\tau_{00} + V_j)}
 \end{align*}
 $$
@@ -129,7 +134,7 @@ writing...
 
 $$
 \begin{align*}
-\lambda_j &= {{Var(\beta_{0j})} \over Var(\overline {Y_{\cdot j}})}\\\\
+\lambda_j &= {Var(\beta_{0j}) \over Var(\overline {Y_{\cdot j}})}\\\\
 &= {\tau_{00} \over (\tau_{00} + V_j)}\\\\
 &= {(parameter\;variance) \over (total\;variance)}\\\\
 &= {(true\;score) \over (observed\;score)}
@@ -157,7 +162,7 @@ $\lambda_j \approx 1$인 경우는 다음 두 가지 경우 중 하나로 생각
 $$
 \begin{align*}
 \\\\
-\lambda_j &= {{Var(\beta_{0j})} \over Var(\overline {Y_{\cdot j}})}\\\\
+\lambda_j &= {Var(\beta_{0j}) \over Var(\overline {Y_{\cdot j}})}\\\\
 &= {\tau_{00} \over (\tau_{00} + V_j)}\\\\
 &= {V_j^{-1} \over (V_j^{-1} + \tau_{00}^{-1})}\\\\
 1-\lambda_j &= 1 - {V_j^{-1} \over (V_j^{-1} + \tau_{00}^{-1})}\\
