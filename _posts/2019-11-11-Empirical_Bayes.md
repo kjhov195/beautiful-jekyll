@@ -65,7 +65,7 @@ $$
 <br>
 ### Empirical Bayes Estimator
 
-식 (1)을 y의 pdf에 대해 정리하면 다음과 같이 나타낼 수 있다.
+앞서 구한 식을 y의 pdf에 대해 정리하면 다음과 같이 나타낼 수 있다.
 
 $$
 \begin{align*}
@@ -73,9 +73,9 @@ f(y) = {f(y|\theta)f(\theta) \over f(\theta|y)}
 \end{align*}
 $$
 
-앞서 말했듯이 Bayesian에서는 $\theta$를 constant가 아닌, random variable로 생각한다. 를 prior distribution,  를 posterior distribution이라고 한다.
+앞서 말했듯이 Bayesian에서는 $\theta$를 constant가 아닌, random variable로 생각한다. $p(\theta)$를 prior distribution, $p(\theta \vert y)$를 posterior distribution이라고 한다.
 
-$\theta$의 __Prior distribution__ $p(\theta)$와 __Posterior distribution__ $p(\theta$ \vert y)$가 또 하나의 모수 $\phi$를 가진다고 하자. 그렇다면, y의 pdf를 다음과 같이 나타낼 수 있다.
+$\theta$의 __Prior distribution__ $p(\theta)$와 __Posterior distribution__ $p(\theta \vert y)$가 또 하나의 모수 $\phi$를 가진다고 하자. 그렇다면, y의 pdf를 다음과 같이 나타낼 수 있다.
 
 $$
 \begin{align*}
