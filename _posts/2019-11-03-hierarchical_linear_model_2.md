@@ -171,7 +171,7 @@ $\lambda_j \approx 1$인 경우는 다음 두 가지 경우 중 하나로 생각
 
 - sample size $n_j$ 가 충분히 큰 경우
 
-만약 sample mean이 'highly reliable estimate'라면($\lambda_j \approx 1$ 이라면) $\overline {Y_{\cdot j}}$에 큰 weight를 주어 $\beta_{0j}$를 추정하게 된다. ,
+만약 sample mean이 'highly reliable estimate'라면($\lambda_j \approx 1$ 이라면) $\overline {Y_{\cdot j}}$에 큰 weight를 주어 $\beta_{0j}$를 추정하게 된다.
 
 반면, sample mean이 'unreliable'하다면($\lambda_j \approx 0$ 이라면) $\hat {\tau_{00}}$에 큰 weight를 주어 $\beta_{0j}$를 추정하게 된다.
 
