@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linear Regression
+title: Linear regression
 subtitle: Simple Linear Regression
 category: Statistics
 use_math: true
