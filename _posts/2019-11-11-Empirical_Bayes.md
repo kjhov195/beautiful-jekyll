@@ -75,7 +75,7 @@ $$
 
 앞서 말했듯이 Bayesian에서는 $\theta$를 constant가 아닌, random variable로 생각한다. 를 prior distribution,  를 posterior distribution이라고 한다.
 
-$\theta$의 __Prior distribution__ $p(\theta)$와 __Posterior distribution__ $p(\theta$|$y)$가 또 하나의 모수 $\phi$를 가진다고 하자. 그렇다면, y의 pdf를 다음과 같이 나타낼 수 있다.
+$\theta$의 __Prior distribution__ $p(\theta)$와 __Posterior distribution__ $p(\theta$ \vert y)$가 또 하나의 모수 $\phi$를 가진다고 하자. 그렇다면, y의 pdf를 다음과 같이 나타낼 수 있다.
 
 $$
 \begin{align*}
@@ -83,7 +83,7 @@ f(y) = {f(y|\theta)f(\theta|\phi) \over f(\theta|y,\phi)}
 \end{align*}
 $$
 
-이 때 주어진 $y$를 활용하여 $\phi$를 추정할 수 있는 경우가 존재한다. 이렇게 구한 $\hat \phi$를 사용하여 새로운 __Posterior distribution__ $p(\theta$|$y,\hat \phi)$ 를 얻을 수 있다.
+이 때 주어진 $y$를 활용하여 $\phi$를 추정할 수 있는 경우가 존재한다. 이렇게 구한 $\hat \phi$를 사용하여 새로운 __Posterior distribution__ $p(\theta \vert y,\hat \phi)$ 를 얻을 수 있다.
 
 $\phi$를 추정한 뒤, 새롭게 구한 posterior distribution의 평균(__posterior mean__)을 $\theta$의 추정량으로 사용할 수 있는데, 이를 Empirical Bayes Estimator라고 한다.
 
