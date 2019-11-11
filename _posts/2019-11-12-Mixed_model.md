@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Missing data
-subtitle: Missing data
+title: Mixed model
+subtitle: Mixed model
 category: Statistics
 use_math: true
 ---
 
 <br>
 <br>
-### Missing
+### Mixed model
 
 writing...
