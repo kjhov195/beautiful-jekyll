@@ -9,9 +9,9 @@ use_math: true
 <br>
 <br>
 ### Spark
-writing...
+수정 중...
 
 <br>
 <br>
 ### Reference
-Helen Brown, Robin Prescott (2015). Applied Mixed Models in Medicine. chapter 1.
+수정 중...
