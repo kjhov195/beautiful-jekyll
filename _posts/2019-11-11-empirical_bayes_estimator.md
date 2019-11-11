@@ -199,3 +199,8 @@ $$ \hat{\beta_{0j}}^* = \hat\lambda_j \overline {Y_{\cdot j}} + (1-\hat\lambda_j
 
 <br>
 <br>
+### Reference
+http://people.stat.sc.edu/Hitchcock/stat535slidesday24.pdf
+
+<br>
+<br>
