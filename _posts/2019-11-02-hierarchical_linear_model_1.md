@@ -11,7 +11,7 @@ use_math: true
 
 [Hierarchical linear model (2)](https://kjhov195.github.io/2019-11-03-hierarchical_linear_model_2/)
 
-[Empirical Bayes Estimate](https://kjhov195.github.io/2019-11-11-Empirical_Bayes/)
+[Empirical Bayes Estimate](https://kjhov195.github.io/2019-11-11-empirical_bayes_estimator/)
 
 ---
 
