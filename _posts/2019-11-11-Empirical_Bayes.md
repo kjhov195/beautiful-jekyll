@@ -160,4 +160,10 @@ $$
 <br>
 ### 3. Hierarchical model에서...
 
+Hierarchical model
+$$
+\begin{align*}
+Y_{ij} &= \beta_{0j} + \beta_{1j} (X_{ij}-\overline{X}_{\cdot j}) + \epsilon_{ij}\\
+\end{align*}
+$$
 writing...

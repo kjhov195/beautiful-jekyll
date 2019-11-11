@@ -135,7 +135,7 @@ $$
 \end{align*}
 $$
 
-Bayes Estimator $\hat{\beta_{0j}}^* $를 추정하기 위해서는  $\lambda_j$를 알아야 한다. 하지만 분산이 unknown이라면 우리는 확실한 $\lambda_j$를 알 수 없다. 결국 $\lambda_j$ 또한 추정해야하는데, 이 과정을 __Empirical Bayes Estimates__ (Morris, 1983)라고 한다. Empirical Bayes Estimates에 대한 자세한 내용은 다음 포스트에서 설명하도록 하겠다.
+Bayes Estimator $\hat{\beta_{0j}}^* $를 추정하기 위해서는  $\lambda_j$를 알아야 한다. 하지만 분산이 unknown이라면 우리는 확실한 $\lambda_j$를 알 수 없다. 결국 $\lambda_j$ 또한 추정해야하는데, 추정된 $\hat \lambda_j$을 활용하여 추정된 $\hat{\beta_{0j}}^* $를 __Empirical Bayes Estimates__ (Morris, 1983)라고 한다. Empirical Bayes Estimates에 대한 자세한 내용은 다음 포스트에서 설명하도록 하겠다.
 
 
 <br>
