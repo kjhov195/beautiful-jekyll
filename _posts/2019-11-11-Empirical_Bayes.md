@@ -75,7 +75,7 @@ $$
 
 앞서 말했듯이 Bayesian에서는 $\theta$를 constant가 아닌, random variable로 생각한다. 를 prior distribution,  를 posterior distribution이라고 한다.
 
-$\theta$의 __Prior distribution: p(\theta)__ 와 __Posterior distribution p(\theta|y)__ 이 또 하나의 모수 $\phi$를 가진다고 하자. 그렇다면, y의 pdf를 다음과 같이 나타낼 수 있다.
+$\theta$의 __Prior distribution p(\theta)__ 와 __Posterior distribution p(\theta|y)__ 이 또 하나의 모수 $\phi$를 가진다고 하자. 그렇다면, y의 pdf를 다음과 같이 나타낼 수 있다.
 
 $$
 \begin{align*}
