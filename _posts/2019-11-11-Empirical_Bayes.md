@@ -160,10 +160,40 @@ $$
 <br>
 ### 3. Hierarchical model에서...
 
-Hierarchical model
+Hierarchical model은 다음과 같다.
+
 $$
 \begin{align*}
-Y_{ij} &= \beta_{0j} + \beta_{1j} (X_{ij}-\overline{X}_{\cdot j}) + \epsilon_{ij}\\
+Y_{ij} &= \beta_{0j} + \beta_{1j} (X_{ij}-\overline{X}_{\cdot j}) + \epsilon_{ij}\\\\
+\begin{bmatrix}
+\beta_{0j} \\
+\beta_{1j}
+\end{bmatrix} &\sim N
+\begin{pmatrix}
+\begin{bmatrix}
+\gamma_0 \\
+\gamma_1
+\end{bmatrix}
+,
+\begin{bmatrix}
+\tau_{00} & \tau_{01} \\
+\tau_{01} & \tau_{11}
+\end{bmatrix}
+\end{pmatrix}\\
 \end{align*}
 $$
-writing...
+
+[Hierarchical linear model (2)](https://kjhov195.github.io/2019-11-03-hierarchical_linear_model_2/)에서 구한 Bayes Estimate는 다음과 같다.
+
+$$ \hat{\beta_{0j}}^* = \lambda_j \overline {Y_{\cdot j}} + (1-\lambda_j) \hat {\gamma_{00 \cdot}} $$
+
+여기서 $\lambda_i$는 다음과 같이 구할 수 있다.
+
+$$
+\begin{align*}
+\lambda_j &= {Var(\beta_{0j}) \over Var(\overline {Y_{\cdot j}})}\\
+&= {\tau_{00} \over (\tau_{00} + V_j)}
+\end{align*}
+$$
+
+하지만 만약 우리가 $\tau_{00}$를 알 수 없다면 
