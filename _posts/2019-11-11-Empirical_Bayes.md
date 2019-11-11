@@ -17,8 +17,6 @@ use_math: true
 
 <br>
 <br>
-
-
 ### Bayes Rule
 
 Empirical Bayes Estimates에 대해 살펴보기 전에, 간단하게 Bayesian Statistics에 대해 살펴보겠다. Bayesian은 모든 이야기가 Bayes rule에 기반하여 이루어진다. Bayes rule을 다시 떠올려보면, 다음과 같다.
@@ -158,7 +156,7 @@ $$
 
 <br>
 <br>
-### 3. Hierarchical model에서...
+### 3. Empirical Bayes Estimator in Hierarchical model
 
 Hierarchical model은 다음과 같다.
 
@@ -196,4 +194,9 @@ $$
 \end{align*}
 $$
 
-하지만 만약 우리가 $\tau_{00}$를 알 수 없다면 
+하지만 만약 우리가 $\tau_{00}$를 알 수 없다면 $\lambda_j$를 구할 수 없고, 결국 Bayes Estimator $\hat{\beta_{0j}}^* $를 구할 수 없다. 하지만 주어진 데이터 Y를 활용하여 $\hat \lambda_j$을 구하고, 이를 사용하여 다음과 같이 Empirical Bayes Estimator를 구할 수 있다.
+
+$$ \hat{\beta_{0j}}^* = \hat\lambda_j \overline {Y_{\cdot j}} + (1-\hat\lambda_j) \hat {\gamma_{00 \cdot}} $$
+
+<br>
+<br>
