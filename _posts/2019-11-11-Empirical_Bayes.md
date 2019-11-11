@@ -111,12 +111,11 @@ $$
 
 $$
 \begin{align*}
-\\
 f(Y_i|\beta)
-&= \int_0^{\infty} \left[ \frac {\beta^\alpha}{\Gamma(\alpha)} \lambda_i^{\alpha-1} e^{-\beta \lambda_i} \right] \left[ \frac {e^{-\lambda_i}\lambda_i^{y_i}}{y_i {!}} \right] d\lambda_i\\
-&= \frac {\beta^\alpha}{{y_i {!}}\Gamma(\alpha)}  \int_0^{\infty} \left[ \lambda_i^{\alpha-1} e^{-\beta \lambda_i} \right] \left[ {e^{-\lambda_i}\lambda_i^{y_i}} \right] d\lambda_i\\
-&= \frac {\beta^\alpha}{{y_i {!}}\Gamma(\alpha)}  \int_0^{\infty} \lambda_i^{y_i+\alpha-1} {e^{-(\beta+1)\lambda_i}}  d\lambda_i\\
-&= \frac {\beta^\alpha}{{y_i {!}}\Gamma(\alpha)} \frac {\Gamma(y_i+\alpha)}{(\beta+1)^{y_i+\alpha}}\;\;(\because gamma\;kernel\;\Gamma(y_i+\alpha,\beta+1))  \\
+&= \int_0^{\infty} \left[ \frac {\beta^\alpha}{\Gamma(\alpha)} \lambda_i^{\alpha-1} e^{-\beta \lambda_i} \right] \left[ \frac {e^{-\lambda_i}\lambda_i^{y_i}}{y_i \#} \right] d\lambda_i\\
+&= \frac {\beta^\alpha}{{y_i \#}\Gamma(\alpha)}  \int_0^{\infty} \left[ \lambda_i^{\alpha-1} e^{-\beta \lambda_i} \right] \left[ {e^{-\lambda_i}\lambda_i^{y_i}} \right] d\lambda_i\\
+&= \frac {\beta^\alpha}{{y_i \#}\Gamma(\alpha)}  \int_0^{\infty} \lambda_i^{y_i+\alpha-1} {e^{-(\beta+1)\lambda_i}}  d\lambda_i\\
+&= \frac {\beta^\alpha}{{y_i \#}\Gamma(\alpha)} \frac {\Gamma(y_i+\alpha)}{(\beta+1)^{y_i+\alpha}}\;\;(\because gamma\;kernel\;\Gamma(y_i+\alpha,\beta+1))  \\
 &= \binom{y_i+\alpha-1}{\alpha-1} \left(\frac {\beta}{\beta+1} \right)^\alpha \left(\frac {1}{\beta+1} \right)^{y_i} \sim Negative\; Binomial
 \end{align*}
 $$
