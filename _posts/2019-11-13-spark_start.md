@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spark start
+title: PySpark
 subtitle: Spark
 category: Apache Spark
 use_math: true

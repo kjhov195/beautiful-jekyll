@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spark install(3): Spark, Hive
+title: Spark install(3)-Spark,Hive
 subtitle: Spark
 category: Apache Spark, Apach Hive
 use_math: true
