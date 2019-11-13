@@ -25,7 +25,7 @@ $ sudo apt-get install nano
 
 #### install
 
-https://repo.continuum.io/archive/ 에서 Anaconda의 최신 버전을 확인한다.
+https://repo.continuum.io/archive/ 에서 Anaconda의 최신 버전을 확인한다. 2019.11.13. 기준, __Anaconda3-2019.10-Linux-x86_64.sh__ 이 최신 버전이다.
 
 ```
 $ cd ~/downloads
@@ -72,7 +72,8 @@ no
 $ nano ~/.bash_profile
 ```
 
-다음을 입력한다.
+다음을 입력한다. 주의할 점은 GCP를 사용할 경우 사용할 경우, 사용자 이름이 ubuntu로 되어있지 않고, 본인의 아이디로 되어있으므로 경로를 잘 수정해주어야 한다.
+
 ```
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
@@ -110,7 +111,7 @@ $ cd ~
 $ nano ~/.jupyter/jupyter_notebook_config.py
 ```
 
-아래의 내용을 추가하자.
+아래의 내용을 추가하자. 사용하고자 하는 포트를 설정해준다. 10001번 포트를 사용하자.
 
 ```
 c = get_config()
@@ -132,3 +133,8 @@ Jupyter notebook을 실행해보자.
 ```
 $ jupyter notebook
 ```
+
+이제 __https://외부IP:포트__ 로 접속할 수 있다.
+
+<br>
+<br>
