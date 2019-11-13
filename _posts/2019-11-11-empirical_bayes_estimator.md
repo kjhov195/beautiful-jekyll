@@ -182,7 +182,7 @@ $$
 
 [Hierarchical linear model (2)](https://kjhov195.github.io/2019-11-03-hierarchical_linear_model_2/)에서 구한 Bayes Estimate는 다음과 같다.
 
-$$ \hat{\beta_{0j}}^* = \lambda_j \overline {Y_{\cdot j}} + (1-\lambda_j) \hat {\gamma_{00 \cdot}} $$
+$$ {\beta_{0j}}^* = \lambda_j \overline {Y_{\cdot j}} + (1-\lambda_j) \hat {\gamma_{00 \cdot}} $$
 
 여기서 $\lambda_i$는 다음과 같이 구할 수 있다.
 
