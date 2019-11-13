@@ -21,7 +21,7 @@ $ sudo apt-get install nano
 <br>
 <br>
 ### Anaconda
-
+<br>
 #### install
 
 https://repo.continuum.io/archive/ 에서 Anaconda의 최신 버전을 확인한다. 2019.11.13. 기준, __Anaconda3-2019.10-Linux-x86_64.sh__ 이 최신 버전이다.

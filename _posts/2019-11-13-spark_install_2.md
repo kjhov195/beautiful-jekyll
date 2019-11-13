@@ -52,7 +52,7 @@ sudo apt-get install scala
 <br>
 <br>
 ### 3. Hadoop(Pseudo-Dstributed mode)
-
+<br>
 #### 1. install protobuf
 ```
 $ sudo apt-get install gcc
@@ -89,7 +89,7 @@ $ mv hadoop-2.9.0.tar.gz ./downloads/
 <br>
 <br>
 #### 3. setting for hadoop
-
+<br>
 ##### hadoop-env.sh
 ```
 $ cd $HOME/hadoop/etc/hadoop
@@ -102,7 +102,7 @@ $ nano hadoop-env.sh
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export HADOOP_PID_DIR=/home/kjhov195/hadoop/pids
 ```
-
+<br>
 ##### masters
 ```
 $ nano masters
@@ -112,7 +112,7 @@ $ nano masters
 ```
 local host
 ```
-
+<br>
 ##### slaves
 ```
 $ nano masters
@@ -122,7 +122,7 @@ $ nano masters
 ```
 local host
 ```
-
+<br>
 ##### core-site.xml
 ```
 $ nano core-site.xml
@@ -140,7 +140,7 @@ $ nano core-site.xml
   </property>
 </configuration>
 ```
-
+<br>
 ##### hdfs-site.xml
 ```
 $ nano core-site.xml
@@ -178,7 +178,7 @@ $ nano core-site.xml
   </property>
 </configuration>
 ```
-
+<br>
 ##### hdfs-site.xml
 
 ```
@@ -199,7 +199,7 @@ $ nano mapred-site.xml
   </property>
 </configuration>
 ```
-
+<br>
 ##### yarn-site.xml
 ```
 $ nano yarn-site.xml
@@ -232,7 +232,7 @@ $ nano yarn-site.xml
   </property>
 </configuration>
 ```
-
+<br>
 ##### bash_profile
 
 ```

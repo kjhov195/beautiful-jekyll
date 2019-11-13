@@ -9,7 +9,7 @@ use_math: true
 <br>
 <br>
 ### PySpark
-
+<br>
 #### Hadoop metastore 실행
 ```
 $ ./bin/hive --service metastore
@@ -50,7 +50,7 @@ PySparkShell
 <br>
 <br>
 ### Errors
-
+<br>
 #### 1. permission Errors
 
 ```
@@ -64,7 +64,7 @@ yes, yes로 답한다.
 ```
 $ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
 ```
-
+<br>
 #### 2. background에서 실행되고 있는 것을 중지
 
 ```
