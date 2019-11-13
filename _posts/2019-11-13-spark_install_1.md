@@ -9,27 +9,126 @@ use_math: true
 <br>
 <br>
 ### Ubuntu
-Ubuntu 18.04 LTS Minimal
-
-<br>
-<br>
-###
+Ubuntu는 Ubuntu 18.04 LTS Minimal를 사용한다.
 
 ```
 $ cd $HOME
 $ mkdir downloads
 $ sudo apt-get update
+
+$ sudo apt-get install nano
 ```
 
 <br>
 <br>
 ### Anaconda
 
+#### install
+
+https://repo.continuum.io/archive/ 에서 Anaconda의 최신 버전을 확인한다.
+
+```
+$ cd ~/downloads
+$ wget https://repo.continuum.io/archive/Anaconda3-2019.10-Linux-x86_64.sh
+$ bash Anaconda3-2019.10-Linux-x86_64.sh
+```
+
+이제 다음의 질문들에는 다음과 같이 입력하면 된다.
+
+```
+Welcome to Anaconda3 2019.10
+In order to continue the installation process, please review the license
+agreement.
+Please, press ENTER to continue
+```
+Enter
+
+
+```
+Do you accept the license terms? [yes|no]
+```
+yes
+
+
+```
+Anaconda3 will now be installed into this location:
+/home/kjhov195/anaconda3
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+```
+Enter
+
+```
+Do you wish the installer to initialize Anaconda3
+by running conda init? [yes|no]
+```
+no
+
+<br>
+#### path
+
+```
+$ nano ~/.bash_profile
+```
+
+다음을 입력한다.
+```
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+## User specific environment and startup programs
+
+# Anaconda
+export ANACONDA_HOME="/home/kjhov195/anaconda3"
+export PATH=${ANACONDA_HOME}/bin:$PATH
+```
+
+bash_profile 수정 후, source해준다.
+
+```
+$ source ~/.bash_profile
+```
+
 <br>
 <br>
 ### Jupyter
 
-<br>
-<br>
-### Reference
-YBIGTA Engineering Team github Wiki
+```
+$ cd $HOME
+$ jupyter notebook --generate-config
+
+$ jupyter notebook password
+
+$ mkdir ~/certs
+$ cd ~/certs
+$ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
+
+$ cd ~
+$ nano ~/.jupyter/jupyter_notebook_config.py
+```
+
+아래의 내용을 추가하자.
+
+```
+c = get_config()
+
+# Notebook config this is where you saved your pem cert
+c.NotebookApp.certfile = u'/home/kjhov195/certs/mycert.pem'
+c.NotebookApp.keyfile = u'/home/kjhov195/certs/mykey.key'
+
+# Set ip to '*' to bind on all interfaces (ips) for the public server
+c.NotebookApp.ip = '*'
+# Don't open browser by default
+c.NotebookApp.open_browser = False
+# Fix port to 10001
+c.NotebookApp.port = 10001
+```
+
+Jupyter notebook을 실행해보자.
+
+```
+$ jupyter notebook
+```
