@@ -1,8 +1,8 @@
 ---
 layout: post
 title: PySpark
-subtitle: Spark
-category: Apache Spark
+subtitle: Apache Spark
+category: Spark
 use_math: true
 ---
 

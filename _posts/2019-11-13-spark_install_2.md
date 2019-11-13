@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Spark install(2)-Java,Scala,Hadoop
-subtitle: Spark
-category: Java, Scala, Apache Hadoop
+subtitle: Java, Scala, Apache Hadoop
+category: Spark
 use_math: true
 ---
 
