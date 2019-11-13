@@ -73,7 +73,6 @@ $ protoc --version
 ```
 
 <br>
-<br>
 #### 2. install Hadoop
 
 ```
@@ -86,7 +85,6 @@ $ ln -s hadoop-2.9.0 hadoop
 $ mv hadoop-2.9.0.tar.gz ./downloads/
 ```
 
-<br>
 <br>
 #### 3. setting for hadoop
 <br>
@@ -266,7 +264,7 @@ export PATH=${ANACONDA_HOME}/bin:${JAVA_HOME}/bin:${HADOOP_HOME}/bin:$PATH
 $ source ~/.bash_profile
 ```
 
-
+<br>
 #### 4. ssh
 ```
 $ cd $HOME
@@ -279,7 +277,7 @@ $ exit
 ```
 local host에 접속 가능한 것을 확인할 수 있다.
 
-
+<br>
 #### 5. run hadoop
 ```
 $ cd $HADOOP_HOME
