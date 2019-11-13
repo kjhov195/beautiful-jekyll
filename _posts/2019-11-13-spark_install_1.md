@@ -2,7 +2,7 @@
 layout: post
 title: Spark install(1)
 subtitle: Spark
-category: Spark
+category: Ubuntu, Anaconda, Jupyter notebook
 use_math: true
 ---
 
@@ -86,7 +86,7 @@ export ANACONDA_HOME="/home/kjhov195/anaconda3"
 export PATH=${ANACONDA_HOME}/bin:$PATH
 ```
 
-bash_profile 수정 후, source해준다.
+bash_profile 수정 후, 바뀐 환경변수를 적용해준다.
 
 ```
 $ source ~/.bash_profile
