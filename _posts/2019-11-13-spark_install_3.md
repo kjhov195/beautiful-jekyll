@@ -141,11 +141,9 @@ $ nano hive-site.xml
 hive를 실행하기 전에, Hadoop을 먼저 실행해준다.
 
 ```
-# Hadoop 실행
 $ $HADOOP_HOME/sbin/start-dfs.sh
 $ $HADOOP_HOME/sbin/start-yarn.sh
 
-# HDFS 디렉토리 생성/권한 부여
 $ hdfs dfs -mkdir -p /tmp/hive
 $ hdfs dfs -mkdir -p /user/hive/warehouse
 $ hdfs dfs -chmod g+w /tmp
@@ -153,11 +151,9 @@ $ hdfs dfs -chmod 777 /tmp/hive
 $ hdfs dfs -chmod g+w /user/hive
 $ hdfs dfs -chmod g+w /user/hive/warehouse
 
-# hive 메타스토어 초기화
 $ cd $HOME/hive
 $ ./bin/schematool -initSchema -dbType derby
 
-# Hive 설정 파일을 spark/conf로 복사
 $ cp $HOME/hive/conf/hive-site.xml $HOME/spark/conf/
 
 $ ./bin/hive --service metastore &
