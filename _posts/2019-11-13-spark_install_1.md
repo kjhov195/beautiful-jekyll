@@ -15,7 +15,6 @@ Ubuntu는 Ubuntu 18.04 LTS Minimal를 사용한다.
 $ cd $HOME
 $ mkdir downloads
 $ sudo apt-get update
-
 $ sudo apt-get install nano
 ```
 
