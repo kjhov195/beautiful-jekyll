@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spark install(1)
+title: Spark install(1)-Anaconda,Jupyter
 subtitle: Spark
 category: Ubuntu, Anaconda, Jupyter notebook
 use_math: true
