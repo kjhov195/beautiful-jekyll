@@ -11,10 +11,23 @@ use_math: true
 ### PySpark
 <br>
 #### Hadoop metastore 실행
+
+
+Hadoop과 Hive를 실행한 후, pyspark를 실행해야 한다.
+
+먼저 Hadoop을 실행한다.
 ```
-$ ./bin/hive --service metastore
+$ $HADOOP_HOME/sbin/start-dfs.sh
+$ $HADOOP_HOME/sbin/start-yarn.sh
+```
+
+Hive를 실행한다.
+```
+$ cd $HOME/hive
+$ ./bin/hive --service metastore &
 $ jps
 ```
+
 다음 7개의 패키지가 실행되고 있는 것을 확인한다.
 ```
 23874 Jps
@@ -26,8 +39,7 @@ $ jps
 21535 SecondaryNameNode
 ```
 
-pyspark를 실행한다.
-
+PySpark를 실행해준다.
 ```
 $ cd $HOME
 $ pyspark
@@ -51,7 +63,7 @@ PySparkShell
 <br>
 ### Errors
 <br>
-#### 1. permission Errors
+#### 1. Jupter permission Errors
 
 ```
 $ cd certs
@@ -65,7 +77,21 @@ yes, yes로 답한다.
 $ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
 ```
 <br>
-#### 2. background에서 실행되고 있는 것을 중지
+#### 2. Jupter permission Errors
+
+ssh key를 다시 생성해준다.
+
+```
+$ cd $HOME
+$ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+$ ssh localhost
+
+$ exit
+```
+<br>
+#### 3. background에서 실행되고 있는 것을 중지
 
 ```
 $ jobs
