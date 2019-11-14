@@ -9,7 +9,7 @@ use_math: true
 <br>
 <br>
 ### Ubuntu
-Ubuntu는 Ubuntu 18.04 LTS Minimal를 사용한다.
+운영체제의 버전 Ubuntu 18.04 LTS Minimal를 기준으로 설명하도록 하겠습니다.
 
 ```
 $ cd $HOME
@@ -134,6 +134,11 @@ $ jupyter notebook
 ```
 
 이제 __https://외부IP:포트__ 로 접속할 수 있다.
+
+<br>
+<br>
+### Reference
+[YBIGTA Engineering Team](https://github.com/YBIGTA/EngineeringTeam)
 
 <br>
 <br>

@@ -108,17 +108,17 @@ $ nano masters
 다음의 내용으로 수정해준다.
 
 ```
-local host
+localhost
 ```
 <br>
 ##### slaves
 ```
-$ nano masters
+$ nano slaves
 ```
 다음의 내용으로 수정해준다.
 
 ```
-local host
+localhost
 ```
 <br>
 ##### core-site.xml
@@ -309,6 +309,11 @@ $ jps
 $ ./sbin/stop-yarn.sh
 $ ./sbin/stop-dfs.sh
 ```
+
+<br>
+<br>
+### Reference
+[YBIGTA Engineering Team](https://github.com/YBIGTA/EngineeringTeam)
 
 <br>
 <br>
