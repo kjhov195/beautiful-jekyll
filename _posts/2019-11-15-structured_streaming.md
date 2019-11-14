@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Structured Streaming
+title: Streaming(2)-Structured Streaming
 subtitle: Apache Spark
 category: Spark
 use_math: true
@@ -15,6 +15,8 @@ Writing..
 <br>
 ### Reference
 [YBIGTA Engineering Team](https://github.com/YBIGTA/EngineeringTeam)
+
+YBIGTA Engineering Team 13기 정우담, SPARK Streaming
 
 <br>
 <br>
