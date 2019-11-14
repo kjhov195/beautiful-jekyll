@@ -57,8 +57,11 @@ ___Spark Streaming___ 은 __실시간__ 으로 변하는 데이터를 __짧은 �
 
 스파크의 스트리밍은 짧은 주기의 배치처리를 하는 것이다. 짧은 주기의 배치처리 때문에 배치 작업 사이에 새로 생성되는 데이터 크기를 최소화시킬 수 있다. 참고로 스파크 스트리밍에서는 이렇게 새로 생성된 데이터가 하나의 RDD로 취급되어 처리된다.
 
+<br>
+<br>
 이제 실제로 어떻게 스트리밍 모듈을 사용할 수 있는지 살펴보자.
 
+<br>
 ```
 from pyspark import SparkContext, SparkConf, storagelevel
 from pyspark.streaming.context import StreamingContext
@@ -69,6 +72,7 @@ ssc = StreamingContext(sc, 3)
 
 스트리밍 모듈을 사용하기 위해서는, _StreamingContext_ 인스턴스를 생성해야 한다. StreamingContext 인스턴스의 두 번재 인자는 데이터를 읽어와서 RDD를 생성하는 주기를 뜻한다.(즉, 이 경우에는 3초 마다 데이터를 읽어와서 RDD를 생성하는 것이다.)
 
+<br>
 ```
 ssc.start()
 ssc.awaitTermination()
@@ -84,15 +88,29 @@ StreamingContext는 일단 시작되면 새로운 연산을 추가할 수 없으
 
 Spark는 'Dstream'과 'Structured Streaming'이라는 2가지의 Streaming API를 제공한다. 두 가지 Streaming API의 특징은 다음과 같다.
 
-- 아
-- 이
-- 우
-|
-- 에
-- 오
+<br>
+
+|  <center>Dstream</center> |  <center>Structured Streaming</center> |  
+|:--------|:--------:|--------:|
+| <center>  Spark 기존 API </center> | <center> 최근 많이 사용되는 API </center> |
+|<center>  Micro 배치 방식으로만 작동 </center> | <center> 연속형 처리 지원 O</center> | <center>cell 2x2 </center> |
+|<center>  이벤트 시간 처리 지원 X </center> | <center> 이벤트 시간 처리 지원 O </center> |
 
 <br>
-### Dstrim
+
+※ 이벤트 시간 기준 처리: data source에서 레코드에 기록한 타임 스탬프를 기반으로 데이터 처리
+※ 처리 시간 기준 처리 : Streaming Application에 레코드가 도착한 타임 스탬프를 기반으로 데이터 처리
+
+<br>
+
+※ 마이크로 배치 처리: 입력 데이터를 끊임 없이 처리하는 것이 아닌, 하나의 작은 배치가 모일 때까지 기다렸다가, 다수의 분산 테스크를 사용하여 각 배치를 병렬적으로 처리.
+  → 한 노드당 더 높은 처리량을 가진다. 동적인 부하 분산 기술이 사용 가능하다. 단, 하나의 단위 배치 데이터를 모으기 위한 시간 지연이 존재한다.
+※ 연속형 처리: 각 노드가 다른 노드에서 전송하는 데이터를 끊임없이 수신. 갱신된 정보는 레코드를 하나씩 하위노드로 전달.
+  → 전체 input의 양이 적으면 매우 빠르지만, 부하가 매우 크다.
+
+
+<br>
+### Dstream
 
 스파크는 2가지의
 Writing..
