@@ -95,7 +95,7 @@ Spark는 'Dstream'과 'Structured Streaming'이라는 2가지의 Streaming API�
 |  <center>Dstream</center> |  <center>Structured Streaming</center> |  
 |:--------|:--------:|--------:|
 | <center>  Spark 기존 API </center> | <center> 최근 많이 사용되는 API </center> |
-|<center>  Micro 배치 방식으로만 작동 </center> | <center> 연속형 처리 지원 O</center> | <center>cell 2x2 </center> |
+|<center>  Micro 배치 방식으로만 작동 </center> | <center> 연속형 처리 지원 O</center> |
 |<center>  이벤트 시간 기준 처리 지원 X </center> | <center> 이벤트 시간 기준 처리 지원 O </center> |
 
 <br>
