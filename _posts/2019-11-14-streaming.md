@@ -8,11 +8,13 @@ use_math: true
 
 <br>
 <br>
-### Batch 처리
+### Batch Processing
 
 우리가 '데이터처리를 한다'는 말을 할 때, 보통 어떤 데이터가 떠오르는가? 보통 이제껏 우리가 다루어 온 데이터처리 방식은 __고정된 과거의 데이터__ 를 처리하는 방식이다. 이와 같은 방법을 __Batch 처리__ 라고 한다.
 
 일반적인 Batch 처리의 특징은 다음과 같다.
+
+- 고정된 input 데이터를 처리한다.
 
 - 데이터의 크기가 크다.
 
@@ -25,9 +27,58 @@ use_math: true
 
 <br>
 <br>
-### Streaming
+### Stream Processing
 
-하지만
+하지만 우리의 실생활을 둘러보면 이러한 성격과는 어울리지 않는 데이터들이 분명 존재한다. 미세먼지농도에 대한 정보, 교통 흐름 정보, 실시간 검색 정보 등을 그 예로 들 수 있을 것이다. 이러한 데이터들의 경우, __최대한 빠른 시간__ 내에 데이터 분석을 하여 output을 만들어내야 한다.
+
+___Streaming___ 이란 신규 데이터를 끊이 처리하여 결과를 만들어내는 방식이다.  
+
+Streaming 처리의 특징을 살펴보면 다음과 같다.
+
+- 무한하게 입력되는 데이터를 처리한다.
+
+- Input data의 시작과 끝이 정의되어 있지 않다.
+
+- 새로운 데이터가 입력될 때 마다 새로운 결과를 만들어낸다.(실시간 처리)
+
+<br>
+<br>
+### Spark Streaming
+
+___Spark Streaming___ 은 __실시간__ 으로 변하는 데이터를 __짧은 주기__ 에 맞춰 빠르고 안정적으로 처리하는데 필요한 기능을 제공하는 Spark의 Sub-module이다. 이러한 성격때문에 Spark Streaming은 실시간으로 데이터처리가 필요하거나 의사결정이 필요한 분야에서 많이 사용되고 있다.
+<br>
+
+<center><img src = '/post_img/191114/image1.png' width="600"/></center>
+
+<br>
+위 그림은 Spark Streaming을 활용한 데이터처리의 전체적인 구조를 나타낸 것이다.
+
+간단하게 살펴보면 Kafka, Flume, HDFS/S3, Kinesis, TCP Socket 등의 다양한 경로로 input data가 주어질 수 있다. 이를 map, reduce 등의 연산을 사용하여 데이터처리를 하고, 다시 HDFS나 DB 등에 적재하는 구조를 가지고 있다.
+
+스파크의 스트리밍은 짧은 주기의 배치처리를 하는 것이다. 짧은 주기의 배치처리 때문에 배치 작업 사이에 새로 생성되는 데이터 크기를 최소화시킬 수 있다. 참고로 스파크 스트리밍에서는 이렇게 새로 생성된 데이터가 하나의 RDD로 취급되어 처리된다.
+
+이제 실제로 어떻게 스트리밍 모듈을 사용할 수 있는지 살펴보자.
+
+```
+from pyspark import SparkContext, SparkConf, storagelevel
+from pyspark.streaming.context import StreamingContext
+
+sc = SparkContext(master="local", appName="Name", conf=conf)
+ssc = StreamingContext(sc, 3)
+```
+
+스트리밍 모듈을 사용하기 위해서는, _StreamingContext_ 인스턴스를 생성해야 한다. StreamingContext 인스턴스의 두 번재 인자는 데이터를 읽어와서 RDD를 생성하는 주기를 뜻한다.(즉, 이 경우에는 3초 마다 데이터를 읽어와서 RDD를 생성하는 것이다.)
+
+```
+ssc.start()
+ssc.awaitTermination()
+ssc.stop(stopSparkContext=False)
+```
+
+StreamingContext는 start(), awaitTermination(), stop()라는 명시적인 시작, 대기, 종료 메서드가 필요하다. 만약 StreamingContext를 종료하면서 SparkContext를 종료하고 싶지 않다면 위와 같은 옵션을 사용할 수 있다.
+
+StreamingContext는 일단 시작되면 새로운 연산을 추가할 수 없으며, 종료되는 순간 재시작할 수 없다는 특징을 가지고 있다. 또한, JVM 하나당 하나의 StreamingContext만 사용할 수 있다.
+
 
 <br>
 ### Dstrim
@@ -41,6 +92,7 @@ Writing..
 <br>
 ### Reference
 [YBIGTA Engineering Team](https://github.com/YBIGTA/EngineeringTeam)
+YBIGTA Engineering Team 13기 정우담, SPARK Streaming
 
 <br>
 <br>
