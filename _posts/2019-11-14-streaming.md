@@ -121,7 +121,7 @@ Dstream은 마지막으로 데이터를 읽은 시점부터 배치 간 간격에
 
 <br>
 
-<center><img src = '/post_img/191114/image1.png' width="600"/></center>
+<center><img src = '/post_img/191114/image2.png' width="600"/></center>
 
 [<center>Image: treaming-programming-guide</center>](https://spark.apache.org/docs/2.2.0/streaming-programming-guide.html)
 
