@@ -50,6 +50,8 @@ ___Spark Streaming___ 은 __실시간__ 으로 변하는 데이터를 __짧은 �
 
 <center><img src = '/post_img/191114/image1.png' width="600"/></center>
 
+[<center>Image: treaming-programming-guide</center>](https://spark.apache.org/docs/2.2.0/streaming-programming-guide.html)
+
 <br>
 위 그림은 Spark Streaming을 활용한 데이터처리의 전체적인 구조를 나타낸 것이다.
 
@@ -94,7 +96,7 @@ Spark는 'Dstream'과 'Structured Streaming'이라는 2가지의 Streaming API�
 |:--------|:--------:|--------:|
 | <center>  Spark 기존 API </center> | <center> 최근 많이 사용되는 API </center> |
 |<center>  Micro 배치 방식으로만 작동 </center> | <center> 연속형 처리 지원 O</center> | <center>cell 2x2 </center> |
-|<center>  이벤트 시간 처리 지원 X </center> | <center> 이벤트 시간 처리 지원 O </center> |
+|<center>  이벤트 시간 기준 처리 지원 X </center> | <center> 이벤트 시간 기준 처리 지원 O </center> |
 
 <br>
 
@@ -112,16 +114,31 @@ Spark는 'Dstream'과 'Structured Streaming'이라는 2가지의 Streaming API�
 <br>
 ### Dstream
 
-스파크는 2가지의
-Writing..
+<br>
+Dstream은 Discretized Streams의 줄임말이다. 우선, 일정 시간동안 데이터를 모아서 하나의 작은 RDD를 만든다. 이러한 RDD들이 모인 Sequence를 바로 Dstream이라고 부른다.
+
+Dstream은 마지막으로 데이터를 읽은 시점부터 배치 간 간격에 해당하는 시간동안 새로 발생한 데이터들을 다시 RDD로 만드는 과정을 반복한다.
 
 <br>
-### Kafka
-Writing..
+
+<center><img src = '/post_img/191114/image1.png' width="600"/></center>
+
+[<center>Image: treaming-programming-guide</center>](https://spark.apache.org/docs/2.2.0/streaming-programming-guide.html)
+
+<br>
+
+Dstream은 새로운 Dstream 생성하는 연산과 외부 시스템에 데이터를 보내는 연산을 제공한다. 이는 RDD의 transformation, action 연산과 같다고 볼 수 있다.
+
+Dstream의 단점을 살펴보면 다음과 같다.
+
+- Python, Java, Scalar, R의 객체와 함수에 의존적
+- 이벤트 시간 기준 처리 지원 X
+- Micro 배치 방식으로만 작동
 
 <br>
 <br>
 ### Reference
+image: [streaming-programming-guide](https://spark.apache.org/docs/2.2.0/streaming-programming-guide.html)
 [YBIGTA Engineering Team](https://github.com/YBIGTA/EngineeringTeam)
 YBIGTA Engineering Team 13기 정우담, SPARK Streaming
 
