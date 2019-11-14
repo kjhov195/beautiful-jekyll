@@ -10,7 +10,7 @@ use_math: true
 <br>
 ### Batch Processing
 
-우리가 '데이터처리를 한다'는 말을 할 때, 보통 어떤 데이터가 떠오르는가? 보통 이제껏 우리가 다루어 온 데이터처리 방식은 __고정된 과거의 데이터__ 를 처리하는 방식이다. 이와 같은 방법을 __Batch 처리__ 라고 한다.
+우리가 '데이터처리를 한다'는 말을 할 때, 보통 어떤 데이터 처리방식이 떠오르는가? 보통 이제껏 우리가 다루어 온 데이터처리 방식은 __고정된 과거의 데이터__ 를 한 번에 처리하는 방식이다. 이와 같은 방법을 __Batch 처리__ 라고 한다.
 
 일반적인 Batch 처리의 특징은 다음과 같다.
 
@@ -77,11 +77,24 @@ ssc.stop(stopSparkContext=False)
 
 StreamingContext는 start(), awaitTermination(), stop()라는 명시적인 시작, 대기, 종료 메서드가 필요하다. 만약 StreamingContext를 종료하면서 SparkContext를 종료하고 싶지 않다면 위와 같은 옵션을 사용할 수 있다.
 
-StreamingContext는 일단 시작되면 새로운 연산을 추가할 수 없으며, 종료되는 순간 재시작할 수 없다는 특징을 가지고 있다. 또한, JVM 하나당 하나의 StreamingContext만 사용할 수 있다.
+StreamingContext는 일단 시작되면 새로운 연산을 추가할 수 없으며, 종료되는 순간 재시작할 수 없다. 또한, JVM 하나당 하나의 StreamingContext만 사용할 수 있다는 특징을 가지고 있다.
 
+<br>
+### API of Spark Streaming
+
+Spark는 'Dstream'과 'Structured Streaming'이라는 2가지의 Streaming API를 제공한다. 두 가지 Streaming API의 특징은 다음과 같다.
+
+- 아
+- 이
+- 우
+|
+- 에
+- 오
 
 <br>
 ### Dstrim
+
+스파크는 2가지의
 Writing..
 
 <br>
