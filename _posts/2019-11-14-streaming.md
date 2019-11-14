@@ -138,9 +138,10 @@ Dstream의 단점을 살펴보면 다음과 같다.
 <br>
 <br>
 ### Reference
-image: [streaming-programming-guide](https://spark.apache.org/docs/2.2.0/streaming-programming-guide.html)
 [YBIGTA Engineering Team](https://github.com/YBIGTA/EngineeringTeam)
+
 YBIGTA Engineering Team 13기 정우담, SPARK Streaming
 
+image: [streaming-programming-guide](https://spark.apache.org/docs/2.2.0/streaming-programming-guide.html)
 <br>
 <br>
