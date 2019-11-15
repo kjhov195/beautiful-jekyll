@@ -138,7 +138,26 @@ query.awaitTermination()
 query.stop()
 ```
 
+이번에는 위 코드를 실행한 후, 위 코드에서 설정해준 hdfs path에 data file을 put해보자.
 
+```
+hadoop fs -put [local 경로] [hdfs 경로]
+```
+
+해당 hdfs path로 데이터가 전송되면, 다음과 같이 datafame이 생성되는 것을 확인할 수 있다.
+
+<br>
+
+<center><img src = '/post_img/191115/image5.png' width="600"/></center>
+
+<br>
+
+덧붙여, 다음은 자주 사용하는 hdfs 관련 명령어다.
+```
+hadoop fs -ls  
+hadoop fs -mkdir
+hadoop fs -rm
+```
 
 
 <br>
