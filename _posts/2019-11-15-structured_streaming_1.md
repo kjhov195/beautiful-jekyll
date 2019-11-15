@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Streaming(2)-Structured Streaming_1
+title: Streaming(2)-Structured Streaming: Basic Operation
 subtitle: Apache Spark
 category: Spark
 use_math: true
@@ -95,7 +95,7 @@ query.awaitTermination()
 query.stop()
 ```
 
-코드를 실행하기 전에 새로운 Terminal에서 __nc -lk 9000__ 을 실행한 후에 data를 입력하면 성공적으로 dataframe이 생성되는 것을 확인할 수 있다.
+위 코드를 실행하기 전에 새로운 Terminal에서 __nc -lk 9000__ 을 실행한 후에 data를 입력하면 성공적으로 dataframe이 생성되는 것을 확인할 수 있다.
 
 <br>
 
