@@ -97,6 +97,8 @@ query.stop()
 
 <center><img src = '/post_img/191115/2_image3.png' width="800"/></center>
 
+_<center> 생성된 DataFrame </center>_
+
 <br>
 
 ### Reference
