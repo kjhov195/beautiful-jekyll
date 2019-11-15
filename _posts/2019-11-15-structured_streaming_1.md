@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Streaming(2)-Structured Streaming
+title: Streaming(2)-Structured Streaming_1
 subtitle: Apache Spark
 category: Spark
 use_math: true
@@ -57,7 +57,7 @@ Spark는 자동으로 이 쿼리를 스트리밍 실행 계획으로 전환하�
 <br>
 ### Input Source
 
-Structured Streaming에는 소켓(socket), 파일, RDD 큐, Kafka와 같은 다양한 입력 소스를 사용할 수 있다.
+Structured Streaming에는 소켓(socket), 파일, RDD 큐, Kafka와 같은 다양한 입력 소스를 사용할 수 있다. 이 중, 주로 Testing용으로 사용되는 Socket과 File의 케이스에 대하여 예시와 함께 자세히 살펴보도록 하겠다.
 
 <br>
 #### 1. Socket
@@ -113,6 +113,8 @@ query.stop()
 
 위와 같이 새로운 Terminal에서 input data를 입력해주면, input data에서 단어의 수를 count한 내용을 담은 dataframe을 생성하는 것을 확인할 수 있다.
 
+다만 소켓이 드라이버에 있어 종단 간 내고장성을 보장할 수 없으므로
+실제 운영 환경에서 사용하면 안 되며, Testing용으로만 사용해야 한다.
 
 <br>
 #### 2. File
@@ -120,6 +122,8 @@ query.stop()
 반면, 데이터 소스로 파일을 사용할 수도 있다. 다만 파일을 데이터 소스로 사용할 경우 주의해야 할 점은 스파크 스트리밍은 파일의 변경 내용까지 추적하지는 않는다는 것이다.
 
 즉, 동일 디렉토리 내의 파일은 모두 __같은 형식__ 이어야 하며, 읽는 시점에 따라 파일내용이 변경되면 안된다는 점을 기억해야 한다.
+
+파일 형식은 pqrauet, text, json, csv, orc이 지원되며, 모든 파일은 설정해준 path에 원자적으로 추가되어야 한다.
 
 다음은 csv 파일을 data source로 사용하는 예시다.
 
@@ -162,7 +166,8 @@ hadoop fs -put [local 경로] [hdfs 경로]
 
 <br>
 
-덧붙여, 다음은 자주 사용하는 hdfs 관련 명령어다.
+덧붙여, 다음은 기본적인 hdfs 명령어이므로 기억해두자.
+
 ```
 hadoop fs -ls  
 hadoop fs -mkdir
@@ -171,34 +176,9 @@ hadoop fs -rm
 
 
 <br>
-#### 3. RDD Queue
-
-만약 data source에서
-
-<br>
-#### 4. Kafka
-
-
-
-
-
-
-
-
-
-writing...
-수정 중...
-
-<br>
 <br>
 ### Reference
 [YBIGTA Engineering Team](https://github.com/YBIGTA/EngineeringTeam)
-
-YBIGTA Engineering Team 11기 김현우, SPARK Streaming
-
-YBIGTA Engineering Team 13기 정우담, SPARK Streaming
-
-YBIGTA Engineering Team 14기 한승희, Spark Streaming
 
 <br>
 <br>
