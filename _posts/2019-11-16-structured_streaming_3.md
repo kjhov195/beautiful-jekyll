@@ -20,8 +20,8 @@ Window는 '시간 간격'이다. Streaming시 윈도우라는 시간 간격을 �
 
 <center><img src = '/post_img/191116/image1.png' width="800"/></center>
 
-_<center> [Image: Apache Spark, Window operation](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)
- </center>_
+[<center>Image: Apache Spark, Window operation</center>](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)
+
 
 <br>
 
@@ -49,8 +49,8 @@ startTime은 첫 batch가 시작하는 시간을 뜻한다.
 
 <center><img src = '/post_img/191116/image2.png' width="800"/></center>
 
-_<center> [Image: Apache Spark, Window operation](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)
- </center>_
+[<center>Image: Apache Spark, Window operation</center>](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)
+
 
 <br>
 
@@ -77,8 +77,7 @@ _<center> [Image: Apache Spark, Window operation](https://spark.apache.org/docs/
 
 <center><img src = '/post_img/191116/image3.png' width="800"/></center>
 
-_<center> [Image: Apache Spark, Watermarking](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)
- </center>_
+[<center>Image: Apache Spark, Watermarking</center>](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)
 
 <br>
 
