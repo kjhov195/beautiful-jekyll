@@ -10,7 +10,7 @@ use_math: true
 <br>
 ### 응용
 
-앞서 [Basic Operation](https://github.com/YBIGTA/EngineeringTeam)을 통하여 데이터스트림을 읽어 dataframe을 만들어 보았다. 이번 포스트에서는 두 예제를 통하여 데이터스트림을 읽은 뒤 집계함수와 사칙연산을 활용하여 Input Dataframe을 바꾸는 법을 살펴보도록 하자.
+앞서 [Basic Operation](https://kjhov195.github.io/2019-11-15-structured_streaming_1/)을 통하여 데이터스트림을 읽어 dataframe을 만들어 보았다. 이번 포스트에서는 두 예제를 통하여 데이터스트림을 읽은 뒤 집계함수와 사칙연산을 활용하여 Input Dataframe을 바꾸는 법을 살펴보도록 하자.
 
 <br>
 ### example 1. select, where
