@@ -180,5 +180,7 @@ hadoop fs -rm
 ### Reference
 [YBIGTA Engineering Team](https://github.com/YBIGTA/EngineeringTeam)
 
+[Spark The Definitive Guide(스파크 완벽 가이드)](http://www.hanbit.co.kr/store/books/look.php?p_code=B6709029941)
+
 <br>
 <br>
