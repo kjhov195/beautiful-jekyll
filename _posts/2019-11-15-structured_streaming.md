@@ -100,10 +100,13 @@ query.stop()
 <br>
 
 <center><img src = '/post_img/191115/image3.png' width="800"/></center>
-<center>새로운 Terminal<\center>
+
+<center>새로운 Terminal</center>
+
+<br>
 
 <center><img src = '/post_img/191115/image4.png' width="800"/></center>
-<center>생성된 DataFrame<\center>
+<center>생성된 DataFrame</center>
 
 <br>
 
