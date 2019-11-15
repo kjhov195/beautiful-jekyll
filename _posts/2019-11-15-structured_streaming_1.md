@@ -101,13 +101,13 @@ query.stop()
 
 <center><img src = '/post_img/191115/image3.png' width="800"/></center>
 
-<center> _새로운 Terminal_ </center>
+_<center> 새로운 Terminal </center>_
 
 <br>
 
 <center><img src = '/post_img/191115/image4.png' width="800"/></center>
 
-<center>_생성된 DataFrame_ </center>
+_<center> 생성된 DataFrame </center>_
 
 <br>
 
@@ -162,7 +162,7 @@ hadoop fs -put [local 경로] [hdfs 경로]
 
 <center><img src = '/post_img/191115/image5.png' width="800"/></center>
 
-<center>_생성된 DataFrame_</center>
+_<center> 생성된 DataFrame </center>_
 
 <br>
 
