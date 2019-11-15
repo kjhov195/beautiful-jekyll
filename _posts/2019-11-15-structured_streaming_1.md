@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Streaming(2)-Structured Streaming: Basic Operation
+title: Streaming 2 -Structured Streaming(Basic Operation)
 subtitle: Apache Spark
 category: Spark
 use_math: true

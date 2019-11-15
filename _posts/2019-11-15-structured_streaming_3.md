@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Streaming(4)-Structured Streaming: Window
+title: Streaming 4 -Structured Streaming(Window)
 subtitle: Apache Spark
 category: Spark
 use_math: true
