@@ -85,8 +85,6 @@ query = addition.writeStream \
 query.awaitTermination()
 
 query.stop()
-<br>
-<br>
 ```
 
 받은 데이터에서 첫 번째 열에 2를 곱하고, 두 번째 열에 1을 더한 값을 select해주었다. 다음은 결과 dataframe이다.
