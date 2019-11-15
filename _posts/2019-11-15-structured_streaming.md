@@ -62,8 +62,84 @@ Structured Streaming에는 소켓(socket), 파일, RDD 큐, Kafka와 같은 다�
 <br>
 #### 1. Socket
 
+TCP 소켓을 이용하여 Input data를 수신할 수 있다. option("host", "localhost"), option("port", 9000)을 통해 IP주소와 포트번호(9000)를 지정하여 스파크 스트리밍의 Data Source로 사용할 수 있다. 다음은 Socket을 Data source로 사용하는 예시다.
+
+```
+spark = SparkSession \
+    .builder \
+    .appName("StructuredNetworkWordCount") \
+    .getOrCreate()
+
+lines = spark \
+    .readStream \
+    .format("socket") \
+    .option("host", "localhost") \
+    .option("port", 9000) \
+    .load()
+
+words = lines.select(
+   explode(
+       split(lines.value, " ")
+   ).alias("word")
+)
+
+wordCounts = words.groupBy("word").count()
+
+query = wordCounts \
+    .writeStream \
+    .outputMode("complete") \
+    .format("console") \
+    .start()
+query.awaitTermination()
+
+query.stop()
+```
+
+코드를 실행하기 전에 새로운 Terminal에서 __nc -lk 9000__ 을 실행한 후에 data를 입력하면 성공적으로 dataframe이 생성되는 것을 확인할 수 있다.
+
+<br>
+
+<center><img src = '/post_img/191115/image3.png' width="600"/><img src = '/post_img/191115/image4.png' width="600"/></center>
+
+
+<br>
+
+
+
 <br>
 #### 2. File
+
+반면, 데이터 소스로 파일을 사용할 수도 있다. 다만 파일을 데이터 소스로 사용할 경우 주의해야 할 점은 스파크 스트리밍은 파일의 변경 내용까지 추적하지는 않는다는 것이다.
+
+즉, 동일 디렉토리 내의 파일은 모두 __같은 형식__ 이어야 하며, 읽는 시점에 따라 파일내용이 변경되면 안된다는 점을 기억해야 한다.
+
+다음은 csv 파일을 data source로 사용하는 예시다.
+
+
+```
+spark = SparkSession.builder \
+                    .appName("csvDF") \
+                    .master("local[*]") \
+                    .getOrCreate()
+
+userSchema = StructType().add("1st", "integer").add("2nd", "integer").add("3rd", "integer")
+
+csvDF = spark.readStream \
+             .option("sep", ",") \
+             .schema(userSchema) \
+             .csv("hdfs:/ybigta/191116")
+
+query = csvDF.writeStream \
+             .outputMode("update") \
+             .format("console") \
+             .start()
+query.awaitTermination()
+
+query.stop()
+```
+
+
+
 
 <br>
 #### 3. RDD Queue
