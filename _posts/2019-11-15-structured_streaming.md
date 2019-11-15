@@ -64,10 +64,14 @@ Structured Streaming에는 소켓(socket), 파일, RDD 큐, Kafka와 같은 다�
 
 <br>
 #### 2. File
+
 <br>
 #### 3. RDD Queue
+
 <br>
 #### 4. Kafka
+
+
 
 
 
