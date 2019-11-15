@@ -101,9 +101,9 @@ query.stop()
 
 <center><img src = '/post_img/191115/image3.png' width="600"/><img src = '/post_img/191115/image4.png' width="600"/></center>
 
-
 <br>
 
+위와 같이 새로운 Terminal(왼쪽)에서 input data를 입력해주면, input data에서 단어의 수를 count한 내용을 담은 dataframe(오른쪽)을 생성하는 것을 확인할 수 있다.
 
 
 <br>
