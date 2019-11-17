@@ -32,6 +32,8 @@ Big O notation은 complexity theory, computer science, mathematics에서 어떠�
 
 some subset of real number에서 정의된 두 함수 $f(x)$와 $g(x)$를 가정해보자. Big O function은 다음과 같이 정의된다.
 
+<br>
+
 $$
 \begin{align*}
 f(x) = O(g(x))\;\;for\;x \rightarrow \infty\\\\
@@ -40,7 +42,9 @@ f(x) = O(g(x))\;\;for\;x \rightarrow \infty\\\\
 \end{align*}
 $$
 
-즉, 상수 N이상의 support에서 $C \vert g(x) \vert \geq f(x)}$ 가 되도록 하는 constant C가 존재한다면, 우리는 $f(x) = O(g(x))$라고 한다.
+<br>
+
+즉, 상수 N이상의 support에서 $C \vert g(x) \vert \geq f(x)$ 가 되도록 하는 constant C가 존재한다면, 우리는 $f(x) = O(g(x))$라고 한다.
 
 다음 그림을 살펴보자.
 
