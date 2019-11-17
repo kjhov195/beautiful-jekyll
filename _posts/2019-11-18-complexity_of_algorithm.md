@@ -62,7 +62,6 @@ $f(n)$의 계산복잡도는 최악의 경우에도 $g(n)$보다 작거나 같�
 
 참고로 다음은 알고리즘을 공부하다 보면 많이 마주치게 되는 계산복잡도의 이름들을 정리한 것이다. n이 증가함에 따라 복잡도가 더 느리게 증가하는 순으로(위에서 아래로) 정리되어 있다.
 
-<br>
 
 |  <center>notation</center> |  <center>name</center> |  
 |:--------|:--------:|--------:|
@@ -83,7 +82,7 @@ $\;\text{for some constant c}$
 
 가장 많이 사용하는 notation은 Big O notation이지만, 이외에도 다른 notation들을 사용하기도 한다.
 
-<br>
+
 
 |  <center>notation</center> |  <center>name</center> |  
 |:--------|:--------:|--------:|
