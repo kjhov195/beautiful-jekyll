@@ -40,13 +40,13 @@ f(x) = O(g(x))\;\;for\;x \rightarrow \infty\\\\
 \end{align*}
 $$
 
-즉, 상수 N이상의 support에서 $C|g(x)| \geq |f(x)|$ 가 되도록 하는 constant C가 존재한다면, 우리는 $f(x) = O(g(x))$라고 한다.
+즉, 상수 N이상의 support에서 $C \vert g(x) \vert \geq f(x)}$ 가 되도록 하는 constant C가 존재한다면, 우리는 $f(x) = O(g(x))$라고 한다.
 
 다음 그림을 살펴보자.
 
 <br>
 
-<center><img src = '/post_img/191118/image1.jpg'/></center>
+<center><img src = '/post_img/191118/image1.png'/></center>
 
 <br>
 
@@ -55,8 +55,6 @@ $$
 이는 나의 알고리즘 $f(n)$이 계산복잡도 g(n)을 가진다면, 즉 $f(n) = O(g(n))$이라면,
 
 $f(n)$의 계산복잡도는 최악의 경우에도 $g(n)$보다 작거나 같다는 의미를 가진다.
-
-<br>
 
 참고로 다음은 알고리즘을 공부하다 보면 많이 마주치게 되는 계산복잡도의 이름들을 정리한 것이다. n이 증가함에 따라 복잡도가 더 느리게 증가하는 순으로(위에서 아래로) 정리되어 있다.
 
