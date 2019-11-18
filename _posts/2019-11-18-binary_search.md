@@ -78,6 +78,26 @@ def binary_search(L, x): #L: list, x:the element we want to find.
     return idx
 ```
 
+<br>
+### 비교
+
+<br>
+
+<center><img src = '/post_img/191118/image3.png'/></center>
+
+<br>
+
+
+선형탐색의 $O(n)$과 이진탐색 $O(log(n))$의 차이가 얼마 나지 않는다고 생각할 수도 있다.
+
+하지만 n이 매우 큰 경우에는 비교할 수 없는 차이가 생기게 된다.
+
+4,294,967,296개(약 43억개)의 원소가 있는 리스트를 상상해보자.
+
+리스트에서 특정 값을 찾아낼 때 이진탐색의 경우 Worst-case performance(최악의 탐색 깊이)는 딱 32번이다. 그러나 선형탐색의 경우 원하는 원소가 가장 마지막 요소인 Worst-case일 때 4,294,967,296번을 search해야 원하는 원소를 찾을 수 있다.
+
+물론 Sorting되어 있어야 한다는 전제가 필요하지만 특정 케이스에서 $O(log(n))$의 Binary Search는 강력한 알고리즘이 될 수 있다.
+
 
 <br>
 <br>
