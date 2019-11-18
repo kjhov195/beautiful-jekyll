@@ -156,7 +156,7 @@ $$\text{You don't know what you don't know.}$$
 즉, 우리가 관측한 값만을 활용하여 결측치를 예측하는 것은 불가능하다. 다시 말하여 결측치는 관측하지 못한 자료이고, 그렇기 때문에 그 결측치가 발생한 Mechanism을 올바르게 modeling하는 것은 거의 불가능하다고 볼 수 있다.
 
 <br>
-#비교
+### 비교
 
 __MCAR__
 가장 강한 가정(Assumption)
