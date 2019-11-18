@@ -2,7 +2,7 @@
 layout: post
 title: 계산복잡도(Complexity of Algorithm)
 subtitle: Data Structure, Algorithm
-category: datastructure
+category: Data Structure, Algorithm
 use_math: true
 ---
 
