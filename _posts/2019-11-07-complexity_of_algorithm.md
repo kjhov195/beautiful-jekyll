@@ -50,7 +50,7 @@ $$
 
 <br>
 
-<center><img src = '/post_img/191117/image1.png'/></center>
+<center><img src = '/post_img/191107/image1.png'/></center>
 
 <br>
 

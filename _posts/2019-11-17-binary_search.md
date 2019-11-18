@@ -47,7 +47,7 @@ def linear_search(L, x): #L: list, x:the element we want to find.
 
 <br>
 
-<center><img src = '/post_img/191118/image2.png'/></center>
+<center><img src = '/post_img/191117/image2.png'/></center>
 
 <br>
 
@@ -83,7 +83,7 @@ def binary_search(L, x): #L: list, x:the element we want to find.
 
 <br>
 
-<center><img src = '/post_img/191118/image3.png'/></center>
+<center><img src = '/post_img/191117/image3.png'/></center>
 
 <br>
 
