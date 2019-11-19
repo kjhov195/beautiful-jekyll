@@ -157,9 +157,12 @@ $$\text{You don't know what you don't know.}$$
 
 <br>
 ### 비교
+<br>
 
 __MCAR__
 가장 강한 가정(Assumption)
+
+<br>
 
 __MAR__
 MCAR보다는 약한 가정
@@ -167,6 +170,8 @@ MCAR보다는 약한 가정
 현실에서 거의 존재하지 않는 결측치
 
 Mixed model로 해결이 가능
+
+<br>
 
 __MNAR__
 가장 약한 가정
