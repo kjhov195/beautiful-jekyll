@@ -8,7 +8,6 @@ title: Project
 <img src = '/post_img/project/bigcontest_main.png' width="400"/>
 
 - 소속: 우리팀화이팅
-(연세대학교 응용통계학과 대학원생 및 학부생 팀)
 - 기간: 3 July 2019 ~ 진행 중
 - 내용: NC SOFT 리니지 유저 잔존가치 예측
 - 역할: 데이터전처리, 모델 설계
