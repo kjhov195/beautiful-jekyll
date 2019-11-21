@@ -79,7 +79,7 @@ $$ \text{where }\beta_t \text{ is fixed effect},\\
 
 <br>
 
-우리는 $ E[y|u] = X\beta + ZU$의 형태로 모델링하고자 한다. 현재 우리가 모델에서 가정한 random effect는 $s_i$, $c_j$ 두 개이다. U와 Z를 다음과 같이 가정한다면 $ZU = z_1 u_1 + z_2 u_2$로 나타낼 수 있을 것이다.
+우리는 $ E[y \vert u] = X \beta + ZU$의 형태로 모델링하고자 한다. 현재 우리가 모델에서 가정한 random effect는 $s_i$, $c_j$ 두 개이다. U와 Z를 다음과 같이 가정한다면 $ZU = z_1 u_1 + z_2 u_2$로 나타낼 수 있을 것이다.
 
 <br>
 
