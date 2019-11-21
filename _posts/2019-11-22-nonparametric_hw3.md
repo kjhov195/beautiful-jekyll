@@ -26,12 +26,10 @@ use_math: true
 
 일반적인 Classification 방법을 사용한다면 데이터셋이 달라짐에 따라 classifier $f$는 아주 크게 변할 수 있다. ___Variance___ 는 Training dataset에 대한 Classifier $f$의 __민감도(sensitivity)__ 를 측정하는 척도로 볼 수 있다. 분류 모델의 Variance는 다양한 요인에 의해 영향을 받는다.
 
-<br>
 ##### 1.1. Variance $\propto$ 1/N
 
 일반적으로 모델의 Variance는 Training dataset의 크기 N과 반비례하는 성향을 보인다. N(Training dataset의 크기)이 커진다면 그만큼 모델의 Variance는 줄어들 것이다.
 
-<br>
 ##### 1.2. Variance $\propto$ Complexity of model
 
 반면, 모델의 Variance는 모델의 복잡한 정도(Complexity)와 비례하는 성향을 가진다. 즉, 일반적으로 모델이 복잡하거나 Overfitted될수록 Variance는 커진다.
