@@ -19,6 +19,7 @@ title: Project
 <br>
 ## Animation Generation Project
 
+<img src = '/post_img/190702/Edge_detection_3.gif' width="320"/>
 <img src = '/post_img/190702/Edge_detection_4.gif' width="320"/>
 
 - 소속: YBIGTA
