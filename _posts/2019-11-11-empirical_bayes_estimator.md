@@ -2,7 +2,7 @@
 layout: post
 title: Empirical Bayes Estimate
 subtitle: Bayesian Statistics
-category: Statistics
+category: Bayesian
 use_math: true
 ---
 
