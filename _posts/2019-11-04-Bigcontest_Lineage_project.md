@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 리니지 유저 이탈 예측 모형 project
+title: 리니지 유저 이탈 예측 project(2019 빅콘테스트)
 subtitle: Bigcontest
 category: Project
 use_math: true
