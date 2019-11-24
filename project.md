@@ -23,7 +23,7 @@ title: Project
 
 - 소속: YBIGTA
 - 기간: 28 May 2019 ~ 29 June 2019
-- 내용: 스팸 문자 여부 실시간 classification
+- 내용: 실제 영상을 애니메이션(만화)의 스타일을 가진 영상으로 변환.
 - 역할: 모델 설계
 - 관련기술: Python, Pytorch, Lua
 - Keyword : Video Style Transfer
