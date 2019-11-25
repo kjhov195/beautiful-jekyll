@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Backfitting MCMC
-subtitle: MCMC
+title: DART(2)-Backfitting MCMC
+subtitle: DART, MCMC
 category: Bayesian
 use_math: true
 ---
 
 <br>
 <br>
-### Backfitting MCMC
+### Backfitting MCMC in DART
 
 Given the observed data $y$, our bayesian setup induces a posterior distribution
 
