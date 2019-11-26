@@ -71,7 +71,7 @@ $$
 
 $P(T_j \vert R_j, \sigma) \propto P(T_j) \int P(R_j \vert M_j, T_j, \sigma) P(M_j \vert T_j, \sigma) dM_j$
 
-can be obtained using Metropolis-Hastings(MH) algorithm of CGM98(Hugh A. Chipman, Edward I. George and Robert E. McCulloch(1998), Bayesian CART Model Search) and priors explained previously.
+can be obtained using Metropolis-Hastings(MH) algorithm of CGM98(Hugh A. Chipman, Edward I. George and Robert E. McCulloch(1998), Bayesian CART Model Search) and priors are in the following section.
 
 <br>
 
