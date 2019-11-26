@@ -21,7 +21,7 @@ use_math: true
 
 Given the observed data $y$, our bayesian setup induces a posterior distribution
 
-$$ p((T_1, M_1), \dots, (T_m,M_m) \vert y)$$
+$$ p((T_1, M_1), \dots, (T_m,M_m), \sigma \vert y)$$
 
 At a general level, our algorithm is a Gibbs sampler.
 
