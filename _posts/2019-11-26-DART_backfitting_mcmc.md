@@ -40,7 +40,7 @@ $$
 
 $$
 \begin{align*}
-\Rightarrow \text{Conditional distribution:}\\\\
+\Rightarrow \text{Conditional Posterior distribution:}\\\\
 (T_j,M_j)\vert T_{(j)},M_{(j)},\sigma,y\;\;\;\;\cdots(1)\\
 \sigma \vert T_1,\cdots,T_m,M_1,\cdots,M_m,y\;\;\;\;\cdots(2)\\\\
 where\;j=1,2,\cdots,m
@@ -53,29 +53,29 @@ $$
 
 <br>
 
-(1) Let $\beta_j \equiv y- \sum_{k \neq j} g(x;T_k,M_k) = g(x;T_j,M_j)+\epsilon$
+(1) Let $R_j \equiv y- \sum_{k \neq j} g(x;T_k,M_k) = g(x;T_j,M_j)+\epsilon$
 
 Drawing from $\;(T_j,M_j)\vert T_{(j)},M_{(j)},\sigma,y\;$ is equivalent to
 
-drawing from $\;(T_j,M_j)\vert \beta_j,\sigma,\;\;j=1,2,\cdots,m$
+drawing from $\;(T_j,M_j)\vert R_j,\sigma,\;\;j=1,2,\cdots,m$
 
 <br>
 
 $$
 \begin{align*}
-P((T_j,M_j)\vert \beta_j,\sigma) = P(T_j \vert \beta_j, \sigma) P(M_j \vert T_j, \beta_j, \sigma)
+P((T_j,M_j)\vert R_j,\sigma) = P(T_j \vert R_j, \sigma) P(M_j \vert T_j, R_j, \sigma)
 \end{align*}
 $$
 
 <br>
 
-$P(T_j \vert \beta_j, \sigma) \propto P(T_j) \int P(\beta_j \vert M_j, T_j, \sigma) P(M_j \vert T_j, \sigma) dM_j$
+$P(T_j \vert R_j, \sigma) \propto P(T_j) \int P(R_j \vert M_j, T_j, \sigma) P(M_j \vert T_j, \sigma) dM_j$
 
 can be obtained using Metropolis-Hastings(MH) algorithm of CGM98(Hugh A. Chipman, Edward I. George and Robert E. McCulloch(1998), Bayesian CART Model Search) and priors explained previously.
 
 <br>
 
-$P(M_j \vert T_j, \beta_j, \sigma)$
+$P(M_j \vert T_j, R_j, \sigma)$
 
 a set of independent draws of the terminal node $\mu_{ij}$'s from a normal distribution.
 
