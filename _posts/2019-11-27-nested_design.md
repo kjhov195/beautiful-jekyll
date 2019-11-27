@@ -47,42 +47,6 @@ __Factor A__ 내의 각각의 level($i = 1,2,3,...,a$)들 __밑에 Factor B__ �
 
 이 때 $\beta_{j(i)}$는 Factor B의 $j$번째 level이 Factor A의 $i$번째 level 밑에 __nested__ 되어 있다는 뜻이다.
 
-<br>
-<br>
-### 3. 숙제($p_{j(i)}$의 의미)
-
-$$y_{ijk} = \mu + \alpha_i + p_{j(i)}+t_k+\alpha t_{ik} + e_{ijk}$$
-
-위 모형에서 $p_{j(i)}$는 Group Factor의 $i$번째 level 밑에 nested 되어있는 patient Factor의 $j$ 번째 level의 환자라는 의미이다.
-
-
-<br>
-<br>
-### 4. 숙제(ANOVA table)
-
-Group의 수를 $g$개($i=1,2,...,g$),
-
-Group $i$의 환자의 수를 $N$($j=1,2,...,N$),
-
-각 그룹의 환자의 측정 횟수를 $t$라고 하자.($k=1,2,...,t$)
-
-SSG/SSP(G)/SST/SSGT/SSE를 계산해보면 다음과 같다.
-
-$$
-\begin{align*}
-SSG &= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} (y_{ijk}-\overline y_{\cdot\cdot\cdot})^2\\
-&= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} ((y_{ijk})+(\overline y_{ij\cdot}-\overline y_{ij\cdot} + \overline y_{i\cdot k}- \overline y_{i\cdot k}+ \overline y_{i\cdot \cdot} - \overline y_{i\cdot \cdot} + \overline y_{i\cdot \cdot} - \overline y_{i\cdot \cdot}+ \overline y_{\cdot \cdot k} - \overline y_{\cdot \cdot k}+\overline y_{\cdot \cdot \cdot}-\overline y_{\cdot \cdot \cdot}) - \overline y_{\cdot \cdot \cdot})^2\\
-&= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} (y_{ijk}+\overline y_{ij\cdot}-\overline y_{ij\cdot} + \overline y_{i\cdot k}- \overline y_{i\cdot k}+ \overline y_{i\cdot \cdot} - \overline y_{i\cdot \cdot} + \overline y_{i\cdot \cdot} - \overline y_{i\cdot \cdot} + \overline y_{\cdot \cdot k} - \overline y_{\cdot \cdot k}+\overline y_{\cdot \cdot \cdot}-\overline y_{\cdot \cdot \cdot} - \overline y_{\cdot \cdot \cdot})^2\\
-&= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} ((\overline y_{i\cdot \cdot}- \overline y_{\cdot \cdot \cdot})+(\overline y_{ij\cdot}- \overline y_{i\cdot \cdot})+(\overline y_{\cdot \cdot k}-\overline y_{\cdot \cdot \cdot})+(\overline y_{i\cdot k}- \overline y_{i\cdot \cdot}- \overline y_{\cdot \cdot k}+\overline y_{\cdot \cdot \cdot})
-  +(y_{ijk}-\overline y_{ij\cdot} - \overline y_{i\cdot k}+ \overline y_{i\cdot \cdot}))^2\\
-&= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} (\overline y_{i\cdot \cdot}- \overline y_{\cdot \cdot \cdot})^2+\sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t}(\overline y_{ij\cdot}- \overline y_{i\cdot \cdot})^2+\sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t}(\overline y_{\cdot \cdot k}-\overline y_{\cdot \cdot \cdot})^2\\
-&\;\;\;\;+\sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t}(\overline y_{i\cdot k}- \overline y_{i\cdot \cdot}- \overline y_{\cdot \cdot k}+\overline y_{\cdot \cdot \cdot})^2
-  +\sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t}(y_{ijk}-\overline y_{ij\cdot} - \overline y_{i\cdot k}+ \overline y_{i\cdot \cdot})^2\\
-&= SSG+SSG(P)+SST+SSGT+SSE
-\end{align*}
-$$
-
-
 
 <br>
 <br>
