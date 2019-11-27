@@ -73,7 +73,12 @@ $$
 SSG &= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} (y_{ijk}-\overline y_{\cdot\cdot\cdot})^2\\
 &= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} ((y_{ijk})+(\overline y_{ij\cdot}-\overline y_{ij\cdot} + \overline y_{i\cdot k}- \overline y_{i\cdot k}+ \overline y_{i\cdot \cdot} - \overline y_{i\cdot \cdot} + \overline y_{i\cdot \cdot} - \overline y_{i\cdot \cdot}+ \overline y_{\cdot \cdot k} - \overline y_{\cdot \cdot k}+\overline y_{\cdot \cdot \cdot}-\overline y_{\cdot \cdot \cdot}) - \overline y_{\cdot \cdot \cdot})^2\\
 &= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} (y_{ijk}+\overline y_{ij\cdot}-\overline y_{ij\cdot} + \overline y_{i\cdot k}- \overline y_{i\cdot k}+ \overline y_{i\cdot \cdot} - \overline y_{i\cdot \cdot} + \overline y_{i\cdot \cdot} - \overline y_{i\cdot \cdot} + \overline y_{\cdot \cdot k} - \overline y_{\cdot \cdot k}+\overline y_{\cdot \cdot \cdot}-\overline y_{\cdot \cdot \cdot} - \overline y_{\cdot \cdot \cdot})^2\\
-&= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} (y_{ijk}+\overline y_{ij\cdot}-\overline y_{ij\cdot} + \overline y_{i\cdot k}- \overline y_{i\cdot k}+ \overline y_{i\cdot \cdot} - \overline y_{i\cdot \cdot} + \overline y_{i\cdot \cdot} - \overline y_{i\cdot \cdot} + \overline y_{\cdot \cdot k} - \overline y_{\cdot \cdot k}+\overline y_{\cdot \cdot \cdot}-\overline y_{\cdot \cdot \cdot} - \overline y_{\cdot \cdot \cdot})^2\\
+&= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} ((\overline y_{i\cdot \cdot}- \overline y_{\cdot \cdot \cdot})+(\overline y_{ij\cdot}- \overline y_{i\cdot \cdot})+(\overline y_{\cdot \cdot k}-\overline y_{\cdot \cdot \cdot})+(\overline y_{i\cdot k}- \overline y_{i\cdot \cdot}- \overline y_{\cdot \cdot k}+\overline y_{\cdot \cdot \cdot})
+  +(y_{ijk}-\overline y_{ij\cdot} - \overline y_{i\cdot k}+ \overline y_{i\cdot \cdot}))^2\\
+&= \sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t} (\overline y_{i\cdot \cdot}- \overline y_{\cdot \cdot \cdot})^2+\sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t}(\overline y_{ij\cdot}- \overline y_{i\cdot \cdot})^2+\sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t}(\overline y_{\cdot \cdot k}-\overline y_{\cdot \cdot \cdot})^2\\
+&\;\;\;\;+\sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t}(\overline y_{i\cdot k}- \overline y_{i\cdot \cdot}- \overline y_{\cdot \cdot k}+\overline y_{\cdot \cdot \cdot})^2
+  +\sum_{i=1}^{g} \sum_{j=1}^{N} \sum_{k=1}^{t}(y_{ijk}-\overline y_{ij\cdot} - \overline y_{i\cdot k}+ \overline y_{i\cdot \cdot})^2\\
+&= SSG+SSG(P)+SST+SSGT+SSE
 \end{align*}
 $$
 
