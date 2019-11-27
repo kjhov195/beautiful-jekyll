@@ -51,7 +51,11 @@ __Factor A__ 내의 각각의 level($i = 1,2,3,...,a$)들 __밑에 Factor B__ �
 <br>
 ### 3. 숙제($p_{j(i)}$의 의미)
 
-다음 모형에서 $p_{j(i)}$는 Group Factor의 $i$번째 level 밑에 nested 되어있는 patient Factor의 $j$ 번째 level의 환자라는 의미이다.
+$$y_{ijk} = \mu + \alpha_i + p_{j(i)}+t_k+\alpha t_{ik} + e_{ijk}$$
+
+위 모형에서 $p_{j(i)}$는 Group Factor의 $i$번째 level 밑에 nested 되어있는 patient Factor의 $j$ 번째 level의 환자라는 의미이다.
+
+
 
 
 <br>
