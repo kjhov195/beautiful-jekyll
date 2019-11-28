@@ -59,7 +59,7 @@ $f(M \vert Y_o, Y_m, \psi) = f(M \vert Y_o, Y_m, \psi)$
 
 ##### pdf of $Y$ (joint pdf of $Y_o, Y_m$)
 
-$$f(Y \vert \theta) = f(Y_0, Y_m \vert \theta)\;\;\text{: joint pdf of Y_o, Y_m}$$
+$$f(Y \vert \theta) = f(Y_0, Y_m \vert \theta)$$
 
 ##### joint pdf of $Y, M$
 
