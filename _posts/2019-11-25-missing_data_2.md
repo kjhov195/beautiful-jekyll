@@ -13,12 +13,11 @@ use_math: true
 
 <br>
 <br>
-### Definition
+### 0. Notation
 
 $$
 \begin{align*}
-Y &= (Y_o, Y_m)\\
-f(Y\vert \theta) &= f(Y_0, Y_m \vert \theta)\;:\;\text{joint pdf of $Y_o$, $Y_m$}\\\\
+Y &= (Y_o, Y_m)
 ,where \;&\begin{cases}
 Y_o &: \text{observed values}\\
 Y_m &: \text{missing values}\\
@@ -32,17 +31,97 @@ y 값은 관측된($Y_o$:observed) y값과 관측되지 않은 y값($Y_m$:missin
 
 $$
 \begin{align*}
-\underset {n \text{ by } k} Y = (y_{ij})
+Y &= (y_{ij})\\
+M &= (m_{ij})\;\;where\;i=1,2,\cdots,n,\;j=1,2,\cdots,k \\
+m_{ij} &= \begin{cases}
+1\;\;\text{ if $y_{ij}$ is missing}\\
+0\;\;\text{ if $y_{ij}$ is observed}
+\end{cases}
 \end{align*}
 $$
 
+when __MCAR__,
+
+$f(M \vert Y_o, Y_m, \psi) = f(M \vert \psi)$
+
+when __MAR__,
+
+$f(M \vert Y_o, Y_m, \psi) = f(M \vert Y_o, \psi)$
+
+when __MCAR__,
+
+$f(M \vert Y_o, Y_m, \psi) = f(M \vert Y_o, Y_m, \psi)$
 
 
 <br>
 <br>
-### MAR
+### 1. PDF
 
-writing...
+##### pdf of $Y$ (joint pdf of $Y_o, Y_m$)
+
+$$f(Y \vert \theta) = f(Y_0, Y_m \vert \theta)\;\;\text{: joint pdf of Y_o, Y_m}$$
+
+##### joint pdf of $Y, M$
+
+$$f(Y,M \vert \theta, \psi) = f(Y \vert \theta) f(M \vert \psi)$$
+
+##### joint pdf of $Y_o, M$
+
+Full model에는 관측된 정보 뿐만 아니라, 관측되지 않은 정보 또한 포함되어야 한다.
+
+따라서 Full model은 다음과 같다.
+
+$$f(Y_o,M \vert \theta, \psi) = f(Y_o \vert \theta) f(M \vert \psi)$$
+
+<br>
+<br>
+### 2. Likelihood
+
+#### 1. Ignorable likelihood
+
+$$L_{ign}(\theta \vert Y_o) = \prod_{i=1}^n f(Y_o \vert \theta)$$
+
+$$f(Y_o \vert \theta) = \int f(Y_o, Y_m \vert \theta) dY_m$$
+
+
+<br>
+#### 2. Full likelihood
+
+$$L_{full}(\theta, \psi \vert Y_o, M) = \prod_{i=1}^n f(Y_o,M \vert \theta, \psi)$$
+
+$$f(Y_o,M \vert \theta, \psi) = \int f(Y_o, Y_m \vert \theta) f(M \vert Y_o, Y_m, \psi)dY_m$$
+
+<br>
+<br>
+### 3. Full Likelihood under MAR
+
+다음의 두 조건이 만족된다고 생각하자.
+
+1. 결측치는 MAR
+
+2. $(\theta, \psi)$의 joint parameter space가 각각의 parameter space의 product이다.
+
+이 때 Full likelihood는 다음과 같이 정리할 수 있다.
+
+$$L_{full}(\theta, \psi \vert Y_o, M) = \prod_{i=1}^n f(Y_o,M \vert \theta, \psi)$$
+
+$$
+\begin{align*}
+f(Y_o,M \vert \theta, \psi) &= \int f(Y_o, Y_m \vert \theta) f(M \vert Y_o, Y_m, \psi)dY_m\\
+&= \int f(Y_o, Y_m \vert \theta) f(M \vert Y_o, \psi)dY_m\;\;\;(\because MAR)\\
+&= f(M \vert Y_o, \psi) \int f(Y_o, Y_m \vert \theta) dY_m\\
+&= f(M \vert Y_o, \psi) f(Y_o \vert \theta)
+\end{align*}
+$$
+
+즉, 여기서 알 수 있는 것은 MAR을 가정할 경우,
+
+위 식에서 좌변 __$F(Y_o, M \vert \theta, \psi)$__ 를 최대화 시키는 것은 우변의 __$f(Y_o \vert \theta)$__ 를 최대화 시키는 것과 같다.
+
+즉, __$L_{full}$__ 를 최대화 시키는 것은 __$L_{ign}$__ 를 최대화 시키는 것과 동일하다.
+
+정리하면, Full liklihood를 최대화시킬 때 $M$을 고려할 필요 없이, 관측된 값의 joint pdf인 $Y_o$의 pdf $f(Y_o \vert \theta)$만 최대화시켜주면 되는 것이다.
+
 
 <br>
 <br>
