@@ -18,7 +18,7 @@ use_math: true
 $$
 \begin{align*}
 Y &= (Y_o, Y_m)
-,where \;&\begin{cases}
+,\;\;\;where \;\begin{cases}
 Y_o &: \text{observed values}\\
 Y_m &: \text{missing values}\\
 \end{cases}
@@ -114,7 +114,9 @@ f(Y_o,M \vert \theta, \psi) &= \int f(Y_o, Y_m \vert \theta) f(M \vert Y_o, Y_m,
 \end{align*}
 $$
 
-즉, 여기서 알 수 있는 것은 MAR을 가정할 경우,
+<br>
+
+여기서 알 수 있는 것은 MAR을 가정할 경우,
 
 위 식에서 좌변 __$F(Y_o, M \vert \theta, \psi)$__ 를 최대화 시키는 것은 우변의 __$f(Y_o \vert \theta)$__ 를 최대화 시키는 것과 같다.
 
