@@ -122,7 +122,7 @@ $$
 
 즉, __$L_{full}$__ 를 최대화 시키는 것은 __$L_{ign}$__ 를 최대화 시키는 것과 동일하다.
 
-정리하면, Full liklihood를 최대화시킬 때 $M$을 고려할 필요 없이, 관측된 값의 joint pdf인 $Y_o$의 pdf $f(Y_o \vert \theta)$만 최대화시켜주면 되는 것이다.
+정리하면, Full liklihood를 최대화시킬 때 $M$을 고려할 필요 없이, 관측된 값의 pdf인 $Y_o$의 pdf $f(Y_o \vert \theta)$만 최대화시켜주면 되는 것이다.
 
 
 <br>
