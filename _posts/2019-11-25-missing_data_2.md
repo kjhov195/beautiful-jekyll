@@ -48,7 +48,7 @@ when __MAR__,
 
 $f(M \vert Y_o, Y_m, \psi) = f(M \vert Y_o, \psi)$
 
-when __MCAR__,
+when __MNAR__,
 
 $f(M \vert Y_o, Y_m, \psi) = f(M \vert Y_o, Y_m, \psi)$
 
