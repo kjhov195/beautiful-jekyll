@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nested Design(Design of Experiment)
+title: Advantages of mixed model
 subtitle: Design of Experiment
 category: Statistics
 use_math: true
@@ -53,3 +53,6 @@ __Factor A__ 내의 각각의 level($i = 1,2,3,...,a$)들 __밑에 Factor B__ �
 ### Reference
 
 Douglas C. Montgomery(2017), Design and Analysis of Experiments, 9th Edition
+
+<br>
+<br>
