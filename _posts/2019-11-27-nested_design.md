@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Advantages of mixed model
+title: Nested Design
 subtitle: Design of Experiment
 category: Statistics
 use_math: true
