@@ -88,17 +88,17 @@ $$
 
 $$
 \begin{align*}
-p(Cold \vert Positive_1, Postivie_2) &\propto p(Positive_2 \vert Cold) \cdot p(Cold \vert Positive_1)\\
+p(Cold \vert Positive_1, Positive_2) &\propto p(Positive_2 \vert Cold) \cdot p(Cold \vert Positive_1)\\
 &\propto 0.95 \cdot 0.7037\\
 &\approx 0.6685
 \end{align*}
 $$
 
-참고로 $p(not \; Cold \vert Positive_1, Postivie_2)$는 다음과 같이 Update할 수 있다.
+참고로 $p(not \; Cold \vert Positive_1, Positive_2)$는 다음과 같이 Update할 수 있다.
 
 $$
 \begin{align*}
-p(not\;Cold \vert Positive_1, Postivie_2) &\propto p(Positive_2 \vert not\;Cold) \cdot p(not\;Cold \vert Positive_1)\\
+p(not\;Cold \vert Positive_1, Positive_2) &\propto p(Positive_2 \vert not\;Cold) \cdot p(not\;Cold \vert Positive_1)\\
 &\propto (1-0.9) \cdot (1-0.7037)\\
 &\approx 0.03
 \end{align*}
