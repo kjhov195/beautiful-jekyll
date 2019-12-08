@@ -74,7 +74,17 @@ $$
 
 <br>
 
-두 번째 진료에서도 Positive(양성) 반응이 나왔을 때 실제 감기일 확률은 다음과 같이 업데이트 된다.
+두 번째 진료에서도 Positive(양성) 반응이 나왔을 때 실제 감기일 확률은 Bayesian Updating에 따라 다음과 같이 업데이트 된다.
+
+$$
+\begin{align*}
+p(\theta \vert y_1, y_2) &\propto p(y_1,y_2 \vert \theta) p(\theta)\\
+&= p(y_1 \vert \theta) p(y_2 \vert \theta) p(\theta)\;\;\;\;\;\;(y_1\;\text{&}\;y_2\;are\;indep)\\
+&\propto p(y_2 \vert \theta) p(\theta \vert y_1)
+\end{align*}
+$$
+
+이므로, 예제에 적용해보면 다음과 같다.
 
 $$
 \begin{align*}
