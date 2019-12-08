@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Informative Prior
+title: Informative Prior(Conjugate Prior)
 subtitle: Bayesian Statistics
 category: Bayesian
 use_math: true
