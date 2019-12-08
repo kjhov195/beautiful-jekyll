@@ -79,7 +79,8 @@ $$
 $$
 \begin{align*}
 p(Cold \vert Positive_1, Postivie_2) &\propto p(Positive_2 \vert Cold) \cdot p(Cold \vert Positive_1)\\
-&\propto 0.95 \cdot 0.7037
+&\propto 0.95 \cdot 0.7037\\
+&\approx 0.6685
 \end{align*}
 $$
 
@@ -87,8 +88,9 @@ $$
 
 $$
 \begin{align*}
-p(not\;Cold \vert Positive_1, Postivie_2) &\propto p(Positive_2 \vert not\;Cold) \cdot p(Cold \vert Positive_1)\\
-&\propto 0.95 \cdot 0.7037
+p(not\;Cold \vert Positive_1, Postivie_2) &\propto p(Positive_2 \vert not\;Cold) \cdot p(not\;Cold \vert Positive_1)\\
+&\propto (1-0.9) \cdot (1-0.7037)\\
+&\approx 0.03
 \end{align*}
 $$
 
