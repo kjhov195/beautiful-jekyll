@@ -16,7 +16,7 @@ $$\hat \theta_{mle} = Argmax_{\theta} L(\theta \vert y)$$
 
 반면 Bayesian의 경우, 모수를 __Random Variable__ 로 취급한다. 이것이 가장 핵심적인 차이점이다.
 
-베이지안은 모수에 대한 분포를 가정하며, 이를 __Prior__ distribution이라고 한다. 직관적으로 이해해본다면 posterior는 관찰하기 이전의 믿음 정도로 이해할 수 있을 것이다.
+베이지안은 모수에 대한 분포를 가정하며, 이를 __Prior__ distribution이라고 한다. 직관적으로 이해해 본다면 posterior는 관찰하기 이전의 믿음 정도로 이해할 수 있을 것이다.
 
 또한 관측된 데이터에 대한 모수의 Conditional Distribution이라고 할 수 있는 __Posterior__ Distribution를 통해 추론이 이루어진다.
 
@@ -50,7 +50,7 @@ $$
 \begin{align*}
 p(\theta \vert y) &= {p(y \vert \theta)f(\theta) \over p(y)}\\
 &\propto p(y \vert \theta)p(\theta)\\\\
-Posterior &\propto Likelihood \cdot posterior\\\\
+Posterior &\propto Likelihood \cdot Posterior\\\\
 \end{align*}
 $$
 
