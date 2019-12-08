@@ -63,11 +63,11 @@ $$
 
 $$
 \begin{align*}
-p(Cold \vert Positive) &= {{p(Positive \vert Cold) p(Cold)}\over {p(Positive)}}\\
-&= {{p(Positive \vert Cold) p(Cold)}\over {p(Positive, Cold)+p(Positive, not\;Cold)}}\\
-&= {{p(Positive \vert Cold) p(Cold)}\over {p(Positive \vert Cold) p(Cold)+p(Positive \vert not\; Cold)p(not\;Cold)}}\\
+p(Cold \vert Positive) &= {p(Positive \vert Cold) p(Cold) \over p(Positive)}\\
+&= {p(Positive \vert Cold) p(Cold) \over p(Positive, Cold)+p(Positive, not\;Cold)}\\
+&= {p(Positive \vert Cold) p(Cold) \over p(Positive \vert Cold) p(Cold)+p(Positive \vert not\; Cold)p(not\;Cold)}\\
 &= {{p(Positive \vert Cold) p(Cold)}\over {p(Positive \vert Cold)p(Cold)+(1-p(Negative \vert not\; Cold))p(not\;Cold)}}\\
-&= {{0.95 \cdot 0.2}\over{0.95 \cdot 0.2 + (1-0.9)\cdot0.8}}\\
+&= {0.95 \cdot 0.2 \over 0.95 \cdot 0.2 + (1-0.9)\cdot0.8 }\\
 &\approx 0.7037
 \end{align*}
 $$
