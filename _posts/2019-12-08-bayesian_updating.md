@@ -84,6 +84,7 @@ p(\theta \vert y_1, y_2) &\propto p(y_1,y_2 \vert \theta) p(\theta)\\
 \end{align*}
 $$
 
+
 이므로, 예제에 적용해보면 다음과 같다.
 
 $$
@@ -94,7 +95,10 @@ p(Cold \vert Positive_1, Positive_2) &\propto p(Positive_2 \vert Cold) \cdot p(C
 \end{align*}
 $$
 
+<br>
+
 참고로 $p(not \; Cold \vert Positive_1, Positive_2)$는 다음과 같이 Update할 수 있다.
+
 
 $$
 \begin{align*}
