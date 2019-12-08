@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Robust Prior
+title: Robust Prior(Diffuse/Mixture/Hierarchical)
 subtitle: Bayesian Statistics
 category: Bayesian
 use_math: true
