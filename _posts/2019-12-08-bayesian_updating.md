@@ -66,13 +66,31 @@ $$
 p(Cold \vert Positive) &= {p(Positive \vert Cold) p(Cold) \over p(Positive)}\\
 &= {p(Positive \vert Cold) p(Cold) \over p(Positive, Cold)+p(Positive, not\;Cold)}\\
 &= {p(Positive \vert Cold) p(Cold) \over p(Positive \vert Cold) p(Cold)+p(Positive \vert not\; Cold)p(not\;Cold)}\\
-&= {p(Positive \vert Cold) p(Cold)}\over {p(Positive \vert Cold)p(Cold)+(1-p(Negative \vert not\; Cold))p(not\;Cold)}\\
+&= {p(Positive \vert Cold) p(Cold)\over p(Positive \vert Cold)p(Cold)+(1-p(Negative \vert not\; Cold))p(not\;Cold)}\\
 &= {0.95 \cdot 0.2 \over 0.95 \cdot 0.2 + (1-0.9)\cdot0.8 }\\
 &\approx 0.7037
 \end{align*}
 $$
 
+<br>
 
+두 번째 진료에서도 Positive(양성) 반응이 나왔을 때 실제 감기일 확률은 다음과 같이 업데이트 된다.
+
+$$
+\begin{align*}
+p(Cold \vert Positive_1, Postivie_2) &\propto p(Positive_2 \vert Cold) \cdot p(Cold \vert Positive_1)\\
+&\propto 0.95 \cdot 0.7037
+\end{align*}
+$$
+
+참고로 $p(not \; Cold \vert Positive_1, Postivie_2)$는 다음과 같이 Update할 수 있다.
+
+$$
+\begin{align*}
+p(not\;Cold \vert Positive_1, Postivie_2) &\propto p(Positive_2 \vert not\;Cold) \cdot p(Cold \vert Positive_1)\\
+&\propto 0.95 \cdot 0.7037
+\end{align*}
+$$
 
 <br>
 <br>
