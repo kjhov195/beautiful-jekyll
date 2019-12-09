@@ -99,7 +99,6 @@ $$Transition\;kernel:T(x' \vert x)=0.6N(x-1.5,1)+0.4N(x+1.5,1)$$
 
 10000번의 iteration을 통하여 Metropolis Hastings 알고리즘으로 $x$를 sampling하는 과정은 다음과 같다.
 
-<br>
 
 ```
 import numpy as np
@@ -141,6 +140,9 @@ for t in range(n_iter):
     else:
         x[t+1] = x[t]
 ```
+
+<br>
+
 
 그 결과, target distribution(윗쪽 그림)과 거의 동일하게 sampling된 것(아래쪽 그림)을 확인할 수 있다.
 
