@@ -38,7 +38,7 @@ $$P_{ij} = P(\theta^{(t+1)}=j \vert \theta^{(t)}=i)$$
 
 Metropolis 알고리즘은 MCMC의 초석이 되는 알고리즘이다. 우리는 target distribution $\pi(\theta)$에서 sampling을 하고자 한다. Metropolis Algorithm의 경우 다음의 step을 거쳐 iterative하게 sampling하게 된다.
 
-1. 현재 시점은 t-step이다. 현재 시점에서의 $\theta^{(t)}$를 given으로 transition kernel $T(\theta^{ * } \vert \theta^{ (t) })$에서 새로운 sample $\theta^{ * }$을 sampling한다.
+1. 현재 시점은 $t$시점이다. 현재 시점에서의 $\theta^{(t)}$를 given으로 transition kernel $T(\theta^{ * } \vert \theta^{ (t) })$에서 새로운 sample $\theta^{ * }$을 sampling한다.
 
 2. $\alpha = {\pi(\theta^{ * }) \over \pi(\theta^{ (t) })}$ 를 계산한다.
 
@@ -49,7 +49,7 @@ $$
 \begin{align*}
 \theta^{ t+1 } =
 \begin{cases}
-\theta^{ * }\;\;\;with\;prob\;p=min(\alpha,1)\\
+\theta^{ * }\;\;\;\;with\;prob\;p=min(\alpha,1)\\
 \theta^{ (t) }\;\;\;with\;prob\;(1-p)
 \end{cases}
 \end{align*}
@@ -81,7 +81,7 @@ $$
 \begin{align*}
 \theta^{ t+1 } =
 \begin{cases}
-\theta^{ * }\;\;\;with\;prob\;p=min(\alpha,1)\\
+\theta^{ * }\;\;\;\;with\;prob\;p=min(\alpha,1)\\
 \theta^{ (t) }\;\;\;with\;prob\;(1-p)
 \end{cases}
 \end{align*}
@@ -91,7 +91,7 @@ $$
 
 <br>
 <br>
-### Example 1.
+### Example
 
 $$Target\;distribution: \pi(x) \propto {1 \over \sqrt{8x^2+1}}exp \left \lbrack -{1 \over 2}(x^2-8x-{16 \over 8x^2+1}) \right \rbrack$$
 
@@ -144,7 +144,7 @@ for t in range(n_iter):
 
 그 결과, target distribution(윗쪽 그림)과 거의 동일하게 sampling된 것(아래쪽 그림)을 확인할 수 있다.
 
-<center><img src = '/post_img/191209/image1.png' width="600"/></center>
+<center><img src = '/post_img/191209/image1.png' width="300"/></center>
 
 
 <br>
