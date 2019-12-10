@@ -20,7 +20,7 @@ $$ p(\theta^{(t+1)} \vert \theta^{(1)},\theta^{(2)},\theta^{(3)},\cdots,\theta^{
 
 즉, 시점 t+1에서의 상태는 그 직전 시점인 t에서의 상태에만 영향을 받는 것을 뜻한다.
 
-참고로 Transition probability from $i$ to $j$,.즉 $P_{ij}$는 다음 확률을 뜻한다.
+참고로 Transition probability from $i$ to $j$, 즉 $P_{ij}$는 다음 확률을 뜻한다.
 
 $$P_{ij} = P(\theta^{(t+1)}=j \vert \theta^{(t)}=i)$$
 
@@ -47,7 +47,7 @@ Metropolis 알고리즘은 MCMC의 초석이 되는 알고리즘이다. 우리�
 4. 다음과 같이 $\theta^{ (t+1) }$을 update한다.
 $$
 \begin{align*}
-\theta^{ t+1 } =
+\theta^{ (t+1) } =
 \begin{cases}
 \theta^{ * }\;\;\;\;with\;prob\;p=min(\alpha,1)\\
 \theta^{ (t) }\;\;\;with\;prob\;(1-p)
@@ -79,7 +79,7 @@ Sampling 과정은 다음과 같다.
 4. 다음과 같이 $\theta^{ (t+1) }$을 update한다.
 $$
 \begin{align*}
-\theta^{ t+1 } =
+\theta^{ (t+1) } =
 \begin{cases}
 \theta^{ * }\;\;\;\;with\;prob\;p=min(\alpha,1)\\
 \theta^{ (t) }\;\;\;with\;prob\;(1-p)
