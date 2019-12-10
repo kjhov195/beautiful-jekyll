@@ -45,7 +45,7 @@ $$Let\;the\;data\;speak\;for\;themselves$$
 
 $\theta$의 prior를 flat prior로 가정해보자. 그리고 $\theta$에 exponential을 취해주는 transformation해준 모수를 $\psi$라고 하자.($\psi = exp(\theta)$)
 
-$\theta$의 prior는 flat prior를 가정하여 $p(\theta) \propto 1$이라고 하자. 하지만 $\psi$의 prior는 다음에서 볼 수 있듯이 더 이상 flat prior가 아니다. 즉, flat prior를 가정할 경우 transformation에 invariance한 성질이 없는 것을 확인할 수 있다.
+$\theta$의 prior는 flat prior를 가정하여 $p(\theta) \propto 1$이다. 하지만 $\psi$의 prior는 다음에서 볼 수 있듯이 더 이상 flat prior가 아니다. 즉, flat prior를 가정할 경우 transformation에 invariance한 성질이 없는 것을 확인할 수 있다.
 
 $$
 \begin{align*}
