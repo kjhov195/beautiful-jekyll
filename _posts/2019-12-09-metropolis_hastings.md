@@ -145,6 +145,10 @@ for t in range(n_iter):
 
 <center><img src = '/post_img/191209/image1.png' width="300"/></center>
 
+Time series plot이라고도 불리우는 Trace plot을 그려보았을 때에도 다음과 같이 잘 수렴하고 있는 것을 확인할 수 있다.
+
+<center><img src = '/post_img/191209/image2.png' width="300"/></center>
+
 
 <br>
 <br>
