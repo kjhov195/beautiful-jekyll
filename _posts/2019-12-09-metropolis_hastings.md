@@ -103,9 +103,6 @@ $$Transition\;kernel:T(x' \vert x)=0.6N(x-1.5,1)+0.4N(x+1.5,1)$$
 ```
 import numpy as np
 import scipy.stats as stats
-import seaborn as sns
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import acorr
 
 def target_fn(x):
     density = 1/(np.sqrt(8*(x**2)+1))*np.exp(-0.5*(x**2-8*x-16/(8*(x**2)+1)))
