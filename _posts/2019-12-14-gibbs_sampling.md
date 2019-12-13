@@ -83,11 +83,11 @@ def gibbs_sampling(x,y,n_iters):
     return x, y
 ```
 
-<center><img src = '/post_img/191214/image1.png' width="600"/></center>
+<center><img src = '/post_img/191214/image1.png' width="300"/></center>
 
 Gibbs sampling통하여 100번 sampling한 결과를 나타낸 것이다.
 
-<center><img src = '/post_img/191214/image2.png' width="600"/></center>
+<center><img src = '/post_img/191214/image2.png' width="300"/></center>
 
 Gibbs sampling통하여 3000번 sampling한 결과를 나타낸 것이다.
 
@@ -97,12 +97,15 @@ Gibbs sampling통하여 3000번 sampling한 결과를 나타낸 것이다.
 
 실제로 3000번 sampling한 경우에 대하여 $x$와 $y$ 각각의 히스토그램을 그려보면 다음과 같으며, 제대로 샘플링되었다는 것을 확인할 수 있다.
 
-<center><img src = '/post_img/191214/image3.png' width="600"/></center>
+<center><img src = '/post_img/191214/image3.png' width="300"/></center>
 
-<center><img src = '/post_img/191214/image4.png' width="600"/></center>
+<center><img src = '/post_img/191214/image4.png' width="300"/></center>
 
 
 <br>
 <br>
 ### Reference
 Sohn, [Gibbs sampler란](https://jinwonsohn.github.io/bayesian/sampling/2018/08/01/Gibbs-Sampler.html)
+
+<br>
+<br>
