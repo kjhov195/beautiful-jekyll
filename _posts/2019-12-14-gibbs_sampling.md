@@ -37,7 +37,7 @@ Posterior가 간단한 형태를 가질 경우 Posterior로부터 쉽게 샘플�
 <br>
 ### Example
 
-사실 처음 보았을 때에 직관적으로 이해하기가 쉽지 않다. 다음의 매우 간단한 예제를 통해 이해해보도록 하자. 이 예시는 [Joel Grus, Data Science from Scratch First Principles with python](https://www.amazon.com/Data-Science-Scratch-Principles-Python/dp/149190142X)에서 가져온 예제다.
+사실 처음 보았을 때에 직관적으로 이해하기가 쉽지만은 않을 것이다. 다음의 매우 간단한 예제를 살펴보면 훨씬 이해하기가 쉽다. 이 예시는 [Joel Grus, Data Science from Scratch First Principles with python](https://www.amazon.com/Data-Science-Scratch-Principles-Python/dp/149190142X)에서 가져온 예제다.
 
 두 fair한 주사위 1,2를 생각해보자. 주사위 1의 눈을 $d_1$, 주사위 2의 눈을 $d_2$라고 하자.
 
@@ -86,7 +86,7 @@ def gibbs_sampling(x,y,n_iters):
 <br>
 <br>
 
-sampling 결과를 시각화해보면 다음과 같다. 
+sampling 결과를 시각화해보면 다음과 같다.
 
 <center><img src = '/post_img/191214/image1.png' width="300"/></center>
 
