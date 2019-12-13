@@ -83,6 +83,11 @@ def gibbs_sampling(x,y,n_iters):
     return x, y
 ```
 
+<br>
+<br>
+
+sampling 결과를 시각화해보면 다음과 같다. 
+
 <center><img src = '/post_img/191214/image1.png' width="300"/></center>
 
 Gibbs sampling통하여 100번 sampling한 결과를 나타낸 것이다.
