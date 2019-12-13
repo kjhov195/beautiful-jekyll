@@ -12,7 +12,7 @@ use_math: true
 
 Posterior가 간단한 형태를 가질 경우 Posterior로부터 쉽게 샘플을 구할 수 있을 것이고, Estimator 또한 쉽게 구할 수 있을 것이다. 하지만 만약 Posterior의 형태가 복잡하거나 Closed-form으로 구할 수 없는 경우 Sampling의 문제 또한 매우 어려워진다.
 
-앞서 살펴본 MCMC의 대표적인 알고리즘인 Metropolis Hastings가 바로 이러한 샘플링 문제를 해결하고자 고안된 알고리즘인데, 깁스 샘플러는 Metropolis Hastings 알고리즘의 Special case라고 볼 수 있다. 순차적으로 각 모수들의 조건부 확률 분포(Full conditional distribution)에서 모수들을 뽑아, 결국 사후분포로부터 샘플을 뽑아낼 수 있도록 해준다.
+앞서 살펴본 MCMC의 대표적인 알고리즘인 Metropolis Hastings가 이러한 샘플링 문제를 해결하고자 고안된 알고리즘인데, 깁스 샘플러는 Metropolis Hastings 알고리즘의 Special case라고 볼 수 있다. 순차적으로 각 모수들의 조건부 확률 분포(Full conditional distribution)에서 모수들을 뽑아, 결국 사후분포로부터 샘플을 뽑아낼 수 있도록 해준다.
 
 <br>
 <br>
@@ -112,5 +112,6 @@ Gibbs sampling통하여 3000번 sampling한 결과를 나타낸 것이다.
 ### Reference
 Sohn, [Gibbs sampler란](https://jinwonsohn.github.io/bayesian/sampling/2018/08/01/Gibbs-Sampler.html)
 
+ratsgo's blog, [Gibbs Sampling](https://ratsgo.github.io/statistics/2017/05/31/gibbs/)
 <br>
 <br>
