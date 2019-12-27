@@ -111,7 +111,7 @@ def naive_density_estimate(x, h, data):
 
 각각 왼쪽 위부터 h = 0.1, 0.2, 0.3, 0.4, 0.5, 0.6일 때 Naive Density Estimate의 결과이다.
 
-우리가 이 예시를 통해 확인할 수 있는 Naive Density Estimate의 단점이 존재하는데, 위 결과에서 볼 수 있듯이 추정된 pdf가 continuous하지 않으며, 상당히 ragged되어 있는 모습을 확인할 수 있다.(The naive density estimator is not continuous and will have a ragged pattern.)
+우리가 이 예시를 통해 확인할 수 있는 Naive Density Estimate의 단점이 있는데, 위 결과에서 볼 수 있듯이 추정된 pdf가 continuous하지 않으며, 상당히 ragged되어 있다는 것이다.(The naive density estimator is not continuous and will have a ragged pattern.)
 
 
 <br>
