@@ -95,15 +95,18 @@ def naive_density_estimate(x, h, data):
 <br>
 
 <center>
-<img src = '/post_img/191228/image6.png' width="250"/>
-<img src = '/post_img/191228/image7.png' width="250"/>
-<img src = '/post_img/191228/image8.png' width="250"/>
+<img src = '/post_img/191228/image6.png' width="300"/>
+<img src = '/post_img/191228/image7.png' width="300"/>
 </center>
 
 <center>
-<img src = '/post_img/191228/image9.png' width="250"/>
-<img src = '/post_img/191228/image10.png' width="250"/>
-<img src = '/post_img/191228/image11.png' width="250"/>
+<img src = '/post_img/191228/image8.png' width="300"/>
+<img src = '/post_img/191228/image9.png' width="300"/>
+</center>
+
+<center>
+<img src = '/post_img/191228/image10.png' width="300"/>
+<img src = '/post_img/191228/image11.png' width="300"/>
 </center>
 
 각각 왼쪽 위부터 h = 0.1, 0.2, 0.3, 0.4, 0.5, 0.6일 때 Naive Density Estimate의 결과이다.
