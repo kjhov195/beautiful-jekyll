@@ -54,8 +54,8 @@ $$
 \begin{align*}
 \hat f(x) &\equiv {1 \over {2h}} \left( \hat F_n(x+h) - \hat F_n(x-h) \right)\\
 & = {1 \over {2nh}} \left( \sum_{j=1}^n I(x-h < x_j \leq x+h) \right)\\
-& = {1 \over n} \left( \sum_{j=1}^n  {1 \over h} {1 \over 2} I(-1 < {{x-x_j} \over h} \leq 1) \right)\\
-& = {1 \over n} \left( \sum_{j=1}^n  {1 \over h} K({{x-x_j} \over h}) \right)\\
+& = {1 \over n} \left( \sum_{j=1}^n  {1 \over h} {1 \over 2} I(-1 < {x-x_j \over h} \leq 1) \right)\\
+& = {1 \over n} \left( \sum_{j=1}^n  {1 \over h} K({x-x_j \over h}) \right)\\
 where\;\;K(x)&= { 1 \over 2 } \cdot I(-1 < x \leq 1)
 \end{align*}
 $$
