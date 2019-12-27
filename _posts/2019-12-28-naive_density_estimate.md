@@ -46,7 +46,7 @@ bins = 30일 때의 histogram이다.
 
 pdf $f$를 추정하는 또 다른 방법으로 Empirical Density Estimate를 확장시킨 Naive Density Estimate가 있다. 우리는 다음과 같이 cdf $F$에 대한 derivative로 pdf $f$를 구할 수 있다는 사실을 알고 있다.
 
-$$ f(x) = \lim_{h \to 0} {{F(x+h)-F(x-h)} \over 2h}$$
+$$ f(x) = \lim_{h \to 0} {F(x+h)-F(x-h) \over 2h}$$
 
 이 사실을 활용하여 h를 아주 작은 어떠한 값으로 정한다면 우리는 Empirical Density Estimate $\hat {F(x)}$를 활용하여 다음과 같이 $f(x)$를 $\hat {f(x)}$로 추정할 수 있다.
 
