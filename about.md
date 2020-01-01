@@ -24,7 +24,7 @@ I completed my Bachelor's degree at Yonsei University. And I am studying for a M
 
 <br>
 ### Awards
-우수상(Third Place Award), 2019 빅콘테스트(2019 BigContest), 한국정보통신진흥협회(National Information Society Agency), Korea
+우수상(Third Place Award), 2019 빅콘테스트(BigContest), 한국정보통신진흥협회(National Information Society Agency), Korea
 
 <br>
 ### Experience
