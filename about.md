@@ -23,6 +23,10 @@ I am currently a Research Scientist at YIDS, Yonsei University Institute of Data
 I completed my Bachelor's degree at Yonsei University. And I am studying for a Master's degree advised by Prof. Hyunjoong Kim. At Yonsei, I co-taught STA1001 as a TA, Teaching Assistant: Introduction to Statistics in 2018 and 2019.
 
 <br>
+### Awards
+우수상(Third Place Award), 2019 빅콘테스트(2019 BigContest), 한국정보통신진흥협회(National Information Society Agency), Korea
+
+<br>
 ### Experience
 
 Intern, LG CNS(2017.06.26 ~ 2017.07.28)
