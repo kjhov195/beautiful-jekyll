@@ -24,7 +24,7 @@ $$ y_i = \beta_0 + \beta_1 x_i + \epsilon_i $$
 
 $$ \hat y_i = \hat \beta_0 + \hat \beta_1x_i $$
 
-$\beta_0$와 $\beta_1$을 추정하는 방법에 대한 이야기는 지난 [Linear regression 포스트](https://kjhov195.github.io/2019-10-26-linear_regression/)에서도 다루었으니 간략하게만 설명하도록 하겠다.
+$\beta_0$와 $\beta_1$을 추정하는 방법에 대한 이야기는 지난 [Linear regression](https://kjhov195.github.io/2019-10-26-linear_regression/) 포스트에서도 다루었으니 간략하게만 설명하도록 하겠다.
 
 $$Q(\beta_0,\beta_1) = \sum\limits_{n=1}^{n} \epsilon^{2} = \sum\limits_{n=1}^{n} (y_i-\beta_0-\beta_1x_i)^{2}$$
 
