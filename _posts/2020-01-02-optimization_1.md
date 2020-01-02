@@ -53,8 +53,9 @@ for epoch in range(n_epochs + 1):
         ))
 ```
 
-다시 한번 복습해보면 이 모델에서는 torch.optim.SGD를 사용하여 optimizer를 정의한 뒤, Gradient를 0으로 초기화하고(optimizer.zero_grad()), 모수들에 대한 Cost의 새로운 Gradient를 계산하여(cost.backward()), 모수들을 Update 해주는 과정을(optimizer.step()) 매 Epoch마다 반복하고 있다.
+다시 한번 복습해보면 이 모델에서는 ```torch.optim.SGD```를 사용하여 optimizer를 정의한 뒤, Gradient를 0으로 초기화하고(```optimizer.zero_grad()```), 모수들에 대한 Cost의 새로운 Gradient를 계산하여(```cost.backward()```), 모수들을 Update 해주는 과정을(```optimizer.step()```) 매 Epoch마다 반복하고 있다.
 
+$a$
 
 <br>
 <br>
