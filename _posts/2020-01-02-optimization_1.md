@@ -96,8 +96,6 @@ plt.show()
 
 <img src = '/post_img/200102/image2.png' width="300"/></center>
 
-<br>
-
 Training data는 왼쪽의 scatter plot과 같이 분포하고 있으며 우리는 regression 문제를 풂으로써 training data를 가장 잘 설명하는, 오른쪽의 이상적인 line을 찾고자 한다.
 
 사실 우리는 최적의 모형을 찾기 위하여 W와 b 모두에 관심을 가지고 있지만, 최대한 간단한 설명을 위하여 우선 b를 0으로 고정한 뒤에 W에 대한 최적의 값을 찾는 문제로 살짝 변형해 보자. 이제부터 우리의 목표는 Cost를 Minimize하는 최적의 W를 찾는 것이다.
