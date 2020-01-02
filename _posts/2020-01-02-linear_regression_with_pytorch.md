@@ -44,13 +44,13 @@ Computer Science, Machine Learning 분야의 linear regression에서도 마찬�
 
 Machine learning 분야에서 통용되는 표기로는 $\hat y$가 아닌 Hypothesis function $H(x)$을 사용한다.
 
-모수들 또한 $\beta$가 아닌 $W$(weight)와 $b$(bias)로 나타내며, Error sum of squares 대신, sum of squares를 n으로 나눈 Cost라는 개념을 사용한다. 유일하게 다른 점은 Minimize하고자 하는 목적 함수인데, Error sum of squares를 사용하든 Cost를 사용하든 결국 차이는 곱해진 $1/n$인데, 이는 미분 과정에서 상수로 취급되므로 모수에 대한 추정값은 이와 상관없이 같다.
+모수들 또한 $\beta$가 아닌 $W$(weight)와 $b$(bias)로 나타내며, Error sum of squares 대신, sum of squares를 n으로 나눈 Cost라는 개념을 사용한다. 한 가지 다른 점은 Minimize하고자 하는 목적 함수인데, Error sum of squares를 사용하든 Cost를 사용하든 결국 차이는 곱해진 $1/n$이며, 이는 미분 과정에서 상수로 취급되므로 모수에 대한 추정값은 이와 상관없이 같다.
 
 $$ H(x) = Wx + b $$
 
 $$ cost(W, b) = \frac{1}{n} \sum^n_{i=1} \left( H(x^{(i)}) - y^{(i)} \right)^2 $$
 
-정리하면 $H(x)$는 주어진 $x$로 예측된 $y$에 대한 추정치이며, $cost(W, b)$는 $H(x)$ 가 $y$ 를 얼마나 잘 예측했는가를 나타내는 지표로 볼 수 있다. 우리는 이 Cost를 최소화시키는 $W$와 $b$를 찾게 될 것이고, 이렇게 찾은 $W$와 $b$를 통하여 $H(x)$에 대한 Regression 모델링이 가능하다.
+정리하면 $H(x)$는 주어진 $x$로 예측된 $y$에 대한 추정치이며, $cost(W, b)$는 $H(x)$가 $y$ 를 얼마나 잘 예측했는가를 나타내는 지표로 볼 수 있다. 우리는 이 Cost를 최소화시키는 $W$와 $b$를 찾게 될 것이고, 이렇게 찾은 $W$와 $b$를 통하여 $H(x)$에 대한 Regression 모델링이 가능하다.
 
 
 |  <center>Statistics </center> |  <center>Machine Learning</center> |  
