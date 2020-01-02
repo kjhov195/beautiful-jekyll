@@ -131,10 +131,9 @@ plt.show()
 
 우리는 주어진 Cost function에서 Cost를 최소화 시키는 $W$를 찾는 것이 목표이다. 즉, 어떠한 함수($f(x)$)에서 그 함수를 최소화하는 $x$를 찾는 것이 목표인 것이다. 간단한 설명을 위하여 $y=(x-1)^2$을 최소화하는 $x$를 찾는 문제를 생각해보자.
 
-<br>
-
 <center><img src = '/post_img/200102/image4.png' width="300"/></center>
 
+<br>
 
 기울기(Gradient)란 벡터 미적분학에서 스칼라장의 최대의 증가율을 나타내는 벡터장을 뜻한다. Gradient Descent Optimization은 $y$의 $x$에 대한 Gradient, 즉 미분값 $f(x)'$를 활용하여 최적의 $x$를 찾는다. 우선 $y=f(x)$의 미분 함수를 구해보자.
 
@@ -160,8 +159,6 @@ $$
 
 아래 plot에서 확인할 수 있듯이 $x=3$에서의 미분 값, 즉 기울기(Gradient)는 4이며, $f(x)$의 $x=3$에서 접선의 기울기 또한 4이다.
 
-<br>
-
 <center><img src = '/post_img/200102/image5.png' width="300"/></center>
 
 Gradient 값이 4로써 양수인데, 이를 통하여 우리는 $x=3$에서 $x$가 한 단위 증가 할 때 $f(x)$가 4만큼 __증가__ 한다는 사실을 알 수 있다. 바꿔 말하면, $x=3$에서 $x$가 한 단위 감소 할 때 $f(x)$가 4만큼 __감소__ 한다는 것이다. 우리의 목표는 $f(x)$를 __감소__ 시켜서 최종적으로 최소값에 도달하는 것이다. 우리의 목표는 $f(x)$를 최소화하는 $x$를 찾는 것이므로, $x=3$에서의 Gradient가 4인 것으로부터 $x$를 3보다 조금 더 감소시켜야 한다는 사실을 알 수 있다.
@@ -169,8 +166,6 @@ Gradient 값이 4로써 양수인데, 이를 통하여 우리는 $x=3$에서 $x$
 즉, 특정 $x$에서의 Gradient가 양수라면 $x$를 감소시키고, Gradient가 음수라면 $x$를 증가시키는 과정을 지속적으로 반복하면 $f(x)$를 최소화시킬 수 있다는 것이다. 여기서 핵심은 $f(x)$를 최소화 시키고자 할 때 Gradient의 부호의 __반대 방향__ 으로 $x$를 update해줘야 한다는 것이다.
 
 이제 $x$를 __얼마나 많이__ 감소, 혹은 증가시킬 것인가에 대한 문제가 남아 있는데, 이 문제는 Gradient의 절대값으로부터 해결할 수 있다. 특정 $x$에서의 Gradient(기울기)의 절대값이 크면 그 만큼 최적의 $x$와 멀다는 뜻이고, 기울기의 절대값이 작으면 그 만큼 최적의 $x$와 가깝다는 뜻으로 해석할 수 있다. 즉, 아래 그림과 같이 Gradient의 절대값이 크면 $x$를 많이 변화시켜주고, 절대값이 작으면 $x$를 적게 변화시켜주면 되는 것이다.
-
-<br>
 
 <center><img src = '/post_img/200102/image5.png' width="300"/>
 <img src = '/post_img/200102/image6.png' width="300"/>
@@ -215,16 +210,18 @@ $$ W_{new} = W_{old} - \alpha \nabla W $$
 
 <br>
 
-이제 실제로 계산해보도록 하자.
+이제 실제로 계산해보도록 하자. Cost 함수는 다음과 같이 정의된다.
 
 ```
 # cost
 cost = torch.mean((hypothesis - y_train) ** 2)
 ```
 
-Cost 함수는 위와 같이 정의된다.
+
 
 <br>
+
+$W$에 대한 초기값을 3으로 주었을 때 Gradient를 계산해보면 28인 것을 알 수 있다.
 
 ```
 W = 3
@@ -232,9 +229,13 @@ gradient = torch.sum((W * X_train - y_train) * X_train)
 print(gradient)
 ```
 
-$W$에 대한 초기값을 3으로 주었을 때 Gradient를 계산해보면 28인 것을 알 수 있다.
-
 <br>
+
+$W=3$에서 구한 gradient를 통하여 W를 위와 같이 update해주어 새로운 $W = 1.6$을 구한다.
+
+$$3-0.05\cdot28 = 1.6$$
+
+해당 과정을 충분한 수 만큼 반복하여 최적의 $W$를 찾아가는 과정이 Gradient Descent optimization이다.
 
 ```
 lr = 0.05
@@ -242,11 +243,6 @@ W -= lr * gradient
 print(W)
 ```
 
-$W=3$에서 구한 gradient를 통하여 W를 위와 같이 update해주어 새로운 $W = 1.6$을 구한다.
-
-$$3-0.05\cdot28 = 1.6$$
-
-해당 과정을 충분한 수 만큼 반복하여 최적의 $W$를 찾아가는 과정이 Gradient Descent optimization이다.
 
 <br>
 <br>
