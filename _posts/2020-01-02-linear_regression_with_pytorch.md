@@ -53,14 +53,12 @@ $$ cost(W, b) = \frac{1}{n} \sum^n_{i=1} \left( H(x^{(i)}) - y^{(i)} \right)^2 $
 정리하면 $H(x)$는 주어진 $x$로 예측된 $y$에 대한 추정치이며, $cost(W, b)$는 $H(x)$ 가 $y$ 를 얼마나 잘 예측했는가를 나타내는 지표로 볼 수 있다. 우리는 이 Cost를 최소화시키는 $W$와 $b$를 찾게 될 것이고, 이렇게 찾은 $W$와 $b$를 통하여 $H(x)$에 대한 Regression 모델링이 가능하다.
 
 <center>
-
 |  <center>Statistics </center> |  <center>Machine Learning</center> |  
 |:--------|:--------:|--------:|
 | <center> $\hat y$ </center> | <center> $H(x)$ </center> |
 | <center>  $\hat \beta_0$ </center> | <center> $b$ </center> |
 | <center>  $\hat \beta_1$ </center> | <center> $W$ </center> |
 | <center>  MSE </center> | <center> $Cost$ </center> |
-
 </center>
 
 <br>
