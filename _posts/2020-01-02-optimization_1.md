@@ -14,7 +14,7 @@ use_math: true
 <br>
 ### Optimization
 
-Regression model이나 이를 기반으로하는 어떠한 신경망 모형이든 결국 Cost를 정의하고, 이를 Minimize하는 parameters를 추정하는 것이 Regression/Classification 모형의 목적이 된다. 이러한 Cost(혹은, MSE)의 최소화는 미분(Differentiating)을 기반으로 이루어지는데 이러한 과정을 조금 더 자세히 살펴보도록 하겠다.
+Regression model이나 이를 기반으로하는 어떠한 신경망 모형이든 결국 Cost를 정의하고, 이를 Minimize하는 parameters를 추정하는 것이 Regression/Classification 모형의 목적이 된다. 이러한 Cost(혹은, MSE)의 최소화는 미분(Differentiating)을 기반으로 이루어지는데, 이러한 과정을 조금 더 자세히 살펴보도록 하겠다.
 
 예시를 통하여 살펴보면 이해가 빠르므로, 앞서 살펴본 [Linear regression](https://kjhov195.github.io/2020-01-02-linear_regression_with_pytorch/)의 예제를 기반으로 설명하도록 하겠다.
 
@@ -59,7 +59,7 @@ for epoch in range(n_epochs + 1):
 <br>
 ### Cost
 
-우리는 Hypothesis 모형을 $Wx+b$로 가정하는 Simple Linear Regression 문제를 풀고있고, 이에 따른 Cost function은 다음과 같다.
+우리는 Hypothesis 모형을 $Wx+b$로 가정하는 Simple Linear Regression 문제를 풀고있으며, 이에 따른 Cost function은 다음과 같다.
 
 $$
 \begin{align*}
@@ -92,15 +92,13 @@ plt.plot(xs, xs)
 plt.show()
 ```
 
-Training data는 왼쪽의 scatter plot과 같이 분포하고 있으며 우리는 regression 문제를 풂으로써 training data를 가장 잘 설명하는, 오른쪽의 이상적인 line을 찾고자 한다.
-
-<br>
-
 <center><img src = '/post_img/200102/image1.png' width="300"/>
 
 <img src = '/post_img/200102/image2.png' width="300"/></center>
 
 <br>
+
+Training data는 왼쪽의 scatter plot과 같이 분포하고 있으며 우리는 regression 문제를 풂으로써 training data를 가장 잘 설명하는, 오른쪽의 이상적인 line을 찾고자 한다.
 
 사실 우리는 최적의 모형을 찾기 위하여 W와 b 모두에 관심을 가지고 있지만, 최대한 간단한 설명을 위하여 우선 b를 0으로 고정한 뒤에 W에 대한 최적의 값을 찾는 문제로 살짝 변형해 보자. 이제부터 우리의 목표는 Cost를 Minimize하는 최적의 W를 찾는 것이다.
 
