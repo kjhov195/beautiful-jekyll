@@ -119,8 +119,6 @@ plt.ylabel('Cost')
 plt.show()
 ```
 
-<br>
-
 <center><img src = '/post_img/200102/image3.png' width="300"/></center>
 
 우리가 가정한 모형에서 W의 변화에 따른 Cost의 변화를 나타낸 Plot이다. $W$가 1일 때 가장 Cost가 줄어드는 것을 시각적으로 확인할 수 있다.(우리가 풀고 있는 문제는 아주 간단한 예시로써, cost를 정의하고 optimization을 통하여 $W$를 찾지 않더라도 직관적으로 $\hat W = 1$일 때 가장 이상적인 모형이 된다는 것을 알고 있다.)
