@@ -133,7 +133,7 @@ plt.show()
 
 <br>
 
-기울기(Gradient)란 벡터 미적분학에서 스칼라장의 최대의 증가율을 나타내는 벡터장을 뜻한다. Gradient Descent Optimization은 $y$의 $x$에 대한 Gradient, 즉 미분값 $f(x)'$를 활용하여 최적의 $x$를 찾는다. 우선 $y=f(x)$의 미분 함수를 구해보자.
+Gradient(기울기)란 벡터 미적분학에서 스칼라장의 최대의 증가율을 나타내는 벡터장을 뜻한다. Gradient Descent Optimization은 $y$의 $x$에 대한 Gradient, 즉 미분값 $f(x)'$를 활용하여 최적의 $x$를 찾는다. 우선 $y=f(x)$의 미분 함수를 구해보자.
 
 $$
 \begin{align*}
