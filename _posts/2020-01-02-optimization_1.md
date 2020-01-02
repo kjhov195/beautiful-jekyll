@@ -144,7 +144,7 @@ $$
 
 Gradient Descent optimization을 사용하기 위해서는 $x$에 대한 초기값을 부여해야 한다. 초기값을 $x=3$으로 부여했다고 하자.
 
-(사실 우리가 풀고 있는 문제와 같이 간단한 regression 문제에서는 x를 어떠한 값으로 initialize하여도 크게 상관이 없지만, 상당히 복잡한 문제를 풀어야 하는 대부분의 Deep learning 모형에서는 $x$에 대한 초기값을 어떻게 주는가가 모형의 성능 및 optimization 속도에 상당히 큰 영향을 미친다. 실제로 Initialization 문제 또한 다양한 해결방법이 논의되고 고안되었다.)
+(사실 우리가 풀고 있는 문제와 같이 간단한 regression 문제에서는 x를 어떠한 값으로 initialize하여도 크게 상관이 없지만, 상당히 복잡한 문제를 풀어야 하는 대부분의 Deep learning 모형에서는 $x$에 대한 초기값을 어떻게 주는가가 optimization에 상당히 큰 영향을 미친다. 실제로 Initialization 문제 또한 다양한 해결방법이 논의되고 고안되었다.)
 
 $x=3$에서의 미분값을 구해보면 다음과 같다.
 
