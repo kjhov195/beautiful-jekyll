@@ -92,15 +92,17 @@ plt.plot(xs, xs)
 plt.show()
 ```
 
+Training data는 왼쪽의 scatter plot과 같이 분포하고 있으며 우리는 regression 문제를 풂으로써 training data를 가장 잘 설명하는, 오른쪽의 이상적인 line을 찾고자 한다.
+
 <br>
 
 <center><img src = '/post_img/200102/image1.png' width="300"/>
 
 <img src = '/post_img/200102/image2.png' width="300"/></center>
 
-Training data는 왼쪽의 scatter plot과 같이 분포하고 있으며 우리는 regression 문제를 풂으로써 training data를 가장 잘 설명하는, 오른쪽의 이상적인 line을 찾고자 한다.
+<br>
 
-사실 최적의 모델을 찾기 위하여 W와 b 모두에 관심을 가지고 있지만, 최대한 간단한 설명을 위하여 우선 b를 0으로 고정한 뒤에 W에 대한 최적의 값을 찾는 문제로 살짝 변형해 보자. 이제부터 우리의 목표는 Cost를 Minimize하는 최적의 W를 찾는 것이다.
+사실 우리는 최적의 모델을 찾기 위하여 W와 b 모두에 관심을 가지고 있지만, 최대한 간단한 설명을 위하여 우선 b를 0으로 고정한 뒤에 W에 대한 최적의 값을 찾는 문제로 살짝 변형해 보자. 이제부터 우리의 목표는 Cost를 Minimize하는 최적의 W를 찾는 것이다.
 
 ```
 # W vs Cost
@@ -203,6 +205,7 @@ $$
 사실 Cost를 minimize하는 $W$와 $b$를 찾는 것이 목표일 때, 이를 해결하는 하나의 방법은 Cost function을 $W$와 $b$에 대하여 미분한 결과가 0이 되도록 하는 $W$와 $b$를 찾는 것이다. 이러한 방법이 통계학에서 사용되는 OLS(Ordinary Least Squares) method이다.
 
 Gradient Descent는 이와 다르게 여러 Step을 거쳐 지속적으로 $W$와 $b$를 조금씩 update함으로써 true $W$와 $b$에 근사(Approximate)시키는 방법이다. 다음과 같이 Cost를 $W$에 대하여 미분해 보자.
+
 $$
 \begin{align*}
 \nabla W &= \frac{\partial cost}{\partial W}\\
@@ -286,7 +289,7 @@ for epoch in range(n_epochs + 1):
 
 최종적으로 Cost가 0까지 줄어들며 $W$가 1로 잘 수렴한 것을 확인할 수 있다.
 
-<center><img src = '/post_img/200102/image7.png' width="300"/>
+<center><img src = '/post_img/200102/image7.png'/>
 </center>
 
 <br>
