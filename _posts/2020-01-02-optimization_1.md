@@ -14,7 +14,7 @@ use_math: true
 <br>
 ### Optimization
 
-Regression model이나 이를 기반으로하는 어떠한 신경망 모델이든 결국 Cost를 정의하고, 이를 Minimize하는 parameters를 추정하는 것이 Regression/Classification 모델의 목적이 된다. 이러한 Cost(혹은, MSE)의 최소화는 미분(Differentiating)을 기반으로 이루어지는데 이러한 과정을 조금 더 자세히 살펴보도록 하겠다.
+Regression model이나 이를 기반으로하는 어떠한 신경망 모형이든 결국 Cost를 정의하고, 이를 Minimize하는 parameters를 추정하는 것이 Regression/Classification 모형의 목적이 된다. 이러한 Cost(혹은, MSE)의 최소화는 미분(Differentiating)을 기반으로 이루어지는데 이러한 과정을 조금 더 자세히 살펴보도록 하겠다.
 
 예시를 통하여 살펴보면 이해가 빠르므로, 앞서 살펴본 [Linear regression](https://kjhov195.github.io/2020-01-02-linear_regression_with_pytorch/)의 예제를 기반으로 설명하도록 하겠다.
 
@@ -53,13 +53,13 @@ for epoch in range(n_epochs + 1):
         ))
 ```
 
-다시 한번 복습해보면 이 모델에서는 ```torch.optim.SGD```를 사용하여 optimizer를 정의한 뒤, Gradient를 0으로 초기화하고(```optimizer.zero_grad()```), 모수들에 대한 Cost의 새로운 Gradient를 계산하여(```cost.backward()```), 모수들을 Update 해주는 과정을(```optimizer.step()```) 매 Epoch마다 반복하고 있다.
+다시 한번 복습해보면 이 모형에서는 ```torch.optim.SGD```를 사용하여 optimizer를 정의한 뒤, Gradient를 0으로 초기화하고(```optimizer.zero_grad()```), 모수들에 대한 Cost의 새로운 Gradient를 계산하여(```cost.backward()```), 모수들을 Update 해주는 과정을(```optimizer.step()```) 매 Epoch마다 반복하고 있다.
 
 <br>
 <br>
 ### Cost
 
-우리는 Hypothesis 모델을 $Wx+b$로 가정하는 Simple Linear Regression 문제를 풀고있고, 이에 따른 Cost function은 다음과 같다.
+우리는 Hypothesis 모형을 $Wx+b$로 가정하는 Simple Linear Regression 문제를 풀고있고, 이에 따른 Cost function은 다음과 같다.
 
 $$
 \begin{align*}
@@ -102,7 +102,7 @@ Training data는 왼쪽의 scatter plot과 같이 분포하고 있으며 우리�
 
 <br>
 
-사실 우리는 최적의 모델을 찾기 위하여 W와 b 모두에 관심을 가지고 있지만, 최대한 간단한 설명을 위하여 우선 b를 0으로 고정한 뒤에 W에 대한 최적의 값을 찾는 문제로 살짝 변형해 보자. 이제부터 우리의 목표는 Cost를 Minimize하는 최적의 W를 찾는 것이다.
+사실 우리는 최적의 모형을 찾기 위하여 W와 b 모두에 관심을 가지고 있지만, 최대한 간단한 설명을 위하여 우선 b를 0으로 고정한 뒤에 W에 대한 최적의 값을 찾는 문제로 살짝 변형해 보자. 이제부터 우리의 목표는 Cost를 Minimize하는 최적의 W를 찾는 것이다.
 
 ```
 # W vs Cost
@@ -125,7 +125,7 @@ plt.show()
 
 <center><img src = '/post_img/200102/image3.png' width="300"/></center>
 
-우리가 가정한 모델에서 W의 변화에 따른 Cost의 변화를 나타낸 Plot이다. $W$가 1일 때 가장 Cost가 줄어드는 것을 시각적으로 확인할 수 있다.(우리가 풀고 있는 문제는 아주 간단한 예시로써, cost를 정의하고 optimization을 통하여 $W$를 찾지 않더라도 직관적으로 $\hat W = 1$일 때 가장 이상적인 모델이 된다는 것을 알고 있다.)
+우리가 가정한 모형에서 W의 변화에 따른 Cost의 변화를 나타낸 Plot이다. $W$가 1일 때 가장 Cost가 줄어드는 것을 시각적으로 확인할 수 있다.(우리가 풀고 있는 문제는 아주 간단한 예시로써, cost를 정의하고 optimization을 통하여 $W$를 찾지 않더라도 직관적으로 $\hat W = 1$일 때 가장 이상적인 모형이 된다는 것을 알고 있다.)
 
 하지만 문제가 복잡해지면 Plot을 통하여 직관적/시각적으로 최적의 $W$를 찾는 것은 불가능하며, 우리는 다양한 optimization 방법을 통하여 최적의 $W$를 찾게 된다. 가장 기본적인 optimization 방법인 Gradient Descent 방법을 사용하여 최적의 $W$를 찾아보자. 우선, Gradient Descent가 무엇인지에 대하여 먼저 살펴볼 필요가 있다.
 
@@ -151,7 +151,7 @@ $$
 
 Gradient Descent optimization을 사용하기 위해서는 $x$에 대한 초기값을 부여해야 한다. 설명을 위하여 초기값을 $x=3$으로 부여했다고 하자.
 
-(사실 우리가 풀고 있는 문제와 같이 간단한 regression 문제에서는 W를 어떠한 값으로 initialize하여도 크게 상관이 없지만, 상당히 복잡한 문제를 풀어야 하는 대부분의 Deep learning 모델에서는 $x$에 대한 초기값을 어떻게 주는가가 모델의 성능 및 optimization 속도에 상당히 큰 영향을 미친다. 실제로 Initialization 문제 또한 다양한 해결방법이 논의되고 고안되었다.)
+(사실 우리가 풀고 있는 문제와 같이 간단한 regression 문제에서는 W를 어떠한 값으로 initialize하여도 크게 상관이 없지만, 상당히 복잡한 문제를 풀어야 하는 대부분의 Deep learning 모형에서는 $x$에 대한 초기값을 어떻게 주는가가 모형의 성능 및 optimization 속도에 상당히 큰 영향을 미친다. 실제로 Initialization 문제 또한 다양한 해결방법이 논의되고 고안되었다.)
 
 $x=3$에서의 미분값을 구해보면 다음과 같다.
 
