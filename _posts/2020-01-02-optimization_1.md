@@ -155,7 +155,7 @@ $$
 \end{align*}
 $$
 
-아래 plot에서 확인할 수 있듯이 $x=3$에서의 미분 값, 즉 기울기(Gradient)는 4이며, $f(x)$의 $x=3$에서 접선의 기울기 또한 4이다.
+아래 plot에서 확인할 수 있듯이 $x=3$에서의 미분 값, 즉 기울기(Gradient)는 4이며, $x=3$에서 $f(x)$의 접선의 기울기 또한 4이다.
 
 <center><img src = '/post_img/200102/image5.png' width="300"/></center>
 
