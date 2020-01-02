@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimization(1): Gradient Descent
+title: Optimization(1)-Gradient Descent
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
@@ -143,7 +143,7 @@ plt.show()
 $$
 \begin{align*}
 y &= (x-1)^2\\
-y' &= \frac{\partial y}{\partial x} = 2 (x-1) \cdot 1\\
+y' &= \frac {\partial y}{\partial x} = 2 (x-1) \cdot 1\\
 \end{align*}
 $$
 
