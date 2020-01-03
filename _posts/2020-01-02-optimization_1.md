@@ -221,7 +221,7 @@ cost = torch.mean((hypothesis - y_train) ** 2)
 
 <br>
 
-$W$에 대한 초기값을 3으로 주었을 때 Gradient를 계산해보면 18.6667인 것을 알 수 있다.
+$W$에 대한 초기값을 2으로 주었을 때 Gradient를 계산해보면 9.333인 것을 알 수 있다.
 
 ```
 W = 3
@@ -231,7 +231,8 @@ print(gradient)
 
 <br>
 
-$W=3$에서 구한 gradient를 사용, W를 아래와 같이 update해주어 새로운 $W = 2.067$을 구한다.
+$W=2$에서 구한 gradient를 사용, W를 아래와 같이 update해주어 새로운 $W = 1.533
+$을 구한다.
 
 ```
 lr = 0.05
@@ -239,10 +240,10 @@ W -= lr * gradient
 print(W)
 ```
 
-$$3-0.05\cdot 18.6667 \approx 2.067$$
+$$2-0.05\cdot 9.333 \approx 1.533
+$$
 
 해당 과정을 충분한 수 만큼 반복하여 최적의 $W$를 찾아가는 과정이 Gradient Descent optimization이다.
-
 
 
 <br>
@@ -261,7 +262,7 @@ y_train = torch.FloatTensor([[1], [2], [3]])
 n = x_train.size()[0]
 
 # Weight Initialization
-W = torch.FloatTensor([3])
+W = torch.FloatTensor([2])
 # learning rate
 lr = 0.05
 
@@ -286,7 +287,7 @@ for epoch in range(n_epochs + 1):
 
 <br>
 
-<center><img src = '/post_img/200102/image8.png'/>
+<center><img src = '/post_img/200102/image7.png'/>
 </center>
 
 
