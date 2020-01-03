@@ -245,6 +245,11 @@ $$
 
 해당 과정을 충분한 수 만큼 반복하여 최적의 $W$를 찾아가는 과정이 Gradient Descent optimization이다.
 
+<br>
+
+<center><img src = '/post_img/200102/image7.png'/>
+</center>
+
 
 <br>
 <br>
@@ -285,10 +290,6 @@ for epoch in range(n_epochs + 1):
     W -= lr * gradient
 ```
 
-<br>
-
-<center><img src = '/post_img/200102/image7.png'/>
-</center>
 
 
 <br>
