@@ -233,15 +233,16 @@ print(gradient)
 
 $W=3$에서 구한 gradient를 통하여 W를 위와 같이 update해주어 새로운 $W = 1.6$을 구한다.
 
-$$3-0.05\cdot28 = 1.6$$
-
-해당 과정을 충분한 수 만큼 반복하여 최적의 $W$를 찾아가는 과정이 Gradient Descent optimization이다.
-
 ```
 lr = 0.05
 W -= lr * gradient
 print(W)
 ```
+
+$$3-0.05\cdot28 = 1.6$$
+
+해당 과정을 충분한 수 만큼 반복하여 최적의 $W$를 찾아가는 과정이 Gradient Descent optimization이다.
+
 
 
 <br>
