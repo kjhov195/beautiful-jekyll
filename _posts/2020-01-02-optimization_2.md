@@ -22,9 +22,9 @@ $$L(W) = \frac 1 N \sum_{i=1}^N L_i(x_i, y_i, w)$$
 $$\nabla_W \cdot L(W) = \frac 1 N \sum_{i=1}^N \nabla_W L_i(x_i, y_i, w)$$
 
 
-Gradient Descent를 사용할 경우 한 가지 문제점이 발생하게 되는데, 매 iteration의 계산마다 training data를 $N$개를 모두 사용하여 계산해야 한다는 점이다. 즉, computational cost가 상당히 expensive하다는 것이다.
+Gradient Descent를 사용할 경우 한 가지 문제점이 발생하게 되는데, 매 iteration의 계산마다 $N$개의 training data를 모두 사용하여 계산해야 한다는 점이다. 즉, computational cost가 상당히 expensive하다는 것이다.
 
-앞의 예시처럼 data수가 상당히 적을 때에는 문제가 되지 않지만, data의 크기가 아주 커지면 수렴 속도가 상당히 느려지게 된다.
+앞의 예시처럼 data의 수가 상당히 적을 때에는 문제가 되지 않지만, data의 크기가 아주 커지면 수렴 속도가 상당히 느려지게 된다.
 
 
 <br>
