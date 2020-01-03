@@ -36,7 +36,7 @@ $$y_i \vert u \sim indep\;f_{Y \vert u}(y_i \vert u)$$
 $$
 \begin{align*}
 y_i \vert u &\sim indep\;f_{Y \vert u}(y_i \vert u)\\
-&= exp \left \lbrack {{y_i \gamma_i - b(\gamma_i)} \over \tau^2 }- c(y_i, \tau)\right \rbrack
+&= exp \left \lbrack {y_i \gamma_i - b(\gamma_i) \over \tau^2 }- c(y_i, \tau)\right \rbrack
 \end{align*}
 $$
 
