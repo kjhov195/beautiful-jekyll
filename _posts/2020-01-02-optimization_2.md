@@ -52,7 +52,7 @@ while True:
 
 첫 번째 문제는 각 weight의 변화가 loss 감소에 미치는 영향이 weight마다 다르고, 이 때문에 zigzaging behavior가 나타나 속도가 여전히 느리다는 것이다. 다음 예시 그림을 보면 훨씬 이해하기가 쉽다.
 
-<center><img src = '/post_img/200102/image8.png' width="300"/></center>
+<center><img src = '/post_img/200102/image8.png' width="600"/></center>
 
 이 예시에서는 가로 방향으로는 해당 축에 해당하는 weight이 변함에 따라 loss가 상당히 느리게 바뀌며, 해당 weight는 not sensitive하다는 사실을 알 수 있다. 반면, 세로 방향으로는 loss가 아주 빠르게 변화하며, 해당 weiht이 상대적으로 더 sensitive하다는 것을 알 수 있다.
 
