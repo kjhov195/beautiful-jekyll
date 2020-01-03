@@ -116,7 +116,7 @@ for epoch in range(n_epochs + 1):
 
 <br>
 
-<center><img src = '/post_img/200103/image10.png' width="450"/></center>
+<center><img src = '/post_img/200103/image10.png' width="300"/></center>
 
 최종 iteration에서의 weights를 확인해보면 위와 같다. 즉 우리는 최종적으로 다음과 같은 Regression 모형을 세우게 된 것이다.
 
@@ -125,9 +125,9 @@ $$ y = 0.7592x_1 + 0.5692x_2 + 0.6821x_3 + 0.0107$$
 
 <br>
 
-<center><img src = '/post_img/200103/image9.png' width="450"/></center>
+<center><img src = '/post_img/200103/image9.png' width="600"/></center>
 
-최종 iteration에서의 weights로 구한 Hypothesis 값들은 $\hat y_1 = 152.1269$, $\hat y_2 = 184.1425$, $\hat y_3 = 180.7670$, $\hat y_4 = 196.8870$, $\hat y_5 = 140.7474$로써 실제 $y$값들과 상당히 유사한 것을 확인할 수 있다.
+최종 iteration에서의 weights로 구한 Hypothesis 값들은 $\hat y_1 = 152.1269$, $\hat y_2 = 184.1425$, $\hat y_3 = 180.7670$, $\hat y_4 = 196.8870$, $\hat y_5 = 140.7474$로써 실제 $y$값들과 거의 같은 것을 확인할 수 있다.
 
 <br>
 <br>
