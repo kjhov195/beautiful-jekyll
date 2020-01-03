@@ -40,7 +40,7 @@ while True:
 
 <br>
 
-<center><img src = '/post_img/200103/image1.png' width="450"/></center>
+<center><img src = '/post_img/200103/image2.png' width="450"/></center>
 
 반면 Non-convex case의 경우 조금 문제가 된다. 예를들어 Saddle point의 경우를 생각해보자. Saddle point 근방에 들어올 경우, gradient가 매우 작으므로 해당 point 근방을 벗어나기가 어려워지고, 더 이상 학습이 일어나지 않게 된다는 문제점이 존재한다.
 
@@ -100,7 +100,7 @@ $$
 
 <br>
 
-<center><img src = '/post_img/200103/image1.png' width="450"/></center>
+<center><img src = '/post_img/200103/image3.png' width="450"/></center>
 
 Adam optimizer의 경우 거의 대부분의 optimization 문제에서 꽤나 좋은 성능을 보이며, 그러한 이유로 많은 문제/영역에서 default optimizer로 사용되고 있다.
 
