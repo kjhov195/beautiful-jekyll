@@ -65,7 +65,7 @@ while True:
 <br>
 ##### problem 2. local minimum/saddle point
 
-SGD는 매 iteration마다 gradient와 step in the direction of opposite gradient를 계산하게 된다. 그런데 만약 optimal point가 아닌 지점에서 gradient가 0으로 계산되는 경우, 해당 지점에서 weight update가 멈추게 되고 우리는 원하는 결과를 얻을 수 없게 된다. 다음 그림을 살펴보자.
+SGD는 매 iteration마다 gradient와 step in the direction of opposite gradient를 계산하게 된다. 그런데 만약 global optimal point가 아닌 지점에서 gradient가 0으로 계산되는 경우, 해당 지점에서 weight update가 멈추게 되고 우리는 원하는 결과를 얻을 수 없게 된다. 다음 그림을 살펴보자.
 
 <br>
 
@@ -76,7 +76,7 @@ SGD는 매 iteration마다 gradient와 step in the direction of opposite gradien
 
 local minimum에서는 어떠한 방향으로 weight이 움직이더라도 loss가 증가하게 되어, 그 시점에서 update가 중단되게 된다. 사실 local minimum의 경우 high dimension에서는 자주 발생하는 문제는 아니다.
 
-saddle point의 경우 역시 gradient가 0으로써 update가 이루어지지 않게 된다. 무엇보다도 saddle point의 가장 큰 문제점은 saddle point 주변의 기울기는 0은 아니지만 거의 0에 가까운, 아주 작은 Gradient를 가지고 있기 때문에 update가 상당히 느리게 진행된다는 것이다. saddle point의 문제는 high dimension에서 상당히 자주 일어나게 되는 일이며 거의 모든 고차원 문제에서 겪게되는 문제점이다.
+saddle point의 경우 역시 gradient가 0으로써 update가 이루어지지 않게 된다. 무엇보다 saddle point의 가장 큰 문제점은 saddle point 주변의 기울기는 0은 아니지만 거의 0에 가까운, 아주 작은 Gradient를 가지고 있기 때문에 update가 상당히 느리게 진행된다는 것이다. saddle point의 문제는 high dimension에서 상당히 자주 일어나게 되는 일이며 거의 모든 고차원 문제에서 겪게되는 문제점이다.
 
 <br>
 ##### problem 3. noise
