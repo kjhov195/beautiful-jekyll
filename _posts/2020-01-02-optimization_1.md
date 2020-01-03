@@ -221,17 +221,17 @@ cost = torch.mean((hypothesis - y_train) ** 2)
 
 <br>
 
-$W$에 대한 초기값을 3으로 주었을 때 Gradient를 계산해보면 28인 것을 알 수 있다.
+$W$에 대한 초기값을 3으로 주었을 때 Gradient를 계산해보면 18.6667인 것을 알 수 있다.
 
 ```
 W = 3
-gradient = torch.sum((W * X_train - y_train) * X_train)
+gradient = 2/n*torch.sum((W * X_train - y_train) * X_train)
 print(gradient)
 ```
 
 <br>
 
-$W=3$에서 구한 gradient를 사용, W를 아래와 같이 update해주어 새로운 $W = 1.6$을 구한다.
+$W=3$에서 구한 gradient를 사용, W를 아래와 같이 update해주어 새로운 $W = 2.067$을 구한다.
 
 ```
 lr = 0.05
@@ -239,7 +239,7 @@ W -= lr * gradient
 print(W)
 ```
 
-$$3-0.05\cdot28 = 1.6$$
+$$3-0.05\cdot 18.6667 \approx 2.067$$
 
 해당 과정을 충분한 수 만큼 반복하여 최적의 $W$를 찾아가는 과정이 Gradient Descent optimization이다.
 
@@ -250,11 +250,15 @@ $$3-0.05\cdot28 = 1.6$$
 ### Source code
 
 ```
-### Linear Regression
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
 
-# Dataset
+### Linear Regression
+# dataset
 x_train = torch.FloatTensor([[1], [2], [3]])
 y_train = torch.FloatTensor([[1], [2], [3]])
+n = x_train.size()[0]
 
 # Weight Initialization
 W = torch.FloatTensor([3])
@@ -269,7 +273,7 @@ for epoch in range(n_epochs + 1):
 
     # cost/gradient
     cost = torch.mean((hypothesis - y_train) ** 2)
-    gradient = torch.sum((W * x_train - y_train) * x_train)
+    gradient = 2/n*torch.sum((W * x_train - y_train) * x_train)
 
     #print
     print('Epoch {:4d}/{} W: {:.3f}, Cost: {:.6f}'.format(
