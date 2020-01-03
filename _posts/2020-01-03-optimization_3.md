@@ -36,6 +36,10 @@ while True:
 
 이러한 scaling term을 통하여 항상 gradient가 큰 coordinate(위 그림에서 수직축에 해당)의 경우, scaling term이 클 것이다. scaling term은 나눠지는 값이므로, 결과적으로 우리는 해당 dimension에 대한 progress를 늦출 수 있게 된다. 반면, 항상 gradient가 작은 coordinate(위 그림에서 수평축에 해당)의 경우, scaling term이 작을 것이다. 역시 나눠지는 값이므로, 결과적으로 우리는 해당 dimension에 대한 progress를 촉진(Accelerate)시킬 수 있게 된다.
 
+<br>
+
+<center><img src = '/post_img/200103/image5.png' width="450"/></center>
+
 또한, gradient가 점점 작아지는 Convex case의 경우 AdaGrad의 아이디어는 상당히 좋은 성능을 보인다. 왜냐하면 iteration이 진행될 수록 ```grad_squared```가 점점 커질 것이고, 이 때문에 매 step마다의 converge의 속도를 점점 늦출 수 있게 되어 결과적으로는 조금 더 빠르고, 정확한 converge가 가능하도록 해준다.
 
 <br>
