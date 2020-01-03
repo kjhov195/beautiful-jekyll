@@ -107,7 +107,7 @@ dataloader
 <br>
 ### Example
 
-다음은 이번 포스트에서 배운 ```torch.utils.data.Dataset```과 ```torch.utils.data.Dataloader```를 [Multivariate Linear Regression](https://kjhov195.github.io/2020-01-03-multivariate_linear_regression/)의 예제에 적용한 것이다.
+다음은 이번 포스트에서 배운 ```torch.utils.data.Dataset```과 ```torch.utils.data.Dataloader```의 활용을 [Multivariate Linear Regression](https://kjhov195.github.io/2020-01-03-multivariate_linear_regression/)의 예제에 적용한 것이다.
 
 ```
 import torch
