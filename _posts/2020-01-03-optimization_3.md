@@ -117,7 +117,7 @@ Adam optimizer의 경우 거의 대부분의 optimization 문제에서 꽤나 �
 
 <center><img src = '/post_img/200103/image6.gif' width="300"/><img src = '/post_img/200103/image7.gif' width="300"/></center>
 
-왼쪽의 그림을 통하여 각 optimizer의 performance를 시각적으로 확인할 수 있으며, Adagrad, Adadelta, RMSprop, and Adadelta가 가장 좋은 convergence를 보여주는 것을 알 수 있다.
+왼쪽의 그림을 통하여 각 optimizer의 performance를 시각적으로 확인할 수 있으며, Adagrad, Adadelta, RMSprop이 가장 좋은 convergence를 보여주는 것을 알 수 있다.
 
 오른쪽의 그림은 saddle point에서의 optimization을 보여주는데, 예상하였던 것처럼 Adadelta와 RMS prop이 가장 좋은 convergence를 보여준다.
 
