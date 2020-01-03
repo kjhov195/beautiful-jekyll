@@ -123,7 +123,7 @@ Adam optimizer의 경우 거의 대부분의 optimization 문제에서 꽤나 �
 
 <br>
 <br>
-### 추가 자료
+### 한 눈에 파악하기
 
 세 Post에 걸쳐 다양한 opimization 방법에 대해 살펴보았다. 이 내용들을 한 눈에 파악할 수 있도록 잘 정리해놓은 자료를 찾아서 공유하고자 한다. 아래 그림은 [하용호님의 Slide](https://www.slideshare.net/JAEHUNKANG2/clipboards/my-clips)에서 가져온 자료이다.
 
