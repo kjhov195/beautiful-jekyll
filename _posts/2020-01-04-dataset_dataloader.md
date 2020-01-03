@@ -14,7 +14,7 @@ use_math: true
 <br>
 ### Pytorch Dataset
 
-Pytorch의 ```torch.utils.data.Dataset```은 Pytorch에서 제공하는 모듈로써 이 모듈을 상속하여 새로운 class를 만듦으로써 우리가 원하는 custom dataset을 지정해줄 수 있게 된다.
+Pytorch의 ```torch.utils.data.Dataset```은 Pytorch에서 제공하는 모듈이다. 이 모듈을 상속하여 새로운 class를 만듦으로써 우리가 원하는 custom dataset을 지정해줄 수 있게 된다.
 
 custom dataset을 만들 때, 이 데이터셋의 총 데이터 수를 반환하는  ```__len__``` method와, 주어진 index에 대응되는 데이터를 반환하는 ```__getitem__``` method라는 두 가지 method를 만들게 된다.
 
