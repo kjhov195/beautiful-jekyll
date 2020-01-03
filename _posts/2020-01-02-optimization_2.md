@@ -150,7 +150,7 @@ v_{t+1} &= \rho v_t + \nabla f(w_t + \rho v_t)\\
 w_{t+1} &= w_t + v_{t+1}\\
 \end{align*}$$
 
-우리는 편리함을 위하여 이 식을 $x_t$와 $\nabla f(x_t)$로 나타낼 수 있도록 식을 변형할 것이다. $\tilde w_t = w_t + \rho v_t$로 두고 식을 조금 더 정리해보면 다음과 같다.
+우리는 편리함을 위하여 이 식을 $x_t$와 $\nabla f(x_t)$로 나타낼 수 있도록 변형할 것이다. $\tilde w_t = w_t + \rho v_t$로 두고 식을 조금 더 정리해보면 다음과 같다.
 
 $$
 \begin{align*}
