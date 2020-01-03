@@ -56,7 +56,7 @@ while True:
 
 이 예시에서는 가로 방향으로는 해당 축에 해당하는 weight이 변함에 따라 loss가 상당히 느리게 바뀌며, 해당 weight는 not sensitive하다는 사실을 알 수 있다. 반면, 세로 방향으로는 loss가 아주 빠르게 변화하며, 해당 weiht이 상대적으로 더 sensitive하다는 것을 알 수 있다.
 
-이러한 상황에 대하여 우리는 이 point에서 loss가 bad condition number를 가지고 있다고 표현할 수 있다. Condition number란 Hessian Matrix의 singular value의 가장 큰 값과 가장 작은 값 간의 비율을 의미한다. 이러한 경우, SGD의 performance는 상당히 좋지 않다.
+이러한 상황에 대하여 우리는 이 point에서 loss가 bad condition number를 가지고 있다고 표현한다. Condition number란 Hessian Matrix의 singular value의 가장 큰 값과 가장 작은 값 간의 비율을 의미한다. 이러한 경우, SGD의 performance는 상당히 좋지 않다.
 
 <center><img src = '/post_img/200102/image9.png' width="300"/></center>
 
