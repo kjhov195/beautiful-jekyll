@@ -19,42 +19,6 @@ Pytorch의 ```torch.utils.data.Dataset```은 Pytorch에서 제공하는 모듈�
 custom dataset을 만들 때, 이 데이터셋의 총 데이터 수를 반환하는  ```__len__``` method와, 주어진 index에 대응되는 데이터를 반환하는 ```__getitem__``` method라는 두 가지 method를 만들게 된다.
 
 <br>
-```
-import torch
-import torch.utils.data
-import numpy as np
-
-# dataset
-X_train = np.array([[73, 80, 75],
-                             [93, 88, 93],
-                             [89, 91, 90],
-                             [96, 98, 100],
-                             [73, 66, 70]])
-y_train = np.array([[152], [185], [180], [196], [142]])
-
-
-class CustomDataset(torch.utils.data.Dataset):
-    def __init__(self):
-        self.x_data = X_train
-        self.y_data = y_train
-
-    def __len__(self):
-        return len(self.x_data)
-
-    def __getitem__(self, idx):
-        x = torch.FloatTensor(self.x_data[idx])
-        y = torch.FloatTensor(self.y_data[idx])
-
-        return x,y
-
-dataset = CustomDataset()
-dataset
-
-dataloader = torch.utils.data.DataLoader(dataset, batch_size=2, shuffle=True)
-dataloader
-```
-
-<br>
 <br>
 ### Pytorch Dataloader
 
