@@ -81,9 +81,60 @@ saddle point의 경우 역시 gradient가 0으로써 update가 이루어지지 �
 <br>
 ##### problem 3. noise
 
-"Stochastic"하다는 특성 때문에 noise가 존재하는 경우, 아래 그림에서 볼 수 있듯 performance가 좋지 않을 수 있다.
+"Stochastic"하다는 특성 때문에 noise가 존재하는 경우, 아래 그림에서 볼 수 있듯이 performance가 좋지 않을 수 있다.
 
 <center><img src = '/post_img/200102/image12.png' width="300"/></center>
+
+<br>
+<br>
+### SGD with Momentum
+
+SGD는 다음과 같이 weight을 업데이트 한다.
+
+$$ w_{t+1} = w_t - \alpha \cdot \nabla f(w_t) $$
+
+```
+#pseudo-code for SGD
+while True:
+  dw = compute_gradient(w)
+  w += -learning_rate * dw
+```
+
+<br>
+
+앞서 살펴본 SGD의 여러 문제들을 해결하는 방법으로 다음과 같이 Momentum의 개념을 도입하게 된다.
+
+$$
+\begin{align*}
+v_{t+1} &= \rho v_t + \nabla f(w_t)\\
+w_{t+1} &= w_t - \alpha \cdot v_{t+1}\\
+&= w_t - \alpha (\rho v_t + \nabla f(w_t))\\
+&= w_t - \alpha   \cdot \nabla f(w_t)- \alpha \cdot \rho v_t
+\end{align*}$$
+
+```
+#pseudo-code for SGD
+vw = 0
+while True:
+  dw = compute_gradient(w)
+  vw = rho * vw + dw
+  w += -learning_rate * vw
+```
+
+v는 velocity, $\rho$는 friction이라고 하며, $\rho$의 경우 일반적으로 0.9, 0.99와 같은 값을 사용한다.
+
+즉, 해당 point에서 마찰계수(friction)를 반영한 속도(velocity)를 먼저 계산하고, 이를 weight update에 사용하는 것이다.
+
+이러한 설정으로 경사 낮은 지점에서는 변하는 속도가 느리게, 경사가 가파른 지점에서는 변하는 속도가 빠르게 만들어 줄 수 있다.
+
+이렇게 momentum을 도입하게 되면 SGD의 문제점들이 해결할 수 있게 된다. 우선, not sensitive한 방향으로 계속 velocity가 더 붙게되고, 이로 인하여 더 많이 이동하게 된다. 또한 gradient가 순간적으로 0이 되더라도 momentum 덕분에 극복이 가능하게 되며, noise 또한 averaged out되어 optimal minimum으로 훨씬 더 smoothly 수렴하게 된다.
+
+<center><img src = '/post_img/200102/image12.png' width="300"/></center>
+
+<br>
+
+단, Velocit  y를 활용하는 momentum의 특성 상 처음에는 overshooting이 발생할 수 있지만, 결과적으로는 SGD보다 훨씬 더 빠르게 optimal point에 도달하게 된다.
+
 
 
 <br>
