@@ -127,9 +127,9 @@ v는 velocity, $\rho$는 friction이라고 하며, $\rho$의 경우 일반적으
 
 이러한 설정으로 경사 낮은 지점에서는 변하는 속도가 느리게, 경사가 가파른 지점에서는 변하는 속도가 빠르게 만들어 줄 수 있다.
 
-이렇게 momentum을 도입하게 되면 SGD의 문제점들이 해결할 수 있게 된다. 우선, not sensitive한 방향으로 계속 velocity가 더 붙게되고, 이로 인하여 더 많이 이동하게 된다. 또한 gradient가 순간적으로 0이 되더라도 momentum 덕분에 극복이 가능하게 되며, noise 또한 averaged out되어 optimal minimum으로 훨씬 더 smoothly 수렴하게 된다.
+이렇게 momentum을 도입하게 되면 SGD의 문제점들이 해결할 수 있게 된다. 우선, not sensitive한 방향으로 계속 velocity가 더 붙게되고, 이로 인하여 더 많이 이동하게 된다. 또한 gradient가 순간적으로 0이 되더라도 momentum 덕분에 극복이 가능하게 되며, noise 또한 averaged out되어 optimal minimum으로 훨씬 더 smooth하게 수렴이 이루어진다.
 
-<center><img src = '/post_img/200102/image12.png' width="300"/></center>
+<center><img src = '/post_img/200102/image13.png' width="300"/></center>
 
 <br>
 
