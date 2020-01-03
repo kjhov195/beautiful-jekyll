@@ -224,7 +224,7 @@ cost = torch.mean((hypothesis - y_train) ** 2)
 $W$에 대한 초기값을 2으로 주었을 때 Gradient를 계산해보면 9.333인 것을 알 수 있다.
 
 ```
-W = 3
+W = 2
 gradient = 2/n*torch.sum((W * X_train - y_train) * X_train)
 print(gradient)
 ```
