@@ -55,7 +55,7 @@ while True:
 
 이러한 상황에 대하여 우리는 이 point에서 loss가 bad condition number를 가지고 있다고 표현할 수 있다. Condition number란 Hessian Matrix의 singular value의 가장 큰 값과 가장 작은 값 간의 비율을 의미한다. 이러한 경우, SGD의 performance는 상당히 좋지 않다.
 
-더욱, 이 예시는 2차원의 optimization landscape를 보여주고 있지만, 고차원의 경우 이러한 문제는 훨씬 더 빈번하게 발생한다.
+더욱, 이 예시는 2차원의 optimization landscape를 보여주고 있지만 고차원의 경우 이러한 문제는 훨씬 더 빈번하게 발생한다.
 
 
 
