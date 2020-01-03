@@ -231,7 +231,7 @@ print(gradient)
 
 <br>
 
-$W=3$에서 구한 gradient를 통하여 W를 위와 같이 update해주어 새로운 $W = 1.6$을 구한다.
+$W=3$에서 구한 gradient를 사용, W를 아래와 같이 update해주어 새로운 $W = 1.6$을 구한다.
 
 ```
 lr = 0.05
