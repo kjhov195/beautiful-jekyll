@@ -63,7 +63,7 @@ while True:
 
 <br>
 
-<center><img src = '/post_img/200103/image1.png' width="450"/></center>
+<center><img src = '/post_img/200103/image3.png' width="450"/></center>
 
 RMS prop은 학습이 조기에 종료될 수 있는 AdaGrad보다 훨씬 더 안정적이고, 빠른 속도로 학습이 끝까지 진행될 수 있도록 해준다.
 
@@ -100,7 +100,7 @@ $$
 
 <br>
 
-<center><img src = '/post_img/200103/image3.png' width="450"/></center>
+<center><img src = '/post_img/200103/image4.png' width="450"/></center>
 
 Adam optimizer의 경우 거의 대부분의 optimization 문제에서 꽤나 좋은 성능을 보이며, 그러한 이유로 많은 문제/영역에서 default optimizer로 사용되고 있다.
 
