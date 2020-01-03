@@ -284,6 +284,8 @@ for epoch in range(n_epochs + 1):
     W -= lr * gradient
 ```
 
+<br>
+
 <center><img src = '/post_img/200102/image8.png'/>
 </center>
 
