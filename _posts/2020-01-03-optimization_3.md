@@ -50,7 +50,7 @@ while True:
 ### RMS prop
 RMS prop은 AdaGrad를 다시 개선한 형태의 optimizer이며, Decay rate라는 개념을 도입한 AdaGrad optimizer라고 볼 수 있다. Decay rate은 하나의 hyper-prameter로써 보통 0.9, 0.99를 많이 사용한다.
 
-Gradient 제곱의 합을 구하는 것은 AdaGrad와 동일한데, Decay rate을 도입함으로써 iteration을 거치는 과정에서 scaling term이 서서히 줄어들게(leaking) 해준다. AdaGrad의 장점은 그대로 유지하면서, Step-size가 0이되어 학습이 일어나지 않게되는 문제를 해결한 것이다.
+Gradient 제곱의 합 ```grad_squared```를 구하는 것은 AdaGrad와 동일한데, Decay rate이 있기 때문에 iteration을 거치는 과정에서 scaling term이 서서히 줄어들게(leaking) 해준다. AdaGrad의 장점은 그대로 유지하면서, Step-size가 0이되어 학습이 일어나지 않게되는 문제를 해결한 것이다.
 
 ```
 #pseudo-code for RMS prop
