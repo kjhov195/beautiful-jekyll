@@ -67,6 +67,8 @@ while True:
 
 SGD는 매 iteration마다 gradient와 step in the direction of opposite gradient를 계산하게 된다. 그런데 만약 optimal point가 아닌 지점에서 gradient가 0으로 계산되는 경우, 해당 지점에서 weight update가 멈추게 되고 우리는 원하는 결과를 얻을 수 없게 된다. 다음 그림을 살펴보자.
 
+<br>
+
 <center><img src = '/post_img/200102/image10.png' width="300"/>
 <img src = '/post_img/200102/image11.png' width="300"/></center>
 
