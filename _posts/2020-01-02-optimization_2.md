@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimization(2)-SGD/Nestrov/AdaGrad/RMSprop/Adam
+title: Optimization(2)-SGD/Nesterov/AdaGrad/RMSprop/Adam
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
@@ -136,23 +136,44 @@ v는 velocity, $\rho$는 friction이라고 하며, $\rho$의 경우 일반적으
 단, Velocit  y를 활용하는 momentum의 특성 상 처음에는 overshooting이 발생할 수 있지만, 결과적으로는 SGD보다 훨씬 더 빠르게 optimal point에 도달하게 된다.
 
 
+<br>
+<br>
+### NAG(Nesterov Accelerated Gradient)
+
+SGD with momentum을 조금 더 개선한 optimization 방법이다. SGD with momentum과 거의 비슷한데 Gradient를 계산하는 순서만 조금 바꾼 형태를 가지며, convergence가 더 좋음이 이론적으로 증명되어 있다.
+
+$$
+\begin{align*}
+v_{t+1} &= \rho v_t + \nabla f(w_t + \rho v_t)\\
+w_{t+1} &= w_t + v_{t+1}\\
+\end{align*}$$
+
+우리는 편리함을 위하여 이 식을 $x_t$와 $\nabla f(x_t)$로 나타낼 수 있도록 식을 변형할 것이다. $\tilde w_t = w_t + \rho v_t$로 두고 식을 조금 더 정리해보면 다음과 같다.
+
+$$
+\begin{align*}
+v_{t+1} &= \rho v_t + \nabla f(\tilde w_t)\\
+\tilde w_{t+1} &= \tilde w_t - \rho v_t + \rho v_{t+1} + v_{t+1}\\
+&= \tilde w_t + v_{t+1} + \rho ( v_{t+1} - v_t)\\
+&= \tilde w_t -\rho v_t + (1+\rho)v_{t+1}\\
+\end{align*}
+$$
+
+```
+#pseudo-code for NAG
+vw = 0
+while True:
+  dw = compute_gradient(w)
+  old_v = v
+  v = rho * v - learning_rate * dw
+  w += -rho * old_v + (1+rho) * v
+```
 
 <br>
-<br>
-### Nestrov optimizer
 
-<br>
-<br>
-### AdaGrad optimizer
+<center><img src = '/post_img/200102/image14.png' width="300"/></center>
 
-<br>
-<br>
-### RMS prop optimizer
-
-<br>
-<br>
-### Adam optimizer
-
+그림에서 확인할 수 있듯이, Nesterov가 SGD, SGD+Momentum보다 훨씬 빠르게 수렴하고 있다. 다만, Nesterov 역시 Momentum을 반영하였기 때문에 overshooting이 여전지 발생하고 있는 것을 확인할 수 있다.
 
 <br>
 <br>
