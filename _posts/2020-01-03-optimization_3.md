@@ -109,9 +109,33 @@ $$
 
 Adam optimizer의 경우 거의 대부분의 optimization 문제에서 꽤나 좋은 성능을 보이며, 그러한 이유로 많은 문제/영역에서 default optimizer로 사용되고 있다.
 
+<br>
+<br>
+### Comparing optimizers
+
+<br>
+
+<center><img src = '/post_img/200103/image6.gif' width="450"/><img src = '/post_img/200103/image7.gif' width="450"/></center>
+
+왼쪽의 그림을 통하여 각 optimizer의 performance를 시각적으로 확인할 수 있으며, Adagrad, Adadelta, RMSprop, and Adam이 가장 좋은 convergence를 보여주는 것을 알 수 있다.
+
+오른쪽의 그림은 saddle point에서의 optimization을 보여주는데, 예상하였던 것처럼 Adadelta와 RMS prop이 가장 좋은 convergence를 보여준다.
+
+<br>
+<br>
+### 정리
+
+세 Post에 걸쳐 다양한 opimization 방법에 대해 살펴보았다. 이 내용들을 한 눈에 파악할 수 있도록 잘 정리해놓은 자료를 찾아서 공유하고자 한다. 아래 그림은 [하용호님의 Slide](https://www.slideshare.net/JAEHUNKANG2/clipboards/my-clips)에서 가져온 자료이다.
+
+<center><img src = '/post_img/200103/image6.gif' width="450"/><img src = '/post_img/200103/image8.gif' width="450"/></center>
+
 
 <br>
 <br>
 ### Reference
 
 [CS231n: Lecture 7, Training Neural Networks II](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7)
+
+[An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/)
+
+[하용호님의 Slide](https://www.slideshare.net/JAEHUNKANG2/clipboards/my-clips)
