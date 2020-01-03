@@ -173,7 +173,7 @@ while True:
 
 <center><img src = '/post_img/200102/image14.png' width="300"/></center>
 
-그림에서 확인할 수 있듯이, Nesterov가 SGD, SGD+Momentum보다 훨씬 빠르게 수렴하고 있다. 다만, Nesterov 역시 Momentum을 반영하였기 때문에 overshooting이 여전지 발생하고 있는 것을 확인할 수 있다.
+그림에서 확인할 수 있듯이, Nesterov가 SGD, SGD+Momentum보다 훨씬 빠르게 수렴하고 있다. 다만, Nesterov 역시 Momentum을 반영하였기 때문에 overshooting이 여전히 발생하고 있는 것을 확인할 수 있다.
 
 <br>
 <br>
