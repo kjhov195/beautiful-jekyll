@@ -22,7 +22,7 @@ $$ y \sim N_N (X \beta, \sigma^2 I)$$
 
 반면, GLM(Generalized Linear Model)에서는 $y_i$들이 exponential family를 따른다고 가정한다.
 
-$$y_i \sim f_{Y_i}(y_i) = exp \left \lbrack {\frac {y_i\gamma_i-b(\gamma_i)} {\tau^2}} - c(y_i, \tau)) \right \rbrack$$
+$$y_i \sim f_{Y_i}(y_i) = exp \left \lbrack {\frac {y_i\gamma_i-b(\gamma_i)} {\tau^2}} - c(y_i, \tau) \right \rbrack$$
 
 이론적으로는 exponential family에 속하는 분포는 무한하게 많지만, 현실적으로 Normal, Binomial(Bernoulli), Poisson 분포가 GLM 응용 분야의 상당 부분을 차지한다고 봐도 무방하다.
 
