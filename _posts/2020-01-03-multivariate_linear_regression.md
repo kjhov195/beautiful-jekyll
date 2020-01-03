@@ -70,7 +70,7 @@ E학생의 경우 퀴즈 성적은 73, 66, 70였으며, 기말고사 성적은 1
 
 우리는 First/Second/Third 퀴즈의 점수($X$)와 기말고사 성적$Y$간의 관계에 대해 regression 모형을 세우려고 한다.
 
-이 regression 모형의 weights에 대한 optimization 과정은 다음과 같다. Simple linear regression의 문제를 푸는 것과 Hypothesis를 정의하는 부분을 제외하면 거의 완벽하게 같다. 자세한 설명은 [Linear Regression](https://kjhov195.github.io/2020-01-02-linear_regression_with_pytorch/)에서 하였으니 참고하면 된다.
+이 regression 모형의 weights에 대한 optimization 과정은 다음과 같다. Hypothesis를 정의하는 부분을 제외하면 Simple linear regression의 문제를 푸는 code와 거의 완벽하게 같다. 자세한 설명은 [Linear Regression](https://kjhov195.github.io/2020-01-02-linear_regression_with_pytorch/)에서 하였으니 참고하면 된다.
 
 <br>
 
