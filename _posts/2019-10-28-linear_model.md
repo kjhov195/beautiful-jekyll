@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linear model
+title: Linear model(LM)
 subtitle: Linear Model
 category: Statistics
 use_math: true
