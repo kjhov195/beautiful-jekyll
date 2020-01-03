@@ -56,7 +56,7 @@ logistic 함수의 결과 값은 0에서 1사이에 위치하게 되는데, 우�
 <br>
 ### MLE of Logistic Regression
 
-Binary classification 문제에 대하여 생각해보자. 우선, $i$번째 observation의 class $y_i$가 1일 확률을 $p$라고 하자.
+Binary classification 문제에 대하여 생각해보자. 우선, $i$번째 observation의 class $y_i$가 1일 확률을 $p_i$라고 하자.
 
 $$ p = Pr(y=1 \vert x) = logistic(x'\beta) $$
 
