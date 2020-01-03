@@ -38,12 +38,8 @@ import torch.utils.data
 import numpy as np
 
 # dataset
-X_train = np.array([[73, 80, 75],
-                             [93, 88, 93],
-                             [89, 91, 90],
-                             [96, 98, 100],
-                             [73, 66, 70]])
-y_train = np.array([[152], [185], [180], [196], [142]])
+X_train = []
+y_train = []
 
 
 class CustomDataset(torch.utils.data.Dataset):
