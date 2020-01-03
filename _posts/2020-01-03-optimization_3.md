@@ -48,6 +48,7 @@ while True:
 
 반면 Non-convex case의 경우 조금 문제가 된다. 예를들어 Saddle point의 경우를 생각해보자. Saddle point 근방에 들어올 경우, gradient가 매우 작으므로 해당 point 근방을 벗어나기가 어려워지고, 더 이상 학습이 일어나지 않게 된다는 문제점이 존재한다.
 
+무엇보다 가장 큰 문제점은, ```grad_squared```는 매 iteration마다 항상 더해져서 커지기만 할 뿐 작아지지 않는다는 것이다. iteration이 많이 진행되어 나누어 주는 값이 너무 커져버리면 결국 update되는 정도가 아주 작아져 버리게 되고, 자연스럽게 학습이 일어나지 않게 된다.
 
 <br>
 <br>
