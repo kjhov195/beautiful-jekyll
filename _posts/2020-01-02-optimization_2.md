@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimization(2)-SGD/Nesterov/AdaGrad/RMSprop/Adam
+title: Optimization(2)-SGD/Momentum/Nesterov
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
