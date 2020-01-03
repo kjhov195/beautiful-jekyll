@@ -54,6 +54,8 @@ dataloader = torch.utils.data.DataLoader(dataset, batch_size=2, shuffle=True)
 dataloader
 ```
 
+<br>
+<br>
 ### Pytorch Dataloader
 
 먼저 ```torch.utils.data.Dataset```를 만들고 나면, ```torch.utils.data.Dataloader```를 사용할 수 있게 된다. ```torch.utils.data.Dataloader```는 Pytorch에서 제공하는 모듈로써 두 가지 옵션을 지정해주어야 한다.
@@ -62,6 +64,8 @@ dataloader
 
 두 번째 옵션은 ```shuffle```이다. shuffle은 매 Epoch마다 dataset의 순서를 섞어서 데이터가 학습되는 순서를 바꿔주도록 해준다. 이 옵션을 주게 되면 우리의 모형이 데이터셋의 순서를 외우지 못하게하여 overfitting을 방지해줄 수 있다.
 
+<br>
+<br>
 ### Source code
 
 ```
