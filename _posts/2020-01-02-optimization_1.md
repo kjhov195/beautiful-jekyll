@@ -175,7 +175,7 @@ Gradient 값이 4로써 양수인데, 이를 통하여 우리는 $x=3$에서 $x$
 
 $$ x_{new} = x_{old} - \alpha \cdot \frac{\partial y}{\partial x}\vert _ {x=x_{old}} $$
 
-여기서 $\alpha$는 learning rate이며, 최적의 $x$로 잘 수렴할 수 있도록 적절한 값을 선택하여 사용하면 된다.
+여기서 상수 $\alpha$는 learning rate이라고 부르며, 최적의 $x$로 잘 수렴할 수 있도록 적절한 값을 선택하여 사용하면 된다.
 
 
 <br>
