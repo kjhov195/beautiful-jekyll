@@ -135,7 +135,7 @@ v는 velocity, $\rho$는 friction이라고 하며, $\rho$의 경우 일반적으
 
 
 
-단, Velocit  y를 활용하는 momentum의 특성 상 처음에는 overshooting이 발생할 수 있지만, 결과적으로는 SGD보다 훨씬 더 빠르게 optimal point에 도달하게 된다.
+단, Velocity를 활용하는 momentum의 특성 상 처음에는 overshooting이 발생할 수 있지만, 결과적으로는 SGD보다 훨씬 더 빠르게 optimal point에 도달하게 된다.
 
 
 <br>
