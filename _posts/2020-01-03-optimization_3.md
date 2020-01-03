@@ -115,7 +115,7 @@ Adam optimizer의 경우 거의 대부분의 optimization 문제에서 꽤나 �
 
 <br>
 
-<center><img src = '/post_img/200103/image6.gif' width="450"/><img src = '/post_img/200103/image7.gif' width="450"/></center>
+<center><img src = '/post_img/200103/image6.gif' width="300"/><img src = '/post_img/200103/image7.gif' width="300"/></center>
 
 왼쪽의 그림을 통하여 각 optimizer의 performance를 시각적으로 확인할 수 있으며, Adagrad, Adadelta, RMSprop, and Adam이 가장 좋은 convergence를 보여주는 것을 알 수 있다.
 
@@ -127,7 +127,7 @@ Adam optimizer의 경우 거의 대부분의 optimization 문제에서 꽤나 �
 
 세 Post에 걸쳐 다양한 opimization 방법에 대해 살펴보았다. 이 내용들을 한 눈에 파악할 수 있도록 잘 정리해놓은 자료를 찾아서 공유하고자 한다. 아래 그림은 [하용호님의 Slide](https://www.slideshare.net/JAEHUNKANG2/clipboards/my-clips)에서 가져온 자료이다.
 
-<center><img src = '/post_img/200103/image6.gif' width="450"/><img src = '/post_img/200103/image8.gif' width="450"/></center>
+<center><img src = '/post_img/200103/image8.gif' width="600"/></center>
 
 
 <br>
