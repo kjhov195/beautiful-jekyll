@@ -47,6 +47,9 @@ while True:
 
 하지만 SGD 또한 여전히 여러 문제가 존재하는데 크게 3가지 문제점을 살펴보도록 하겠다.
 
+<br>
+##### problem 1. Differnt sensitivities of the weights
+
 첫 번째 문제는 각 weight의 변화가 loss 감소에 미치는 영향이 weight마다 다르고, 이 때문에 zigzaging behavior가 나타나 속도가 여전히 느리다는 것이다. 다음 예시 그림을 보면 훨씬 이해하기가 쉽다.
 
 <center><img src = '/post_img/200102/image8.png' width="300"/></center>
@@ -59,9 +62,26 @@ while True:
 
 위 예시는 2차원의 optimization landscape를 보여주고 있지만 고차원의 경우 이러한 문제는 훨씬 더 빈번하게 발생한다.
 
+<br>
+##### problem 2. local minimum/saddle point
 
+SGD는 매 iteration마다 gradient와 step in the direction of opposite gradient를 계산하게 된다. 그런데 만약 optimal point가 아닌 지점에서 gradient가 0으로 계산되는 경우, 해당 지점에서 weight update가 멈추게 되고 우리는 원하는 결과를 얻을 수 없게 된다. 다음 그림을 살펴보자.
 
+<center><img src = '/post_img/200102/image10.png' width="300"/>
+<img src = '/post_img/200102/image11.png' width="300"/></center>
 
+우리는 왼쪽의 경우를 local minimum, 오른쪽의 경우를 saddle point라고 말한다.
+
+local minimum에서는 어떠한 방향으로 weight이 움직이더라도 loss가 증가하게 되어, 그 시점에서 update가 중단되게 된다. 사실 local minimum의 경우 high dimension에서는 자주 발생하는 문제는 아니다.
+
+saddle point의 경우 역시 gradient가 0으로써 update가 이루어지지 않게 된다. 무엇보다도 saddle point의 가장 큰 문제점은 saddle point 주변의 기울기는 0은 아니지만 거의 0에 가까운, 아주 작은 Gradient를 가지고 있기 때문에 update가 상당히 느리게 진행된다는 것이다. saddle point의 문제는 high dimension에서 상당히 자주 일어나게 되는 일이며 거의 모든 고차원 문제에서 겪게되는 문제점이다.
+
+<br>
+##### problem 3. noise
+
+"Stochastic"하다는 특성 때문에 noise가 존재하는 경우, 아래 그림에서 볼 수 있듯 performance가 좋지 않을 수 있다.
+
+<center><img src = '/post_img/200102/image12.png' width="300"/></center>
 
 
 <br>
