@@ -112,7 +112,7 @@ y_train = torch.FloatTensor([[152], [185], [180], [196], [142]])
 dataset = CustomDataset()
 dataloader = torch.utils.data.DataLoader(dataset, batch_size=4, shuffle=True)
 
-# weight initialization
+# model
 model = MultivariateLinearRegressionModel()
 
 # optimizer
@@ -139,6 +139,7 @@ for epoch in range(n_epochs+1):
             epoch, n_epochs, batch_idx+1, len(dataloader), cost.item()
         ))
 
+# parameters
 model.state_dict()
 ```
 
