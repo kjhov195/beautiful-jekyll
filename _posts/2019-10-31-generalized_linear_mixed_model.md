@@ -10,6 +10,9 @@ use_math: true
 <br>
 ### Genealized Linear Mixed Model
 
+GLMM(Genealized Linear Mixed Model)은 GLM(__Generalized__ Linear Model)과 LMM(Linear __Mixed__ Model)을 결합한 형태의 모형이다.
+
+즉, Linear Model에 random effect
 
 
 
@@ -18,4 +21,4 @@ use_math: true
 <br>
 <br>
 ### Reference
-Helen Brown, Robin Prescott (2015). Applied Mixed Models in Medicine. chapter 1.
+Seung-Ho Kang(2019), Generalized Linear Model : Generalized Linear Mixed Models(GLMMs), Yonsei University, p.1.
