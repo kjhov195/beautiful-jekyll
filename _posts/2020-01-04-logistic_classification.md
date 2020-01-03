@@ -27,11 +27,11 @@ $$
 
 <br>
 
-<center><img src = '/post_img/200104/image1.png' width="450"/></center>
+<center><img src = '/post_img/200104/image1.png' width="500"/></center>
 
-<center><img src = '/post_img/200104/image2.png' width="450"/></center>
+<center><img src = '/post_img/200104/image3.png' width="500"/></center>
 
-<center><img src = '/post_img/200104/image3.png' width="450"/></center>
+<center><img src = '/post_img/200104/image2.png' width="500"/></center>
 
 <br>
 <br>
