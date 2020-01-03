@@ -65,14 +65,12 @@ while True:
 
 <center><img src = '/post_img/200103/image1.png' width="450"/></center>
 
-RMS prop은 학습이 조기에 종료될 수 있는 AdaGrad보다 훨씬 더 안정적이고, 학습이 끝까지 진행될 수 있도록 해준다.
+RMS prop은 학습이 조기에 종료될 수 있는 AdaGrad보다 훨씬 더 안정적이고, 빠른 속도로 학습이 끝까지 진행될 수 있도록 해준다.
 
 
 <br>
 <br>
 ### Adam
-
-Adam은 앞서 살펴본 Momentum/AdaGrad/RMS prop의 장점만을 모아 하나로 결합한 형태의 optimizer이며, 거의 대부분의 optimization 문제에서 상당히 좋은 default optimizer로 사용할 수 있다.
 
 ```
 #pseudo-code for Adam
@@ -88,7 +86,9 @@ while True:
   w += -learning_rate*first_moment/(sqrt(second_moment)+1e-7)
 ```
 
-일반적으로 $\beta_1$, $\beta_2$, $\text{learning_rate}$은 다음을 기본적으로 사용한다.
+Adam은 앞서 살펴본 Momentum/AdaGrad/RMS prop의 장점만을 모아 하나로 결합한 형태의 optimizer이다. "```first_moment```" 의 경우 momentum의 개념을 도입한 부분이고, "```second_moment```" 의 경우 AdaGrad의 개념을 도입한 부분이다. 최종적으로 w를 update해주는 "```w += ```"부분의 경우, RMS prop과 상당히 유사한 형태인 것을 확인할 수 있다.
+
+일반적으로 $\beta_1$, $\beta_2$, $\text{learning_rate}$은 기본적으로 다음 값들을 사용한다.
 
 $$
 \begin{align*}
@@ -97,6 +97,12 @@ $$
 \text{learning rate} &= 1e-3\;\;or\;\;5e-4\\
 \end{align*}
 $$
+
+<br>
+
+<center><img src = '/post_img/200103/image1.png' width="450"/></center>
+
+Adam optimizer의 경우 거의 대부분의 optimization 문제에서 꽤나 좋은 성능을 보이며, 그러한 이유로 많은 문제/영역에서 default optimizer로 사용되고 있다.
 
 
 <br>
