@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linear mixed model(LMM)
+title: Linear Mixed model(LMM)
 subtitle: Linear mixed model
 category: Statistics
 use_math: true
