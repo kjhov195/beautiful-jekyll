@@ -28,7 +28,7 @@ while True:
   w += -learning_rate*dw/(sqrt(grad_squared)+1e-7)
 ```
 
-즉, AdaGrad는 각 dimension마다 gradient의 historical sum of squares로 element-wise scaling을 해주는 term(```grad_squared```)을 추가한 것이다.(scaling term에 1e-7이 더해지는 이유는 우리가 나누는 값(scaling term)이 0이 되지 않도록 해주기 위함이다.)
+즉, AdaGrad는 각 dimension마다 gradient의 historical sum of squares로 element-wise scaling을 해주는 term(```grad_squared```)을 추가한 것이다.(scaling term에 1e-7을 더해주는 이유는 우리가 나누는 값(scaling term)이 0이 되지 않도록 해주기 위함이다.)
 
 <br>
 
