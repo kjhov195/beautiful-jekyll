@@ -284,8 +284,6 @@ for epoch in range(n_epochs + 1):
     W -= lr * gradient
 ```
 
-최종적으로 Cost가 0까지 줄어들며 $W$가 1로 잘 수렴한 것을 확인할 수 있다.
-
 <center><img src = '/post_img/200102/image8.png'/>
 </center>
 
