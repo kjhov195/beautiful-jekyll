@@ -66,7 +66,7 @@ $$ \mu_i = logistic(x_i' \beta) = \frac 1 {1+e^{-x_i' \beta}} $$
 
 참고로 logistic function은 logit function과 역함수의 관계에 있다.
 
-$$logit(x) = {x \over 1-x}$$
+$$logit(x) = log(odds) = log({x \over 1-x})$$
 
 $$logit^{-1}(x) = logistic(x) = {1 \over 1+exp(-x)} = {exp(x) \over exp(x)+1}$$
 
