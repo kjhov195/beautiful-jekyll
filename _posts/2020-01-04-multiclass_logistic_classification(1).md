@@ -109,8 +109,8 @@ $$
 Softmax(H_L(X)) =  
 \begin{bmatrix}
 \frac {e^{XW_A}} {e^{XW_A}+e^{XW_B}+e^{XW_C}} &
-\frac {e^{XW_A}} {e^{XW_A}+e^{XW_B}+e^{XW_C}} &
-\frac {e^{XW_A}} {e^{XW_A}+e^{XW_B}+e^{XW_C}}
+\frac {e^{XW_B}} {e^{XW_A}+e^{XW_B}+e^{XW_C}} &
+\frac {e^{XW_C}} {e^{XW_A}+e^{XW_B}+e^{XW_C}}
 \end{bmatrix}
 \end{align*}
 $$
