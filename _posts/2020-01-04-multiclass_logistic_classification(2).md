@@ -117,7 +117,7 @@ cost = -(y_one_hot*torch.log(hypothesis)).sum(dim=1).mean()
 
 그 후에 ```y_train.unsqueeze(1)```를 통하여 _torch.Size([8])_ 의 shape을 가진 y_train을 _torch.Size([8, 1])_ 의 shape으로 reshape해 준다.
 
-마지막으로 ```scatter_(1, y_train.unsqueeze(1), 1)```를 통하여 one-hot encoding을 해준다. scatter 함수 인자들의 의미는 순서대로 __dimension=1__ 에 해당하는 방향, 즉 열 방향으로 __y_train.unsqueeze(1)__ 의 값들을 흩뿌려주는데, __1__ 이라는 숫자를 사용하여을 뿌리라는 의미이다.
+마지막으로 ```scatter_(1, y_train.unsqueeze(1), 1)```를 통하여 one-hot encoding을 해준다. scatter 함수 인자들의 의미는 순서대로 __dimension=1__ 에 해당하는 방향, 즉 열 방향으로 __y_train.unsqueeze(1)__ 의 값들을 흩뿌려주는데, __1__ 이라는 숫자를 사용하여 흩뿌리라는 의미이다.
 
 이후, ```cost = -(y_one_hot*torch.log(hypothesis)).sum(dim=1).mean()```로써 Cross Entropy loss를 활용하여 cost를 계산해 주었다.
 
