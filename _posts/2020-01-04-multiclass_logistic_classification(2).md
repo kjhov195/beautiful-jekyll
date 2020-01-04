@@ -13,7 +13,7 @@ use_math: true
 
 <br>
 <br>
-### Multiclass logistic regression
+### Example: Multiclass logistic regression
 
 ```
 import torch
@@ -189,6 +189,84 @@ for epoch in range(n_epochs + 1):
 우선, ```SoftmaxClassifierModel()``` Class를 정의할 때 Softmax 함수 값을 return해주는 것이 아닌 선형 함수 $XW+b$ 를 return하도록 만들어 주어야 한다.
 
 또한, ```torch.nn.functional.cross_entropy()```를 사용할 때에는 인자로 $XW+b$와 $Y$(one-hot encoding이 되지 않은)를 사용해야 한다는 점을 잊지 말아야 한다.
+
+<br>
+<br>
+### Real dataset
+
+이번에는 실제 데이터에 적용하여 Multiclass logistic regression으로 classification 문제를 풀어보도록 하자. 데이터는 __pid.dat__ 와 __pidtest.dat__ 데이터로, [여기](https://github.com/kjhov195/data_mining/blob/master/2_data/data.zip)에 업로드 해놓았다.
+
+<br>
+```
+import torch
+import pandas as pd
+import numpy as np
+
+# For reproducibility
+torch.manual_seed(1)
+
+# model
+class SoftmaxClassifierModel(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.linear = torch.nn.Linear(7, 2)
+
+    def forward(self, x):
+        return self.linear(x)
+
+model = SoftmaxClassifierModel()
+
+# dataset
+# training set
+df_train = pd.read_csv("pid.dat",sep=',',header=None)
+x_train = np.array(df_train.iloc[:,:7])
+y_train = np.array(df_train.iloc[:,7])
+
+x_train = torch.FloatTensor(x_train)
+y_train = torch.LongTensor(y_train)
+y_train[y_train==1] = 0
+y_train[y_train==2] = 1
+
+# test set
+df_test = pd.read_csv("pidtest.dat",sep=',',header=None)
+x_test = np.array(df_test.iloc[:,:7])
+y_test = np.array(df_test.iloc[:,7])
+
+x_test = torch.FloatTensor(x_test)
+y_test = torch.LongTensor(y_test)
+y_test[y_test==1] = 0
+y_test[y_test==2] = 1
+
+# optimizer
+optimizer = torch.optim.Adam(model.parameters(), lr=0.005)
+
+n_epochs = 10000
+for epoch in range(n_epochs + 1):
+    # Hypothesis
+    XW = model(x_train)
+
+    # cost
+    cost = torch.nn.functional.cross_entropy(XW, y_train)
+
+    # Updating weights
+    optimizer.zero_grad()
+    cost.backward()
+    optimizer.step()
+
+    # print
+    if epoch % 100 == 0:
+        print('Epoch {:4d}/{} Cost: {:.6f}'.format(
+            epoch, n_epochs, cost.item()
+        ))
+
+# validation
+y_pred = torch.argmax(model(x_train),dim=1)
+(y_train == y_pred).numpy().mean() #accuracy
+
+# test
+y_pred = torch.argmax(model(x_test),dim=1)
+(y_test == y_pred).numpy().mean() #accuracy
+```
 
 
 <br>
