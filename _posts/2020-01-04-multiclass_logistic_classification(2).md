@@ -184,9 +184,11 @@ for epoch in range(n_epochs + 1):
         ))
 ```
 
-주의해야할 점은 ```SoftmaxClassifierModel()``` Class를 정의할 때 Softmax 함수 값을 return해주는 것이 아닌, 선형 함수 $XW$ 값을 return하도록 만들어 주어야 한다는 것이다.
+여기서 매우 중요한 포인트는 Pytorch에서 loss function으로 __Cross Entropy loss__ 를 사용할 경우, 해당 함수 내에서 자동으로 softmax 값을 계산해준다는 점이다. 즉, 우리는 다음 두 가지 사항을 명심해야한다.
 
-또한, ```torch.nn.functional.cross_entropy()```를 사용할 때에는 인자로 $XW+b$와 $Y$(one-hot encoding이 되지 않은)를 사용해야 한다.
+우선, ```SoftmaxClassifierModel()``` Class를 정의할 때 Softmax 함수 값을 return해주는 것이 아닌 선형 함수 $XW+b$ 를 return하도록 만들어 주어야 한다.
+
+또한, ```torch.nn.functional.cross_entropy()```를 사용할 때에는 인자로 $XW+b$와 $Y$(one-hot encoding이 되지 않은)를 사용해야 한다는 점을 잊지 말아야 한다.
 
 
 <br>
