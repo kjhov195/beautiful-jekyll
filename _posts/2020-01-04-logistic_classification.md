@@ -56,32 +56,46 @@ logistic 함수의 결과 값은 0에서 1사이에 위치하게 되는데, 우�
 <br>
 ### MLE of Logistic Regression
 
-Binary classification 문제에 대하여 생각해보자. 여기서 $y$는 1과 0의 두 값을 취하고, $p$는 $y$가 1일 확률을 뜻하므로 우리는 $y$에 대하여 Bernoulli 분포를 가정할 수 있다.
+Binary classification 문제에 대하여 생각해보자. $p$를 다음과 같이 정의하도록 한다.
 
-$$ Pr(Y_i=y_i) = {p_i}^{y_i} (1-{p_i})^{1-y_i} $$
+$$ p_i = Pr(y_i=1 \vert x_i) = logistic(x_i'\beta) = \frac 1 {1+e^{-x_i'\beta}}$$
 
-$i$번째 observation의 class $y_i$가 1일 확률이 $p_i$이며, 다음과 같이 p를 정의할 수 있다.
+여기서 $y$는 1과 0의 두 값을 취하고, $p$는 $y$가 1일 확률이므로 우리는 $y$에 대하여 Bernoulli 분포를 가정할 수 있다.
 
-$$ p = Pr(y=1 \vert x) = logistic(x'\beta) = \frac 1 {1+e^{-x'\beta}}$$
+$$ Y_i \sim Bernoulli(p_i) = Bernoulli(\frac 1 {1+e^{-x_i'\beta}})$$
 
+$$ Pr(Y_i=y_i) = {p_i}^{y_i} (1-{p_i})^{1-y_i} = \left \lbrack {\frac 1 {1+e^{-x_i'\beta}}} \right \rbrack^{y_i} \left \lbrack1-{\frac 1 {1+e^{-x_i'\beta}}}\right \rbrack^{1-y_i}$$
 
-
-이 때 모수 $p$의 likelihood를 구해보면 다음과 같다.
-
+이 때 $p$의 log-likelihood를 구해보면 다음과 같다.
 
 $$
 \begin{align*}
-L(\beta \vert y) &= \prod_{i=1}^n Pr(Y_i = y_i \vert X_i)\\
-l(\beta \vert y) &= log(L(\beta \vert y)) \\
-&=\sum_{i=1}^n log(Pr(Y_i = y_i \vert X_i))\\
+L(p \vert y) &= \prod_{i=1}^n f(y_i \vert p_i) \\
+&= \prod_{i=1}^n Pr(Y_i = y_i \vert p_i)\\
+l(p \vert y) &= log(L(p \vert y)) \\
+&=\sum_{i=1}^n log(Pr(Y_i = y_i \vert p_i))\\
 &=\sum_{i=1}^n log({p_i}^{y_i} (1-{p_i})^{1-y_i})\\
 &=\sum_{i=1}^n \left \lbrack y_i log(p_i) + (1-y_i)log(1-p_i) \right \rbrack\\
 \end{align*}
 $$
 
-위와 같이 log-liklihood $l(\beta \vert y)$를 성공적으로 구하였다. 일반적으로 우리는 log-likelihood를 구한 후에 이를 최대화하는 $\beta$를 찾기 위하여 $l(\beta \vert y)$를 미분한 식을 0으로 놓고 $\beta$에 대하여 풀게 된다.
+따라서, $\beta$에 대한 log-likelihodd는 다음과 같다.
+
+$$
+\begin{align*}
+L(\beta \vert y) &= \prod_{i=1}^n f(y_i \vert x_i, \beta)\\
+&= \prod_{i=1}^n Pr(Y_i = y_i \vert x_i, \beta)\\
+l(\beta \vert y) &= log(L(\beta \vert y)) \\
+&=\sum_{i=1}^n log(Pr(Y_i = y_i \vert x_i, \beta))\\
+&=\sum_{i=1}^n log \left \lbrack \left \lbrack {\frac 1 {1+e^{-x_i'\beta}}} \right \rbrack^{y_i} \left \lbrack1-{\frac 1 {1+e^{-x_i'\beta}}}\right \rbrack^{1-y_i} \right \rbrack\\
+&=\sum_{i=1}^n \left \lbrack y_i log \left \lbrack \frac 1 {1+e^{-x_i'\beta}} \right \rbrack  + (1-y_i)log\left \lbrack1-\frac 1 {1+e^{-x_i'\beta}} \right \rbrack \right \rbrack
+\end{align*}
+$$
+
+위와 같이 log-liklihood $l(\beta \vert y)$를 성공적으로 구하였다. 일반적으로 우리는 log-likelihood를 구한 후에 이를 최대화하는 $\beta$를 찾게 된다.
 
 하지만 로지스틱 회귀의 경우 해당 식에 대한 해답이 closed-form으로 존재하지 않는다. 따라서 numerical한 optimization을 통하여 구할 수 밖에 없다.
+
 
 <br>
 <br>
