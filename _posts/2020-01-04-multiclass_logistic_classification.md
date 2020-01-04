@@ -189,9 +189,9 @@ CrossEntropy(S,L) &=
 \end{align*}
 $$
 
-다시 한 번 기억해야하는 것은 Binary logistic regression의 경우 sigmoid 값은 $y$가 1일 확률 값 하나를 반환하지만,
+다시 한 번 기억해야하는 것은 Binary logistic regression의 경우 sigmoid함수는 $y$가 1일 확률 값 하나를 반환하지만,
 
-Multiclass logistic regression의 경우 softmax 함수는 class의 개수 만큼의 확률 값을 가지고있는 하나의 행렬을 반환한다는 사실이다.
+Multiclass logistic regression의 경우 softmax 함수는 class의 개수 만큼의 확률 값을 가지고있는 하나의 행렬을 반환한다는 사실이다. 즉, one-hot encoding된 $y$의 dimension 만큼의 행렬을 반환하게 된다.
 
 pytorch를 활용한 multiclass logistic regression은 다음 포스트에서 살펴보도록 하겠다.
 
