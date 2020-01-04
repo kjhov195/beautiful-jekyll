@@ -14,7 +14,7 @@ use_math: true
 
 이번 포스트에서는 $y$의 class가 2개 이상일 때 어떻게 classification을 할 것인지에 대하여 살펴보도록 하겠다.
 
-만약 다루고자 하는 class의 수가 2개 이상일 경우, 우리는 Multiclass Logistic Regression을 다루게 된다. 통계학에서는 Multinomial Logistic Regression, Multiclass Logistic Regression, Multilevl Logistic Regression 등으로 불리우며, 컴퓨터과학이나 머신러닝 분야에서는 Softmax Classifier라고 불리는 경우도 있다. 모두 다 달라보이는 이름이지만, 사실은 똑같은 모형을 일컫는 말이다.
+만약 다루고자 하는 class의 수가 2개 이상일 경우, 우리는 Multiclass Logistic Regression을 다루게 된다. 통계학에서는 Multinomial Logistic Regression, Multiclass Logistic Regression, Multilevl Logistic Regression 등으로 불리우며, 컴퓨터공학이나 머신러닝에서는 Softmax Classifier라고 불리는 경우도 있다. 모두 다 달라보이는 이름이지만, 사실은 똑같은 모형을 일컫는 말이다.
 
 <br>
 <br>
@@ -66,9 +66,9 @@ Multiclass Logistic Regression은 Binary Logistic Regression과 크게 다르지
 <br>
 ### Hypothesis
 
-앞서 2개의 class를 구분하는 Logistic regression의 경우, $W = [w_1 w_2 \cdots w_p]'_ {p \times 1}$ matrix 하나에 대한 Estimation을 하였다.
+앞서 2개의 class를 구분하는 Logistic regression의 경우, 하나의 열로 구성된 $W = [w_1 w_2 \cdots w_p]'_ {p \times 1}$ Matrix에 관심을 가지고, 추정해 주었다.
 
-Multiclass Logistic regression의 경우, class의 수 만큼 $W$ matrix를 추정하게 된다. 간단한 설명을 위하여 3개의 class를 가정해보자. 이 때 $W$ matrix는 다음과 같이 $W_{multi}$의 형태로 정의된다.
+Multiclass Logistic regression의 경우, class 수 만큼의 열을 가진 $W$ matrix를 추정하게 된다. 간단한 설명을 위하여 3개의 class를 가정해보자. 이 때 $W$ matrix는 다음과 같이 $W_{multi}$의 형태로 정의된다.
 
 $$
 \begin{align*}
