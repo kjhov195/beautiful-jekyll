@@ -167,10 +167,10 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.1)
 n_epochs = 4000
 for epoch in range(n_epochs + 1):
     # Hypothesis
-    XW = model(x_train)
+    linear = model(x_train)
 
     # cost
-    cost = torch.nn.functional.cross_entropy(XW, y_train)
+    cost = torch.nn.functional.cross_entropy(linear, y_train)
 
     # Updating weights
     optimizer.zero_grad()
@@ -184,9 +184,9 @@ for epoch in range(n_epochs + 1):
         ))
 ```
 
-주의해야할 점은 ```SoftmaxClassifierModel()``` Class를 정의할 때 Softmax 함수 값을 return해주는 것이 아닌, 선형 함수 $XW$ 값을 return하도록 해주어야 한다는 것이다.
+주의해야할 점은 ```SoftmaxClassifierModel()``` Class를 정의할 때 Softmax 함수 값을 return해주는 것이 아닌, 선형 함수 $XW$ 값을 return하도록 만들어 주어야 한다는 것이다.
 
-또한, ```torch.nn.functional.cross_entropy()```함수를 사용할 때 인자로 $XW$와 $Y$(one-hot encoding이 되지 않은)를 사용해야 한다.
+또한, ```torch.nn.functional.cross_entropy()```를 사용할 때에는 인자로 $XW+b$와 $Y$(one-hot encoding이 되지 않은)를 사용해야 한다.
 
 
 <br>
