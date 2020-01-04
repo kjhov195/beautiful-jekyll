@@ -13,8 +13,13 @@ use_math: true
 
 <br>
 <br>
-### Example: Multiclass logistic regression
+### Example 1.
 
+앞선 [post](https://kjhov195.github.io/2020-01-04-multiclass_logistic_classification_1/)에서 Multiclass logistic regression에 대해 살펴보았다.
+
+이번에는 Pytorch를 활용하여 실제로 classification 문제를 풀어보도록 하자.
+
+<br>
 ```
 import torch
 
@@ -192,9 +197,9 @@ for epoch in range(n_epochs + 1):
 
 <br>
 <br>
-### Real dataset
+### Example 2. Real dataset
 
-이번에는 실제 데이터에 적용하여 Multiclass logistic regression으로 classification 문제를 풀어보도록 하자. 데이터는 __pid.dat__ 와 __pidtest.dat__ 데이터로, [여기](https://github.com/kjhov195/data_mining/blob/master/2_data/data.zip)에 업로드 해놓았다.
+이번에는 실제 데이터에 적용하여 Multiclass logistic regression으로 classification 문제를 풀어보도록 하자. 데이터는 __pid.dat__ 와 __pidtest.dat__ 데이터로, [여기](https://github.com/kjhov195/data_mining/tree/master/2_data)에 업로드 해놓았다.
 
 <br>
 ```
