@@ -56,13 +56,15 @@ logistic 함수의 결과 값은 0에서 1사이에 위치하게 되는데, 우�
 <br>
 ### MLE of Logistic Regression
 
-Binary classification 문제에 대하여 생각해보자. 우선, $i$번째 observation의 class $y_i$가 1일 확률을 $p_i$라고 하자.
-
-$$ p = Pr(y=1 \vert x) = logistic(x'\beta) $$
-
-여기서 $y$는 1과 0의 두 값을 취하고, $p$는 $y$가 1일 확률을 뜻하므로 우리는 $y$에 대하여 Bernoulli 분포를 가정할 수 있다.
+Binary classification 문제에 대하여 생각해보자. 여기서 $y$는 1과 0의 두 값을 취하고, $p$는 $y$가 1일 확률을 뜻하므로 우리는 $y$에 대하여 Bernoulli 분포를 가정할 수 있다.
 
 $$ Pr(Y_i=y_i) = {p_i}^{y_i} (1-{p_i})^{1-y_i} $$
+
+$i$번째 observation의 class $y_i$가 1일 확률이 $p_i$이며, 다음과 같이 p를 정의할 수 있다.
+
+$$ p = Pr(y=1 \vert x) = logistic(x'\beta) = \frac 1 {1+e^{-x'\beta}}$$
+
+
 
 이 때 모수 $p$의 likelihood를 구해보면 다음과 같다.
 
