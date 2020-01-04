@@ -10,7 +10,7 @@ use_math: true
 <br>
 ### Multiclass Logistic Regression, Softmax Classifier
 
-앞서 [Logistic Regression](https://kjhov195.github.io/2020-01-04-logistic_classification/) 포스트에서는 $y$의 class가 0과 1로 두 개인 경우에 classification을 어떻게 할 것인가에 대하여 살펴보았다.
+앞서 [Logistic Regression](https://kjhov195.github.io/2020-01-04-logistic_classification/) 포스트에서는 $y$의 class가 두 개인 경우의 logistic regression을 통한 classification에 대하여 살펴보았다.
 
 이번 포스트에서는 $y$의 class가 2개 이상일 때 어떻게 classification을 할 것인지에 대하여 살펴보도록 하겠다.
 
