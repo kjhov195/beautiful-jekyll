@@ -7,10 +7,6 @@ use_math: true
 ---
 
 <br>
-
-우선, 해당 포스트는 [모두를 위한 딥러닝 시즌2](https://deeplearningzerotoall.github.io/season2/lec_pytorch.html)의 자료를 기본으로 하여 정리한 내용임을 밝힙니다.
-
-<br>
 <br>
 ### Multiclass Logistic Regression, Softmax Classifier
 
@@ -201,5 +197,3 @@ pytorch를 활용한 multiclass logistic regression은 다음 포스트에서 �
 
 <br>
 <br>
-### Reference
-[모두를 위한 딥러닝 시즌2](https://deeplearningzerotoall.github.io/season2/lec_pytorch.html)
