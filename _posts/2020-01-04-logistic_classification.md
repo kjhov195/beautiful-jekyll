@@ -79,7 +79,7 @@ l(p \vert y) &= log(L(p \vert y)) \\
 \end{align*}
 $$
 
-따라서, $\beta$에 대한 log-likelihodd는 다음과 같다.
+따라서, $\beta$에 대한 log-likelihood는 다음과 같다.
 
 $$
 \begin{align*}
