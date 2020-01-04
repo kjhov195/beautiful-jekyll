@@ -91,12 +91,12 @@ $$
 &=  
 \begin{bmatrix}
 \frac {e^{X_1W_A}} {e^{X_1W_A}+e^{X_1W_B}+e^{X_1W_C}} &
-\frac {e^{X_1W_A}} {e^{X_1W_A}+e^{X_1W_B}+e^{X_1W_C}} &
-\frac {e^{X_1W_A}} {e^{X_1W_A}+e^{X_1W_B}+e^{X_1W_C}}\\
+\frac {e^{X_1W_B}} {e^{X_1W_A}+e^{X_1W_B}+e^{X_1W_C}} &
+\frac {e^{X_1W_C}} {e^{X_1W_A}+e^{X_1W_B}+e^{X_1W_C}}\\
 \vdots & \vdots & \vdots\\
 \frac {e^{X_8W_A}} {e^{X_8W_A}+e^{X_8W_B}+e^{X_8W_C}} &
-\frac {e^{X_8W_A}} {e^{X_8W_A}+e^{X_8W_B}+e^{X_8W_C}} &
-\frac {e^{X_8W_A}} {e^{X_8W_A}+e^{X_8W_B}+e^{X_8W_C}}
+\frac {e^{X_8W_B}} {e^{X_8W_A}+e^{X_8W_B}+e^{X_8W_C}} &
+\frac {e^{X_8W_C}} {e^{X_8W_A}+e^{X_8W_B}+e^{X_8W_C}}
 \end{bmatrix}_ {8 \times 3}
 \end{align*}
 $$
