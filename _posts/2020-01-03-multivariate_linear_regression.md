@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multivariate Linear Regression
+title: Multiple Linear Regression
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
@@ -18,7 +18,7 @@ use_math: true
 
 이에 앞서, 우리는 [Linear Regression](https://kjhov195.github.io/2020-01-02-linear_regression_with_pytorch/) 포스트에서 Simple linear regression에 대해 살펴보았다. Simple linear regression은 하나의 $y$와 하나의 $x$간의 선형관계에 대한 이야기였다.
 
-Multiple linear regression의 경우, 하나의 $y$와 여러 $x_i(i=1,2,\cdots,p)$들 사이의 선형관계에 대한 이야기라고 생각하면 된다. 따라서 모형은 다음과 같다.
+Multiple linear regression의 경우, 하나의 $y$와 여러 $x_i(i=1,2,\cdots,p)$들 사이의 선형관계에 대한 이야기다. 따라서 모형은 다음과 같다.
 
 $$ H(x_1, x_2, x_3) = x_1w_1 + x_2w_2 + x_3w_3 + b $$
 
@@ -26,18 +26,9 @@ $$ cost(W, b) = \frac{1}{n} \sum^n_{i=1} \left( H(x^{(i)}) - y^{(i)} \right)^2 $
 
 <br>
 <br>
-### Multivariate linear regression
+### Multiple linear regression
 
-Multivariate 모형은 연속적인 관측치(simultaneous)를 비롯한 __하나 이상의 outcome variable(y)에 대한 모형__ 을 의미한다.
-
-$$ H(X) = XW $$
-
-
-<br>
-<br>
-### Multivariate Multiple linear regression
-
-따라서 Multivariate Multiple linear regression 모형은 다음과 같이 정의된다.
+따라서 Multiple linear regression 모형을 행렬로 나타내면 다음과 같다.
 
 $$
 \begin{align*}
