@@ -1,16 +1,10 @@
 ---
 layout: post
-title: Issues about Jekyll
+title: Jekyll error book
 subtitle: How to use, Errors
 category: Jekyll
 use_math: true
 ---
-# Result on local
-Local에서 결과를 보고 싶을 때
-```
-bundle exec jekyll server
-bundle exec jekyll server start
-```
 
 <br>
 <br>
@@ -18,6 +12,15 @@ bundle exec jekyll server start
 Windows에서 error가 날 때 Windows cmd에서
 ```
 c/Windows/System32/chcp.com 65001
+```
+
+<br>
+<br>
+# Result on local
+Local에서 결과를 보고 싶을 때
+```
+bundle exec jekyll server
+bundle exec jekyll server start
 ```
 
 <br>
