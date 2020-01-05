@@ -87,9 +87,9 @@ MNIST training data의 경우 60,000개의 데이터를 가지고 있는데, 이
 
 예시로 0~2의 index에 해당하는 3개의 training 데이터만 시각화 해보면 다음과 같다.
 
-<center><img src = '/post_img/200105/image3.png' width="250"/>
-<img src = '/post_img/200105/image4.png' width="250"/>
-<img src = '/post_img/200105/image5.png' width="250"/></center>
+<center><img src = '/post_img/200105/image3.png' width="200"/>
+<img src = '/post_img/200105/image4.png' width="200"/>
+<img src = '/post_img/200105/image5.png' width="200"/></center>
 
 <br>
 <br>
