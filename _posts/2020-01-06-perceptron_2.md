@@ -53,6 +53,68 @@ XOR 게이트는 두 개의 입력 값 $x_1$과 $x_2$가 모두 0이거나, 모�
 
 <br>
 <br>
+### Source code
+
+```
+import torch
+
+# setting device
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+# for reproducibility
+torch.manual_seed(777)
+if device == 'cuda':
+    torch.cuda.manual_seed_all(777)
+
+# dataset
+X = torch.FloatTensor([[0, 0], [0, 1], [1, 0], [1, 1]]).to(device)
+Y = torch.FloatTensor([[0], [1], [1], [0]]).to(device)
+
+# model
+linear1 = torch.nn.Linear(2, 10, bias=True)
+linear2 = torch.nn.Linear(10, 10, bias=True)
+linear3 = torch.nn.Linear(10, 10, bias=True)
+linear4 = torch.nn.Linear(10, 1, bias=True)
+sigmoid = torch.nn.Sigmoid()
+model = torch.nn.Sequential(linear1, sigmoid, linear2, sigmoid, linear3, sigmoid, linear4, sigmoid).to(device)
+
+# define cost/loss & optimizer
+criterion = torch.nn.BCELoss().to(device)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.1)
+
+for step in range(4001):
+    # Hypothesis
+    hypothesis = model(X)
+
+    # cost/loss function
+    cost = criterion(hypothesis, Y)
+
+    # updating weights
+    optimizer.zero_grad()
+    cost.backward()
+    optimizer.step()
+
+    if step % 100 == 0:
+        print(step, cost.item())
+```
+
+3개의 hidden layer를 가진 Multi layer perceptron이다.
+
+<br>
+```
+# Accuracy computation
+# True if hypothesis>0.5 else False
+with torch.no_grad():
+    hypothesis = model(X)
+    predicted = (hypothesis > 0.5).float()
+    accuracy = (predicted == Y).float().mean()
+    print('\nHypothesis: ', hypothesis.detach().cpu().numpy(), '\nCorrect: ', predicted.detach().cpu().numpy(), '\nAccuracy: ', accuracy.item())
+```
+
+Test 결과 100%의 정확도로 예측에 성공한 것을 확인할 수 있다.
+
+<br>
+<br>
 ### 작성 중...
 
 작성 중...
