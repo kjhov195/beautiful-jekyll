@@ -83,7 +83,7 @@ for i in idx:
 
 MNIST training data의 경우 60,000개의 데이터를 가지고 있는데, 이를 한 번에 불러오는 것은 메모리 문제 때문에 효율적이지 않다. 따라서 mini-batch 단위로 사진을 가지고오는 방법을 선택하게 된다. 적당히 적은 숫자를 사용하면 되는데, 이 예시에서는 1,000개로 선택해 주었다. 그리고 ```torch.utils.data.DataLoader()```를 통하여 설정해준 batch_size 크기 만큼의 데이터를 가져오게 된다. shuffle 옵션의 경우 데이터를 불러들일 때 순서를 섞을 것인지에 대한 옵션이고, drop_last 옵션의 경우 batch 단위로 데이터를 잘라서 읽는 과정에서 데이터의 끝부분이 짤리는 경우가 발생할 때 이를 어떻게 처리할지에 대한 옵션이다.
 
-이렇게 가져온 X데이터의 경우 _torch.Size([1, 28, 28])_ 의 shape을 가진다. ```x.squeeze()```를 통해 X 행렬의 형태를 _torch.Size([1, 28, 28])_ 으로 reshape해주고, numpy로 변환하여 ```matplotlib.imshow()``` 함수를 사용하면 $1 \times 28 \times 28$의 행렬을 시각적으로 확인할 수 있게 된다.
+이렇게 가져온 X데이터의 경우 _torch.Size([1, 28, 28])_ 의 shape을 가진다. ```x.squeeze()```를 통해 X 행렬의 형태를 _torch.Size([28, 28])_ 으로 reshape해주고, numpy로 변환하여 ```matplotlib.imshow()``` 함수를 사용하면 $28 \times 28$의 행렬을 시각적으로 확인할 수 있게 된다.
 
 예시로 0~2의 index에 해당하는 3개의 training 데이터만 시각화 해보면 다음과 같다.
 
