@@ -192,9 +192,9 @@ for epoch in range(training_epochs):
         Y = Y.to(device)
 ```
 
-Training 과정에 대하여 자세히 살펴보도록 하자. 우리는 batch_size를 1000으로 지정해 주었으므로, batch의 총 수는 60개가 된다.
+Training 과정에 대하여 자세히 살펴보도록 하자. 우리는 batch_size를 1000으로 지정해 주었으므로, 한 epoch에서 batch의 총 개수는 60개, iteration 수는 60번이 되는 것이다.
 
-즉 우리의 training 과정은 15번의 Epoch을 거쳐 진행되는데, 각 Epoch에서 600번의 iterations이 이루어지는 구조를 가지고 있다. 즉, 총 9000번의 iteration이 이루어지는 것이다. 한 iteration에서 가져오는 data의 수(batch size)는 600이므로, 한 iteration에서 사용하는 training data $X$의 shape은 $600 \times 784$가 된다. 그러한 이유로 ```X = X.view(-1, 28 * 28).to(device)```에서 X를 __$600 \times 784$__ 로 정해준 것이다.
+즉 우리의 training 과정은 15번의 Epoch을 거쳐 총 900번의 iteration이 이루어지는 것이다. 한 iteration에서 가져오는 data의 수(batch size)는 1000이므로, training data $X$의 shape은 $1000 \times 784$가 된다. 그러한 이유로 ```X = X.view(-1, 28 * 28).to(device)```에서 X를 __$1000 \times 784$__ 로 정해준 것이다.
 
 <br>
 <br>
