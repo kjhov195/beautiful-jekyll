@@ -45,6 +45,11 @@ XOR 게이트는 두 개의 입력 값 $x_1$과 $x_2$가 모두 0이거나, 모�
 
 1969년, MIT AI laboratory의 창시자인 Marvin Minsky교수는 single layer perceptron으로는 XOR 문제를 해결할 수 없으며, XOR 문제를 풀기 위해서는 Multi layer perceptron을 도입이 필요하다는 것을 밝혔다.
 
+<br>
+
+<center><img src = '/post_img/200106/image3.png' width="450"/></center>
+
+
 단층 perceptron으로는 XOR 문제를 풀 수 없지만 Layer의 수를 더 늘릴 경우 XOR 문제를 풀 수 있게 되는 것이다.
 
 이러한 구조의 perceptron을 MLP(Multi Layer Perceptron)이라고 한다. MLP란 input layer와 output layer 사이에 hidden layers가 추가된 구조의 perceptrons를 의미한다.(참고로 하나의 hidden layer를 사용하는 MLP의 경우 Vanilla Neural Networks라고도 부르기도 한다.)
@@ -115,12 +120,6 @@ Test 결과 100%의 정확도로 예측에 성공한 것을 확인할 수 있다
 
 <br>
 <br>
-### 작성 중...
-
-작성 중...
-
-<br>
-<br>
 ### Reference
 
 [CS231n](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk), Stanford University School of Engineering
@@ -128,3 +127,5 @@ Test 결과 100%의 정확도로 예측에 성공한 것을 확인할 수 있다
 [모두를 위한 딥러닝 시즌2](https://deeplearningzerotoall.github.io/season2/lec_pytorch.html)
 
 [PyTorch로 시작하는 딥 러닝 입문](https://wikidocs.net/60680)
+
+[Example: Neural network](http://www.texample.net/tikz/examples/neural-network/)
