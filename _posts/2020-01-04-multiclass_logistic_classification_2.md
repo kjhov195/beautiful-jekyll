@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multiclass Logistic Regression(Softmax Classifier)-(2)
+title: Softmax Classifier(2)
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
