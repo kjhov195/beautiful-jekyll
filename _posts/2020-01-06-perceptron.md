@@ -214,17 +214,6 @@ with torch.no_grad():
     print('\nHypothesis: ', hypothesis.detach().cpu().numpy(), '\nCorrect: ', predicted.detach().cpu().numpy(), '\nAccuracy: ', accuracy.item())
 ```
 
-<br>
-<br>
-### Multi layer perceptron
-
-하지만, 단층 perceptron으로는 이러한 XOR 문제를 풀 수 없지만 Layer의 수를 더 늘릴 경우 XOR 문제를 풀 수 있다는 사실을 알게된다.
-
-이러한 구조의 perceptron을 MLP(Multi Layer Perceptron)이라고 한다. MLP란 input layer와 output layer 사이에 hidden layers가 추가된 구조의 perceptrons를 의미한다.
-
-참고로 하나의 hidden layer를 사용하는 MLP의 경우 Vanilla Neural Networks라고도 부르기도 한다.
-
-
 
 <br>
 <br>
