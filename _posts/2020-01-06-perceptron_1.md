@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Perceptron(1)-Single Layer Perceptron
+title: Perceptron
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
