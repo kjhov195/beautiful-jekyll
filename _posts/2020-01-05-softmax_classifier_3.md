@@ -25,7 +25,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200105/image1.png' width="600"/></center>
+<center><img src = '/post_img/200105/image2.png' width="600"/></center>
 
 MNIST 데이터셋은 손으로 쓴 숫자 이미지로 이루어진 대형 데이터셋이며, 60,000개의 Training dataset과 10,000개의 Test dataset으로 이루어져 있다.
 
