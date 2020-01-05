@@ -54,7 +54,7 @@ AND 게이트는 두 개의 입력 값 $x_1$과 $x_2$가 모두 1인 경우에�
 
 <br>
 
-<center><img src = '/post_img/200106/image1.png' width="300"/></center>
+<center><img src = '/post_img/200106/image1.png' width="450"/></center>
 
 그림에서 볼 수 있듯이, (0,0), (0,1), (1,0)의 경우 class 0이며, (1,1)의 경우에만 class 1에 속해 있는 것을 확인할 수 있다.
 
@@ -130,7 +130,7 @@ OR 게이트는 두 개의 입력 값 $x_1$과 $x_2$가 모두 0인 경우에만
 
 <br>
 
-<center><img src = '/post_img/200106/image2.png' width="300"/></center>
+<center><img src = '/post_img/200106/image2.png' width="450"/></center>
 
 그림에서 볼 수 있듯이, (0,1), (1,0), (1,1)의 경우 class 1이며, (0,0)의 경우에만 class 0에 속해 있는 것을 확인할 수 있다.
 
@@ -156,7 +156,7 @@ XOR 게이트는 두 개의 입력 값 $x_1$과 $x_2$가 모두 0이거나, 모�
 
 <br>
 
-<center><img src = '/post_img/200106/image3.png' width="300"/></center>
+<center><img src = '/post_img/200106/image3.png' width="450"/></center>
 
 이 문제는 단층 perceptron으로 풀 수 없는데, 그 이유는 두 집단을 구분지을 수 있는 하나의 linear 함수를 찾을 수 없기 때문이다. 간단하게 위 그림에서 하나의 직선을 그려서 두 집단을 구분할 수 있는지 생각해보자. 불가능할 것이다.
 
