@@ -24,7 +24,7 @@ Perceptron은 다수의 입력으로부터 하나의 결과를 내보내는 알�
 
 <br>
 
-<center><img src = '/post_img/200106/image5.png' width="600"/></center>
+<center><img src = '/post_img/200106/image5.png' width="300"/></center>
 
 퍼셉트론의 구조도 이와 비슷하다. 그림에서의 원은 뉴런, $W$는 신호를 전달하는 축삭돌기의 역할을 하게 된다. 각 뉴런에서 보내지는 입력값 $x$를 가중치 $W$에 곱해주고, 이 값을 Activation 함수를 통과시켜 뉴런 $y$로 전달해주는 것이다.
 
