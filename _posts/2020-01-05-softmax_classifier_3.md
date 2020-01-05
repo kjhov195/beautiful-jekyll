@@ -35,7 +35,7 @@ MNIST 데이터셋(Modified National Institute of Standards and Technology datab
 
 <center><img src = '/post_img/200105/image2.png' width="600"/></center>
 
-각 데이터는 0에서 9까지의 자연수 중 하나에 대응되는 숫자에 대한 데이터이며, $1 \times 28 \times 28$, 총 784개의 픽셀에 대한 정보를 담은 행렬이다.
+각 데이터는 0에서 9까지의 자연수 중 하나에 대응되는 숫자에 대한 데이터이며, $1 \times 28 \times 28$, 총 784개의 픽셀의 색에 대한 정보를 담은 행렬이다. 각 픽셀에 대응되는 행렬의 성분은 0부터 255사이의 숫자를 가지고 있는데, 까만색에 가까운 픽셀일수록 0에 가까운 값을, 흰색에 가까운 픽셀일수록 255에 가까운 값을 가지게 된다.
 
 <br>
 <br>
@@ -228,7 +228,7 @@ with torch.no_grad():
     plt.show()
 ```
 
-약 Accuracy 87%의 성능을 보이는데, 얼핏 생각하면 높은 수치로 보이지만 사실은 훌륭한 성능은 아니다. 우리가 사용한 모델은 $28 \times 28$의 이미지 데이터를 $1 \times 784$ 형태의 vector로 flatten시킨 후 Softmax classifier를 적용한 것인데, 이로 인하여 위치에 대한 정보를 모두 잃어버리게 되어 효율적이지 못한 방법이 되어버린다.
+약 Accuracy 86.9%의 성능을 보이는데, 얼핏 생각하면 높은 수치로 보이지만 사실은 훌륭한 성능은 아니다. 우리가 사용한 모델은 $28 \times 28$의 이미지 데이터를 $1 \times 784$ 형태의 vector로 flatten시킨 후 Softmax classifier를 적용한 것인데, 이로 인하여 위치에 대한 정보를 모두 잃어버리게 되어 효율적이지 못한 방법이 되어버린다.
 
 이후에 보게 될 CNN 기반의 모델에서는 전혀 다른 방법을 사용하여 이미지 데이터에 대한 분류 알고리즘을 세우게 되고, MNIST dataset의 classification 문제에 대한 Accuracy를 거의 100%에 가깝께까지 끌어올릴 수 있게 된다.
 
