@@ -198,7 +198,7 @@ for epoch in range(training_epochs):
 
 Training 과정에 대하여 자세히 살펴보도록 하자. 우리는 batch_size를 1000으로 지정해 주었으므로, 한 epoch에서 batch의 총 개수는 60개, iteration 수는 60번이 되는 것이다.
 
-즉 우리의 training 과정은 15번의 Epoch을 거쳐 총 900번의 iteration이 이루어지는 것이다. 한 iteration에서 가져오는 data의 수(batch size)는 1000이므로, training data $X$의 shape은 $1000 \times 784$가 된다. 그러한 이유로 ```X = X.view(-1, 28 * 28).to(device)```에서 X를 __$1000 \times 784$__ 로 정해준 것이다.
+즉 우리의 training 과정은 15번의 Epoch을 거쳐 총 900번의 iteration이 이루어지는 것이다. 한 iteration에서 가져오는 data의 수(batch size)는 1000이므로, training data $X$의 shape은 $1000 \times 784$가 된다. 그러한 이유로 ```X = X.view(-1, 28 * 28).to(device)```에서 X의 shape을 __$1000 \times 784$__ 로 정해준 것이다.
 
 <br>
 <br>
@@ -228,9 +228,9 @@ with torch.no_grad():
     plt.show()
 ```
 
-약 Accuracy 87%의 성능을 보이는데, 얼핏 생각하면 높은 수치이지만 사실은 훌륭한 성능은 아니다. 우리가 사용한 모델은 $28 \times 28$의 이미지 데이터를 $1 \times 784$ 형태의 vector로 flatten시킨 후 Softmax classifier를 적용한 것인데, 이로 인하여 위치에 대한 정보를 모두 잃어버리게 되어 효율적이지 못한 방법이 되어버린다.
+약 Accuracy 87%의 성능을 보이는데, 얼핏 생각하면 높은 수치로 보이지만 사실은 훌륭한 성능은 아니다. 우리가 사용한 모델은 $28 \times 28$의 이미지 데이터를 $1 \times 784$ 형태의 vector로 flatten시킨 후 Softmax classifier를 적용한 것인데, 이로 인하여 위치에 대한 정보를 모두 잃어버리게 되어 효율적이지 못한 방법이 되어버린다.
 
-이후에 보게 될 CNN 기반의 모델에서는 전혀 다른 방법을 사용하여 이미지 데이터에 대하여 분류 알고리즘을 세우게 되고, MNIST dataset의 classification 문제에 대한 Accuracy를 거의 100%에 가깝께까지 끌어올릴 수 있게 된다.
+이후에 보게 될 CNN 기반의 모델에서는 전혀 다른 방법을 사용하여 이미지 데이터에 대한 분류 알고리즘을 세우게 되고, MNIST dataset의 classification 문제에 대한 Accuracy를 거의 100%에 가깝께까지 끌어올릴 수 있게 된다.
 
 <br>
 <br>
