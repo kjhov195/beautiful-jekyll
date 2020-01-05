@@ -79,7 +79,7 @@ for i in idx:
     plt.show()
 ```
 
-한 줄 한 줄씩 살펴보도록 하자. 우선, ```torchvision.datasets.MNIST()```함수를 통하여 torchvision library에 내장되어 있는 MNIST dataset을 읽어온다. __train__ 옵션의 경우 training dataset을 불러오려면 True, test dataset을 불러오려면 False를 사용한다. 이 함수는 결과적으로 (X, Y)과 같이 2개의 원소로 이루어진 tuple을 받아온다. __transform__ 옵션은 이 중 X의 형태에 대한 옵션이다. 이 옵션을 False로 주면 이미지 데이터를 PIL로 받아오기 때문에, Pytorch Tensor로 가져오기 위해서는 True로 설정해주어야 한다. True로 설정해주면 X를 _torch.Size([1, 28, 28])_ 형태의 Tensor로 가져오게 된다. Y의 경우 transform 옵션의 여부와 상관 없이 0~9의 int타입의 정수로 가져온다.
+한 줄 한 줄씩 살펴보도록 하자. 우선, ```torchvision.datasets.MNIST()```함수를 통하여 torchvision library에 내장되어 있는 MNIST dataset을 읽어온다. __train__ 옵션의 경우 training dataset을 불러오려면 True, test dataset을 불러오려면 False를 사용한다. 이 함수는 결과적으로 (X, Y)과 같이 2개의 원소로 이루어진 tuple을 받아온다. __transform__ 옵션은 이 중 X의 형태에 대한 옵션이다. 이 옵션을 False로 주면 이미지 데이터를 PIL로 받아오기 때문에, Pytorch Tensor로 가져오기 위해서는 True로 설정해주어야 한다. True로 설정해주면 X를 _torch.Size([1, 28, 28])_ 형태의 Tensor로 가져오게 된다. Y의 경우 transform 옵션의 여부와 상관 없이 0~9사이의 int타입 정수로 가져온다.
 
 MNIST training data의 경우 60,000개의 데이터를 가지고 있는데, 이를 한 번에 불러오는 것은 메모리 문제 때문에 효율적이지 않다. 따라서 mini-batch 단위로 사진을 가지고오는 방법을 선택하게 된다. 적당히 적은 숫자를 사용하면 되는데, 이 예시에서는 1,000개로 선택해 주었다. 그리고 ```torch.utils.data.DataLoader()```를 통하여 설정해준 batch_size 크기 만큼의 데이터를 가져오게 된다. shuffle 옵션의 경우 데이터를 불러들일 때 순서를 섞을 것인지에 대한 옵션이고, drop_last 옵션의 경우 batch 단위로 데이터를 잘라서 읽는 과정에서 데이터의 끝부분이 짤리는 경우가 발생할 때 이를 어떻게 처리할지에 대한 옵션이다.
 
