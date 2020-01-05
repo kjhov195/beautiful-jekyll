@@ -15,7 +15,7 @@ use_math: true
 <br>
 ### Example 1.
 
-앞선 [post](https://kjhov195.github.io/2020-01-04-multiclass_logistic_classification_1/)에서 Multiclass logistic regression에 대해 살펴보았다.
+앞선 [post](https://kjhov195.github.io/2020-01-04-softmax_classifier_1/)에서 Multiclass logistic regression에 대해 살펴보았다.
 
 이번에는 Pytorch를 활용하여 실제로 classification 문제를 풀어보도록 하자.
 
