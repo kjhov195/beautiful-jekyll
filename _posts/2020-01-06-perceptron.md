@@ -204,6 +204,9 @@ for step in range(1001):
         print(step, cost.item())
 ```
 
+<br>
+
+
 ```
 # Accuracy computation
 # True if hypothesis>0.5 else False
