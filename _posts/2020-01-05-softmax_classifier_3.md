@@ -230,6 +230,10 @@ with torch.no_grad():
     plt.show()
 ```
 
+약 Accuracy 87%의 성능을 보이는데, 얼핏 생각하면 높은 수치이지만 사실은 훌륭한 성능은 아니다. 우리가 사용한 모델은 $28 \times 28$의 이미지 데이터를 $1 \times 784$ 형태의 vector로 flatten시킨 후 Softmax classifier를 적용한 것인데, 이로 인하여 위치에 대한 정보를 모두 잃어버리게 되어 효율적이지 못한 방법이 되어버린다.
+
+이후에 보게 될 CNN 기반의 모델에서는 전혀 다른 방법을 사용하여 이미지 데이터에 대하여 분류 알고리즘을 세우게 되고, MNIST dataset의 classification 문제에 대한 Accuracy를 거의 100%에 가깝께까지 끌어올릴 수 있게 된다.
+
 <br>
 <br>
 ### Reference
