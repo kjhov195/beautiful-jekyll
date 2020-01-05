@@ -160,7 +160,7 @@ XOR 게이트는 두 개의 입력 값 $x_1$과 $x_2$가 모두 0이거나, 모�
 
 이 문제는 단층 perceptron으로 풀 수 없는데, 그 이유는 두 집단을 구분지을 수 있는 하나의 linear 함수를 찾을 수 없기 때문이다. 간단하게 위 그림에서 하나의 직선을 그려서 두 집단을 구분할 수 있는지 생각해보자. 불가능할 것이다.
 
-아래와 같이 single layer perceptron을 적합시켜 보아도, prediction일 잘 되지 않는 것을 확인할 수 있다.
+아래와 같이 single layer perceptron을 적합시켜 보아도, prediction일 잘 되지 않아 정확도가 50%밖에 되지 않는 것을 확인할 수 있다.
 
 ```
 import torch
