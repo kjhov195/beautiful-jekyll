@@ -25,11 +25,17 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200105/image3.png' width="600"/></center>
+<center><img src = '/post_img/200105/image1.png' width="600"/></center>
 
 MNIST 데이터셋은 손으로 쓴 숫자 이미지로 이루어진 대형 데이터셋이며, 60,000개의 Training dataset과 10,000개의 Test dataset으로 이루어져 있다.
 
 MNIST 데이터셋(Modified National Institute of Standards and Technology database)은 NIST의 오리지널 데이터셋의 샘플을 재가공하여 만들어졌다. MNIST의 Training set의 절반과 Test set의 절반은 NIST의 Training set에서 취합하였으며, 그 밖의 Training set의 절반과 Test set의 절반은 NIST의 Test set으로부터 취합되었다.
+
+<br>
+
+<center><img src = '/post_img/200105/image1.png' width="600"/></center>
+
+각 데이터는 0에서 9까지의 자연수 중 하나에 대응되는 숫자에 대한 한 색깔(흑백)의 데이터이며, $28 \times 28$, 총 784개의 픽셀에 대한 정보를 담은 행렬이다.
 
 <br>
 <br>
@@ -82,9 +88,9 @@ MNIST training data의 경우 60,000개의 데이터를 가지고 있는데, 이
 예시로 0~2의 index에 해당하는 3개의 training 데이터만 시각화 해보면 다음과 같다.
 
 <center>
+<img src = '/post_img/200105/image3.png' width="300"/>
+<img src = '/post_img/200105/image4.png' width="300"/>
 <img src = '/post_img/200105/image5.png' width="300"/>
-<img src = '/post_img/200105/image6.png' width="300"/>
-<img src = '/post_img/200105/image7.png' width="300"/>
 </center>
 
 <br>
