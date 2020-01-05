@@ -47,7 +47,7 @@ XOR 게이트는 두 개의 입력 값 $x_1$과 $x_2$가 모두 0이거나, 모�
 
 <br>
 
-<center><img src = '/post_img/200106/image6.png' width="450"/></center>
+<center><img src = '/post_img/200106/image6.png' width="600"/></center>
 
 
 단층 perceptron으로는 XOR 문제를 풀 수 없지만 Layer의 수를 더 늘릴 경우 XOR 문제를 풀 수 있게 되는 것이다.
