@@ -105,11 +105,6 @@ $$
 \end{align*}
 $$
 
-<br>
-
-<center><img src = '/post_img/200106/image9.png' width="600"/></center>
-
-
 참고로 이러한 계산은 우리의 모델에 존재하는 모든 weights들에 대하여 초기 값을 1이라고 가정하여 계산한 것이라고 볼 수 있고, 그 이후에는 위와 같이 local gradients와 global gradients를 구하고 나면 우리는 weights를 gradient를 반영하여 update해줄 수 있게 된다.
 
 
