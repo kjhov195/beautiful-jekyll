@@ -81,12 +81,12 @@ $$
 x &= -2\\
 y &= 5\\
 z &= -4\\\\
-q &= x+y\\
-f &= qz\\\\
+q &= x+y = 3\\
+f &= qz = 3 \cdot (-4) = -12\\\\
 {\partial q \over \partial x} &= 1\\
 {\partial q \over \partial y} &= 1\\
-{\partial f \over \partial z} &= q\\
-{\partial f \over \partial q} &= z\\
+{\partial f \over \partial z} &= q = 3\\
+{\partial f \over \partial q} &= z = -4\\
 \end{align*}
 $$
 
