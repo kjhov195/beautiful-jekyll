@@ -55,13 +55,13 @@ Sigmoid 함수의 경우 0부터 1까지 범위의 값을 가지며, 통계학�
 
 <center><img src = '/post_img/200107/image4.png' width="450"/></center>
 
-위 그림에서 빨간 박스에 해당하는 부분은 Gradient가 거의 0에 가까운 아주 작은 숫자를 가진다. 즉, $x$가 0보다 꽤 작거나, 클 경우 ${\partial \sigma \over \partial x} \approx 0$가 된다.
+위 그림에서 빨간 박스에 해당하는 부분은 Gradient가 거의 0에 가까운 아주 작은 숫자를 가진다. 즉, $x$가 0보다 꽤 작거나, 클 경우 ${\partial \sigma \over \partial x} \approx 0$가 된다. 이렇게 Sigmoid 함수에서 Gradient가 거의 0에 가까운 부분을 _Saturated Regime_ 이라고 부른다.
 
 <br>
 
 <center><img src = '/post_img/200107/image5.png' width="450"/></center>
 
-이는 Multi layer perceptron에서 큰 문제가 된다. layer가 많을 경우 최종적인 Gradient를 구하기 위하여 local Gradient를 상당히 많이 곱해주게 되는데(Back propagation), 이 과정에서 0에 가까운 값들을 계속 곱해주게 되는 것이다. 이로 인하여 앞단에 위치한 layer일 수록 Gradient 값들을 제대로 구하지 못하고 거의 0에 수렴해버리는 문제가 발생하며, 이로 인하여 Weight들이 제대로 update되지 못하게 된다. 이러한 현상을 __Vanishing Gradient__ 라고 한다.
+이는 Multi layer perceptron에서 큰 문제가 된다. layer가 많을 경우 최종적인 Global Gradient를 구하기 위하여 local Gradient를 상당히 많이 곱해주게 되는데(Back propagation), 이 과정에서 0에 가까운 값들을 계속 곱해주게 되는 것이다. 이로 인하여 앞단에 위치한 layer일 수록 Gradient 값들을 제대로 구하지 못하고 거의 0에 수렴해버리는 문제가 발생하며, 이로 인하여 Weight들이 제대로 update되지 못하게 된다. 이러한 현상을 __Vanishing Gradient__ 라고 한다.
 
 <br>
 
