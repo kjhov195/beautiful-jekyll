@@ -80,7 +80,7 @@ x_1, x_2, \cdots, x_n>0\\
 F = \sum_{i=1}^n w_ix_i+b\\
 \downarrow\\
 \text{final output of a sigmoid, } L\\
-L = F(\sum_{i=1}^n w_ix_i+b) = {1 \over 1+exp(-\sum_{i=1}^n w_ix_i+b)}\\
+L = L(F) =L(\sum_{i=1}^n w_ix_i+b) = {1 \over 1+exp(-\sum_{i=1}^n w_ix_i+b)}\\
 $$
 
 우선, $\frac {\partial F} {\partial w_i}$ 값의 부호에 대해 생각해보자. $\frac {\partial F} {\partial w_i}$는 다음과 같이 구할 수 있다.
