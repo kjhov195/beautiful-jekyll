@@ -39,6 +39,8 @@ Sigmoid 함수의 경우 0부터 1까지 범위의 값을 가지며, 통계학�
 
 하지만 Sigmoid 함수의 경우 Neural Networks에서 Activation 함수로 사용하기에는 __매우__ 부적절한 함수이며, 크게 3가지 이유가 존재한다.
 
+<br>
+
 (1) Vanishing Gradient
 
 <br>
@@ -67,28 +69,75 @@ Sigmoid 함수의 경우 0부터 1까지 범위의 값을 가지며, 통계학�
 
 Sigmoid 함수의 경우 output 값이 0.5를 중심으로 하며, 0과 1사이에 위치해 있다. 하지만 Neural Networks의 경우 이러한 구조의 Activation 함수는 좋은 성능을 보이지 못한다.
 
-앞서 Vanishing Gradient에서 살펴보았던 그림을 다시 살펴보자.
+Multi layer를 가정하여 어떤 layer는 앞단의 sigmoid로부터의 output을 받아 input $x$로 사용한다고 하자. __Sigmoid 함수의 결과 값은 항상 양수__ 이므로, 이 경우 $x$는 항상 양수이다. 이러한 양수의 $x$를 input으로 받아 linear combination을 계산하고($F = \sum_{i=1}^n w_ix_i+b$), 여기에 activation function으로 sigmoid를 주어 최종 output $L = L(F) = L(\sum_{i=1}^n w_ix_i+b)$를 만들어 낸다고 가정하자. 이 구조를 정리해보면 다음과 같다.
 
-<br>
 
-<center><img src = '/post_img/200107/image3.png' width="450"/></center>
+$$
+\text{output from last $n$ sigmoids $\sigma_{1,prev}, \cdots, \sigma_{n,prev}$}\\
+x_1, x_2, \cdots, x_n>0\\
+\downarrow\\
+\text{$F = \sum_{i=1}^n w_ix_i+b$ is used as a new input of a next step's sigmoid $\sigma$}\\
+\downarrow\\
+\text{final output of a sigmoid}\\
+L = L(F) = L(\sum_{i=1}^n w_ix_i+b)\\
+$$
 
-여기서 Activation function(sigmoid)의 결과 값 $\sigma(\sum_i w_i x_i + b)$를 각 $w_i$로 미분한 값들을 구해보자. 즉, $\frac {\partial \sigma} {\partial w_1}$, $\frac {\partial \sigma} {\partial w_2}$, $\cdots$, $\frac {\partial \sigma} {\partial w_i}$, $\cdots$
-에 대해 생각해보자. 이 값들은 다음과 같이 구할 수 있다.
+
+여기서 Linear combination $F = \sum_i w_i x_i + b$를 각 $w_i$로 미분한 값들을 구해보자. 즉, $\frac {\partial F} {\partial w_1}$, $\frac {\partial F} {\partial w_2}$, $\cdots$, $\frac {\partial F} {\partial w_n}$에 대해 생각해보자는 것이다.
+
+이 값들은 다음과 같이 구할 수 있으며, $x$가 양수이므로 $w$에 대한 gradient는 항상 양수라는 것을 알 수 있다.
 
 $$
 \begin{align*}
-\frac {\partial \sigma} {\partial w_1} &= x_1 > 0\\
-\frac {\partial \sigma} {\partial w_2} &= x_2 > 0\\
+\frac {\partial F} {\partial w_1} &= x_1 > 0\\
+\frac {\partial F} {\partial w_2} &= x_2 > 0\\
 \vdots \;\;\; &= \; \vdots \\
-\frac {\partial \sigma} {\partial w_i} &= x_i > 0\\
-\vdots \;\;\; &= \; \vdots \\
+\frac {\partial F} {\partial w_n} &= x_n > 0\\
 \end{align*}
 $$
 
-multi layer를 가정할 경우, 이 그림의 앞단에서 또 다른 sigmoid 값을 input $x$로 받았다고 생각할 수 있다. Sigmoid 함수의 결과 값은 항상 양수이므로, 이 경우 $x$는 항상 양수인 것이다.
+최종 output인 $L$에 대한 $w$의 Gradient를 생각해보자.
 
-한편, 최종 out
+$$
+\begin{align*}
+\frac {\partial L} {\partial w_1} &= \frac {\partial L} {\partial F} \frac {\partial F} {\partial w_1} \\
+\frac {\partial L} {\partial w_2} &= \frac {\partial L} {\partial F} \frac {\partial F} {\partial w_2} \\
+\vdots\;\;\; &= \;\;\;\;\;\;\vdots\\
+\frac {\partial L} {\partial w_n} &= \frac {\partial L} {\partial F} \frac {\partial F} {\partial w_n} \\
+\end{align*}
+$$
+
+$\frac {\partial \sigma} {\partial w_i}$의 값은 항상 $x_i$와 같으며, 이는 양수라는 것을 우리는 알고 있다. 결과적으로 다음과 같이 $\frac {\partial L} {\partial w_i}$의 부호와 $\frac {\partial L} {\partial C} $의 부호가 같다는 사실을 알 수 있다.
+
+$$
+\begin{align*}
+sign(\frac {\partial L} {\partial w_1}) &= sign(\frac {\partial L} {\partial F})\\
+sign(\frac {\partial L} {\partial w_2}) &= sign(\frac {\partial L} {\partial F})\\
+\vdots\;\;\; &= \;\;\;\;\;\;\vdots\\
+sign(\frac {\partial L} {\partial w_n}) &= sign(\frac {\partial L} {\partial F})\\
+\end{align*}
+$$
+
+그런데 여기서 우변이 모두 같으므로, 다음과 같이 $L$에 대한 모든 $w_i$의 미분 값의 부호가 같다는 사실을 알 수 있다. 즉, $\frac {\partial L} {\partial F}$가 양수/음수라면 모든 $\frac {\partial L} {\partial w_i}$가 양수/음수로 같은 부호를 가지는 것이다.
+
+$$
+\begin{align*}
+sign(\frac {\partial L} {\partial w_1}) = sign(\frac {\partial L} {\partial w_2}) = \cdots = sign(\frac {\partial L} {\partial w_n}) = \cdots = sign(\frac {\partial L} {\partial F})\\
+\end{align*}
+$$
+
+이는 training의 성능 저하에 꽤나 큰 영향을 미치는데, 다음 그림을 살펴보자.
+
+<br>
+
+<center><img src = '/post_img/200107/image6.png' width="450"/></center>
+
+시각적으로 쉽게 설명하기 위하여 2개의 weight $w_1$, $w_2$만 존재한다고 가정하자. 이 때 가로축은 $w_1$, 세로축은 $w_2$에 대한 축이며, 파란색 벡터를 weight $(w_1, w_2)$의 optimal한 학습 방향이라고 하자.
+
+만약, 모든 weights($w_1$과 $w_2$)에 대한 gradient의 부호 값이 같다면, 학습되는 방향 또한 같은 방향일 수 밖에 없다. 즉, 그림에서 연두색으로 표시된 방향으로만 학습이 되는 것이다.
+
+결과적으로 오른쪽 아래의 방향으로 학습되는 과정에서 $\rightarrow$ 방향과 $\downarrow$ 방향으로 번갈아 가며 학습되게 되고, 그림에서 빨간 직선의 과정을 거쳐 같이 학습이 이루어지게 된다. 즉, 결과적으로 학습 과정이 매우 느려지고, 효율적이지 못하게 되는 것이다.
+
 
 
 <br>
