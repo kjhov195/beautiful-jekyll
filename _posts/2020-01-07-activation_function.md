@@ -47,15 +47,15 @@ Sigmoid 함수의 경우 0부터 1까지 범위의 값을 가지며, 통계학�
 
 <center><img src = '/post_img/200107/image3.png' width="450"/></center>
 
-위와 같은 Computational graph를 생각해보자. 우리는 최종적으로 $\partial L \over \partial x$를 계산해야 하며, 이는 Back propagation을 통하여 ${\partial L \over \partial x} = {\partial L \over \partial \sigma} \cdot {\partial \sigma \over \partial x}$와 같이 계산할 수 있다.
+위와 같은 Computational graph를 생각해보자. 우리는 최종적으로 $\partial L \over \partial w$를 계산해야 하며, 이는 Back propagation을 통하여 ${\partial L \over \partial w} = {\partial L \over \partial \sigma} \cdot {\partial \sigma \over \partial w}$와 같이 계산할 수 있다.
 
-여기서 문제가 되는 부분은 Sigmoid 함수에 대한 미분 값인 ${\partial \sigma \over \partial x}$의 크기에 대한 문제이다. 다음 그림을 살펴보자.
+여기서 문제가 되는 부분은 Sigmoid 함수에 대한 미분 값인 ${\partial \sigma \over \partial w}$의 크기에 대한 문제이다. 다음 그림을 살펴보자.
 
 <br>
 
 <center><img src = '/post_img/200107/image4.png' width="450"/></center>
 
-위 그림에서 빨간 박스에 해당하는 부분은 Gradient가 거의 0에 가까운 아주 작은 숫자를 가진다. 즉, $x$가 0보다 꽤 작거나, 클 경우 ${\partial \sigma \over \partial x} \approx 0$가 된다. 이렇게 Sigmoid 함수에서 Gradient가 거의 0에 가까운 부분을 _Saturated Regime_ 이라고 부른다.
+위 그림에서 빨간 박스에 해당하는 부분은 Gradient가 거의 0에 가까운 아주 작은 숫자를 가진다. 즉, $w$가 0보다 꽤 작거나, 클 경우 ${\partial \sigma \over \partial w} \approx 0$가 된다. 이렇게 Sigmoid 함수에서 Gradient가 거의 0에 가까운 부분을 _Saturated Regime_ 이라고 부른다.
 
 <br>
 
@@ -76,53 +76,61 @@ $$
 \text{output from last $n$ sigmoids $\sigma_{1,prev}, \cdots, \sigma_{n,prev}$}\\
 x_1, x_2, \cdots, x_n>0\\
 \downarrow\\
-\text{$L = \sum_{i=1}^n w_ix_i+b$ is used as a new input of a next step's sigmoid $\sigma$}\\
+\text{$F = \sum_{i=1}^n w_ix_i+b$ is used as a new input of a next step's sigmoid}\\
+F = \sum_{i=1}^n w_ix_i+b\\
 \downarrow\\
-\text{final output of a sigmoid}\\
-\sigma = \sigma(L) = \sigma(\sum_{i=1}^n w_ix_i+b)\\
+\text{final output of a sigmoid, } L\\
+L = F(\sum_{i=1}^n w_ix_i+b) = {1 \over 1+exp(-\sum_{i=1}^n w_ix_i+b)}\\
 $$
 
-
-여기서 Linear combination $L = \sum_i w_i x_i + b$를 각 $w_i$로 미분한 값들을 구해보자. 즉, $\frac {\partial L} {\partial w_1}$, $\frac {\partial L} {\partial w_2}$, $\cdots$, $\frac {\partial L} {\partial w_n}$에 대해 생각해보자는 것이다.
-
-이 값들은 다음과 같이 구할 수 있으며, $x$가 양수이므로 $w$에 대한 gradient는 항상 양수라는 것을 알 수 있다.
+우선, $\frac {\partial F} {\partial w_i}$ 값의 부호에 대해 생각해보자. $\frac {\partial F} {\partial w_i}$는 다음과 같이 구할 수 있다.
 
 $$
 \begin{align*}
-\frac {\partial L} {\partial w_1} &= x_1 > 0\\
-\frac {\partial L} {\partial w_2} &= x_2 > 0\\
+\frac {\partial F} {\partial w_1} &= x_1 > 0\\
+\frac {\partial F} {\partial w_2} &= x_2 > 0\\
 \vdots \;\;\; &= \; \vdots \\
-\frac {\partial L} {\partial w_n} &= x_n > 0\\
+\frac {\partial F} {\partial w_n} &= x_n > 0\\
 \end{align*}
 $$
 
-최종 output인 $\sigma$에 대한 $w$의 Gradient를 생각해보자.
+$\frac {\partial F} {\partial w_i}$의 값은 항상 $x_i$와 같다. 그런데 사실 모든 $x_i$는 이전 layer에서의 sigmoid 함수의 결과값이므로 양수이다. 즉, $\frac {\partial F} {\partial w_i}$는 항상 $\frac {\partial F} {\partial w_i}>0$ 임을 알 수 있다.
+
+
+이제 Final output $L = {1 \over 1+exp(-\sum_{i=1}^n w_ix_i+b)}$를 각 $w_i$로 미분한 값들(Global Gradient)에 대해 생각해보자. $\frac {\partial L} {\partial w_1}$, $\frac {\partial L} {\partial w_2}$, $\cdots$, $\frac {\partial L} {\partial w_n}$을 구해보면 다음과 같다.
+
 
 $$
 \begin{align*}
-\frac {\partial \sigma} {\partial w_1} &= \frac {\partial \sigma} {\partial L} \frac {\partial L} {\partial w_1} \\
-\frac {\partial \sigma} {\partial w_2} &= \frac {\partial \sigma} {\partial L} \frac {\partial L} {\partial w_2} \\
+\frac {\partial L} {\partial w_1} &= \frac {\partial L} {\partial F} \frac {\partial F} {\partial w_1} \\
+\frac {\partial L} {\partial w_2} &= \frac {\partial L} {\partial F} \frac {\partial F} {\partial w_2} \\
 \vdots\;\;\; &= \;\;\;\;\;\;\vdots\\
-\frac {\partial \sigma} {\partial w_n} &= \frac {\partial \sigma} {\partial L} \frac {\partial L} {\partial w_n} \\
+\frac {\partial L} {\partial w_n} &= \frac {\partial L} {\partial F} \frac {\partial F} {\partial w_n} \\
 \end{align*}
 $$
 
-$\frac {\partial L} {\partial w_i}$의 값은 항상 $x_i$와 같으며, 모든 $x_i$는 이전 layer에서의 sigmoid 함수의 결과값이므로 양수라는 것을 우리는 알고 있다. 결과적으로 다음과 같이 $\frac {\partial \sigma} {\partial w_i}$의 부호와 $\frac {\partial \sigma} {\partial C} $의 부호가 같다는 사실을 이끌어낼 수 있다.
+아까 살펴보았듯이, $\frac {\partial F} {\partial w_i}$는 모든 $i$에 대하여 양수라는 것을 알고 있다. 즉, 결과적으로 다음과 같이 $\frac {\partial L} {\partial w_i}$의 부호와 $\frac {\partial L} {\partial F}$의 부호가 같다는 사실을 이끌어낼 수 있다.
+
+$\frac {\partial L} {\partial F}$의 경우, $\frac {\partial L} {\partial F} = (1-L(F))L(F)$로 계산되며, 양수와 음수의 값 모두가 될 수 있다.
+
+이 두 사실을 종합하면, 다음의 관계를 이끌어낼 수 있다.
 
 $$
 \begin{align*}
-sign(\frac {\partial \sigma} {\partial w_1}) &= sign(\frac {\partial \sigma} {\partial L})\\
-sign(\frac {\partial \sigma} {\partial w_2}) &= sign(\frac {\partial \sigma} {\partial L})\\
+sign(\frac {\partial L} {\partial w_1}) &= sign(\frac {\partial L} {\partial F})\\
+sign(\frac {\partial L} {\partial w_2}) &= sign(\frac {\partial L} {\partial F})\\
 \vdots\;\;\; &= \;\;\;\;\;\;\vdots\\
-sign(\frac {\partial \sigma} {\partial w_n}) &= sign(\frac {\partial \sigma} {\partial L})\\
+sign(\frac {\partial L} {\partial w_n}) &= sign(\frac {\partial L} {\partial F})\\
 \end{align*}
 $$
 
-그런데 여기서 우변이 모두 같으므로, 다음과 같이 $\sigma$에 대한 모든 $w_i$의 미분 값의 부호가 같다는 사실을 알 수 있다. 즉, $\frac {\partial \sigma} {\partial L}$가 양수/음수라면 모든 $\frac {\partial \sigma} {\partial w_i}$가 양수/음수로 같은 부호를 가지는 것이다.
+
+
+그런데 여기서 우변이 모두 같으므로, 다음과 같이 $L$에 대한 모든 $w_i$의 미분 값의 부호가 같다는 사실을 알 수 있다. 즉, $\frac {\partial L} {\partial F}$가 양수/음수라면 모든 $\frac {\partial L} {\partial w_i}$가 양수/음수로 같은 부호를 가지는 것이다.
 
 $$
 \begin{align*}
-sign(\frac {\partial \sigma} {\partial w_1}) = sign(\frac {\partial \sigma} {\partial w_2}) = \cdots = sign(\frac {\partial \sigma} {\partial w_n}) = \cdots = sign(\frac {\partial \sigma} {\partial L})\\
+sign(\frac {\partial L} {\partial w_1}) = sign(\frac {\partial L} {\partial w_2}) = \cdots = sign(\frac {\partial L} {\partial w_n}) = sign(\frac {\partial L} {\partial F})\\
 \end{align*}
 $$
 
