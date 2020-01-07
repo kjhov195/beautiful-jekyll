@@ -69,60 +69,60 @@ Sigmoid 함수의 경우 0부터 1까지 범위의 값을 가지며, 통계학�
 
 Sigmoid 함수의 경우 output 값이 0.5를 중심으로 하며, 0과 1사이에 위치해 있다. 하지만 Neural Networks의 경우 이러한 구조의 Activation 함수는 좋은 성능을 보이지 못한다.
 
-Multi layer를 가정하여 어떤 layer는 앞단의 sigmoid로부터의 output을 받아 input $x$로 사용한다고 하자. __Sigmoid 함수의 결과 값은 항상 양수__ 이므로, 이 경우 $x$는 항상 양수이다. 이러한 양수의 $x$를 input으로 받아 linear combination을 계산하고($F = \sum_{i=1}^n w_ix_i+b$), 여기에 activation function으로 sigmoid를 주어 최종 output $L = L(F) = L(\sum_{i=1}^n w_ix_i+b)$를 만들어 낸다고 가정하자. 이 구조를 정리해보면 다음과 같다.
+Multi layer를 가정하여 어떤 layer는 앞단의 sigmoid로부터의 output을 받아 input $x$로 사용한다고 하자. __Sigmoid 함수의 결과 값은 항상 양수__ 이므로, 이 경우 $x$는 항상 양수이다. 이러한 양수의 $x$를 input으로 받아 linear combination을 계산하고($L = \sum_{i=1}^n (w_ix_i+b$), 여기에 activation function으로 sigmoid를 주어 최종 output $\sigma = \sigma(L) = \sigma(\sum_{i=1}^n w_ix_i+b)$를 만들어 낸다고 가정하자. 이 구조를 정리해보면 다음과 같다.
 
 
 $$
 \text{output from last $n$ sigmoids $\sigma_{1,prev}, \cdots, \sigma_{n,prev}$}\\
 x_1, x_2, \cdots, x_n>0\\
 \downarrow\\
-\text{$F = \sum_{i=1}^n w_ix_i+b$ is used as a new input of a next step's sigmoid $\sigma$}\\
+\text{$L = \sum_{i=1}^n w_ix_i+b$ is used as a new input of a next step's sigmoid $\sigma$}\\
 \downarrow\\
 \text{final output of a sigmoid}\\
-L = L(F) = L(\sum_{i=1}^n w_ix_i+b)\\
+\sigma = \sigma(L) = \sigma(\sum_{i=1}^n w_ix_i+b)\\
 $$
 
 
-여기서 Linear combination $F = \sum_i w_i x_i + b$를 각 $w_i$로 미분한 값들을 구해보자. 즉, $\frac {\partial F} {\partial w_1}$, $\frac {\partial F} {\partial w_2}$, $\cdots$, $\frac {\partial F} {\partial w_n}$에 대해 생각해보자는 것이다.
+여기서 Linear combination $L = \sum_i w_i x_i + b$를 각 $w_i$로 미분한 값들을 구해보자. 즉, $\frac {\partial L} {\partial w_1}$, $\frac {\partial L} {\partial w_2}$, $\cdots$, $\frac {\partial L} {\partial w_n}$에 대해 생각해보자는 것이다.
 
 이 값들은 다음과 같이 구할 수 있으며, $x$가 양수이므로 $w$에 대한 gradient는 항상 양수라는 것을 알 수 있다.
 
 $$
 \begin{align*}
-\frac {\partial F} {\partial w_1} &= x_1 > 0\\
-\frac {\partial F} {\partial w_2} &= x_2 > 0\\
+\frac {\partial L} {\partial w_1} &= x_1 > 0\\
+\frac {\partial L} {\partial w_2} &= x_2 > 0\\
 \vdots \;\;\; &= \; \vdots \\
-\frac {\partial F} {\partial w_n} &= x_n > 0\\
+\frac {\partial L} {\partial w_n} &= x_n > 0\\
 \end{align*}
 $$
 
-최종 output인 $L$에 대한 $w$의 Gradient를 생각해보자.
+최종 output인 $\sigma$에 대한 $w$의 Gradient를 생각해보자.
 
 $$
 \begin{align*}
-\frac {\partial L} {\partial w_1} &= \frac {\partial L} {\partial F} \frac {\partial F} {\partial w_1} \\
-\frac {\partial L} {\partial w_2} &= \frac {\partial L} {\partial F} \frac {\partial F} {\partial w_2} \\
+\frac {\partial \sigma} {\partial w_1} &= \frac {\partial \sigma} {\partial L} \frac {\partial L} {\partial w_1} \\
+\frac {\partial \sigma} {\partial w_2} &= \frac {\partial \sigma} {\partial L} \frac {\partial L} {\partial w_2} \\
 \vdots\;\;\; &= \;\;\;\;\;\;\vdots\\
-\frac {\partial L} {\partial w_n} &= \frac {\partial L} {\partial F} \frac {\partial F} {\partial w_n} \\
+\frac {\partial \sigma} {\partial w_n} &= \frac {\partial \sigma} {\partial L} \frac {\partial L} {\partial w_n} \\
 \end{align*}
 $$
 
-$\frac {\partial \sigma} {\partial w_i}$의 값은 항상 $x_i$와 같으며, 이는 양수라는 것을 우리는 알고 있다. 결과적으로 다음과 같이 $\frac {\partial L} {\partial w_i}$의 부호와 $\frac {\partial L} {\partial C} $의 부호가 같다는 사실을 알 수 있다.
+$\frac {\partial L} {\partial w_i}$의 값은 항상 $x_i$와 같으며, 모든 $x_i$는 이전 layer에서의 sigmoid 함수의 결과값이므로 양수라는 것을 우리는 알고 있다. 결과적으로 다음과 같이 $\frac {\partial \sigma} {\partial w_i}$의 부호와 $\frac {\partial \sigma} {\partial C} $의 부호가 같다는 사실을 이끌어낼 수 있다.
 
 $$
 \begin{align*}
-sign(\frac {\partial L} {\partial w_1}) &= sign(\frac {\partial L} {\partial F})\\
-sign(\frac {\partial L} {\partial w_2}) &= sign(\frac {\partial L} {\partial F})\\
+sign(\frac {\partial \sigma} {\partial w_1}) &= sign(\frac {\partial \sigma} {\partial L})\\
+sign(\frac {\partial \sigma} {\partial w_2}) &= sign(\frac {\partial \sigma} {\partial L})\\
 \vdots\;\;\; &= \;\;\;\;\;\;\vdots\\
-sign(\frac {\partial L} {\partial w_n}) &= sign(\frac {\partial L} {\partial F})\\
+sign(\frac {\partial \sigma} {\partial w_n}) &= sign(\frac {\partial \sigma} {\partial L})\\
 \end{align*}
 $$
 
-그런데 여기서 우변이 모두 같으므로, 다음과 같이 $L$에 대한 모든 $w_i$의 미분 값의 부호가 같다는 사실을 알 수 있다. 즉, $\frac {\partial L} {\partial F}$가 양수/음수라면 모든 $\frac {\partial L} {\partial w_i}$가 양수/음수로 같은 부호를 가지는 것이다.
+그런데 여기서 우변이 모두 같으므로, 다음과 같이 $\sigma$에 대한 모든 $w_i$의 미분 값의 부호가 같다는 사실을 알 수 있다. 즉, $\frac {\partial \sigma} {\partial L}$가 양수/음수라면 모든 $\frac {\partial \sigma} {\partial w_i}$가 양수/음수로 같은 부호를 가지는 것이다.
 
 $$
 \begin{align*}
-sign(\frac {\partial L} {\partial w_1}) = sign(\frac {\partial L} {\partial w_2}) = \cdots = sign(\frac {\partial L} {\partial w_n}) = \cdots = sign(\frac {\partial L} {\partial F})\\
+sign(\frac {\partial \sigma} {\partial w_1}) = sign(\frac {\partial \sigma} {\partial w_2}) = \cdots = sign(\frac {\partial \sigma} {\partial w_n}) = \cdots = sign(\frac {\partial \sigma} {\partial L})\\
 \end{align*}
 $$
 
