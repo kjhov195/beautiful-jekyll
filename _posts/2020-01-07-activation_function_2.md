@@ -23,11 +23,13 @@ use_math: true
 
 [앞선 포스트](https://kjhov195.github.io/2020-01-07-activation_function_1/)에서 Activation 함수로써의 Sigmoid 함수에 대하여 세 가지 문제점을 살펴보았다. 그 중 __Vanishing Gradient__ 와 __Not zero centered__ 는 Neural Networks의 성능 저하에 큰 영향을 미치게 된다.
 
-이러한 문제점을 해결하기 위하여 다양한 Activation 함수가 고안되었고, 오늘은 tanh/ReLU/LeakyReLU/Maxout/ELU 함수에 대해 살펴보고자 한다.
 
 <br>
 
 <center><img src = '/post_img/200107/image100.png' width="600"/></center>
+
+이러한 문제점을 해결하기 위하여 다양한 Activation 함수가 고안되었고, 오늘은 tanh/ReLU/LeakyReLU/Maxout/ELU 함수에 대해 살펴보고자 한다.
+
 
 
 <br>
