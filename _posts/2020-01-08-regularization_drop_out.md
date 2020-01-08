@@ -21,7 +21,7 @@ use_math: true
 
 오버피팅(overfitting)이란 __training data__ 를 과하게 학습하는 것을 뜻한다. training data를 과하게 학습하는 것이 어떤 문제가 될까?
 
-일반적으로 Training data는 실제 데이타의 부분 집합이므로 __training data__ 에 대해서는 __Error가 감소__ 하지만, __Test data__ 에 대해서는 __Error가 증가__ 하게 된다.
+일반적으로 Training data는 실제 데이터의 부분 집합이므로 __training data__ 에 대해서는 __Error가 감소__ 하지만, __Test data__ 에 대해서는 __Error가 증가__ 하게 된다.
 
 <br>
 
