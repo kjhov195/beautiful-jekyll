@@ -246,7 +246,7 @@ with torch.no_grad():
     print('Prediction: ', torch.argmax(single_prediction, 1).item())
 ```
 
-단순한 [Softmax Classifier](https://kjhov195.github.io/2020-01-05-softmax_classifier_3/)의 경우 86.9% 정도의 Accuracy를 보여주었었는데, 이번 예제의 모델에서는 94.7%의 Accuracy를 보여준다.
+단순한 [Softmax Classifier](https://kjhov195.github.io/2020-01-05-softmax_classifier_3/)의 경우 86.9% 정도의 Accuracy를 보여주었었는데, 이번 예제의 Neural Networks(3 layers, ReLu activations)에서는 94.7%의 Accuracy를 보여준다.
 
 <br>
 <br>
