@@ -41,7 +41,7 @@ Sigmoid 함수의 경우 0부터 1까지 범위의 값을 가지며, 통계학�
 
 <br>
 
-(1) Vanishing Gradient
+#### (1) Vanishing Gradient
 
 <br>
 
@@ -63,7 +63,7 @@ Sigmoid function을 Activation function으로 가지는 경우, $\partial \sigma
 
 <br>
 
-(2) Not zero-centered
+#### (2) Not zero-centered
 
 Sigmoid 함수의 경우 output 값이 0.5를 중심으로 하며, 0과 1사이에 위치해 있다. 하지만 Neural Networks의 경우 이러한 구조의 Activation 함수는 좋은 성능을 보이지 못한다.
 
@@ -146,7 +146,7 @@ $$
 
 <br>
 
-(3) Computationally expensive
+#### (3) Computationally expensive
 
 Sigmoid 함수는 다음과 같은 형태를 가진다.
 
