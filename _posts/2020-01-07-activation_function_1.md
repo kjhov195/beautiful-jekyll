@@ -17,7 +17,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200107/image1.png' width="600"/></center>
+<center><img src = '/post_img/200107/image1.png' width="450"/></center>
 
 일반적인 Neural Networks는 $\sum_i W_iX_i$를 계산한 후에 Sigmoid와 같은 함수 $f$를 통하여 transformation해주는 작업을 각 layer마다 반복하게 된다. 이러한 transformation function $f$를 우리는 __Activation Function__ 이라고 한다.
 
@@ -153,7 +153,7 @@ Sigmoid 함수는 다음과 같은 형태를 가진다.
 $$ \sigma(x) = \frac 1 {1+e^{-x}}$$
 
 
-사실 Sigmoid에 들어가 있는 Exponential 함수 $exp$는 computing 시에 비교적 연산히 오래걸린다는 단점이 존재한다. Neural Networks에서 Sigmoid를 사용할 경우 매우 많은 Activation 함수값을 계산해야 하므로, Activation fucntion으로 Sigmoid 함수를 사용할 경우 Computationally expensive하다는 단점이 존재한다.
+사실 Sigmoid에 들어가 있는 Exponential 함수 $exp$는 computing 시에 비교적 연산히 오래걸린다는 단점이 존재한다. Neural Networks에서 Sigmoid를 사용할 경우 매우 많은 Activation 함수값을 계산해야 하므로, Activation fucntion으로 Sigmoid 함수를 사용할 경우 Computationally expensive하다는 점이 문제가 될 수 있다.
 
 세 가지 문제 중, 앞의 두 가지 문제 __Vanishing Gradient__ 와 __Not zero centered__ 는 큰 문제로 부각되지만, 계산상의 비효율성에 대한 문제는 사실 큰 문제가 되지는 않는다.
 
