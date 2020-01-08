@@ -221,27 +221,6 @@ print('Learning finished')
 
 <br>
 
-```
-# Test the model using test sets
-with torch.no_grad():
-    X_test = mnist_test.test_data.view(-1, 28 * 28).float().to(device)
-    Y_test = mnist_test.test_labels.to(device)
-
-    prediction = model(X_test)
-    correct_prediction = torch.argmax(prediction, 1) == Y_test
-    accuracy = correct_prediction.float().mean()
-    print('Accuracy:', accuracy.item())
-
-    # Get one and predict
-    r = random.randint(0, len(mnist_test) - 1)
-    X_single_data = mnist_test.test_data[r:r + 1].view(-1, 28 * 28).float().to(device)
-    Y_single_data = mnist_test.test_labels[r:r + 1].to(device)
-
-    print('Label: ', Y_single_data.item())
-    single_prediction = model(X_single_data)
-    print('Prediction: ', torch.argmax(single_prediction, 1).item())
-```
-
 softmax classifier에서는 하나의 layer를 사용하였으나, 이번 예제에서는 hidden layer 2개를 더 추가해 주었다.
 
 또한 Sigmoid 함수 대신, ReLU함수를 Activation function으로 사용해 주었다. 마지막 layer(layer3)의 뒷단에 ReLU함수를 적용해주지 않은 이유는 CrossEntropyLoss를 사용하였기 때문이다.(Pytorch의 경우, CrossEntropyLoss 내부에 Sigmoid 함수가 들어가 있다.)
