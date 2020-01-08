@@ -27,7 +27,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200107/image100.png' width="450"/></center>
+<center><img src = '/post_img/200107/image100.png' width="600"/></center>
 
 
 <br>
@@ -68,7 +68,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200107/image10.png' width="450"/></center>
+<center><img src = '/post_img/200107/image10.png' width="600"/></center>
 
 
 <br>
