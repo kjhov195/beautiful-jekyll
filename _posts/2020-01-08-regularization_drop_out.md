@@ -64,9 +64,9 @@ Regularization term $R(W)$의 대표적인 예시로는 다음과 같은 $L1$ Re
 
 $$
 \begin{align*}
-\text{L2 Regularization: } R(W) = \sum_k \sum_l W_{k,l}^2\\
-\text{L1 Regularization: } R(W) = \sum_k \sum_l \vert W_{k,l} \vert \\
-\text{Elastic net(L1+L2): } R(W) = \sum_k \sum_l \beta W_{k,l}^2 + \vert W_{k,l} \vert\\
+\text{L2 Regularization: } R(W) &= \sum_k \sum_l W_{k,l}^2\\
+\text{L1 Regularization: } R(W) &= \sum_k \sum_l \vert W_{k,l} \vert \\
+\text{Elastic net(L1+L2): } R(W) &= \sum_k \sum_l \beta W_{k,l}^2 + \vert W_{k,l} \vert\\
 \end{align*}
 $$
 
