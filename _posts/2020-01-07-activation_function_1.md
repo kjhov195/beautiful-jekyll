@@ -67,7 +67,7 @@ Sigmoid function을 Activation function으로 가지는 경우, $\partial \sigma
 
 Sigmoid 함수의 경우 output 값이 0.5를 중심으로 하며, 0과 1사이에 위치해 있다. 하지만 Neural Networks의 경우 이러한 구조의 Activation 함수는 좋은 성능을 보이지 못한다.
 
-Multi layer를 가정하여 어떤 layer는 앞단의 sigmoid로부터의 output을 받아 input $x$로 사용한다고 하자. __Sigmoid 함수의 결과 값은 항상 양수__ 이므로, 이 경우 $x$는 항상 양수이다. 이러한 양수의 $x$를 input으로 받아 linear combination을 계산하고($L = \sum_{i=1}^n (w_ix_i+b$), 여기에 activation function으로 sigmoid를 주어 최종 output $\sigma = \sigma(L) = \sigma(\sum_{i=1}^n w_ix_i+b)$를 만들어 낸다고 가정하자. 이 구조를 정리해보면 다음과 같다.
+Multi layer를 가정하여 어떤 layer는 앞단의 sigmoid로부터의 output을 받아 input $x$로 사용한다고 하자. __Sigmoid 함수의 결과 값은 항상 양수__ 이므로, 이 경우 $x$는 항상 양수이다. 이러한 양수의 $x$를 input으로 받아 linear combination $F$을 계산하고($F = \sum_{i=1}^n (w_ix_i+b$), 여기에 activation function으로 sigmoid를 주어 결과값 $L(F) = L(\sum_{i=1}^n w_ix_i+b)$를 만들어 낸다고 가정하자. 이 구조를 정리해보면 다음과 같다.
 
 
 $$
