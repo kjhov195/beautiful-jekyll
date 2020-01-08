@@ -27,7 +27,7 @@ use_math: true
 
 <center><img src = '/post_img/200108/image2.png' width="600"/></center>
 
-위 그림의 overfitting된 모델의 예시에서도, Test dataset에 대하여 Error가 꽤 증가하는 것을 확인할 수 있다.
+위 예시의 overfitting된 모델에서도, Test dataset에 대하여 Error가 꽤 증가하는 것을 확인할 수 있다.
 
 <br>
 
