@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Activation fucntion-Sigmoid
+title: Activation fucntion(1)-Sigmoid
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true

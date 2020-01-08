@@ -20,11 +20,14 @@ Neural Networks를 학습시킬 때 Weight을 어떻게 초기화할 것인지�
 
 만약 모든 weights를 0으로 초기화한다면 어떤 일이 생길지 생각해보자.
 
-$$\text{All the neurons would do the same thing.}$$
+__같은 output 값을 얻음__ $\rightarrow$ __같은 gradient 값을 얻음__ $\rightarrow$ __같은 weight 을 업데이트함__
+
 
 즉, 모든 뉴런들이 동일한 연산을 수행하게 되고, back propagation 또한 동일한 gradient를 계산하게 될 것이다.
 
-__같은 output 값을 얻음__ $\rightarrow$ __같은 gradient 값을 얻음__ $\rightarrow$ __같은 weight 을 업데이트함__
+$$\text{All the neurons would do the same thing.}$$
+
+
 
 <br>
 <br>

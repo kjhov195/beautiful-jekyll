@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Activation fucntion-tanh/ReLU/LeakyReLU/ELU/Maxout
+title: Activation fucntion(2)-tanh/ReLU/LeakyReLU/ELU/Maxout
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
