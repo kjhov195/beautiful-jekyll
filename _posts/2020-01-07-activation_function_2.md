@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Activation fucntion-tanh/ReLU/LeakyReLU/Maxout/ELU
+title: Activation fucntion-tanh/ReLU/LeakyReLU/ELU/Maxout
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
@@ -20,15 +20,16 @@ use_math: true
 
 <center><img src = '/post_img/200107/image2.png' width="450"/></center>
 
+$$ f(x) = \frac 1 {1+e^{-x}}$$
 
 [앞선 포스트](https://kjhov195.github.io/2020-01-07-activation_function_1/)에서 Activation 함수로써의 Sigmoid 함수에 대하여 세 가지 문제점을 살펴보았다. 그 중 __Vanishing Gradient__ 와 __Not zero centered__ 는 Neural Networks의 성능 저하에 큰 영향을 미치게 된다.
 
 
 <br>
 
-<center><img src = '/post_img/200107/image100.png' width="800"/></center>
+<center><img src = '/post_img/200107/image11.png' width="800"/></center>
 
-이러한 문제점을 해결하기 위하여 다양한 Activation 함수가 고안되었고, 오늘은 tanh/ReLU/LeakyReLU/Maxout/ELU 함수에 대해 살펴보고자 한다.
+이러한 문제점을 해결하기 위하여 다양한 Activation 함수가 고안되었고, 이번 포스트에서는 tanh/ReLU/LeakyReLU/Maxout/ELU 함수에 대해 살펴보고자 한다.
 
 
 
@@ -40,6 +41,11 @@ use_math: true
 
 <center><img src = '/post_img/200107/image7.png' width="450"/></center>
 
+1991년, LeCun et al에 의해 제안된 Activation function이다.
+
+0.5를 중심으로 하며, range[0,1]의 output 값을 가지는 Sigmoid 함수와는 달리, 0을 중심으로 range[-1,1]의 output 값을 가지는 함수이다.
+
+Sigmoid 함수의 __Not zero centered__ 의 단점을 보완하였다는 개선점이 있다. 하지만 너무 적거나 너무 큰 값에서는 Gradient가 0이되는 부분, 즉 __Saturated Regime__ 이 여전히 존재한다는 문제점이 남아있다.
 
 <br>
 <br>
@@ -49,19 +55,29 @@ use_math: true
 
 <center><img src = '/post_img/200107/image8.png' width="450"/></center>
 
+$$ f(x) = max(0, x)$$
+
+2012년, Krizhevsky et al에 의해 제안된 Activation function이다.
+
+Sigmoid와 비교하였을 때, 물론 양수 부분에서만 Saturated Regime이 사라졌지만 Gradient Vanishing 문제가 어느정도 해결되었다는 것을 알 수 있다. 또한, exponential 함수 $exp$를 사용하지 않기 때문에 Computationally inefficient하다는 문제점도 해결되었다.
+
+하지만 여전히 두 가지 큰 문제점이 남아있다. 첫 번째로 Sigmoid함수에서 존재하였던 Not zero-centered에 대한 문제를 해결하지 못하였으며, 두 번째로 음수 영역에서는 여전히 Gradient가 0이 되어 여전히 half of the regime에서 gradient를 _"kill"_ 하고 있는 것이다.
+
 
 <br>
 <br>
 ### LeakyReLU
 
+
 <br>
 
 <center><img src = '/post_img/200107/image9.png' width="450"/></center>
 
+$$ f(x) = max(\alpha x, x)$$
 
-<br>
-<br>
-### Maxout
+2013년, Mass et al과 2015년 He et al에 의해 제안된 Activation function이다.
+
+ReLU 함수의 단점을 보완한 것이며, 무엇보다도 가장 중요한 것은 더 이상 음수 영역에서 Gradient가 0이 되어버리지 않는다는 장점이 있다. 또한, Computationally efficient하여 sigmoid 함수나 tanh 함수에 비하여 수렴 속도가 빠르다는 장점이 있다.
 
 
 <br>
@@ -72,6 +88,53 @@ use_math: true
 
 <center><img src = '/post_img/200107/image10.png' width="600"/></center>
 
+2015년, Clevert et al에 의해 제안된 Activation function이다.
+
+
+$$
+\begin{align*}
+f(x) =
+\begin{cases}
+x\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;if\;x>0\\\\
+\alpha(exp(x)-1)\;\;\;if\;x\leq 0
+\end{cases}
+\end{align*}
+$$
+
+이름에서 알 수 있듯이, ReLU의 좋은 점을 그대로 유지하면서 Zero-centered에 가깝게 변형한 함수이다.
+
+단점으로는 exponential 함수를 사용하므로, Computationally Inefficient하다는 점이 있다.
+
+
+<br>
+<br>
+### Maxout
+
+2013년, Goodfellow et al에 의해 제안된 Activation function이다.
+
+$$ max(w_1'x +b_1, w_2'x +b_2)$$
+
+앞서 살펴본 Activation functions들과는 조금은 다른 성격의 Activation 함수이다.
+
+Saturated Regime이 없으며, Gradient가 0이 되어버리는 지점이 없다는 장점이 있다.
+
+하지만 parameter의 수가 두 배가 되어버린다는 단점이 존재한다.
+
+<br>
+<br>
+### Summary
+
+Stanford의 CS231n 강의에서는 다음과 같은 순서로 Activation function을 시도해볼 것을 권한다.
+
+(1) ReLU를 사용하자.
+
+(2) 성능이 만족스럽지 않다면, LeakyReLU, Maxout, ELU를 사용하라.
+
+(3) 그래도 만족스럽지 않다면, tanh를 사용하라. 하지만 많은 기대는 하지말자.
+
+(4) 그러나 Sigmoid는 사용하지 말라.
+
+실무적으로는 ReLU를 가장 많이 사용하며, LeakyReLU/Maxout/ELU도 좋은 선택지가 될 수 있다.
 
 <br>
 <br>
