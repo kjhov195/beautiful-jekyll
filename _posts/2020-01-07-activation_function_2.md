@@ -26,7 +26,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200107/image100.png' width="600"/></center>
+<center><img src = '/post_img/200107/image100.png' width="800"/></center>
 
 이러한 문제점을 해결하기 위하여 다양한 Activation 함수가 고안되었고, 오늘은 tanh/ReLU/LeakyReLU/Maxout/ELU 함수에 대해 살펴보고자 한다.
 
