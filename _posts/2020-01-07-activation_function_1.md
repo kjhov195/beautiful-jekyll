@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Activation fucntion-Sigmoid/tanh/ReLU/LeakyReLU/Maxout/ELU
+title: Activation fucntion-Sigmoid
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
