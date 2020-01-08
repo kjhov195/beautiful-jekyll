@@ -16,8 +16,18 @@ use_math: true
 
 ### Sigmoid
 
-세 가지 문제 중, 앞의 두 가지 문제 __Vanishing Gradient__ 와 __Not zero centered__ 는 큰 문제로 부각되지만, 계산상의 비효율성에 대한 문제는 사실 큰 문제가 되지는 않는다.
+<br>
 
+<center><img src = '/post_img/200107/image2.png' width="450"/></center>
+
+
+[앞선 포스트](https://kjhov195.github.io/2020-01-07-activation_function_1/)에서 Activation 함수로써의 Sigmoid 함수에 대하여 세 가지 문제점을 살펴보았다. 그 중 __Vanishing Gradient__ 와 __Not zero centered__ 는 Neural Networks의 성능 저하에 큰 영향을 미치게 된다.
+
+이러한 문제점을 해결하기 위하여 다양한 Activation 함수가 고안되었고, 오늘은 tanh/ReLU/LeakyReLU/Maxout/ELU 함수에 대해 살펴보고자 한다.
+
+<br>
+
+<center><img src = '/post_img/200107/image100.png' width="450"/></center>
 
 
 <br>
@@ -25,12 +35,27 @@ use_math: true
 ### tanh
 
 <br>
+
+<center><img src = '/post_img/200107/image7.png' width="450"/></center>
+
+
+<br>
 <br>
 ### ReLU
 
 <br>
+
+<center><img src = '/post_img/200107/image8.png' width="450"/></center>
+
+
+<br>
 <br>
 ### LeakyReLU
+
+<br>
+
+<center><img src = '/post_img/200107/image9.png' width="450"/></center>
+
 
 <br>
 <br>
@@ -41,10 +66,19 @@ use_math: true
 <br>
 ### ELU
 
+<br>
+
+<center><img src = '/post_img/200107/image10.png' width="450"/></center>
+
 
 <br>
 <br>
 ### Example
+
+```
+example
+```
+
 
 <br>
 <br>
