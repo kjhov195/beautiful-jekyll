@@ -45,17 +45,15 @@ Sigmoid 함수의 경우 0부터 1까지 범위의 값을 가지며, 통계학�
 
 <br>
 
-<center><img src = '/post_img/200107/image3.png' width="450"/></center>
+Sigmoid function을 Activation function으로 가지는 경우, $\partial \sigma \over \partial w$를 계산해야 하며, 이는 Back propagation을 통하여 ${\partial \sigma \over \partial w} = {\partial \sigma \over \partial X} \cdot {\partial X \over \partial w}$와 같이 계산할 수 있다.
 
-위와 같은 Computational graph를 생각해보자. 우리는 최종적으로 $\partial L \over \partial w$를 계산해야 하며, 이는 Back propagation을 통하여 ${\partial L \over \partial w} = {\partial L \over \partial \sigma} \cdot {\partial \sigma \over \partial w}$와 같이 계산할 수 있다.
-
-여기서 문제가 되는 부분은 Sigmoid 함수에 대한 미분 값인 ${\partial \sigma \over \partial w}$의 크기에 대한 문제이다. 다음 그림을 살펴보자.
+여기서 문제가 되는 부분은 Sigmoid 함수에 대한 미분 값인 ${\partial \sigma \over \partial X}$의 크기에 대한 문제이다. 다음 그림을 살펴보자.
 
 <br>
 
 <center><img src = '/post_img/200107/image4.png' width="450"/></center>
 
-위 그림에서 빨간 박스에 해당하는 부분은 Gradient가 거의 0에 가까운 아주 작은 숫자를 가진다. 즉, $w$가 0보다 꽤 작거나, 클 경우 ${\partial \sigma \over \partial w} \approx 0$가 된다. 이렇게 Sigmoid 함수에서 Gradient가 거의 0에 가까운 부분을 _Saturated Regime_ 이라고 부른다.
+위 그림에서 빨간 박스에 해당하는 부분은 Gradient가 거의 0에 가까운 아주 작은 숫자를 가진다. 즉, $X$가 0보다 꽤 작거나, 클 경우 ${\partial \sigma \over \partial X} \approx 0$가 된다. 이렇게 Sigmoid 함수에서 Gradient가 거의 0에 가까운 부분을 _Saturated Regime_ 이라고 부른다.
 
 <br>
 
@@ -109,11 +107,11 @@ $$
 \end{align*}
 $$
 
-아까 살펴보았듯이, $\frac {\partial F} {\partial w_i}$는 모든 $i$에 대하여 양수라는 것을 알고 있다. 즉, 결과적으로 다음과 같이 $\frac {\partial L} {\partial w_i}$의 부호와 $\frac {\partial L} {\partial F}$의 부호가 같다는 사실을 이끌어낼 수 있다.
+아까 살펴보았듯이, $\frac {\partial F} {\partial w_i}$는 모든 $i$에 대하여 양수라는 것을 알고 있다.
 
-$\frac {\partial L} {\partial F}$의 경우, $\frac {\partial L} {\partial F} = (1-L(F))L(F)$로 계산되며, 양수와 음수의 값 모두가 될 수 있다.
+또한, $\frac {\partial L} {\partial F}$의 경우 $\frac {\partial L} {\partial F} = (1-L(F))L(F)$로 계산되며, 양수와 음수의 값 모두가 될 수 있다.
 
-이 두 사실을 종합하면, 다음의 관계를 이끌어낼 수 있다.
+이 두 사실을 종합하면, 다음과 같이 $\frac {\partial L} {\partial w_i}$의 부호와 $\frac {\partial L} {\partial F}$의 부호가 같다는 사실을 이끌어낼 수 있다.
 
 $$
 \begin{align*}
