@@ -34,7 +34,7 @@ ___<center>2019 Bigcontest </center>___
 
 <center><img src = '/post_img/191104/image6.png' width="600"/></center>
 
-XGBoost, LightGBM, RandomForest과 같은 다양한 모델을 기반으로하여 예측 모형을 모델링하였으며, 예측 값에 대한 scaling을 통하여 점수를 극대화하고, 앙상블을 통하여 regularization까지 신경써주었다.
+XGBoost, LightGBM, RandomForest과 같은 다양한 모델을 기반으로하여 예측 모형을 모델링하였으며, 예측 값에 대한 scaling을 통하여 점수를 극대화하고, 앙상블을 통한 regularization까지 신경써주었다.
 
 사실 지나고보니 무작정 예측 모델을 만들어보는 것보다는, 실제로 게임을 플레이해보면서 Domain Knowledge를 이해하였던 경험이나, 출제자의 의도가 무엇인지 파악하려고 노력했던 점이 예선 통과에 중요하게 작용했던 것 같다.
 
@@ -80,7 +80,7 @@ XGBoost, LightGBM, RandomForest과 같은 다양한 모델을 기반으로하여
 
 <center><img src = '/post_img/191104/image4.png' width="600"/></center>
 
-거의 세 달을 통계연구소 연구실에서 모여 밤을 새가며 함께 고생한 우리팀화이팅 멤버들 사진이다. 너무나도 좋은 경험이었고, 결과 또한 좋아서 뿌듯하다.
+거의 세 달을 통계연구소 연구실에서 모여 밤을 새가며 함께 고생한 우리팀화이팅 멤버들 사진이다. 너무나도 소중한 경험을 할 수 있게 만들어준 팀원들에게 감사한다.
 
 <br>
 <br>
