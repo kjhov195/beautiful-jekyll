@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Regularization(1)-Regularization term/Dropout
+title: Overfitting-Regularization/Dropout
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
@@ -40,21 +40,11 @@ use_math: true
 <br>
 ### Regularization
 
-Overfitting을 해결하기 위해 Regularization을 도입하게 되며, Deep learning에서 많이 사용되는 Regularization 방법에는 다음과 같은 것들이 있다.
-
-(1) Add term to loss
-
-(2) Dropout
-
-(3) Batch Normalization
-
-(4) Data Augmentation
-
-대표적인 방법으로써 위 네 가지가 있으며, 이 이외에도 많은 방법들이 사용된다. 이번 포스트에서는 (1)과 (2)에 대해 살펴보도록 하겠다.
+Overfitting을 해결하기 위해 Regularization을 도입하게 되며, Deep learning에서 많이 사용되는 Regularization 방법에는 loss에 새로운 Regularization term을 더해주거나, Drop out을 사용하는 등의 여러 방법이 존재한다. 이번 포스트에서는 loss에 새로운 term을 더해주는 방식과 Drop out에 대해 살펴보도록 하겠다.
 
 
 <br>
-##### (1) Add term to loss
+### Add term to loss
 
 $$ L = {\frac 1 N} \sum_{i=1}^N \sum_{i \neq y_i} max(0,f(x_i;W)_ j -f(x_i;W)_ {y_i}+1)+\lambda R(W)$$
 
@@ -71,7 +61,7 @@ $$
 $$
 
 <br>
-##### (2) Dropout
+### Dropout
 
 <br>
 

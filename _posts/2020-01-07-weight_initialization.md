@@ -27,7 +27,7 @@ __같은 output 값을 얻음__ $\rightarrow$ __같은 gradient 값을 얻음__ 
 
 $$\text{All the neurons would do the same thing.}$$
 
-
+이는 분명 우리가 원하는 방향의 학습이 아니다. 이러한 문제를 해결하기 위하여 다양한 Initialization 방법들이 연구되었고, 가장 일반적으로 많이 쓰이는 Xavier와 He Initialization을 위주로 살펴보도록 하겠다.
 
 <br>
 <br>
