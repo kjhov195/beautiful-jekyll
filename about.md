@@ -12,13 +12,13 @@ subtitle: Interested in Statistics and Computer Science.
 <br>
 ### About Me
 
-I'm broadly interested in Statistics, machine learning and deep learning.
+I'm broadly interested in __Statistics, machine learning and deep learning__.
 
 My research involves statistical models, computer vision, machine learning and prediction model using deep neural networks.
 
-I worked as an intern at LG CNS in 2017, and as an trainee at KT in 2018.
+I worked as an intern at __LG CNS__ in 2017, and as an trainee at __KT__ in 2018.
 
-I am currently a Research Scientist at YIDS, Yonsei University Institute of Data Science.
+I am currently a Research Scientist of __YIDS, Yonsei University Institute of Data Science__.
 
 I completed my Bachelor's degree at Yonsei University. And I am studying for a Master's degree advised by Prof. Hyunjoong Kim. At Yonsei, I co-taught STA1001 as a TA, Teaching Assistant: Introduction to Statistics in 2018, 2019, and 2020.
 
