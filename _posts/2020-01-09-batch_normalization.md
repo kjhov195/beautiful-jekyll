@@ -42,7 +42,7 @@ Covariate Shift는 모델의 성능 저하에 큰 영향을 미친다. 그 이�
 <br>
 ### Internal Covariate Shift
 
-Training/Test dataset 간의 차이에 대한 문제(Covariate Shift)를 각 Layer의 input 간의 차이로 확장 시킨 것을 __Internal Covariate Shift__ 라고 한다.
+Training/Test dataset 간의 차이에 대한 문제(Covariate Shift)를 각 Mini Batch 간 input 데이터의 차이에 의한 문제로 확장 시킨 것을 __Internal Covariate Shift__ 라고 한다.
 
 Neural Networks에서 모든 Training data를 한 번에 사용하지 않고 Mini batch를 사용할 경우, 각 step에서 사용되는 Training data는 매번 달라지게 된다. 이렇게 배치 간의 데이터 분포가 다른 경우를 __Internal Covariate Shift__ 라고 한다.
 
