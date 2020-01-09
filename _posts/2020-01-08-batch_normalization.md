@@ -23,33 +23,40 @@ use_math: true
 <br>
 ### Internal Covariate Shift
 
-일반적인 Neural Networks에서는 여러 layers를 사용한다. 그러한 각 layer마다 input을 받아 linear combination을 구한 후, Activation function을 적용하여 output을 구해주는 작업이 이루어 진다.
-
-<br>
-
-<center><img src = '/post_img/200108/image7.png' width="600"/></center>
-
-결과적으로 이 때문에 각 layer의 input data $x$의 분포(Distribution)가 달라지게 된다. 뒷단에 위치한 layer일 수록 변형이 누적되게되고, 결국 뒷단의 layer에 대한 input data의 분포는 상당히 많이 달라지게 된다.
 
 <br>
 
 <center><img src = '/post_img/200108/image6.png' width="600"/></center>
 
-이는 또한 Training set($X_{train}$)의 분포와 Test set($X_{test}$)의 분포에 대해 차이를 발생시킨다. 이러한 현상을 Internal Covariate Shift라고 부른다.
-
-Internal Covariate Shift는 Vanishing Gradient/Exploding Gradient를 불러 일으키며, 이는 모델의 성능 저하에 큰 영향을 미친다. 그 이유를 직관적으로 잘 설명해주는 자료가 있어서 [JUNSIK HWANG님의 블로그](https://jsideas.net/batch_normalization/)에서 자료를 가지고 와보았다.
+이는 또한 Training set($X_{train}$)의 분포와 Test set($X_{test}$)의 분포의 차이가 있는 경우, 이를 __Internal Covariate Shift__ 라고 부른다.
 
 <br>
 
 <center><img src = '/post_img/200108/image8.png' width="600"/></center>
 
-고양이와 강아지를 분류하는 문제를 풀고있다고 하자. Training dataset에는 러시안 블루 고양이만 있고, Test dataset에는 페르시안 고양이만 있는 상황이다.(즉, Covariate Shift를 일부러 만들어보자.)
+Internal Covariate Shift는 모델의 성능 저하에 큰 영향을 미친다. 그 이유를 직관적으로 잘 설명해주는 자료가 있어 [JUNSIK HWANG님의 블로그](https://jsideas.net/batch_normalization/)에서 위 그림을 가지고 왔다.
 
-이 때 Training data에 있는 러시안 블루 고양이에 대한 분류 정확도는 99%에 달한다.
+고양이와 강아지를 분류하는 문제를 풀고있으며, Training dataset에는 러시안 블루 고양이만 있고, Test dataset에는 페르시안 고양이만 있다.(즉, Covariate Shift를 일부러 만들어보자.)
 
-하지만 Test dataset에는 페르시안 고양이만 있는 상황이다. 이 때 우리가 train시킨 모델에 Test dataset을 적용하면 어떤 결과가 발생할까? 페르시안 고양이의 털 색깔(흰색)을 보고 _"Training set에서는 회색 털을 가지고 있어야 고양이라고 배웠는데, Testset의 이 친구는 하얀색 털을 가지고 있구나. 그럼 이 친구는 강아지 일 수도 있겠다."_ 라는 판단을 할 수 있게 되고, 결과적으로 오분류의 가능성이 높아진다.
+이 때 Training data에 있는 러시안 블루 고양이에 대한 우리가 적합시킨 모델의 분류 정확도는 99%에 달한다.
+
+하지만 Test dataset에는 페르시안 고양이만 있는 상황이다. 이 때 우리가 train시킨 모델에 이러한 Test dataset을 적용하면 어떤 결과가 발생할까?
+
+페르시안 고양이의 털 색깔(흰색)을 보고 _"Training set에서는 회색 털을 가지고 있어야 고양이라고 배웠는데, Testset의 이 친구는 하얀색 털을 가지고 있구나. 그럼 이 친구는 강아지 일 수도 있겠다."_ 라는 판단을 할 수 있게 되고, 결과적으로 오분류의 가능성이 높아진다.
 
 즉, Training dataset과 Input dataset의 분포에 대한 차이는 모델의 성능 저하에 큰 영향을 미칠 수 있는 것이다.
+
+<br>
+
+<center><img src = '/post_img/200108/image7.png' width="600"/></center>
+
+일반적인 Neural Networks에서는 여러 layers를 사용한다. 그러한 각 layer마다 input을 받아 linear combination을 구한 후, Activation function을 적용하여 output을 구해주는 작업이 이루어 진다.
+
+결과적으로 이 때문에 각 layer의 input data $x$의 분포(Distribution)가 달라지게 된다. 뒷단에 위치한 layer일 수록 변형이 누적되게되고, 결국 뒷단의 layer에 대한 input data의 분포는 상당히 많이 달라지게 된다.
+
+즉, Neural Networks에서의 Internal Covariate Shift는 아주 중요한 이슈가 된다.
+
+
 
 <br>
 <br>
