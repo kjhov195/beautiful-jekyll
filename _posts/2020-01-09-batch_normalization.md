@@ -302,15 +302,6 @@ plot_compare(valid_losses, title='Validation Loss at Epoch')
 plot_compare(valid_accs, [0, 1.0], title='Validation Acc at Epoch')
 ```
 
-<br>
-
-<center><img src = '/post_img/200109/image6.png' width="300"/>
-<img src = '/post_img/200109/image7.png' width="300"/></center>
-
-<br>
-
-<center><img src = '/post_img/200109/image8.png' width="300"/>
-<img src = '/post_img/200109/image9.png' width="300"/></center>
 
 <br>
 <br>
