@@ -53,7 +53,7 @@ XGBoost, LightGBM, RandomForest과 같은 다양한 모델을 기반으로하여
 
 <br>
 
-<center><img src = '/post_img/191104/image1.png' width="600"/></center>
+<center><img src = '/post_img/191104/image1.jpg' width="600"/></center>
 
 
 2019 데이터 진흥주간에서 11월 26일(화)에 시상식이 열렸다. 2차 본선을 통과하여 수상이 확정되었으나, 어떤 상을 받게 될지는 미공개인 상태로 시상식에 참가하게 된다.
