@@ -60,7 +60,7 @@ XGBoost, LightGBM, RandomForest과 같은 다양한 모델을 기반으로하여
 
 <br>
 
-<center><img src = '/post_img/191104/image2.png' width="600"/></center>
+<center><img src = '/post_img/191104/image2.png' width="300"/></center>
 
 이 날은 시상식 뿐만아니라, 빅데이터 기반 모델링을 활용하고 있는 여러 업체들이 참여하여 다양한 행사가 열렸다. 구경하는 재미도 쏠쏠했다.
 
