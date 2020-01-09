@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overfitting-Regularization/Dropout
+title: Regularization/Dropout
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true

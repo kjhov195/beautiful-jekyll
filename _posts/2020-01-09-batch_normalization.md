@@ -13,32 +13,23 @@ use_math: true
 
 <br>
 <br>
-### Vanishing Gradient
-
-우리는 앞서 ReLU 등의 [변형된 Activation 함수를 사용](https://kjhov195.github.io/2020-01-07-activation_function_2/)하거나, [Weight initialization를 신중하게 하는 방법](https://kjhov195.github.io/2020-01-07-weight_initialization/)을 통하여 Vanishing gradient 문제를 간접적으로 해결해 보았다.
-
-이번에는 학습하는 과정 자체를 개선하여 근본적으로 Vanishing Gradient 문제가 발생하지 않도록 하는 방법에 대하여 살펴보도록 하겠다.
-
-<br>
-<br>
 ### Covariate Shift
 
-
 <br>
 
-<center><img src = '/post_img/200108/image6.png' width="600"/></center>
+<center><img src = '/post_img/200109/image1.png' width="600"/></center>
 
 이는 또한 Training set($X_{train}$)의 분포와 Test set($X_{test}$)의 분포의 차이가 있는 경우, 이를 __Covariate Shift__ 라고 부른다.
 
+Covariate Shift는 모델의 성능 저하에 큰 영향을 미친다. 그 이유를 직관적으로 잘 설명해주는 자료가 있어 [JUNSIK HWANG님의 블로그](https://jsideas.net/batch_normalization/)에서 아래 그림을 가지고 왔다.
+
 <br>
 
-<center><img src = '/post_img/200108/image8.png' width="600"/></center>
+<center><img src = '/post_img/200109/image2.png' width="600"/></center>
 
-Covariate Shift는 모델의 성능 저하에 큰 영향을 미친다. 그 이유를 직관적으로 잘 설명해주는 자료가 있어 [JUNSIK HWANG님의 블로그](https://jsideas.net/batch_normalization/)에서 위 그림을 가지고 왔다.
+고양이와 강아지를 분류하는 문제를 풀고있으며, Training dataset에는 러시안 블루 고양이만 있고, Test dataset에는 페르시안 고양이만 있다고 하자.(즉, Covariate Shift를 일부러 만들어보자.)
 
-고양이와 강아지를 분류하는 문제를 풀고있으며, Training dataset에는 러시안 블루 고양이만 있고, Test dataset에는 페르시안 고양이만 있다.(즉, Covariate Shift를 일부러 만들어보자.)
-
-이 때 Training data에 있는 러시안 블루 고양이에 대한 우리가 적합시킨 모델의 분류 정확도는 99%에 달한다.
+이 때 Training data의 러시안 블루 고양이에 대한 우리가 적합시킨 모델의 분류 정확도(Training Accuracy)는 99%에 달한다.
 
 하지만 Test dataset에는 페르시안 고양이만 있는 상황이다. 이 때 우리가 train시킨 모델에 이러한 Test dataset을 적용하면 어떤 결과가 발생할까?
 
@@ -51,6 +42,8 @@ Covariate Shift는 모델의 성능 저하에 큰 영향을 미친다. 그 이�
 <br>
 ### Internal Covariate Shift
 
+Training/Test dataset 간의 차이에 대한 문제(Covariate Shift)를 각 Layer의 input 간의 차이로 확장 시킨 것을 __Internal Covariate Shift__ 라고 한다.
+
 Neural Networks에서 모든 Training data를 한 번에 사용하지 않고 Mini batch를 사용할 경우, 각 step에서 사용되는 Training data는 매번 달라지게 된다. 이렇게 배치 간의 데이터 분포가 다른 경우를 __Internal Covariate Shift__ 라고 한다.
 
 이러한 __Internal Covariate Shift__ 문제는 Layer의 수가 많으면 더욱 더 큰 문제가 된다.
@@ -59,27 +52,40 @@ Neural Networks에서 모든 Training data를 한 번에 사용하지 않고 Min
 
 <br>
 
-<center><img src = '/post_img/200108/image7.png' width="600"/></center>
+<center><img src = '/post_img/200109/image3.png' width="600"/></center>
 
 결과적으로 이 때문에 각 layer의 input data $x$의 분포(Distribution)가 달라지게 되며, 뒷단에 위치한 layer일 수록 변형이 누적되어 input data의 분포는 상당히 많이 달라지게 된다.
 
-이런 상황이 발생할 경우, 모델이 일관적인 학습을 하기가 어려워진다.
-
-
+이런 상황이 발생할 경우, 모델의 parameter들이 일관적인 학습을 하기가 어려워진다.
 
 <br>
 <br>
 ### Batch Normalization
 
-Batch Normalization은 loffe and Szegedy(2015)에 의하여 제시된 아이디어이다.
+이러한 Internal Covariate Shift문제를 해결하기 위하여 고안된 아이디어가 바로 __Batch Normalization__ 이다.
 
+Batch Normalization은 loffe and Szegedy(2015)에 의하여 제안된 개념이며, 자세히 설명해보면 다음과 같다.
 
+<br>
+##### Batch Normalization while Training
 
+$K$개의 Mini batch $\text{mini-batch}_{k},\;\;k=1,2,\cdots,K$가 존재한다고 가정하자.
 
+각 Mini batch마다 $n$개(batch size)의 데이터 $x_i,\;\;i=1,2,\cdots,n$가 존재한다.
 
+우리는 각 Mini batch에 들어가 있는 $x_i$에 대하여 표본 평균 $E[x^{(k)}]$과 표본 분산 $Var[x^{(k)}]$를 구할 수 있다.
+
+이 값들을 활용하여 다음과 같이 input data를 Normalize 해준 후에 계산한다.
+
+이를 수식으로 나타내면 다음과 같다.
 
 $$ \hat x ^{(k)}  = {x^{(k)}-E[x^{(k)}] \over \sqrt{Var[x^{(k)}]}} $$
 
+<br>
+##### Batch Normalization while Testing
+
+
+이러한 과정을 각 layer마다 적용해줄 수 있다.
 
 
 <br>
