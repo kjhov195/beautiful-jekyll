@@ -305,13 +305,14 @@ plot_compare(valid_accs, [0, 1.0], title='Validation Acc at Epoch')
 
 <br>
 
-<center><img src = '/post_img/200109/image10.png' width="300"/>
-<img src = '/post_img/200109/image11.png' width="300"/></center>
+<center><img src = '/post_img/200109/image10.png' width="600"/></center>
+
+<center><img src = '/post_img/200109/image11.png' width="600"/></center>
 
 <br>
 
-<center><img src = '/post_img/200109/image12.png' width="300"/>
-<img src = '/post_img/200109/image13.png' width="300"/></center>
+<center><img src = '/post_img/200109/image12.png' width="600"/></center>
+<center><img src = '/post_img/200109/image13.png' width="600"/></center>
 
 
 <br>
