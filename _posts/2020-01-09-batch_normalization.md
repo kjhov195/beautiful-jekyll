@@ -64,29 +64,42 @@ Neural Networks에서 모든 Training data를 한 번에 사용하지 않고 Min
 
 이러한 Internal Covariate Shift문제를 해결하기 위하여 고안된 아이디어가 바로 __Batch Normalization__ 이다.
 
-Batch Normalization은 loffe and Szegedy(2015)에 의하여 제안된 개념이며, 자세히 설명해보면 다음과 같다.
+Batch Normalization은 loffe and Szegedy(2015)에 의하여 제안된 개념이며, 논문에서 제시된 방법은 다음과 같다.
+
+<br>
+
+<center><img src = '/post_img/200109/image4.png' width="600"/></center>
+
+이제 한 단계 한 단계씩 자세히 살펴보도록 하자.
 
 <br>
 ##### Batch Normalization while Training
 
 $K$개의 Mini batch $\text{mini-batch}_{k},\;\;k=1,2,\cdots,K$가 존재한다고 가정하자.
 
-각 Mini batch마다 $n$개(batch size)의 데이터 $x_i,\;\;i=1,2,\cdots,n$가 존재한다.
+각 Mini batch마다 $m$개(batch size)의 데이터 $x_1,x_2,\cdots,x_m$이 존재한다.
 
-우리는 각 Mini batch에 들어가 있는 $x_i$에 대하여 표본 평균 $E[x^{(k)}]$과 표본 분산 $Var[x^{(k)}]$를 구할 수 있다.
+$$ B = \left \lbrace x_1,\cdots, x_m \right \rbrace $$
 
-이 값들을 활용하여 다음과 같이 input data를 Normalize 해준 후에 계산한다.
+우리는 각 Mini batch에 들어가 있는 $x_1,\cdots,x_m$에 대하여 표본 평균 $\mu_B = {\frac 1 m}\sum_{i=1}^m x_i$과 표본 분산 $\sigma_B^2 = {\frac 1 m} \sum_{i=1}^m (x_i-\mu_B)^2$을 구할 수 있다.
 
-이를 수식으로 나타내면 다음과 같다.
+이 값들을 활용하여 다음과 같이 input data $x_1,\cdots,x_m$을 normalize해줄 수 있다.
 
-$$ \hat x ^{(k)}  = {x^{(k)}-E[x^{(k)}] \over \sqrt{Var[x^{(k)}]}} $$
+$$\hat x_i = {\frac {x_i-\mu_B} {\sqrt{\sigma_B^2+\epsilon}}}$$
+
+한 Batch 내의 표본평균과 표본표준편차를 사용하여 normalize해주는 것에서 끝나지 않고, $\gamma$와 $\beta$라는 parameter를 활용하여 scale and shift시켜준다.
+
+$$y_i = \gamma \hat x_i + \beta$$
+
+scale and shift는 normalize를 다시 어느정도 풀어주는 작업이라고 볼 수 있다. 모수 $\gamma$와 $\beta$ 또한 training 과정에서 학습시켜야 하는 parameter이다.
+
 
 <br>
 ##### Batch Normalization while Testing
 
-
-이러한 과정을 각 layer마다 적용해줄 수 있다.
-
+<br>
+<br>
+### Example
 
 <br>
 <br>
@@ -95,3 +108,7 @@ $$ \hat x ^{(k)}  = {x^{(k)}-E[x^{(k)}] \over \sqrt{Var[x^{(k)}]}} $$
 [CS231n](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk), Stanford University School of Engineering
 
 [모두를 위한 딥러닝 시즌2](https://deeplearningzerotoall.github.io/season2/lec_pytorch.html)
+
+[Sergey Ioffe, Christian Szegedy(2015), Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf)
+
+[JUNSIK HWANG님의 블로그](https://jsideas.net/batch_normalization/)
