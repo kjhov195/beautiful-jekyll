@@ -106,7 +106,7 @@ Batch-size가 8이며, 어떠한 두 Minibatch $B_1$과 $B_2$가 다음과 같�
 $$
 \begin{align*}
 B_1 &= \left \lbrace x_1,x_2,\cdots,x_6,x_7,x_8 \right \rbrace\\
-B_2 &= \left \lbrace x_1,x_2,\cdots,x_6,x_{10},x_{11} \right \rbrace
+B_2 &= \left \lbrace x_1,x_2,\cdots,x_6,x_9,x_{10} \right \rbrace
 \end{align*}
 $$
 
@@ -305,15 +305,15 @@ plot_compare(valid_accs, [0, 1.0], title='Validation Acc at Epoch')
 
 <br>
 
-<center><img src = '/post_img/200109/image10.png' width="600"/></center>
+<center><img src = '/post_img/200109/image10.png' width="700"/></center>
 
-<center><img src = '/post_img/200109/image11.png' width="600"/></center>
+<center><img src = '/post_img/200109/image11.png' width="700"/></center>
 
 <br>
 
-<center><img src = '/post_img/200109/image12.png' width="600"/></center>
+<center><img src = '/post_img/200109/image12.png' width="700"/></center>
 
-<center><img src = '/post_img/200109/image13.png' width="600"/></center>
+<center><img src = '/post_img/200109/image13.png' width="700"/></center>
 
 
 <br>
