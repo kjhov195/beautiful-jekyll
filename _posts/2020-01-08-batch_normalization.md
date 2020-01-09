@@ -21,20 +21,20 @@ use_math: true
 
 <br>
 <br>
-### Internal Covariate Shift
+### Covariate Shift
 
 
 <br>
 
 <center><img src = '/post_img/200108/image6.png' width="600"/></center>
 
-이는 또한 Training set($X_{train}$)의 분포와 Test set($X_{test}$)의 분포의 차이가 있는 경우, 이를 __Internal Covariate Shift__ 라고 부른다.
+이는 또한 Training set($X_{train}$)의 분포와 Test set($X_{test}$)의 분포의 차이가 있는 경우, 이를 __Covariate Shift__ 라고 부른다.
 
 <br>
 
 <center><img src = '/post_img/200108/image8.png' width="600"/></center>
 
-Internal Covariate Shift는 모델의 성능 저하에 큰 영향을 미친다. 그 이유를 직관적으로 잘 설명해주는 자료가 있어 [JUNSIK HWANG님의 블로그](https://jsideas.net/batch_normalization/)에서 위 그림을 가지고 왔다.
+Covariate Shift는 모델의 성능 저하에 큰 영향을 미친다. 그 이유를 직관적으로 잘 설명해주는 자료가 있어 [JUNSIK HWANG님의 블로그](https://jsideas.net/batch_normalization/)에서 위 그림을 가지고 왔다.
 
 고양이와 강아지를 분류하는 문제를 풀고있으며, Training dataset에는 러시안 블루 고양이만 있고, Test dataset에는 페르시안 고양이만 있다.(즉, Covariate Shift를 일부러 만들어보자.)
 
@@ -46,15 +46,24 @@ Internal Covariate Shift는 모델의 성능 저하에 큰 영향을 미친다. 
 
 즉, Training dataset과 Input dataset의 분포에 대한 차이는 모델의 성능 저하에 큰 영향을 미칠 수 있는 것이다.
 
+
+<br>
+<br>
+### Internal Covariate Shift
+
+Neural Networks에서 모든 Training data를 한 번에 사용하지 않고 Mini batch를 사용할 경우, 각 step에서 사용되는 Training data는 매번 달라지게 된다. 이렇게 배치 간의 데이터 분포가 다른 경우를 __Internal Covariate Shift__ 라고 한다.
+
+이러한 __Internal Covariate Shift__ 문제는 Layer의 수가 많으면 더욱 더 큰 문제가 된다.
+
+일반적인 Neural Networks에서는 여러 layers를 사용하며, 각 layer마다 input을 받아 linear combination을 구한 후 Activation function을 적용하여 output을 구해주는 작업이 이루어 진다.
+
 <br>
 
 <center><img src = '/post_img/200108/image7.png' width="600"/></center>
 
-일반적인 Neural Networks에서는 여러 layers를 사용한다. 그러한 각 layer마다 input을 받아 linear combination을 구한 후, Activation function을 적용하여 output을 구해주는 작업이 이루어 진다.
+결과적으로 이 때문에 각 layer의 input data $x$의 분포(Distribution)가 달라지게 되며, 뒷단에 위치한 layer일 수록 변형이 누적되어 input data의 분포는 상당히 많이 달라지게 된다.
 
-결과적으로 이 때문에 각 layer의 input data $x$의 분포(Distribution)가 달라지게 된다. 뒷단에 위치한 layer일 수록 변형이 누적되게되고, 결국 뒷단의 layer에 대한 input data의 분포는 상당히 많이 달라지게 된다.
-
-즉, Neural Networks에서의 Internal Covariate Shift는 아주 중요한 이슈가 된다.
+이런 상황이 발생할 경우, 모델이 일관적인 학습을 하기가 어려워진다.
 
 
 
