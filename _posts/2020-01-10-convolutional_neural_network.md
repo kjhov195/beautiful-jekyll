@@ -67,15 +67,6 @@ output 행렬의 1행 1열의 값을 구하는 과정은 위와 같이 element-w
 
 $28 \times 28$의 input data에 $3 \times 3$의 filter를 적용하여 계산하여 output 행렬의 1행 1열의 성분을 계산하는 과정을 나타낸 것이다. 마찬가지로 element-wise multiplication을 해준 후, 이를 더해주는 과정을 거쳐 계산이 이루어진다.
 
-<br>
-<br>
-### ```torch.nn.Conv2d()```
-
-<br>
-
-<center><img src = '/post_img/200110/image4.png' width="700"/></center>
-
-Pytorch Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/stable/nn.html#conv2d)에 나와있는 Convolution layer를 구현한 함수이다. 여러 옵션을 줄 수 있는데, 이 중에서 __stride__ 와 __padding__ 에 대하여 자세히 살펴보도록 하겠다.
 
 <br>
 <br>
@@ -85,7 +76,9 @@ Pytorch Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/
 
 <center><img src = '/post_img/200110/no_padding_strides.gif' width="300"/></center>
 
+Convolution layer에는 다양한 옵션을 줄 수 있는데, 그 중 하나가 __Stride__ 이다.
 
+Stride는 filter를 한 번에 얼마나 이동시킬 것인가를 의미한다. 위 예시에서는 filter가 두 칸씩 이동하고 있으므로, _Stride=2_ 로 설정해준 것이다. 만약 Stride를 따로 설정해주지 않을 경우에는 _Stride=1_ 이 기본적인 default 값으로 사용된다.
 
 <br>
 <br>
@@ -95,7 +88,27 @@ Pytorch Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/
 
 <center><img src = '/post_img/200110/full_padding_no_strides.gif' width="300"/></center>
 
+zero padding은 input의 size를 유지해주면서, edge의 정보를 잃지 않게 하기위하여 사용하는 방법이다. 위 예시와 같이 data의 edge 바깥 부분을 0으로 채워주는 방법을 zero padding이라고 한다. 위와 같이 0으로 한 겹을 쌓아줄 경우 _padding=1_ 옵션이며, 따로 설정해주지 않을 경우에는 _padding=0_ 이 default 옵션으로 사용된다.
 
+
+<br>
+<br>
+### ```torch.nn.Conv2d()```
+
+<br>
+
+<center><img src = '/post_img/200110/image4.png' width="700"/></center>
+
+Pytorch Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/stable/nn.html#conv2d)에 나와있는 Convolution layer를 구현한 함수이다.
+
+Pytorch의 ```torch.nn.Conv2d()```의 경우, input data로 사용하는 데이터는 __torch.Tensor__ 여야 하며, 다음과 같은 shape을 가지고 있어야 한다.
+
+$$
+\begin{align*}
+\text{input shape: } &(N \times C \times H \times W)\\
+&(\text{batch_size, channel, height, width})
+\end{align*}
+$$
 
 
 
