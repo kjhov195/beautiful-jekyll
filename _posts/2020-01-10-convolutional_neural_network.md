@@ -70,7 +70,7 @@ $28 \times 28$의 input data에 $3 \times 3$의 filter를 적용하여 계산하
 
 <br>
 <br>
-### stride
+### Convolution Layer: stride
 
 <br>
 
@@ -82,7 +82,7 @@ Stride는 filter를 한 번에 얼마나 이동시킬 것인가를 의미한다.
 
 <br>
 <br>
-### zero padding
+### Convolution Layer: zero padding
 
 <br>
 
@@ -90,14 +90,13 @@ Stride는 filter를 한 번에 얼마나 이동시킬 것인가를 의미한다.
 
 zero padding은 input의 size를 유지해주면서, edge의 정보를 잃지 않게 하기위하여 사용하는 방법이다. 위 예시와 같이 data의 edge 바깥 부분을 0으로 채워주는 방법을 zero padding이라고 한다. 위와 같이 0으로 한 겹을 쌓아줄 경우 _padding=1_ 옵션이며, 따로 설정해주지 않을 경우에는 _padding=0_ 이 default 옵션으로 사용된다.
 
-
 <br>
 <br>
 ### ```torch.nn.Conv2d()```
 
 <br>
 
-<center><img src = '/post_img/200110/image4.png' width="700"/></center>
+<center><img src = '/post_img/200110/image3.png' width="700"/></center>
 
 Pytorch Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/stable/nn.html#conv2d)에 나와있는 Convolution layer를 구현한 함수이다.
 
@@ -109,7 +108,6 @@ $$
 &(\text{batch_size, channel, height, width})
 \end{align*}
 $$
-
 
 
 <br>
