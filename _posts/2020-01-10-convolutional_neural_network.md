@@ -88,7 +88,7 @@ Stride는 filter를 한 번에 얼마나 이동시킬 것인가를 의미한다.
 
 <center><img src = '/post_img/200110/full_padding_no_strides.gif' width="300"/></center>
 
-zero padding은 input의 size를 유지해주면서, edge의 정보를 잃지 않게 하기위하여 사용하는 방법이다. 위 예시와 같이 data의 edge 바깥 부분을 0으로 채워주는 방법을 zero padding이라고 한다. 위와 같이 0으로 한 겹을 쌓아줄 경우 _padding=1_ 옵션이며, 따로 설정해주지 않을 경우에는 _padding=0_ 이 default 옵션으로 사용된다.
+__zero padding__ 은 input의 size를 유지해주면서, edge의 정보를 잃지 않게 하기위하여 사용하는 방법이다. 위 예시와 같이 data의 edge 바깥 부분을 0으로 채워주는 방법을 zero padding이라고 한다. 위와 같이 0으로 한 겹을 쌓아줄 경우 _padding=1_ 옵션이며, 따로 설정해주지 않을 경우에는 _padding=0_ 이 default 옵션으로 사용된다.
 
 <br>
 <br>
@@ -126,13 +126,13 @@ CNN에서 사용되는 또 하나의 layer가 있는데, 바로 Pooling layer이
 
 <br>
 
-<center><img src = '/post_img/200110/image4.png' width="700"/></center>
+<center><img src = '/post_img/200110/image4.png' width="600"/></center>
 
 Max pooling의 경우, filter 안에 들어오는 elements 중에서 가장 큰 값을 선택하여 output 행렬의 element로 사용하는 방식이다. 위 그림은 Max pooling의 간단한 예시이다.
 
 <br>
 
-<center><img src = '/post_img/200110/image5.png' width="700"/></center>
+<center><img src = '/post_img/200110/image5.png' width="600"/></center>
 
 반면, Average pooling의 경우, filter 안에 들어오는 elements에 대하여 평균 값을 구하여 output 행렬의 element로 사용하는 방식이다. 위 그림은 Average pooling의 예시이다.
 
