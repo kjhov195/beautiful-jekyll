@@ -90,6 +90,14 @@ Stride는 filter를 한 번에 얼마나 이동시킬 것인가를 의미한다.
 
 zero padding은 input의 size를 유지해주면서, edge의 정보를 잃지 않게 하기위하여 사용하는 방법이다. 위 예시와 같이 data의 edge 바깥 부분을 0으로 채워주는 방법을 zero padding이라고 한다. 위와 같이 0으로 한 겹을 쌓아줄 경우 _padding=1_ 옵션이며, 따로 설정해주지 않을 경우에는 _padding=0_ 이 default 옵션으로 사용된다.
 
+
+### Convolution Layer: output size
+
+결과적으로, Convolution Layer를 거쳐 나오는 output의 shape은 다음과 같다.
+
+$$ \text{output size } = {\frac {\text{input size} - \text{filter size} + (2 \times \text{padding})} {\text{stride}}} + 1$$
+
+
 <br>
 <br>
 ### ```torch.nn.Conv2d()```
