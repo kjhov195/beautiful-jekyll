@@ -109,6 +109,24 @@ $$
 \end{align*}
 $$
 
+<br>
+<br>
+### Pooling layer
+
+CNN에서 사용되는 또 하나의 layer가 있는데, 바로 Pooling layer이다. Pooling layer는 Down sampling을 위해 사용되는데, 대표적인 예시로 Max pooling이나 Average Pooling이 있다.
+
+<br>
+
+<center><img src = '/post_img/200110/image4.png' width="700"/></center>
+
+Max pooling의 경우, filter 안에 들어오는 elements 중에서 가장 큰 값을 선택하여 output 행렬의 element로 사용하는 방식이다. 위 그림은 Max pooling의 간단한 예시이다.
+
+<br>
+
+<center><img src = '/post_img/200110/image5.png' width="700"/></center>
+
+반면, Average pooling의 경우, filter 안에 들어오는 elements에 대하여 평균 값을 구하여 output 행렬의 element로 사용하는 방식이다. 위 그림은 Average pooling의 예시이다.
+
 
 <br>
 <br>
@@ -120,4 +138,4 @@ $$
 
 [vdumoulin github](https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md)
 
-[Pytorch Documentation](https://pytorch.org/docs/stable/nn.html#conv2d)
+[Pytorch Documentation: torch.nn.Conv2d](https://pytorch.org/docs/stable/nn.html#conv2d)
