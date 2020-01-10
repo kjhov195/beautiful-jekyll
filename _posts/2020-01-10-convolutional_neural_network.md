@@ -65,7 +65,7 @@ output 행렬의 1행 1열의 값을 구하는 과정은 위와 같이 element-w
 
 <center><img src = '/post_img/200110/image2.png' width="700"/></center>
 
-$28 \times 28$의 input data에 $3 \times 3$의 filter를 적용하여 계산하여 output 행렬의 1행 1열의 성분을 계산하는 과정을 나타낸 것이다. 마찬가지로 element-wise multiplication을 해준 후, 이를 더해주는 과정을 거쳐 계산이 이루어진다.
+$28 \times 28$의 input data에 $3 \times 3$의 filter를 적용하여 계산하여 output 행렬의 1행 1열의 성분을 계산하는 과정을 나타낸 것이다. 행렬의 나머지 성분들 또한 마찬가지로 element-wise multiplication을 해준 후, 이를 더해주는 과정을 거쳐 계산이 이루어진다.
 
 
 <br>
@@ -88,7 +88,7 @@ Stride는 filter를 한 번에 얼마나 이동시킬 것인가를 의미한다.
 
 <center><img src = '/post_img/200110/full_padding_no_strides.gif' width="300"/></center>
 
-__zero padding__ 은 input의 size를 유지해주면서, edge의 정보를 잃지 않게 하기위하여 사용하는 방법이다. 위 예시와 같이 data의 edge 바깥 부분을 0으로 채워주는 방법을 zero padding이라고 한다. 위와 같이 0으로 한 겹을 쌓아줄 경우 _padding=1_ 옵션이며, 따로 설정해주지 않을 경우에는 _padding=0_ 이 default 옵션으로 사용된다.
+__zero padding__ 은 input의 size를 유지해주면서, edge의 정보를 잃지 않게 하기위하여 사용하는 방법이다. 위 예시와 같이 data의 edge 바깥 부분을 0으로 채워주는 방법을 zero padding이라고 한다. 위와 같이 0으로 두 겹을 쌓아줄 경우 _padding=2_ 옵션이며, 따로 설정해주지 않을 경우에는 _padding=0_ 이 default 옵션으로 사용된다.
 
 <br>
 <br>
