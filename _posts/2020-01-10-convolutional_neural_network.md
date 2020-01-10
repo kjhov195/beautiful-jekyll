@@ -160,6 +160,16 @@ Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/stable/n
 <br>
 ### Example
 
+CNN을 활용한 MNIST classification 문제를 풀어보자.
+
+우리가 사용할 모델의 구조는 다음과 같다.
+
+<br>
+
+<center><img src = '/post_img/200110/image8.png' width="700"/></center>
+
+위 구조의 CNN을 Pytorch로 구현해보면 다음과 같다.
+
 ```
 import torch
 import torchvision.datasets as dsets
