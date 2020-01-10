@@ -107,7 +107,7 @@ $$ \text{output size } = {\frac {\text{input size} - \text{filter size} + (2 \ti
 
 <center><img src = '/post_img/200110/image3.png' width="700"/></center>
 
-Pytorch Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/stable/nn.html#conv2d)에 나와있는 Convolution layer를 구현한 함수이다.
+Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/stable/nn.html#conv2d)에 나와있는 Convolution layer를 구현한 함수이다.
 
 Pytorch의 ```torch.nn.Conv2d()```의 경우, input data로 사용하는 데이터는 __torch.Tensor__ 여야 하며, 다음과 같은 shape을 가지고 있어야 한다.
 
@@ -135,6 +135,26 @@ Max pooling의 경우, filter 안에 들어오는 elements 중에서 가장 큰 
 <center><img src = '/post_img/200110/image5.png' width="700"/></center>
 
 반면, Average pooling의 경우, filter 안에 들어오는 elements에 대하여 평균 값을 구하여 output 행렬의 element로 사용하는 방식이다. 위 그림은 Average pooling의 예시이다.
+
+<br>
+<br>
+### torch.nn.MaxPool2d()
+
+<br>
+
+<center><img src = '/post_img/200110/image6.png' width="700"/></center>
+
+Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/stable/nn.html#conv2d)에 나와있는 Max pooling layer를 구현한 함수이다.
+
+<br>
+<br>
+### torch.nn.AvgPool2d()
+
+<br>
+
+<center><img src = '/post_img/200110/image7.png' width="700"/></center>
+
+Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/stable/nn.html#conv2d)에 나와있는 Average pooling layer를 구현한 함수이다.
 
 
 <br>
