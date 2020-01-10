@@ -292,4 +292,4 @@ with torch.no_grad():
 
 [vdumoulin github](https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md)
 
-[Pytorch Documentation: torch.nn.Conv2d](https://pytorch.org/docs/stable/nn.html#conv2d)
+[Pytorch Documentation](https://pytorch.org/docs/stable/nn.html#conv2d)
