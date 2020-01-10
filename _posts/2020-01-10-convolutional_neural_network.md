@@ -27,7 +27,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200110/no_padding_no_strides.gif' width="450"/></center>
+<center><img src = '/post_img/200110/no_padding_no_strides.gif' width="300"/></center>
 
 [vdumoulin github](https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md)에 Convolution layer의 연산 방식을 잘 나타낸 그림이 있어서 가져와 보았다.
 
@@ -83,7 +83,7 @@ Pytorch Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/
 
 <br>
 
-<center><img src = '/post_img/200110/no_padding_strides.gif' width="450"/></center>
+<center><img src = '/post_img/200110/no_padding_strides.gif' width="300"/></center>
 
 
 
@@ -93,7 +93,7 @@ Pytorch Pytorch 공식 홈페이지의 [Documentation](https://pytorch.org/docs/
 
 <br>
 
-<center><img src = '/post_img/200110/full_padding_no_strides.gif' width="450"/></center>
+<center><img src = '/post_img/200110/full_padding_no_strides.gif' width="300"/></center>
 
 
 
