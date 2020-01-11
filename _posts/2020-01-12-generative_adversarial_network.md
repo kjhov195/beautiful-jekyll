@@ -226,9 +226,9 @@ for epoch in range(n_epochs):
 
 <br>
 
-<center><img src = '/post_img/200112/fake_0.png' width="300"/>
-<img src = '/post_img/200112/fake_20.png' width="300"/>
-<img src = '/post_img/200112/fake_199.png' width="300"/></center>
+<center><img src = '/post_img/200112/fake_0.png' width="200"/>
+<img src = '/post_img/200112/fake_20.png' width="200"/>
+<img src = '/post_img/200112/fake_199.png' width="200"/></center>
 
 Training이 진행되면서 실제 데이터와 유사한 데이터를 생성해내는 것을 확인할 수 있다.
 
