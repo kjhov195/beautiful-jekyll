@@ -60,6 +60,26 @@ $$
 \min_ { G }{ \max_ { D }{ V\left( D,G \right)  }  } ={ E }_{ x\sim { p }_{ data }\left( x \right)  }\left[ \log { D\left( x \right)  }  \right] +{ E }_{ z\sim { p }_{ z }\left( z \right)  }\left[ \log { \left\{ 1-D\left( G\left( z \right)  \right)  \right\}  }  \right]
 $$
 
+
+$$
+\begin{align*}
+\max_{ D }{ V\left( D \right)  } =&{ E }_{ x\sim { p }_{ data }\left( x \right)  }\left[ \log { D\left( x \right)  }  \right] +{ E }_{ z\sim { p }_{ z }\left( z \right)  }\left[ \log { \left\{ 1-D\left( z \right)  \right\}  }  \right] \\ =&\frac { 1 }{ m } \sum_{ i=1 }^{ m }{ \log { D\left( { x }^{ i } \right)  }  } +\frac { 1 }{ m } \sum_{ i=1 }^{ m }{ \log { \left\{ 1-D\left( G\left( { z }^{ i } \right)  \right)  \right\}  }  }
+\end{align*}
+$$
+
+
+$$
+\begin{align*}
+\min_{ G }{ V\left( G \right)  } =&{ E }_{ z\sim { p }_{ z }\left( z \right)  }\left[ \log { \left\{ 1-D\left( G\left( z \right)  \right)  \right\}  }  \right] \\ =&\frac { 1 }{ m } \sum_{ j=1 }^{ m }{ \log { \left\{ 1-D\left( G\left( { z }^{ j } \right)  \right)  \right\}  }  }
+\end{align*}
+$$
+
+
+$$
+\min_ { G }{ V\left( G \right)  } ={ E }_{ z\sim { p }_{ z }\left( z \right)  }\left[ \log { \left\{ 1-D\left( G\left( z \right)  \right)  \right\}  }  \right] \\ \Rightarrow -{ E }_{ z\sim { p }_{ z }\left( z \right)  }\left[ \log { D\left( G\left( z \right)  \right)  }  \right]
+$$
+
+
 작성 중....
 
 <br>
