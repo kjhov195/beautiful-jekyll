@@ -40,9 +40,9 @@ GAN의 경우 두 개의 네트워크가 사용되어 조금은 복잡한 구조
 
 <center><img src = '/post_img/200112/image2.png' width="600"/></center>
 
-우선 D(Discriminator)부터 살펴보자. D의 역할은 __주어진 input이 real data인지 구별__ 하는 것이다. Data $x$가 input으로 주어졌을 때, D의 output $D(x)$는 $x$가 real data일 확률을 return한다.
+우선 D(Discriminator)부터 살펴보자. D의 역할은 주어진 input이 real data인지 구별하는 것이다. Data $x$가 input으로 주어졌을 때, D의 output __$D(x)$는 $x$가 real data일 확률__ 을 return한다.
 
-G(Generator)의 역할은 D(Discriminator)가 진짜인지 구별할 수 없을 만큼 진짜같은 Fake data를 만들어내는 것이다. 위 그림에서와 같이 난수 vector(Latent Code)가 주어졌을 때 $G$를 통하여 Fake image $G(z)$를 생성한다. 그러한 $G(z)$를 다시 $D$의 input으로 주면 $D(G(z))$는 $G(z)$가 real data일 확률을 return하게 된다.
+G(Generator)의 역할은 D(Discriminator)가 진짜인지 구별할 수 없을 만큼 진짜같은 Fake data를 만들어내는 것이다. 위 그림에서와 같이 난수 vector(Latent Code)가 주어졌을 때 $G$를 통하여 __Fake image $G(z)$를 생성__ 한다. 그러한 $G(z)$를 다시 $D$의 input으로 주면 $D(G(z))$는 $G(z)$가 real data일 확률을 return하게 된다.
 
 D를 학습시킬 때에는 G를 고정시킨 채 실제 데이터($x \sim p_{data}(x)$)가 주어졌을 때에 높은 확률을 return하고, 가짜 데이터($z \sim p_z(z))$)는 낮은 확률을 return해주는 방향으로 weight을 update한다.
 
