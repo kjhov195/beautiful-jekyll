@@ -22,7 +22,7 @@ __Generative Adversarial Networks__ 는 2014년 NIPS에 발표된 논문으로�
 <center><img src = '/post_img/200112/image.png' width="450"/></center>
 
 
-__GAN__(Generative Adversarial Networks)이라는 이름은 실제 데이터의 분포와 유사한 분포(__"Generative"__ model)를 추정(Estimate)하기 위해 D(Discriminator)와 G(Generator)라는 두 모델을 적대적인(__"Adversarial"__) 한 방식을 통하여 모델을 Training시키기 때문에 붙여진 이름이다.
+__GAN__(Generative Adversarial Networks)이라는 이름은 실제 데이터의 분포와 유사한 분포(__"Generative"__ model)를 추정(Estimate)하기 위해 D(Discriminator)와 G(Generator)라는 두 모델을 적대적인(__"Adversarial"__) 방식을 통하여 모델을 Training시키기 때문에 붙여진 이름이다.
 
 <br>
 
