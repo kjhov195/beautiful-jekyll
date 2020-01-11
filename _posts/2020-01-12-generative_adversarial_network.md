@@ -38,7 +38,7 @@ GAN의 경우 두 개의 네트워크가 사용되어 조금은 복잡한 구조
 
 <br>
 
-<center><img src = '/post_img/200112/image1.png' width="600"/></center>
+<center><img src = '/post_img/200112/image2.png' width="600"/></center>
 
 우선 D(Discriminator)부터 살펴보자. D의 역할은 __주어진 input이 real data인지 구별__ 하는 것이다. Data $x$가 input으로 주어졌을 때, D의 output $D(x)$는 $x$가 real data일 확률을 return한다.
 
