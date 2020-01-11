@@ -28,7 +28,7 @@ __GAN__(Generative Adversarial Networks)이라는 이름은 실제 데이터의 
 
 <center><img src = '/post_img/200112/image1.png' width="600"/></center>
 
-GAN의 최종적인 목적은 Training data과 비교하였을 때 구분할 수 없을 정도로 유사한 가짜 데이터를 생성해낼 수 있도록 Training data의 분포 $P_{data}(x)$를 추정하는 가짜 데이터의 분포 $P_{model}(x)$를 만드는 것이다.
+GAN의 최종적인 목적은 Training data과 비교하였을 때 구분할 수 없을 정도로 유사한 가짜 데이터를 생성해낼 수 있도록 Training data의 분포 $P_{data}(x)$를 추정하는 가짜 데이터의 분포 $P_{model}(x)$를 찾는 것이다.
 
 <br>
 <br>
