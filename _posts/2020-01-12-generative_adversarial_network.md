@@ -199,6 +199,10 @@ $$
 
 즉, GAN에서 $\min_ { G }\max_ { D }{ V\left( D,G \right)}$ 문제를 푸는 것은 진짜 데이터의 분포 $p_{data}$와 가짜 데이터의 분포 $p_{q}$간의 __Jenson-Shannon divergence__ 를 minimize하는 것과 같기 때문에 GAN이 잘 작동하는 것임을 알 수 있다.
 
+<br>
+
+<center><img src = '/post_img/200112/image5.png' width="450"/></center>
+
 
 
 <br>
