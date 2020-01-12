@@ -201,7 +201,7 @@ $$
 
 <br>
 
-<center><img src = '/post_img/200112/image5.png' width="450"/></center>
+<center><img src = '/post_img/200112/image5.png' width="300"/></center>
 
 
 
