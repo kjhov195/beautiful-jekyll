@@ -315,7 +315,7 @@ for epoch in range(n_epochs):
         #############################################
         ###  Training G(Generator)    
         #############################################
-        z = torch.randn(batch_size,  ).to(device)
+        z = torch.randn(batch_size, latent_size).to(device)
         G_z = G(z)
         D_G_z = D(G_z)
         # optimization
