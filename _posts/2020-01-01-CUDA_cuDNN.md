@@ -29,7 +29,7 @@ nvidia-smi
 ### cuDNN
 
 ```
-# installingcuDNN
+# installing cuDNN
 sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64 /" >> /etc/apt/sources.list.d/cuda.list'
 sudo apt-get update
 sudo apt-get install libcudnn7-dev
@@ -37,3 +37,6 @@ sudo apt-get install libcudnn7-dev
 # check
 cat /usr/include/cudnn.h | grep CUDNN_MAJOR -A 2
 ```
+
+<br>
+<br>
