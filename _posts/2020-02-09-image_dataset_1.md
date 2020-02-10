@@ -6,12 +6,6 @@ category: Deep Learning
 use_math: true
 ---
 
-이 글은 현재 수정중입니다!!
-이 글은 현재 수정중입니다!!
-이 글은 현재 수정중입니다!!
-이 글은 현재 수정중입니다!!
-이 글은 현재 수정중입니다!!
-
 <br>
 ### Computer Vision Tasks
 
@@ -26,7 +20,7 @@ Computer Vision에서 주로 다루게 되는 문제들은 크게 Classification
 
 <br>
 <br>
-### MNIST
+### MNIST(1998)
 
 <br>
 
@@ -51,7 +45,7 @@ MNIST 데이터셋(Modified National Institute of Standards and Technology datab
 
 <br>
 <br>
-### SVHN
+### SVHN(2011)
 
 <br>
 
@@ -82,7 +76,7 @@ format1은 각 사진마다 다른 해상도를 가지고 있는데, 학습을 �
 
 <br>
 <br>
-### CIFAR-10
+### CIFAR-10(2009)
 
 <br>
 
@@ -113,7 +107,7 @@ Target의 경우 위와 같이 Airplane, Automobile, Bird, Cat, Deer, Dog, Frog,
 
 <br>
 <br>
-### CIFAR100
+### CIFAR100(2009)
 
 <br>
 
@@ -140,7 +134,7 @@ _사실, 이 데이터셋에는 조그마한 오류가 있는데 버섯(mushroom
 
 <br>
 <br>
-### ImageNet
+### ImageNet(2009)
 
 
 <br>
@@ -169,7 +163,7 @@ ImageNet Dataset의 경우, __ILSVRC: ImageNet Large Scale Visual Recognition Co
 
 <br>
 <br>
-### STL-10
+### STL-10(2011)
 
 <br>
 
@@ -185,7 +179,7 @@ $$
 \end{align*}
 $$
 
-paper: [An Analysis of Single-Layer Networks in Unsupervised Feature Learning](https://cs.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf)
+paper: [Adam Coates, Honglak Lee, Andrew Y. Ng An Analysis of Single Layer Networks in Unsupervised Feature Learning AISTATS, 2011.](https://cs.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf)
 
 STL-10은 ImageNet 데이터셋의 labeled data에서 sampling하여 만든 데이터셋이며, 5,000개의 training 데이터와 8,000개의 test 데이터로 이루어져 있다. Unsupervised learning을 위한 labeling이 되어있지 않은 100,000개의 data 또한 함께 포함되어 있다.
 
@@ -197,13 +191,7 @@ STL-10의 경우, $96 \times 96$ 크기의 해상도로 MNIST/SVHN/CIFAR10/CIFAR
 <br>
 ### Reference
 
-https://www.cs.toronto.edu/~kriz/cifar.html
-
-https://laonple.blog.me/220643128255
-
-http://image-net.org/about-stats
-
-https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk
+[CS231n](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7)
 
 [THE MNIST DATABASE of handwritten digits](http://yann.lecun.com/exdb/mnist/index.html)
 
