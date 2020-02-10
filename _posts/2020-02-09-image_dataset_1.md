@@ -99,11 +99,7 @@ CIFAR-10과 CIFAR-100은 80,000,000만개의 [tiny images dataset](http://people
 
 이미지의 크기는 $32 \times 32$이며, 3가지 색상 channel로 이루어져 있고, training set의 경우 50,000개, test set의 경우 10,000개의 데이터로 이루어져 있다.
 
-<br>
-
-
-
-Target의 경우 위와 같이 Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck의 10개의 class로 구성되어 있으며, 각 class는 서로 완벽하게 차별(completely mutually exclusive)되는 데이터셋이다. 즉, 어떤 데이터이든 10개의 class중 완벽하게 하나의 class에만 속하도록 구성되어 있다.
+Target의 label은 Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck와 같이 10개의 class로 구성되어 있으며, 각 class는 서로 완벽하게 차별(completely mutually exclusive)되도록 구성되었다. 즉, 어떤 데이터이든 10개의 class중 완벽하게 하나의 class에만 속하도록 구성되어 있는 것이다.
 
 <br>
 <br>
