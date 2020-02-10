@@ -13,7 +13,6 @@ use_math: true
 
 <center><img src = '/post_img/200209/image1.png' width="600"/></center>
 
-
 Computer Vision에서 주로 다루게 되는 문제들은 크게 Classification/Sementic Segmentation/Object Detection/Instance Segmentation과 같이 4가지로 분류할 수 있다.
 
 이 중, 이번 포스트에서는 Classification(Image Recognition) 문제에서 주로 사용되는 데이터셋들을 위주로 살펴보도록 하겠다.
@@ -61,7 +60,6 @@ $$
 $$
 
 paper: [Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo Wu, Andrew Y. Ng Reading Digits in Natural Images with Unsupervised Feature Learning NIPS Workshop on Deep Learning and Unsupervised Feature Learning 2011.](http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf)
-
 
 SVHN은 Google Street View에서 수집된 숫자 데이터셋으로, MNIST와 마찬가지로 0부터 9까지 숫자 10개의 이미지로 이루어진 데이터셋이다. 차이점이 있다면 MNIST의 경우 손글씨에 대한 한 가지 채널의 색상(흑백)을 가진 이미지였으나, SVHN의 경우 건물 번호나 표지판과 같이 real-world에서 볼 수 있는 이미지로 이루어져 있다는 것이다. 또한, 세 가지 색상 채널(RGB)로 이루어져 있다는 차이점도 존재한다. SVHN은 73257개의 Training 데이터, 26032개의 Test 데이터로 구성되어 있다.
 
@@ -122,8 +120,6 @@ paper: [Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 
 
 CIFAR-100의 경우, 20개의 Supeerclass와 100개의 class로 구성된 데이터셋이며, 데이터의 수와 사이즈는 CIFAR-10과 동일하다.
 
-<br>
-
 Target의 경우 위와 같이 100개의 Classes로 구성되어 있으며, 그와 동시에 20개의 Superclass로 나눌 수도 있다.
 
 _사실, 이 데이터셋에는 조그마한 오류가 있는데 버섯(mushrooms)의 경우 과일/야채(fruit or vegetables)가 아니고, 곰(bears)의 경우 육식동물이 아니다._ :)
@@ -132,11 +128,9 @@ _사실, 이 데이터셋에는 조그마한 오류가 있는데 버섯(mushroom
 <br>
 ### ImageNet(2009)
 
-
 <br>
 
 <center><img src = '/post_img/200209/image8.png' width="450"/></center>
-
 
 $$
 \begin{align*}
@@ -155,8 +149,6 @@ ImageNet Dataset의 경우, __ILSVRC: ImageNet Large Scale Visual Recognition Co
 
 보통 $264 \times 264$ pixels로 crop된 sub-sampled images를 사용하는 것이 일반적이다.
 
-
-
 <br>
 <br>
 ### STL-10(2011)
@@ -164,7 +156,6 @@ ImageNet Dataset의 경우, __ILSVRC: ImageNet Large Scale Visual Recognition Co
 <br>
 
 <center><img src = '/post_img/200209/image5.png' width="450"/></center>
-
 
 $$
 \begin{align*}
@@ -180,8 +171,6 @@ paper: [Adam Coates, Honglak Lee, Andrew Y. Ng An Analysis of Single Layer Netwo
 STL-10은 ImageNet 데이터셋의 labeled data에서 sampling하여 만든 데이터셋이며, 5,000개의 training 데이터와 8,000개의 test 데이터로 이루어져 있다. Unsupervised learning을 위한 labeling이 되어있지 않은 100,000개의 data 또한 함께 포함되어 있다.
 
 STL-10의 경우, $96 \times 96$ 크기의 해상도로 MNIST/SVHN/CIFAR10/CIFAR100에 비하여 비교적 큰 해상도를 가지고 있다.
-
-
 
 <br>
 <br>
