@@ -132,20 +132,20 @@ LeNet-5의 구조를 살펴보면 다음과 같다.
 <br>
 ##### Convolutional layer
 
-$
+$$
 \begin{align*}
 \text{output size} = {{\text{input size} - \text{filter size}} \over \text{stride}} + 1
 \end{align*}
-$
+$$
 
 <br>
 ##### Pooling layer
 
-$
+$$
 \begin{align*}
 \text{output size} = {{\text{input size} - \text{kernel size}} \over \text{stride}} + 1
 \end{align*}
-$
+$$
 
 
 <br>
