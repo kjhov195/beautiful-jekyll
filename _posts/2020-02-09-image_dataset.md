@@ -6,17 +6,18 @@ category: Deep Learning
 use_math: true
 ---
 
-<br>
+이 글은 현재 수정중입니다!!
+이 글은 현재 수정중입니다!!
+이 글은 현재 수정중입니다!!
+이 글은 현재 수정중입니다!!
+이 글은 현재 수정중입니다!!
 
-우선, 해당 포스트는 Stanford University School of Engineering의 [CS231n](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7) 강의자료와 고려대학교 [최윤제](https://github.com/yunjey/) 연구원님의 [Naver D2(Naver Engineering)](https://www.slideshare.net/NaverEngineering/1-gangenerative-adversarial-network) 발표 자료를 기본으로 하여 정리한 내용임을 밝힙니다.
-
-<br>
 <br>
 ### Computer Vision Tasks
 
 Computer Vision에서 주로 다루게 되는 문제들은 크게 Classification/Sementic Segmentation/Object Detection/Instance Segmentation과 같이 4가지로 분류할 수 있다.
 
-이번 포스트에서는 Classification(Image Recognition) 문제에서 주로 사용되는 데이터셋들을 위주로 살펴보도록 하겠다.
+이 중, 이번 포스트에서는 Classification(Image Recognition) 문제에서 주로 사용되는 데이터셋들을 위주로 살펴보도록 하겠다.
 
 <br>
 <br>
