@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CNN Architecture(2)-VGG/GoogLeNet
+title: CNN Architecture(3)-VGG/GoogLeNet
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
