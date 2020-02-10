@@ -41,14 +41,14 @@ Pooling layer의 filter size 또한 일괄적으로 $2 \times 2 \text{ with stri
 
 VGGNet의 경우 전체적으로 모델의 뒷단으로 갈수록 feature map의 size는 점차 줄어들면서 filter의 개수는 점차 늘어나도록 구성되어 있다는 특징을 가지고 있다.
 
-앞서 ILSVRC 2013에서 Clarifai의 11.7% top-5 error 기록을 VGGNet은 7.3%으로 깨버리며 ILSVRC 2014에서 2등을 차지하게 된다.
+앞서 ILSVRC 2013에서 Clarifai의 11.7% top-5 error rate를 VGGNet이 7.3%의 error rate으로 갱신하면서 ILSVRC 2014에서 2등을 차지하게 된다.
 
 <br>
 
 <center><img src = '/post_img/200211/image3.png' width="600"/></center>
 
 
-한 가지 눈여겨 볼만한 것은, VGGNet의 첫 번째 FC Layer의 parameter의 개수이다. 하나의 layer에서 약 1억개에 육박하는 parameter를 가지고 있는데, 이는 굉장히 비효율성을 가져오게 되며, overfitting을 해결하는데에도 도움이 되지 않는다.
+한 가지 눈여겨 볼만한 것은, VGGNet의 첫 번째 FC Layer의 parameter의 개수이다. 하나의 layer에서 약 1억개에 육박하는 parameter를 가지고 있는데, 이때문에 굉장히 비효율적인 training이 이루어지게 되며, 이는 overfitting을 해결하는데에도 전혀 도움이 되지 않는다.
 
 
 
@@ -70,7 +70,7 @@ GoogLeNet은 위와 같이 매우 복잡한 구조를 가지고 있다. 하지�
 
 <center><img src = '/post_img/200211/image5.png' width="600"/></center>
 
-Computational complex하다는 단점이 존재한다. 실제로 위 그림에서 Filter Concatenation을 거쳐 나온 output의 dimension은 $28 \times 28 \times 672$가 되고, 이는 다음 inception module의 input이 된다. 여기서 계산해야하는 총 parameter의 수는 8억 5400만(854M)으로써 아주 많다는 것을 확인할 수 있다.
+Computationally complex하다는 단점이 존재한다. 실제로 위 그림에서 Filter Concatenation을 거쳐 나온 output의 dimension은 $28 \times 28 \times 672$가 되고, 이는 다음 inception module의 input이 된다. 여기서 계산해야하는 총 parameter의 수는 8억 5400만(854M)으로써 아주 많다는 것을 확인할 수 있다.
 
 <br>
 
