@@ -34,7 +34,7 @@ $$
 \end{align*}
 $$
 
-paper: [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)
+paper: [Yann LeCunn Et al.(1998), Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)
 
 MNIST 데이터셋은 손으로 쓴 숫자 이미지로 이루어진 대형 데이터셋이며, 60,000개의 Training dataset과 10,000개의 Test dataset으로 이루어져 있다.
 
@@ -59,7 +59,7 @@ $$
 \end{align*}
 $$
 
-paper: [Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo Wu, Andrew Y. Ng Reading Digits in Natural Images with Unsupervised Feature Learning NIPS Workshop on Deep Learning and Unsupervised Feature Learning 2011.](http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf)
+paper: [Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo Wu, Andrew Y. Ng(2011), Reading Digits in Natural Images with Unsupervised Feature Learning NIPS Workshop on Deep Learning and Unsupervised Feature Learning](http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf)
 
 SVHN은 Google Street View에서 수집된 숫자 데이터셋으로, MNIST와 마찬가지로 0부터 9까지 숫자 10개의 이미지로 이루어진 데이터셋이다. 차이점이 있다면 MNIST의 경우 손글씨에 대한 한 가지 채널의 색상(흑백)을 가진 이미지였으나, SVHN의 경우 건물 번호나 표지판과 같이 real-world에서 볼 수 있는 이미지로 이루어져 있다는 것이다. 또한, 세 가지 색상 채널(RGB)로 이루어져 있다는 차이점도 존재한다. SVHN은 73257개의 Training 데이터, 26032개의 Test 데이터로 구성되어 있다.
 
@@ -89,7 +89,7 @@ $$
 \end{align*}
 $$
 
-paper: [Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf)
+paper: [Alex Krizhevsky(2009), Learning Multiple Layers of Features from Tiny Images](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf)
 
 CIFAR는 Canadian Institute For Advanced Research의 줄임말이다.
 
@@ -116,7 +116,7 @@ $$
 \end{align*}
 $$
 
-paper: [Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf)
+paper: [Alex Krizhevsky(2009), Learning Multiple Layers of Features from Tiny Images](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf)
 
 CIFAR-100의 경우, 20개의 Supeerclass와 100개의 class로 구성된 데이터셋이며, 데이터의 수와 사이즈는 CIFAR-10과 동일하다.
 
@@ -139,7 +139,7 @@ $$
 \end{align*}
 $$
 
-paper: [ImageNet: A Large-Scale Hierarchical Image Database, Jia Deng at el., 2009](http://www.image-net.org/papers/imagenet_cvpr09.pdf)
+paper: [Jia Deng Et al.(2009), ImageNet: A Large-Scale Hierarchical Image Database](http://www.image-net.org/papers/imagenet_cvpr09.pdf)
 
 Stanford University의 Li Fei-Fei 교수를 중심으로 데이터베이스가 제작되었으며, Google, Microsoft와 같은 기업 또한 함께 참여하여 제작한 데이터셋이다.
 
@@ -166,7 +166,7 @@ $$
 \end{align*}
 $$
 
-paper: [Adam Coates, Honglak Lee, Andrew Y. Ng An Analysis of Single Layer Networks in Unsupervised Feature Learning AISTATS, 2011.](https://cs.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf)
+paper: [Adam Coates, Honglak Lee, Andrew Y. Ng(2011), An Analysis of Single Layer Networks in Unsupervised Feature Learning AISTATS](https://cs.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf)
 
 STL-10은 ImageNet 데이터셋의 labeled data에서 sampling하여 만든 데이터셋이며, 5,000개의 training 데이터와 8,000개의 test 데이터로 이루어져 있다. Unsupervised learning을 위한 labeling이 되어있지 않은 100,000개의 data 또한 함께 포함되어 있다.
 
