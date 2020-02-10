@@ -29,24 +29,19 @@ paper: [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION, Simo
 
 VGG의 경우 앞선 포스트에서 살펴본 LeNet, AlexNet, ZFNet과는 확연히 다른 점이 존재한다.
 
-우선 VGG의 경우 Conv Layer와 Pooling layer의 Filter size를 일괄적으로 통일시켜 주었다.
+우선 VGG의 경우 Conv Layer와 Pooling layer의 Filter size를 일괄적으로 통일시켜 주었다. 앞서 살펴본 다른 모델들의 경우, Conv Layer의 Filter size를 바꿔주었는데, VGGNet의 경우 Convolutional Layer의 Filter size를 $3 \times 3 \text{ with stride 1, pad 1}$으로 고정시켜 주었다.
 
-앞서 살펴본 다른 모델들의 경우, Conv Layer의 Filter size를 바꿔주었는데, VGGNet의 경우 Convolutional Layer의 Filter size를 $3 \times 3 \text{ with stride 1, pad 1}$으로 고정시켜 주었다.
-
-$3 \times 3$의 작은 filter를 사용하는 것이 상당히 눈에 띄는데, VGGNet은 더 많은 수의, 더 작은 크기의 filter를 사용한다. 예를 들어, 3개의 $3 \times 3$ filters는 1개의 $7 \times 7$ filter와 같은 effective receptive field를 가지게 된다. 이로써 더 깊지만 더 적은 parameter를 가지는 convolutional layer를 만들 수 있게 된다. 실제로 계산해 보면, $3 \times 3^2 \times \text{(# of channels)}$는 $1 \times 7^2 \times \text{(# of channels)}$보다 더 적은 수임을 확인할 수 있다.
-
-Pooling layer의 filter size 또한 일괄적으로 $2 \times 2 \text{ with stride 2}$로 통일시켜 준 것을 확인할 수 있다.
+$3 \times 3$의 작은 filter를 사용하는 것이 상당히 눈에 띄는데, VGGNet은 더 많은 수의, 더 작은 크기의 filter를 사용한다. 예를 들어, 3개의 $3 \times 3$ filters는 1개의 $7 \times 7$ filter와 같은 effective receptive field를 가지게 된다. 이로써 더 깊지만 더 적은 parameter를 가지는 convolutional layer를 만들 수 있게 된다. 실제로 계산해 보면, $3 \times 3^2 \times \text{(# of channels)}$는 $1 \times 7^2 \times \text{(# of channels)}$보다 더 적은 수임을 확인할 수 있다. Pooling layer의 filter size 또한 일괄적으로 $2 \times 2 \text{ with stride 2}$로 통일시켜 준 것을 확인할 수 있다.
 
 각 Layer마다 소요되는 Memory와 parameter의 수를 살펴보면 다음과 같다.
-
-VGGNet의 경우 전체적으로 모델의 뒷단으로 갈수록 feature map의 size는 점차 줄어들면서 filter의 개수는 점차 늘어나도록 구성되어 있다는 특징을 가지고 있다.
-
-앞서 ILSVRC 2013에서 Clarifai의 11.7% top-5 error rate를 VGGNet이 7.3%의 error rate으로 갱신하면서 ILSVRC 2014에서 2등을 차지하게 된다.
 
 <br>
 
 <center><img src = '/post_img/200211/image3.png' width="600"/></center>
 
+VGGNet의 경우 전체적으로 모델의 뒷단으로 갈수록 feature map의 size는 점차 줄어들면서 filter의 개수는 점차 늘어나도록 구성되어 있다는 특징을 가지고 있다.
+
+앞서 ILSVRC 2013에서 Clarifai의 11.7% top-5 error rate를 VGGNet이 7.3%의 error rate으로 갱신하면서 ILSVRC 2014에서 2등을 차지하게 된다.
 
 한 가지 눈여겨 볼만한 것은, VGGNet의 첫 번째 FC Layer의 parameter의 개수이다. 하나의 layer에서 약 1억개에 육박하는 parameter를 가지고 있는데, 이때문에 굉장히 비효율적인 training이 이루어지게 되며, 이는 overfitting을 해결하는데에도 전혀 도움이 되지 않는다.
 
