@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CNN Architecrue(1)-LeNet5
+title: CNN Architecture(1)-LeNet5
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
