@@ -19,7 +19,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200211/image1.png' width="450"/></center>
+<center><img src = '/post_img/200210/image1.png' width="450"/></center>
 
 paper: [LeCun et al.(1998), GradientBased Learning Applied to Document
 Recognition](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)
@@ -34,7 +34,7 @@ LeNet의 경우 LeNet-1부터 LeNet-5까지 다양한 버전으로 존재한다.
 
 <br>
 
-<center><img src = '/post_img/200211/image0.png' width="450"/></center>
+<center><img src = '/post_img/200210/image0.png' width="450"/></center>
 
 LeNet-1의 구조를 모델의 앞단부터 살펴보면 다음과 같다.
 
@@ -80,7 +80,7 @@ LeNet을 통하여 LeCun은 MLP(Multi Layer Perceptron), 혹은 DNN(Deep Neural 
 
 <br>
 
-<center><img src = '/post_img/200211/image2.png' width="450"/></center>
+<center><img src = '/post_img/200210/image2.png' width="450"/></center>
 
 
 LeNet-5의 구조를 살펴보면 다음과 같다.
