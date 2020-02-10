@@ -24,7 +24,7 @@ ImageNet 데이터셋에 대한 Image Classification Task의 경우 이미 2015�
 
 <br>
 
-<center><img src = '/post_img/200210/image4.png' width="450"/></center>
+<center><img src = '/post_img/200210/image4.png' width="600"/></center>
 
 paper: [ImageNet Classification with Deep Convolutional Neural Networks, Krizhevsky et al., 2012](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
 
@@ -52,10 +52,9 @@ $$ {(55-3) \over 2} + 1 = 27$$
 
 <br>
 
-<center><img src = '/post_img/200210/image5.png' width="450"/></center>
+<center><img src = '/post_img/200210/image5.png' width="600"/></center>
 
-
-AlexNet의 경우 많은 특징을 가지는데, 우선 AlexNet은 최초로 ReLU를 사용한 Convolutional Neural Networks이다. AlexNet의 경우, 모든 Convolution Layer와 Fully Connected Layer에 Activation function으로 ReLU 함수를 사용하였다.
+AlexNet의 역사적으로 중요한 의미를 가지는데, AlexNet은 최초로 ReLU를 사용한 Convolutional Neural Networks이기 때문이다. AlexNet의 경우, 모든 Convolution Layer와 Fully Connected Layer에 Activation function으로 ReLU 함수를 사용하였다.
 
 또한 AlexNet은 flipping, jittering, cropping corlor normalization 등의 다양한 Data Augmentation을 사용하여 성능을 향상시켰다.
 
