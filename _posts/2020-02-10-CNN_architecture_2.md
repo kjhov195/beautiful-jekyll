@@ -70,7 +70,9 @@ paper: [Visualizing and Understanding Convolutional Networks, Zeiler and Fergus,
 
 ZFNet은 기본적으로 AlexNet과 아주 유사한 구조를 가지고 있다.
 
-첫 번째 다른 점은 CONV1 layer에서 AlexNet(2012)의 경우 $11 \times 11 \text{ size filter with stride } 4$를 사용하였으나, ZFNet(2013)의 경우 $7 \times 7 \text{ size filter with stride } 2$를 사용하였다는 점이다.
+첫 번째 다른 점은 CONV1 layer에서 AlexNet(2012)의 경우 $11 \times 11 \text{ size filter with stride } 4$를 사용하였으나,
+
+ZFNet(2013)의 경우 $7 \times 7 \text{ size filter with stride } 2$를 사용하였다는 점이다.
 
 두 번째 다른 점은 CONV3, CONV4, CONV5 Layer의 filter의 개수이다. AlexNet의 경우 384, 384, 256개의 filter를 사용하였으나, ZFNet의 경우 512, 1024, 512개의 filter를 사용하였다.
 
