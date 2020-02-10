@@ -24,7 +24,7 @@ use_math: true
 paper: [LeCun et al.(1998), GradientBased Learning Applied to Document
 Recognition](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)
 
-우리가 알고 있는 CNN(Convolutional Neural Networks)를 가장 처음 도입한 사람은 프랑스의 얀 르쿤(Yann LeCun)이며, 현재는 Facebook의 Vice President, Chief AI Scientist를 맡고 있다.
+우리가 알고 있는 CNN(Convolutional Neural Networks)을 가장 처음 도입한 사람은 프랑스의 얀 르쿤(Yann LeCun)이며, 현재는 Facebook의 Vice President, Chief AI Scientist를 맡고 있다.
 
 LeNet의 경우 LeNet-1부터 LeNet-5까지 다양한 버전으로 존재한다. LeNet-1의 경우 1990년에 발표되었으며, 비교적 가장 최신의 LeNet에 해당하는 LeNet-5의 초기 모델로 볼 수 있다.
 
@@ -46,7 +46,7 @@ LeNet-1의 구조를 모델의 앞단부터 살펴보면 다음과 같다.
 
 - Twelve 8×8 feature maps convolutional layer (5×5 size)
 
-- Average Pooling layers (2×2 size) >
+- Average Pooling layers (2×2 size)
 
 - Directly fully connected to the output
 
@@ -67,8 +67,7 @@ LeNet-1의 구조를 모델의 앞단부터 살펴보면 다음과 같다.
 이제 마지막으로, Fully Connected Layer를 거쳐 최종적으로 $1 \times 1 \times 10$의 output을 뽑아낸다.
 
 
-LeNet의 경우 $5 \times 5$ size의 filter를 사용하는 Convolutional Layer를 통하여 __Local receptive field__ 개념을 적용하였고, 네트워크 내에서 이미지에 대해 같은 Kernel을 적용함으로써 __Shared weight__ 개념이 적용하였다. 또한, average pooling을 통하여 __sub sampling__ 개념을 도입하였다는 점에서 이후의 CNN의 발전에 큰 기여를 하였다.
-
+LeNet의 경우 $5 \times 5$ size의 filter를 사용하는 Convolutional Layer를 통하여 __Local receptive field__ 개념을 적용하였고, 네트워크 내에서 이미지에 대해 같은 Kernel을 적용함으로써 __Shared weight__ 개념을 적용하였다는 의의를 가진다. 또한, Average pooling을 통하여 __sub sampling__ 개념을 도입하였다는 점에서 이후의 CNN의 발전에 큰 기여를 하였다고 할 수 있다.
 
 <br>
 <br>
@@ -76,7 +75,7 @@ LeNet의 경우 $5 \times 5$ size의 filter를 사용하는 Convolutional Layer�
 
 LeNet을 통하여 LeCun은 MLP(Multi Layer Perceptron), 혹은 DNN(Deep Neural Networks)나 다른 분류 알고리즘들에 비하여 CNN의 성능이 매우 좋다는 것을 알리게 되었다.
 
-많은 연구 끝에 LeNet-1 이후에 비슷한 구조의 다양한 모델이 연구되어 LeNet-5까지 이르게 된다.
+LeNet-1 이후, 많은 연구 끝에 LeNet-1과 비슷한 구조의 다양한 모델이 연구되어 LeNet-5까지 이르게 된다.
 
 <br>
 
