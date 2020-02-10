@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Image Dataset(1)
+title: Image Dataset(2)
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
@@ -11,9 +11,6 @@ use_math: true
 이 글은 현재 수정중입니다!!
 이 글은 현재 수정중입니다!!
 이 글은 현재 수정중입니다!!
-
-<br>
-
 
 <br>
 <br>
