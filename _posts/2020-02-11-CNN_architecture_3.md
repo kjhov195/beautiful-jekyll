@@ -108,3 +108,5 @@ GoogLeNet의 경우 ILSVRC 2013의 11.7% top-5 error 기록을 6.7%로 갱신하
 
 <br>
 <br>
+
+[CS231n](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7)
