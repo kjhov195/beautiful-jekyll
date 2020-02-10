@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CNN(Convolutional Neural Networks)
+title: image dataset(1)
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
@@ -9,7 +9,7 @@ use_math: true
 <br>
 
 
-이번 포스트에서는 Computer Vision 분야에서 가장 많이 사용되는 대표적인 데이터셋을 살펴보도록 하겠다.
+이번 포스트와 다음 포스트에서는 Computer Vision 분야에서 많이 사용되는 대표적인 데이터셋을 살펴보도록 하겠다. 이번 포스트에서는 Image Classification(Image Recognition) 문제에서 주로 사용되는 데이터셋들을 위주로 살펴보도록 하겠다.
 
 <br>
 <br>
@@ -32,6 +32,18 @@ MNIST의 Training set의 절반과 Test set의 절반은 NIST의 Training set에
 
 
 각 데이터는 0에서 9까지의 자연수 중 하나에 대응되는 숫자에 대한 데이터이며, 1×28×28, 총 784개의 픽셀의 색에 대한 정보를 담은 행렬이다. 각 픽셀에 대응되는 행렬의 성분은 0부터 255사이의 숫자를 가지고 있는데, 까만색에 가까운 픽셀일수록 0에 가까운 값을, 흰색에 가까운 픽셀일수록 255에 가까운 값을 가지게 된다.
+
+
+<br>
+<br>
+### SVHN
+
+
+<br>
+<br>
+### STL10
+
+
 
 
 <br>
