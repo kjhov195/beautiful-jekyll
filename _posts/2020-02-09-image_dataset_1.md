@@ -15,6 +15,11 @@ use_math: true
 <br>
 ### Computer Vision Tasks
 
+<br>
+
+<center><img src = '/post_img/200209/image1.png' width="450"/></center>
+
+
 Computer Vision에서 주로 다루게 되는 문제들은 크게 Classification/Sementic Segmentation/Object Detection/Instance Segmentation과 같이 4가지로 분류할 수 있다.
 
 이 중, 이번 포스트에서는 Classification(Image Recognition) 문제에서 주로 사용되는 데이터셋들을 위주로 살펴보도록 하겠다.
@@ -25,7 +30,7 @@ Computer Vision에서 주로 다루게 되는 문제들은 크게 Classification
 
 <br>
 
-<center><img src = '/post_img/200209/image1.png' width="450"/></center>
+<center><img src = '/post_img/200209/image2.png' width="450"/></center>
 
 $$
 \begin{align*}
@@ -46,6 +51,10 @@ MNIST 데이터셋(Modified National Institute of Standards and Technology datab
 <br>
 ### SVHN
 
+paper: [Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo Wu, Andrew Y. Ng Reading Digits in Natural Images with Unsupervised Feature Learning NIPS Workshop on Deep Learning and Unsupervised Feature Learning 2011.](http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf)
+
+SVHN is a real-world image dataset for developing machine learning and object recognition algorithms with minimal requirement on data preprocessing and formatting. It can be seen as similar in flavor to MNIST (e.g., the images are of small cropped digits), but incorporates an order of magnitude more labeled data (over 600,000 digit images) and comes from a significantly harder, unsolved, real world problem (recognizing digits and numbers in natural scene images). SVHN is obtained from house numbers in Google Street View images.
+
 
 <br>
 <br>
@@ -65,6 +74,9 @@ $
 \text{Test set: }&10000  \times 3 \times 32 \times 32\\
 \end{align*}
 $
+
+paper: [Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf)
+
 
 CIFAR는 Canadian Institute For Advanced Research의 줄임말이다.
 
@@ -90,6 +102,8 @@ $
 \end{align*}
 $
 
+paper: [Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf)
+
 CIFAR-100의 경우, 20개의 Supeerclass와 100개의 class로 구성된 데이터셋이며, 데이터의 수와 사이즈는 CIFAR-10과 동일하다.
 
 <br>
@@ -109,6 +123,8 @@ $
 \end{align*}
 $
 
+paper: [ImageNet: A Large-Scale Hierarchical Image Database, Jia Deng at el., 2009](http://www.image-net.org/papers/imagenet_cvpr09.pdf)
+
 Stanford University의 Li Fei-Fei 교수를 중심으로 데이터베이스가 제작되었으며, Google, Microsoft와 같은 기업 또한 함께 참여하여 제작한 데이터셋이다.
 
 ImageNet Dataset의 경우, __ILSVRC: ImageNet Large Scale Visual Recognition Competition__ 에서 사용되는 것으로 유명하다.
@@ -116,7 +132,6 @@ ImageNet Dataset의 경우, __ILSVRC: ImageNet Large Scale Visual Recognition Co
 총 21,841개 classes의 14,197,122개 데이터로 구성되어 있으며, 다양한 해상도의 image size로 구성되어 있다. 데이터셋 구성 내역에 대한 자세한 설명은 [이곳](http://image-net.org/about-stats)의 설명을 참고하면 된다.
 
 보통 $264 \times 264$ pixels로 crop된 sub-sampled images를 사용하는 것이 일반적이다.
-
 
 
 <br>
@@ -130,3 +145,10 @@ https://laonple.blog.me/220643128255
 http://image-net.org/about-stats
 
 https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk
+
+
+[The Street View House Numbers (SVHN) Dataset](http://ufldl.stanford.edu/housenumbers/)
+
+[cifar](https://www.cs.toronto.edu/~kriz/cifar.html)
+
+[ImageNet: A Large-Scale Hierarchical Image Database, Jia Deng at el., 2009](http://www.image-net.org/papers/imagenet_cvpr09.pdf)]
