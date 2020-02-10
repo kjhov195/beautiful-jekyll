@@ -73,7 +73,7 @@ LeNet의 경우 $5 \times 5$ size의 filter를 사용하는 Convolutional Layer�
 <br>
 ### LeNet-5
 
-LeNet을 통하여 LeCun은 MLP(Multi Layer Perceptron), 혹은 DNN(Deep Neural Networks)나 다른 분류 알고리즘들에 비하여 CNN의 성능이 매우 좋다는 것을 알리게 되었다.
+LeCun은 LeNet을 통하여 CNN의 성능이 MLP(Multi Layer Perceptron), 혹은 DNN(Deep Neural Networks)을 비롯한 다른 분류 알고리즘들에 비하여 매우 좋다는 것을 알리게 되었다.
 
 LeNet-1 이후, 많은 연구 끝에 LeNet-1과 비슷한 구조의 다양한 모델이 연구되어 LeNet-5까지 이르게 된다.
 
@@ -127,7 +127,9 @@ LeNet-5의 구조를 살펴보면 다음과 같다.
 
 앞서 LeNet-1과 LeNet-5의 모든 Layer에서 output의 dimension을 계산해 보았다. 직접 새로운 데이터셋에서 새로운 모델을 만들어야 할 경우, dimension 계산을 잘 할수 있어야 모델을 잘 만들 수 있다. 따라서 Dimension 계산은 아주 중요한 작업이다.
 
-각 Layer에서의 output size 계산은 다음과 같이 쉽게 할 수 있다. _(사실, LeNet과 같이 간단한 구조의 경우, 아래 식을 사용하지 않더라도 금방 계산할 수 있다. 하지만 복잡한 구조를 가진 CNN의 경우, 아래 식이 경우에 따라 큰 도움이 될 수도 있다.)_
+각 Layer에서의 output size 계산은 다음과 같이 쉽게 할 수 있다.
+
+_(사실, LeNet과 같이 간단한 구조의 경우, 아래 식을 사용하지 않더라도 금방 계산할 수 있다. 하지만 복잡한 구조를 가진 CNN의 경우, 아래 식이 경우에 따라 큰 도움이 될 수도 있다.)_
 
 <br>
 ##### Convolutional layer
