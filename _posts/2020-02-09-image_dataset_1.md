@@ -82,15 +82,6 @@ format1은 각 사진마다 다른 해상도를 가지고 있는데, 학습을 �
 
 <br>
 <br>
-### STL10
-
-paper: [An Analysis of Single-Layer Networks in Unsupervised Feature Learning](https://cs.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf)
-
-The STL-10 dataset is an image recognition dataset for developing unsupervised feature learning, deep learning, self-taught learning algorithms. It is inspired by the CIFAR-10 dataset but with some modifications. In particular, each class has fewer labeled training examples than in CIFAR-10, but a very large set of unlabeled examples is provided to learn image models prior to supervised training. The primary challenge is to make use of the unlabeled data (which comes from a similar but different distribution from the labeled data) to build a useful prior. We also expect that the higher resolution of this dataset (96x96) will make it a challenging benchmark for developing more scalable unsupervised learning methods.
-
-
-<br>
-<br>
 ### CIFAR-10
 
 <br>
@@ -147,7 +138,6 @@ Target의 경우 위와 같이 100개의 Classes로 구성되어 있으며, 그�
 
 _사실, 이 데이터셋에는 조그마한 오류가 있는데 버섯(mushrooms)의 경우 과일/야채(fruit or vegetables)가 아니고, 곰(bears)의 경우 육식동물이 아니다._ :)
 
-
 <br>
 <br>
 ### ImageNet
@@ -174,6 +164,33 @@ ImageNet Dataset의 경우, __ILSVRC: ImageNet Large Scale Visual Recognition Co
 총 21,841개 classes의 14,197,122개 데이터로 구성되어 있으며, 다양한 해상도의 image size로 구성되어 있다. 데이터셋 구성 내역에 대한 자세한 설명은 [이곳](http://image-net.org/about-stats)의 설명을 참고하면 된다.
 
 보통 $264 \times 264$ pixels로 crop된 sub-sampled images를 사용하는 것이 일반적이다.
+
+
+
+<br>
+<br>
+### STL-10
+
+<br>
+
+<center><img src = '/post_img/200209/image5.png' width="450"/></center>
+
+
+$$
+\begin{align*}
+\text{Num of classes: }&10\\
+\text{Size of images: }&96 \times 96\\
+\text{Training set: } &5000 \times 3 \times 96 \times 96\\
+\text{Test set: }&8000  \times 3 \times 96 \times 96\\
+\end{align*}
+$$
+
+paper: [An Analysis of Single-Layer Networks in Unsupervised Feature Learning](https://cs.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf)
+
+STL-10은 ImageNet 데이터셋의 labeled data에서 sampling하여 만든 데이터셋이며, 5,000개의 training 데이터와 8,000개의 test 데이터로 이루어져 있다. Unsupervised learning을 위한 labeling이 되어있지 않은 100,000개의 data 또한 함께 포함되어 있다.
+
+STL-10의 경우, $96 \times 96$ 크기의 해상도로 MNIST/SVHN/CIFAR10/CIFAR100에 비하여 비교적 큰 해상도를 가지고 있다.
+
 
 
 <br>
