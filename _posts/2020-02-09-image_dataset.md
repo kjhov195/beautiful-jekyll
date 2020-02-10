@@ -8,28 +8,38 @@ use_math: true
 
 <br>
 
+우선, 해당 포스트는 Stanford University School of Engineering의 [CS231n](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7) 강의자료와 고려대학교 [최윤제](https://github.com/yunjey/) 연구원님의 [Naver D2(Naver Engineering)](https://www.slideshare.net/NaverEngineering/1-gangenerative-adversarial-network) 발표 자료를 기본으로 하여 정리한 내용임을 밝힙니다.
 
-이번 포스트와 다음 포스트에서는 Computer Vision의 여러 Task에서 많이 사용되는 대표적인 데이터셋을 살펴보도록 하겠다. 이번 포스트에서는 Image Classification(Image Recognition) 문제에서 주로 사용되는 데이터셋들을 위주로 살펴보도록 하겠다.
+<br>
+<br>
+### Computer Vision Tasks
+
+Computer Vision에서 주로 다루게 되는 문제들은 크게 Classification/Sementic Segmentation/Object Detection/Instance Segmentation과 같이 4가지로 분류할 수 있다.
+
+이번 포스트에서는 Classification(Image Recognition) 문제에서 주로 사용되는 데이터셋들을 위주로 살펴보도록 하겠다.
 
 <br>
 <br>
 ### MNIST
 
-$
+<br>
+
+<center><img src = '/post_img/200209/image1.png' width="450"/></center>
+
+$$
 \begin{align*}
-database
+\text{Num of classes: } &10\\
+\text{Size of images: } &28 \times 28\\
+\text{Training set: } &60000 \times 1 \times 28 \times 28\\
+\text{Test set: } &10000  \times 1 \times 28 \times 28\\
 \end{align*}
-$
+$$
 
 MNIST 데이터셋은 손으로 쓴 숫자 이미지로 이루어진 대형 데이터셋이며, 60,000개의 Training dataset과 10,000개의 Test dataset으로 이루어져 있다.
 
-MNIST 데이터셋(Modified National Institute of Standards and Technology database)은 NIST의 오리지널 데이터셋의 샘플을 재가공하여 만들어졌다.
+각 데이터는 0에서 9까지의 자연수 중 하나에 대응되는 숫자에 대한 데이터이며, 하나의 데이터는 1×28×28, 총 784개의 픽셀의 색에 대한 정보를 담은 행렬이다. 각 픽셀에 대응되는 행렬의 성분은 0부터 255사이의 숫자를 가지고 있는데, 까만색에 가까운 픽셀일수록 0에 가까운 값을, 흰색에 가까운 픽셀일수록 255에 가까운 값을 가진다.
 
-MNIST의 Training set의 절반과 Test set의 절반은 NIST의 Training set에서 취합하였으며, 그 밖의 Training set의 절반과 Test set의 절반은 NIST의 Test set으로부터 취합되었다.
-
-
-각 데이터는 0에서 9까지의 자연수 중 하나에 대응되는 숫자에 대한 데이터이며, 1×28×28, 총 784개의 픽셀의 색에 대한 정보를 담은 행렬이다. 각 픽셀에 대응되는 행렬의 성분은 0부터 255사이의 숫자를 가지고 있는데, 까만색에 가까운 픽셀일수록 0에 가까운 값을, 흰색에 가까운 픽셀일수록 255에 가까운 값을 가지게 된다.
-
+MNIST 데이터셋(Modified National Institute of Standards and Technology database)은 NIST의 오리지널 데이터셋의 샘플을 재가공하여 만들어졌다. Training set의 절반과 Test set의 절반은 NIST의 Training set에서 취합하였으며, 그 밖의 Training set의 절반과 Test set의 절반은 NIST의 Test set으로부터 취합되었다고 한다.
 
 <br>
 <br>
