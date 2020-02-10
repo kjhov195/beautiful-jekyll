@@ -63,11 +63,11 @@ $$
 paper: [Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo Wu, Andrew Y. Ng Reading Digits in Natural Images with Unsupervised Feature Learning NIPS Workshop on Deep Learning and Unsupervised Feature Learning 2011.](http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf)
 
 
+SVHN은 Google Street View에서 수집된 숫자 데이터셋으로, MNIST와 마찬가지로 0부터 9까지 숫자 10개의 이미지로 이루어진 데이터셋이다. 차이점이 있다면 MNIST의 경우 손글씨에 대한 한 가지 채널의 색상(흑백)을 가진 이미지였으나, SVHN의 경우 건물 번호나 표지판과 같이 real-world에서 볼 수 있는 이미지로 이루어져 있다는 것이다. 또한, 세 가지 색상 채널(RGB)로 이루어져 있다는 차이점도 존재한다. SVHN은 73257개의 Training 데이터, 26032개의 Test 데이터로 구성되어 있다.
+
 <br>
 
 <center><img src = '/post_img/200209/image4.png' width="450"/></center>
-
-SVHN은 Google Street View에서 수집된 숫자 데이터셋으로, MNIST와 마찬가지로 0부터 9까지 숫자 10개의 이미지로 이루어진 데이터셋이다. 차이점이 있다면 MNIST의 경우 손글씨에 대한 한 가지 채널의 색상(흑백)을 가진 이미지였으나, SVHN의 경우 건물 번호나 표지판과 같이 real-world에서 볼 수 있는 이미지로 이루어져 있다는 것이다. 또한, 세 가지 색상 채널(RGB)로 이루어져 있다는 차이점도 존재한다. SVHN은 73257개의 Training 데이터, 26032개의 Test 데이터로 구성되어 있다.
 
 사실 SVHN format1의 경우, ```train.tar.gz, test.tar.gz , extra.tar.gz```와 같이 train/test/extra dataset으로 나누어져 있는데, 여분의 dataset인 531,131개의 extra dataset까지 모두 합칠 경우 600,000만장이 넘는 데이터셋이 된다. _extra dataset의 경우 분류 난이도가 비교적 쉬운 편이라고 한다._
 
