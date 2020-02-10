@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CNN Architecture(4)-ResNet
+title: CNN Architecture(4)-ResNet/SeNet
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
@@ -39,6 +39,9 @@ ResNet의 경우 초기에 $224 \times 224$의 image를 $56 \times 56$의 크기
 
 이 포스트는 현재 작성 중인 포스트입니다. 이 포스트는 현재 작성 중인 포스트입니다.
 
+<br>
+<br>
+### SeNet(2017)
 
 <br>
 <br>
