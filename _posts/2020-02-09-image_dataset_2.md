@@ -17,23 +17,11 @@ use_math: true
 
 <center><img src = '/post_img/200209/image10.jfif' width="450"/></center>
 
-$
-\begin{align*}
-\text{Num of classes: }&80\\
-\text{Num of data: }& \text{2.5 million labeled instances in 328k images}\\
-\end{align*}
-$
-
 paper: [Tsung-Yi Lin Et al.(2015), Microsoft COCO: Common Objects in Context](https://arxiv.org/pdf/1405.0312.pdf)
 
 COCO는 Common Object in Context의 줄임말로서, object detection, keypoint detection, stuff segmentation, panoptic segmentation, image captioning을 위한 데이터셋이다.
 
-Microsoft의 COCO Dataset은 약 33만개의 데이터로 구성되어 있으며, 여러 버전에 걸쳐 공개되었다. 각 데이터셋의 규모는 다음과 같다.
-
-train2017 : 118,287
-annotation (train2017) : 117,266
-val2017 : 5,000
-annotation (val2017) : 4,952
+Microsoft의 COCO Dataset은 약 33만개의 데이터로 구성되어 있으며, 여러 버전에 걸쳐 공개되었다.
 
 MS COCO paper에는 91개의 class라고 명시되어 있지만, 실제로는 80개의 class가 제공된다.
 
