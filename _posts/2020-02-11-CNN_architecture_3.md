@@ -14,7 +14,7 @@ use_math: true
 
 <center><img src = '/post_img/200211/image1.png' width="600"/></center>
 
-이번 포스트에서 살펴볼 모델은 ILSVRC'14의 Classification task에서 각각 2등과 1등을 차지한 VGG와 GoogLeNet이다. 그 중, 먼저 살펴볼 VGGNet의 경우 ILSVRC'14 Classification task에서는 2등, Localization task에서는 1등을 차지한 모델이다. VGG Net의 구조는 다음과 같다.
+이번 포스트에서 살펴볼 모델은 ILSVRC'14의 Classification task에서 각각 2등과 1등을 차지한 VGGNet와 GoogLeNet이다. 그 중, 먼저 살펴볼 VGGNet의 경우 ILSVRC'14 Classification task에서는 2등, Localization task에서는 1등을 차지한 모델이다. VGGNet의 구조는 다음과 같다.
 
 
 <br>
