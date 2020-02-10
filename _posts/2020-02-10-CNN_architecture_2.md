@@ -80,3 +80,5 @@ Zeiler는 Clarifai라는 회사를 세우고, 이 회사의 이름으로도 대�
 
 <br>
 <br>
+
+[CS231n](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7)
