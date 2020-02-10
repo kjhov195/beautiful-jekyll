@@ -29,7 +29,7 @@ paper: [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION, Simo
 
 VGG의 경우 앞선 포스트에서 살펴본 LeNet, AlexNet, ZFNet과는 확연히 다른 점이 존재한다.
 
-우선 VGG의 경우 Conv Layer와 Pooling layer의 Filter size를 일괄적으로 통일시켜 주었다. 앞서 살펴본 다른 모델들의 경우, Conv Layer의 Filter size를 바꿔주었는데, VGGNet의 경우 Convolutional Layer의 Filter size를 $3 \times 3 \text{ with stride 1, pad 1}$으로 고정시켰다.
+우선 VGG의 경우 Conv Layer와 Pooling layer의 Filter size를 일괄적으로 통일시켜 주었다. 앞서 살펴본 다른 모델들의 경우 Conv Layer마다 Filter size를 바꿔주었는데, VGGNet의 Convolutional Layer들은 Filter size를 $3 \times 3 \text{ with stride 1, pad 1}$으로 고정시켰다.
 
 $3 \times 3$의 작은 filter를 사용하는 것이 상당히 눈에 띄는데, VGGNet은 더 많은 수의, 더 작은 크기의 filter를 사용한다. 예를 들어, 3개의 $3 \times 3$ filters는 1개의 $7 \times 7$ filter와 같은 effective receptive field를 가지게 된다. 이로써 더 깊지만 더 적은 parameter를 가지는 convolutional layer를 만들 수 있게 된다. 실제로 계산해 보면, $3 \times 3^2 \times \text{(# of channels)}$는 $1 \times 7^2 \times \text{(# of channels)}$보다 더 적은 수임을 확인할 수 있다. Pooling layer의 filter size 또한 일괄적으로 $2 \times 2 \text{ with stride 2}$로 통일시켜 준 것을 확인할 수 있다.
 
