@@ -147,7 +147,7 @@ ImageNet Dataset의 경우, __ILSVRC: ImageNet Large Scale Visual Recognition Co
 
 총 21,841개 classes의 14,197,122개 데이터로 구성되어 있으며, 다양한 해상도의 image size로 구성되어 있다. 데이터셋 구성 내역에 대한 자세한 설명은 [이곳](http://image-net.org/about-stats)의 설명을 참고하면 된다.
 
-보통 $264 \times 264$ pixels로 crop된 sub-sampled images를 사용하는 것이 일반적이다.
+보통 $227 \times 227$ pixels로 crop된 sub-sampled images를 사용하는 것이 일반적이다.
 
 <br>
 <br>
