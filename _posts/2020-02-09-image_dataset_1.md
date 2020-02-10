@@ -17,7 +17,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200209/image1.png' width="450"/></center>
+<center><img src = '/post_img/200209/image1.png' width="600"/></center>
 
 
 Computer Vision에서 주로 다루게 되는 문제들은 크게 Classification/Sementic Segmentation/Object Detection/Instance Segmentation과 같이 4가지로 분류할 수 있다.
@@ -92,14 +92,19 @@ The STL-10 dataset is an image recognition dataset for developing unsupervised f
 <br>
 <br>
 ### CIFAR-10
-$
+
+<br>
+
+<center><img src = '/post_img/200209/image6.png' width="450"/></center>
+
+$$
 \begin{align*}
 \text{Num of classes: }&10\\
 \text{Size of images: }&32 \times 32\\
 \text{Training set: } &50000 \times 3 \times 32 \times 32\\
 \text{Test set: }&10000  \times 3 \times 32 \times 32\\
 \end{align*}
-$
+$$
 
 paper: [Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf)
 
@@ -118,14 +123,19 @@ Target의 경우 위와 같이 Airplane, Automobile, Bird, Cat, Deer, Dog, Frog,
 <br>
 <br>
 ### CIFAR100
-$
+
+<br>
+
+<center><img src = '/post_img/200209/image7.png' width="450"/></center>
+
+$$
 \begin{align*}
 \text{Num of classes: }&100\\
 \text{Size of images: }&32 \times 32\\
 \text{Training set: } &50000 \times 3 \times 32 \times 32\\
 \text{Test set: }&10000  \times 3 \times 32 \times 32\\
 \end{align*}
-$
+$$
 
 paper: [Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf)
 
@@ -141,12 +151,19 @@ _사실, 이 데이터셋에는 조그마한 오류가 있는데 버섯(mushroom
 <br>
 <br>
 ### ImageNet
-$
+
+
+<br>
+
+<center><img src = '/post_img/200209/image8.png' width="450"/></center>
+
+
+$$
 \begin{align*}
 \text{Num of classes: }&21841\\
 \text{Num of data: }&14197122\\
 \end{align*}
-$
+$$
 
 paper: [ImageNet: A Large-Scale Hierarchical Image Database, Jia Deng at el., 2009](http://www.image-net.org/papers/imagenet_cvpr09.pdf)
 
