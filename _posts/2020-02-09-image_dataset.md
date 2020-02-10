@@ -1,6 +1,6 @@
 ---
 layout: post
-title: image dataset(1)
+title: Image Dataset(1)
 subtitle: Deep Learning
 category: Deep Learning
 use_math: true
@@ -9,7 +9,7 @@ use_math: true
 <br>
 
 
-이번 포스트와 다음 포스트에서는 Computer Vision 분야에서 많이 사용되는 대표적인 데이터셋을 살펴보도록 하겠다. 이번 포스트에서는 Image Classification(Image Recognition) 문제에서 주로 사용되는 데이터셋들을 위주로 살펴보도록 하겠다.
+이번 포스트와 다음 포스트에서는 Computer Vision의 여러 Task에서 많이 사용되는 대표적인 데이터셋을 살펴보도록 하겠다. 이번 포스트에서는 Image Classification(Image Recognition) 문제에서 주로 사용되는 데이터셋들을 위주로 살펴보도록 하겠다.
 
 <br>
 <br>
@@ -17,10 +17,7 @@ use_math: true
 
 $
 \begin{align*}
-\text{Num of classes: }&10\\
-\text{Size of images: }&28 \times 28\\
-\text{Training set: } &60000 \times 1 \times 28 \times 28\\
-\text{Test set: }&10000  \times 1 \times 28 \times 28\\
+database
 \end{align*}
 $
 
@@ -139,7 +136,6 @@ MS COCO paper에는 91개의 class라고 명시되어 있지만, 실제로는 80
 https://www.cs.toronto.edu/~kriz/cifar.html
 
 https://laonple.blog.me/220643128255
-
 
 http://image-net.org/about-stats
 
