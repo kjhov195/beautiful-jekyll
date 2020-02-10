@@ -12,7 +12,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200211/image1.png' width="450"/></center>
+<center><img src = '/post_img/200211/image1.png' width="600"/></center>
 
 이번 포스트에서 살펴볼 모델은 ILSVRC'14의 Classification task에서 각각 2등과 1등을 차지한 VGG와 GoogLeNet이다. 그 중, 먼저 살펴볼 VGGNet의 경우 ILSVRC'14 Classification에서 2등, Localization에서 1등을 차지한 모델이다. VGG Net의 구조는 다음과 같다.
 
@@ -23,7 +23,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200211/image2.png' width="450"/></center>
+<center><img src = '/post_img/200211/image2.png' width="600"/></center>
 
 paper: [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION, Simonyan and Zisserman, 2014](https://arxiv.org/pdf/1409.1556.pdf)
 
@@ -45,7 +45,7 @@ VGGNet의 경우 전체적으로 모델의 뒷단으로 갈수록 feature map의
 
 <br>
 
-<center><img src = '/post_img/200211/image3.png' width="450"/></center>
+<center><img src = '/post_img/200211/image3.png' width="600"/></center>
 
 
 한 가지 눈여겨 볼만한 것은, VGGNet의 첫 번째 FC Layer의 parameter의 개수이다. 하나의 layer에서 약 1억개에 육박하는 parameter를 가지고 있는데, 이는 굉장히 비효율성을 가져오게 되며, overfitting을 해결하는데에도 도움이 되지 않는다.
@@ -58,7 +58,7 @@ VGGNet의 경우 전체적으로 모델의 뒷단으로 갈수록 feature map의
 
 <br>
 
-<center><img src = '/post_img/200211/image4.png' width="450"/></center>
+<center><img src = '/post_img/200211/image4.png' width="600"/></center>
 
 paper: [Going deeper with convolutions, Szegedy et al., 2014](https://arxiv.org/pdf/1409.4842.pdf)
 
@@ -68,25 +68,25 @@ GoogLeNet은 위와 같이 매우 복잡한 구조를 가지고 있다. 하지�
 
 <br>
 
-<center><img src = '/post_img/200211/image5.png' width="450"/></center>
+<center><img src = '/post_img/200211/image5.png' width="600"/></center>
 
 Computational complex하다는 단점이 존재한다. 실제로 위 그림에서 Filter Concatenation을 거쳐 나온 output의 dimension은 $28 \times 28 \times 672$가 되고, 이는 다음 inception module의 input이 된다. 여기서 계산해야하는 총 parameter의 수는 8억 5400만(854M)으로써 아주 많다는 것을 확인할 수 있다.
 
 <br>
 
-<center><img src = '/post_img/200211/image6.png' width="450"/></center>
+<center><img src = '/post_img/200211/image6.png' width="600"/></center>
 
 GoogLeNet은 Bottleneck layers를 Inception module에 도입하여 이러한 문제를 해결하게 된다. Bottleneck layer는 $1 \times 1$ convolutional layer를 의미하는데, 이를 사용함으로써 다음과 같이 dimension reduction 효과를 볼 수 있게 된다.
 
 <br>
 
-<center><img src = '/post_img/200211/image7.png' width="450"/></center>
+<center><img src = '/post_img/200211/image7.png' width="600"/></center>
 
 결과적으로 dimension reduction을 적용한 Inception module에서는 다음과 같이 3억 580만(358M) 개의 parameter를 가지게 되고, 이는 앞서 살펴본 개수보다 훨씬 줄어든 수임을 알 수 있다.
 
 <br>
 
-<center><img src = '/post_img/200211/image8.png' width="450"/></center>
+<center><img src = '/post_img/200211/image8.png' width="600"/></center>
 
 사실 Dimension reduction을 통하여 어느정도의 정보의 손실이 발생할 수 밖에 없지만, 이로 인해 잃는 것보다 각 Feature map들 간의 Linear combination을 통하여 얻을 수 있는 Nonlinearity의 장점이 더 크기 때문에 성능 또한 좋아지게 된다.
 
@@ -98,7 +98,7 @@ GoogLeNet은 Bottleneck layers를 Inception module에 도입하여 이러한 문
 
 <br>
 
-<center><img src = '/post_img/200211/image9.png' width="450"/></center>
+<center><img src = '/post_img/200211/image9.png' width="600"/></center>
 
 GoogLeNet의 한 가지 눈에 띄는 특징은 lower layers에서 추가적인 gradient를 반영해주기 위하여 만들어준 Auxilary classification outputs이다. 여기서는 모델의 중반 부분에서 따로 끊어서 마치 모델의 마지막 부분인 것처럼 FC Layer와 softmax를 거쳐 output을 만들어 준다. 이렇게 추가적으로 gradient를 계산할 수 있도록 만들어준 이유는 GoogLeNet이 아주 깊은 depth를 가지고 있기 때문이다. Networks가 너무 깊어서 마지막 loss term에서의 계산에서 시작되는 back propagation 과정은 gradients 중 일부의 signal을 약하게 만들 우려가 존재한다. 이를 방지하기 위하여 비교적 모델의 앞단에서 추가적으로 gradient 계산을 도울 수 있도록 만들어 준 것이라고 생각하면 된다.
 
