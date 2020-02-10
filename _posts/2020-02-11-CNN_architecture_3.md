@@ -64,7 +64,7 @@ GoogLeNet은 위와 같이 매우 복잡한 구조를 가지고 있다. 하지�
 
 <center><img src = '/post_img/200211/image5.png' width="600"/></center>
 
-Computationally complex하다는 단점이 존재한다. 실제로 위 그림에서 Filter Concatenation을 거쳐 나온 output의 dimension은 $28 \times 28 \times 672$가 되고, 이는 다음 inception module의 input이 된다. 여기서 계산해야하는 총 parameter의 수는 8억 5400만(854M)으로써 아주 많다는 것을 확인할 수 있다.
+Computationally complex하다는 단점이 존재한다. 실제로 위 그림에서 Filter Concatenation을 거쳐 나온 output의 dimension은 $28 \times 28 \times 672$가 되고, 이는 다음 inception module의 input이 된다. 여기서 계산해야하는 총 parameter의 수는 8억 5400만(854M)으로써 매우 많다는 것을 확인할 수 있다.
 
 <br>
 
@@ -84,17 +84,21 @@ GoogLeNet은 Inception module에 Bottleneck layers를 도입하여 이러한 문
 
 사실 Dimension reduction을 통하여 어느정도의 정보의 손실이 발생할 수 밖에 없지만, 이로 인해 잃는 것보다 각 Feature map들 간의 Linear combination을 통하여 얻을 수 있는 Nonlinearity의 장점이 더 크기 때문에 성능 또한 좋아지게 된다.
 
-한 가지 주목할 만한 점은 마지막 단에서 FC Layer를 완벽하게 제거하고, Average Pooling Layer를 대신 사용하였다는 점이다. 앞서 살펴보았던 VGGNet의 경우 FC Layer의 과도한 Parameter의 수가 단점이 되었는데, GoogLeNet의 경우 FC Layer를 Average Pooling Layer로 대체해줌으로써 Parameter의 수를 훨씬 더 줄일 수 있게 된다. 그 결과 AlexNet은 6000만 개(60M), VGGNet(VGG16)은 1억 3800만 개(138M)의 parameters를 가지고 있는 것에 비하여 GoogLeNet은 겨우 5백만 개(5M)의 parameters밖에 가지지 않는다.
+한 가지 주목할 만한 점은 마지막 단에서 FC Layer를 완벽하게 제거하고, Average Pooling Layer를 대신 사용하였다는 점이다. 앞서 살펴보았던 VGGNet의 경우 FC Layer의 과도한 Parameter의 수가 단점이 되었는데, GoogLeNet의 경우 FC Layer를 Average Pooling Layer로 대체해줌으로써 Parameter의 수를 훨씬 더 줄일 수 있게 된다. 그 결과 AlexNet은 6000만 개(60M), VGGNet(VGG16)은 1억 3800만 개(138M)의 parameters를 가지고 있는 것에 비하여 GoogLeNet은 겨우 5백만 개(5M)의 parameters밖에 가지지 않게 된다.
 
 <br>
 
 <center><img src = '/post_img/200211/image9.png' width="600"/></center>
 
-GoogLeNet의 한 가지 눈에 띄는 특징은 lower layers에서 추가적인 gradient를 반영해주기 위하여 만들어준 Auxilary classification outputs이다. 여기서는 모델의 중반 부분에서 따로 끊어서 마치 모델의 마지막 부분인 것처럼 FC Layer와 softmax를 거쳐 output을 만들어 준다. 이렇게 추가적으로 gradient를 계산할 수 있도록 만들어준 이유는 GoogLeNet이 아주 깊은 depth를 가지고 있기 때문이다. Networks가 너무 깊을 경우, 마지막 loss term에서의 계산에서 시작되는 back propagation 과정은 gradients 중 일부의 signal을 약하게 만들 우려가 존재한다. 이를 방지하기 위하여 비교적 모델의 앞단에서 추가적으로 gradient 계산을 도울 수 있도록 만들어 준 것이라고 생각하면 된다.
+한 가지 눈에 띄는 GoogLeNet의 특징은 lower layers에서 추가적인 gradient를 반영해주기 위하여 만들어준 Auxilary classification outputs이 존재한다는 것이다.
+
+여기에서는 모델의 중반 부분에서 따로 끊어서 마치 모델의 마지막 부분인 것처럼 FC Layer와 softmax를 거쳐 output을 만들어 준다. 이렇게 추가적으로 gradient를 계산할 수 있도록 만들어준 이유는 GoogLeNet이 아주 깊은 depth를 가지고 있기 때문이다.
+
+Networks가 너무 깊을 경우, 마지막 loss term에서의 계산에서 시작되는 back propagation 과정은 gradients 중 일부의 signal을 약하게 만들 우려가 존재한다. 이를 방지하기 위하여 비교적 모델의 앞단에서 추가적으로 gradient 계산을 도울 수 있도록 만들어 준 것이라고 생각하면 된다.
 
 GoogLeNet의 경우 ILSVRC 2013의 11.7% top-5 error 기록을 6.7%로 갱신하며 ILSVRC 2014에서 우승을 차지한다.
 
-다만 위와 같이 GoogLeNet의 매우 복잡한 구조에 비하여, 2등을 기록하였지만 훨씬 더 간단한 구조의 VGGNet을 일반적으로 더 많이 사용한다.
+다만 위와 같이 GoogLeNet의 매우 복잡한 구조에 비하여, 2등을 기록하였지만 훨씬 더 간단한 구조의 VGGNet을 일반적으로 더 많이 사용하는 경향이 있다.
 
 <br>
 <br>
