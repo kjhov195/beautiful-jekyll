@@ -41,11 +41,13 @@ $$
 \end{align*}
 $$
 
+paper: [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)
+
 MNIST 데이터셋은 손으로 쓴 숫자 이미지로 이루어진 대형 데이터셋이며, 60,000개의 Training dataset과 10,000개의 Test dataset으로 이루어져 있다.
 
 각 데이터는 0에서 9까지의 자연수 중 하나에 대응되는 숫자에 대한 데이터이며, 하나의 데이터는 1×28×28, 총 784개의 픽셀의 색에 대한 정보를 담은 행렬이다. 각 픽셀에 대응되는 행렬의 성분은 0부터 255사이의 숫자를 가지고 있는데, 까만색에 가까운 픽셀일수록 0에 가까운 값을, 흰색에 가까운 픽셀일수록 255에 가까운 값을 가진다.
 
-MNIST 데이터셋(Modified National Institute of Standards and Technology database)은 NIST의 오리지널 데이터셋의 샘플을 재가공하여 만들어졌다. Training set의 절반과 Test set의 절반은 NIST의 Training set에서 취합하였으며, 그 밖의 Training set의 절반과 Test set의 절반은 NIST의 Test set으로부터 취합되었다고 한다.
+MNIST 데이터셋(Modified National Institute of Standards and Technology database)은 [NIST](https://www.nist.gov/system/files/documents/srd/nistsd19.pdf)의 샘플을 재가공하여 만들어졌다. Training set의 절반과 Test set의 절반은 NIST의 Training set에서 취합하였으며, 그 밖의 Training set의 절반과 Test set의 절반은 NIST의 Test set으로부터 취합되었다고 한다.
 
 <br>
 <br>
@@ -73,14 +75,18 @@ paper: [Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo Wu, Andrew 
 
 SVHN은 Google Street View에서 수집된 숫자 데이터셋으로, MNIST와 마찬가지로 0부터 9까지 숫자 10개의 이미지로 이루어진 데이터셋이다. 차이점이 있다면 MNIST의 경우 손글씨에 대한 한 가지 채널의 색상(흑백)을 가진 이미지였으나, SVHN의 경우 건물 번호나 표지판과 같이 real-world에서 볼 수 있는 이미지로 이루어져 있다는 것이다. 또한, 세 가지 색상 채널(RGB)로 이루어져 있다는 차이점도 존재한다. SVHN은 73257개의 Training 데이터, 26032개의 Test 데이터로 구성되어 있다.
 
-사실 SVHN format1의 경우, ```train.tar.gz, test.tar.gz , extra.tar.gz```와 같이 train/test/extra dataset으로 나누어져 있는데, 여분의 dataset인 extra dataset까지 모두 합칠 경우 600,000만장이 넘는 데이터셋이 된다. format1은 각 사진마다 다른 해상도를 가지고 있는데, 학습을 위한 전처리로 $32 \times 32$ 사이즈로 crop한 SVHN format2 데이터셋이 우리가 주로 사용하는 SVHN 데이터셋이다.
+사실 SVHN format1의 경우, ```train.tar.gz, test.tar.gz , extra.tar.gz```와 같이 train/test/extra dataset으로 나누어져 있는데, 여분의 dataset인 531,131개의 extra dataset까지 모두 합칠 경우 600,000만장이 넘는 데이터셋이 된다. _extra dataset의 경우 분류 난이도가 비교적 쉬운 편이라고 한다._
+
+format1은 각 사진마다 다른 해상도를 가지고 있는데, 학습을 위한 전처리로 $32 \times 32$ 사이즈로 crop한 SVHN format2 데이터셋이 우리가 주로 사용하는 SVHN 데이터셋이다.
 
 
 <br>
 <br>
 ### STL10
 
+paper: [An Analysis of Single-Layer Networks in Unsupervised Feature Learning](https://cs.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf)
 
+The STL-10 dataset is an image recognition dataset for developing unsupervised feature learning, deep learning, self-taught learning algorithms. It is inspired by the CIFAR-10 dataset but with some modifications. In particular, each class has fewer labeled training examples than in CIFAR-10, but a very large set of unlabeled examples is provided to learn image models prior to supervised training. The primary challenge is to make use of the unlabeled data (which comes from a similar but different distribution from the labeled data) to build a useful prior. We also expect that the higher resolution of this dataset (96x96) will make it a challenging benchmark for developing more scalable unsupervised learning methods.
 
 
 <br>
@@ -96,7 +102,6 @@ $
 $
 
 paper: [Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf)
-
 
 CIFAR는 Canadian Institute For Advanced Research의 줄임말이다.
 
@@ -166,8 +171,11 @@ http://image-net.org/about-stats
 
 https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk
 
+[THE MNIST DATABASE of handwritten digits](http://yann.lecun.com/exdb/mnist/index.html)
 
 [The Street View House Numbers (SVHN) Dataset](http://ufldl.stanford.edu/housenumbers/)
+
+[STL-10 dataset](http://ai.stanford.edu/~acoates/stl10/)
 
 [cifar](https://www.cs.toronto.edu/~kriz/cifar.html)
 
