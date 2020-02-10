@@ -24,9 +24,9 @@ use_math: true
 paper: [LeCun et al.(1998), GradientBased Learning Applied to Document
 Recognition](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)
 
-우리가 알고 있는 CNN(Convolutional Neural Networks)를 가장 처음 도입한 사람은 프랑스의 얀 르쿤(Yann LeCun)이라는 사람이며, 현재는 Facebook의 Vice President, Chief AI Scientist를 맡고 있다.
+우리가 알고 있는 CNN(Convolutional Neural Networks)를 가장 처음 도입한 사람은 프랑스의 얀 르쿤(Yann LeCun)이며, 현재는 Facebook의 Vice President, Chief AI Scientist를 맡고 있다.
 
-LeNet의 경우 LeNet-1부터 LeNet-5까지 다양한 버전으로 존재한다. LeNet-1의 경우 1990년에 발표되었으며, LeNet-5의 초기 모델로 볼 수 있다.
+LeNet의 경우 LeNet-1부터 LeNet-5까지 다양한 버전으로 존재한다. LeNet-1의 경우 1990년에 발표되었으며, 비교적 가장 최신의 LeNet에 해당하는 LeNet-5의 초기 모델로 볼 수 있다.
 
 <br>
 <br>
