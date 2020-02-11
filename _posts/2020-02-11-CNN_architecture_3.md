@@ -64,7 +64,7 @@ GoogLeNet은 위와 같이 매우 복잡한 구조를 가지고 있다. 하지�
 
 <center><img src = '/post_img/200211/image5.png' width="600"/></center>
 
-Computationally complex하다는 단점이 존재한다. 실제로 위 그림에서 Filter Concatenation을 거쳐 나온 output의 dimension은 $28 \times 28 \times 672$가 되고, 이는 다음 inception module의 input이 된다. 여기서 계산해야하는 총 parameter의 수는 8억 5400만(854M)으로써 매우 많다는 것을 확인할 수 있다.
+GoogLeNet의 경우 Computationally complex하다는 단점이 존재한다. 실제로 위 그림에서 Filter Concatenation을 거쳐 나온 output의 dimension은 $28 \times 28 \times 672$가 되고, 이는 다음 inception module의 input이 된다. 여기서 계산해야하는 총 parameter의 수는 8억 5400만(854M)으로써 매우 많다는 것을 확인할 수 있다.
 
 <br>
 
