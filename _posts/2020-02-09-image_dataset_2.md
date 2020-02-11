@@ -15,7 +15,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200209/image10.jfif' width="450"/></center>
+<center><img src = '/post_img/200209/image10.jfif' width="600"/></center>
 
 paper: [Tsung-Yi Lin Et al.(2015), Microsoft COCO: Common Objects in Context](https://arxiv.org/pdf/1405.0312.pdf)
 
@@ -31,7 +31,7 @@ MS COCO paper에는 91개의 class라고 명시되어 있지만, 실제로는 80
 
 <br>
 
-<center><img src = '/post_img/200209/image11.png' width="450"/></center>
+<center><img src = '/post_img/200209/image11.png' width="600"/></center>
 
 paper: [Mark Everingham, Luc Van Gool, Christopher K. I. Williams, John Winn(2010), Andrew ZissermanThe PASCAL Visual Object Classes (VOC) Challenge](http://host.robots.ox.ac.uk/pascal/VOC/pubs/everingham10.pdf)
 

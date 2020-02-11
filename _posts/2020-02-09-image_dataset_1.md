@@ -141,9 +141,9 @@ $$
 
 paper: [Jia Deng Et al.(2009), ImageNet: A Large-Scale Hierarchical Image Database](http://www.image-net.org/papers/imagenet_cvpr09.pdf)
 
-Stanford University의 Li Fei-Fei 교수를 중심으로 데이터베이스가 제작되었으며, Google, Microsoft와 같은 기업 또한 함께 참여하여 제작한 데이터셋이다.
+Stanford University의 Li Fei-Fei 교수를 중심으로 제작되었으며, Google, Microsoft와 같은 기업 또한 함께 참여하여 제작한 데이터셋이다.
 
-ImageNet Dataset의 경우, __ILSVRC: ImageNet Large Scale Visual Recognition Competition__ 에서 사용되는 것으로 유명하다.
+ImageNet Dataset의 경우, __ILSVRC: ImageNet Large Scale Visual Recognition Competition__ 에서 사용되는 데이터셋으로 유명하다.
 
 총 21,841개 classes의 14,197,122개 데이터로 구성되어 있으며, 다양한 해상도의 image size로 구성되어 있다. 데이터셋 구성 내역에 대한 자세한 설명은 [이곳](http://image-net.org/about-stats)의 설명을 참고하면 된다.
 
