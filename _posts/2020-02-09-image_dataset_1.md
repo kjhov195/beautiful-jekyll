@@ -105,7 +105,7 @@ Target의 label은 Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship
 
 <br>
 
-<center><img src = '/post_img/200209/image7.png' width="450"/></center>
+<center><img src = '/post_img/200209/image7.png' width="600"/></center>
 
 $$
 \begin{align*}
@@ -130,7 +130,7 @@ _사실, 이 데이터셋에는 조그마한 오류가 있는데 버섯(mushroom
 
 <br>
 
-<center><img src = '/post_img/200209/image8.png' width="450"/></center>
+<center><img src = '/post_img/200209/image8.png' width="600"/></center>
 
 $$
 \begin{align*}
