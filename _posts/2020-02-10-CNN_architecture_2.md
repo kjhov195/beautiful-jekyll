@@ -12,7 +12,7 @@ ILSVRC는 2010년부터 2017년까지 개최된 ImageNet dataset에 대한 Image
 
 <br>
 
-<center><img src = '/post_img/200210/image3.png' width="600"/></center>
+<center><img src = '/post_img/200210/image3.png' width="700"/></center>
 
 ImageNet 데이터셋에 대한 Image Classification Task의 경우 이미 2015년부터 인간의 Error Rate(5.1%)를 뛰어넘어 3.6%에 도달하였으며, 마지막 대회인 2017년의 경우 2.3%의 Error Rate을 달성하게 된다.
 
@@ -24,7 +24,7 @@ ImageNet 데이터셋에 대한 Image Classification Task의 경우 이미 2015�
 
 <br>
 
-<center><img src = '/post_img/200210/image4.png' width="600"/></center>
+<center><img src = '/post_img/200210/image4.png' width="700"/></center>
 
 paper: [ImageNet Classification with Deep Convolutional Neural Networks, Krizhevsky et al., 2012](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
 
@@ -64,7 +64,7 @@ AlexNet의 역사적으로 중요한 의미를 가지는데, AlexNet은 최초�
 
 <br>
 
-<center><img src = '/post_img/200210/image6.png' width="600"/></center>
+<center><img src = '/post_img/200210/image6.png' width="700"/></center>
 
 paper: [Visualizing and Understanding Convolutional Networks, Zeiler and Fergus, 2013](https://arxiv.org/abs/1311.2901)
 
