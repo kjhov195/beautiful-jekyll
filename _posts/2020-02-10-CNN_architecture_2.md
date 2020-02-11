@@ -85,3 +85,7 @@ Zeiler는 Clarifai라는 회사를 세우고, 이 회사의 이름으로도 대�
 ### Reference
 
 [CS231n](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7)
+
+[Krizhevsky et al.(2012), ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
+
+[Zeiler and Fergus(2013), Visualizing and Understanding Convolutional Networks](https://arxiv.org/abs/1311.2901)

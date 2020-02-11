@@ -154,6 +154,6 @@ $$
 <br>
 ### Reference
 
-[GradientBased Learning Applied to Document Recognition, LeCun et al.(1998)](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)
+[LeCun et al.(1998), GradientBased Learning Applied to Document Recognition](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)
 
 [Review: LeNet-1, LeNet-4, LeNet-5, Boosted LeNet-4 (Image Classification)](https://medium.com/@sh.tsang/paper-brief-review-of-lenet-1-lenet-4-lenet-5-boosted-lenet-4-image-classification-1f5f809dbf17)
