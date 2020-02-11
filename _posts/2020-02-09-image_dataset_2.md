@@ -39,7 +39,7 @@ Pascal VOC는 object detection을 위한 데이터셋이다.
 
 2005년부터 2012년까지 열린 Pascal VOC Challenge에서 사용된 데이터셋이다. Pascal VOC Challenge는 현재는 더이상 진행되지 않는 대회이지만, Pascal VOC data는 여전히 많이 사용되고 있는 데이터셋이다.
 
-덧붙여, 대회는 종료되었지만 여전히 [PASCAL VOC Evaluation Server](http://host.robots.ox.ac.uk:8080/)에서 Pascal VOC 데이터셋에 대한 evaluation 결과 현황을 확인할 수 있다.
+대회는 종료되었지만 여전히 [PASCAL VOC Evaluation Server](http://host.robots.ox.ac.uk:8080/)에서 Pascal VOC 데이터셋에 대한 evaluation 결과 현황를 확인할 수 있다.
 
 <br>
 <br>
