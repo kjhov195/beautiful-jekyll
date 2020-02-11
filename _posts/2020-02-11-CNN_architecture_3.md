@@ -37,7 +37,7 @@ $3 \times 3$의 작은 filter를 사용하는 것이 상당히 눈에 띄는데,
 
 <br>
 
-<center><img src = '/post_img/200211/image3.png' width="700"/></center>
+<center><img src = '/post_img/200211/image3.png' width="800"/></center>
 
 VGGNet의 경우 전체적으로 모델의 뒷단으로 갈수록 feature map의 size는 점차 줄어들면서 filter의 개수는 점차 늘어나도록 구성되어 있다는 특징을 가지고 있다.
 
