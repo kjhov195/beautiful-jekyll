@@ -8,7 +8,7 @@ use_math: true
 
 ### ILSVRC
 
-ILSVRC는 2010년부터 2017년까지 개최된 ImageNet dataset에 대한 Image Recognition 대회이다.
+ILSVRC는 2010년부터 2017년까지 개최된 ImageNet dataset에 대한 Image Recognition(Classification) 대회이다. ImageNet dataset에 대한 설명은 [이 포스트](https://kjhov195.github.io/2020-02-09-image_dataset_1/)에 정리해 두었다.
 
 <br>
 
