@@ -14,7 +14,7 @@ ILSVRC는 2010년부터 2017년까지 개최된 ImageNet dataset에 대한 Image
 
 <center><img src = '/post_img/200210/image3.png' width="700"/></center>
 
-ImageNet 데이터셋에 대한 Image Classification Task의 경우 이미 2015년부터 인간의 Error Rate(5.1%)를 뛰어넘어 3.6%에 도달하였으며, 마지막 대회인 2017년의 경우 2.3%의 Error Rate을 달성하게 된다.
+ImageNet 데이터셋에 대한 Image Classification Task의 경우 이미 2015년부터 인간의 Error Rate(5.1%)를 뛰어넘어 3.6%에 도달하였으며, 마지막 대회인 2017년의 경우 2.3%의 Error Rate를 달성하게 된다.
 
 이번 포스트에서는 최초로 CNN 기반의 모델로 우승을 거머쥔 AlexNet(2012)과 이를 발전시킨 모델인 ZFNet(2013)을 살펴보도록 하겠다.
 
@@ -48,7 +48,7 @@ $$ {(55-3) \over 2} + 1 = 27$$
 
 결과적으로 AlexNet의 $227 \times 227 \times 3$의 input을 주면, ImageNet dataset의 class 수인 1000개의 class scores가 나오도록 구성되어 있는 것을 확인할 수 있다.
 
-참고로 NORM1/NORM2라는 Normalization layer가 눈에 띄는데, 해당 논문이 나온 2012년에는 많이 사용되던 Layer였지만, 이후에는 해당 Layer의 효용성이 낮다고 판단하여 더이상 사용되지 않고 있는 Layer 종류이다.
+참고로 NORM1/NORM2라는 Normalization layer가 눈에 띄는데, 해당 논문이 나온 2012년 당시에는 많이 사용되곤 하였던 Layer지만, 이후에는 해당 Layer의 효용성이 낮다고 판단하여 더이상 사용되지 않고 있는 Layer 종류이다.
 
 <br>
 
