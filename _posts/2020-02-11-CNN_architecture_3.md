@@ -25,7 +25,7 @@ use_math: true
 
 <center><img src = '/post_img/200211/image2.png' width="600"/></center>
 
-paper: [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION, Simonyan and Zisserman, 2014](https://arxiv.org/pdf/1409.1556.pdf)
+paper: [Simonyan and Zisserman(2014), VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf)
 
 VGG의 경우 앞선 포스트에서 살펴본 LeNet, AlexNet, ZFNet과는 확연히 다른 점이 존재한다.
 
@@ -54,7 +54,7 @@ VGGNet은 7.3%의 error rate로 ILSVRC 2013 Clarifai's ZFNet의 11.7% top-5 erro
 
 <center><img src = '/post_img/200211/image4.png' width="700"/></center>
 
-paper: [Going deeper with convolutions, Szegedy et al., 2014](https://arxiv.org/pdf/1409.4842.pdf)
+paper: [Szegedy et al.(2014), Going deeper with convolutions](https://arxiv.org/pdf/1409.4842.pdf)
 
 GoogLeNet은 위와 같이 매우 복잡한 구조를 가지고 있다. 하지만 부분 부분 살펴보면, 여러개의 Inception module로 이루어져 있다는 것을 확인할 수 있다.
 
@@ -105,3 +105,7 @@ GoogLeNet의 경우 ILSVRC 2013의 11.7% top-5 error 기록을 6.7%로 갱신하
 ### Reference
 
 [CS231n](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7)
+
+[Simonyan and Zisserman(2014), VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf)
+
+[Szegedy et al.(2014), Going deeper with convolutions](https://arxiv.org/pdf/1409.4842.pdf)
