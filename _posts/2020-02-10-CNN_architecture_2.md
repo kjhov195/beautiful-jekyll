@@ -26,7 +26,7 @@ ImageNet 데이터셋에 대한 Image Classification Task의 경우 이미 2015�
 
 <center><img src = '/post_img/200210/image4.png' width="700"/></center>
 
-paper: [ImageNet Classification with Deep Convolutional Neural Networks, Krizhevsky et al., 2012](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
+paper: [Krizhevsky et al.(2012), ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
 
 위 그림이 살짝 짤려있는데 그림을 잘못 가져온 것이 아니라, 원래 논문에 이렇게 들어가 있다. 또한, 위 그림에서는 224로 되어있지만 오타로 알려져 있으며, input의 크기는 $227 \times 227 \times 3$을 받는다고 생각하면 된다.
 
@@ -66,7 +66,7 @@ AlexNet의 역사적으로 중요한 의미를 가지는데, AlexNet은 최초�
 
 <center><img src = '/post_img/200210/image6.png' width="700"/></center>
 
-paper: [Visualizing and Understanding Convolutional Networks, Zeiler and Fergus, 2013](https://arxiv.org/abs/1311.2901)
+paper: [Zeiler and Fergus(2013), Visualizing and Understanding Convolutional Networks](https://arxiv.org/abs/1311.2901)
 
 ZFNet은 기본적으로 AlexNet과 아주 유사한 구조를 가지고 있다.
 

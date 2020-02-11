@@ -12,7 +12,7 @@ use_math: true
 
 <br>
 
-<center><img src = '/post_img/200211/image1.png' width="600"/></center>
+<center><img src = '/post_img/200211/image1.png' width="700"/></center>
 
 이번 포스트에서 살펴볼 모델은 ILSVRC'14의 Classification task에서 각각 2등과 1등을 차지한 VGGNet와 GoogLeNet이다. 그 중, 먼저 살펴볼 VGGNet의 경우 ILSVRC'14 Classification task에서는 2등, Localization task에서는 1등을 차지한 모델이다. VGGNet의 구조는 다음과 같다.
 
@@ -37,7 +37,7 @@ $3 \times 3$의 작은 filter를 사용하는 것이 상당히 눈에 띄는데,
 
 <br>
 
-<center><img src = '/post_img/200211/image3.png' width="600"/></center>
+<center><img src = '/post_img/200211/image3.png' width="700"/></center>
 
 VGGNet의 경우 전체적으로 모델의 뒷단으로 갈수록 feature map의 size는 점차 줄어들면서 filter의 개수는 점차 늘어나도록 구성되어 있다는 특징을 가지고 있다.
 
@@ -52,7 +52,7 @@ VGGNet은 7.3%의 error rate로 ILSVRC 2013 Clarifai's ZFNet의 11.7% top-5 erro
 
 <br>
 
-<center><img src = '/post_img/200211/image4.png' width="600"/></center>
+<center><img src = '/post_img/200211/image4.png' width="700"/></center>
 
 paper: [Going deeper with convolutions, Szegedy et al., 2014](https://arxiv.org/pdf/1409.4842.pdf)
 
@@ -88,7 +88,7 @@ GoogLeNet은 Inception module에 Bottleneck layers를 도입하여 이러한 문
 
 <br>
 
-<center><img src = '/post_img/200211/image9.png' width="600"/></center>
+<center><img src = '/post_img/200211/image9.png' width="700"/></center>
 
 한 가지 눈에 띄는 GoogLeNet의 특징은 lower layers에서 추가적인 gradient를 반영해주기 위하여 만들어준 Auxilary classification outputs이 존재한다는 것이다.
 
