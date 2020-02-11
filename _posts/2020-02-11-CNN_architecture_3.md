@@ -41,7 +41,7 @@ $3 \times 3$의 작은 filter를 사용하는 것이 상당히 눈에 띄는데,
 
 VGGNet의 경우 전체적으로 모델의 뒷단으로 갈수록 feature map의 size는 점차 줄어들면서 filter의 개수는 점차 늘어나도록 구성되어 있다는 특징을 가지고 있다.
 
-한 가지 눈여겨 볼만한 것은, VGGNet의 첫 번째 FC Layer의 parameter의 개수이다. 하나의 layer에서 약 1억개에 육박하는 parameter를 가지고 있는데, 이때문에 굉장히 비효율적인 training이 이루어지게 되며, 이는 overfitting을 해결하는데에도 전혀 도움이 되지 않는다.
+VGGNet의 첫 번째 FC Layer의 parameter의 개수를 눈여겨 볼 만 한데, 하나의 layer에서 약 1억개에 육박하는 parameter를 가지고 있는 것을 확인할 수 있다. 이 때문에 굉장히 비효율적인 training이 이루어지게 되며, overfitting을 해결하는데에도 전혀 도움을 주지 못한다.
 
 VGGNet은 7.3%의 error rate로 ILSVRC 2013 Clarifai's ZFNet의 11.7% top-5 error rate를 넘어서면서 ILSVRC 2014에서 2등을 차지하게 된다.
 
