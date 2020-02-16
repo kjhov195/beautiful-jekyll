@@ -6,6 +6,12 @@ category: Deep Learning
 use_math: true
 ---
 
+<br>
+
+우선, 해당 포스트는 Stanford University School of Engineering의 [CS231n](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7) 강의자료를 기본으로 하여 정리한 내용임을 밝힙니다.
+
+<br>
+<br>
 ### ILSVRC
 
 ILSVRC는 2010년부터 2017년까지 개최된 ImageNet dataset에 대한 Image Recognition(Classification) 대회이다. ImageNet dataset에 대한 설명은 [이 포스트](https://kjhov195.github.io/2020-02-09-image_dataset_1/)에 정리해 두었다.

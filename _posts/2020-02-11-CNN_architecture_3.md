@@ -7,6 +7,10 @@ use_math: true
 ---
 
 <br>
+
+우선, 해당 포스트는 Stanford University School of Engineering의 [CS231n](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7) 강의자료를 기본으로 하여 정리한 내용임을 밝힙니다.
+
+<br>
 <br>
 ### ILSVRC'14
 
