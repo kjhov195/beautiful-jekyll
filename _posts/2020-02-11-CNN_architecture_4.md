@@ -54,7 +54,7 @@ ResNet을 만든 He는 깊은 구조의 CNN의 performance가 좋지 않은 것�
 
 <br>
 
-<center><img src = '/post_img/200211/image11.png' width="700"/></center>
+<center><img src = '/post_img/200211/image13.png' width="700"/></center>
 
 ResNet은 __skip connection(Residual Block)__ 이라는 개념을 도입하여 이 문제를 해결한다.
 
