@@ -81,4 +81,6 @@ ResNet의 경우 이러한 문제를 해결하게 되고, ILSVRC'14까지 선보
 <br>
 ### Reference
 
+[CS231n](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7)
+
 [He et al.(2015), Deep Residual Learning for Image Recognition](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
