@@ -14,10 +14,6 @@ use_math: true
 <br>
 ### ILSVRC'15
 
-<br>
-
-<center><img src = '/post_img/200211/image10.png' width="700"/></center>
-
 이번 포스트에서 살펴볼 모델은 ILSVRC'15의 Classification task에서 1등을 차지한 ResNet을 살펴보도록 하겠다.
 
 <br>
