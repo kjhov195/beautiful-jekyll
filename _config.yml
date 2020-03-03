@@ -193,7 +193,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # 블로그 댓글 기능 true
+      comments: true
       share: true
       related: true
 
