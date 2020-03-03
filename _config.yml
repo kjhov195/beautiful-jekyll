@@ -123,6 +123,20 @@ share-links-active:
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
 # disqus: ""
+comments:
+  provider               : "disqus" # 블로그 댓글 기능 false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  disqus:
+    shortname            : "kjhov195-github-io" # 블로그 댓글 기능 https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
+  utterances:
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
 
 # If you want to use JustComments fill with the API Key
 #just-comments: "ABCD-EFGH-IJKL"
@@ -171,20 +185,29 @@ kramdown:
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
-  -
-    scope:
+  # _posts
+  - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: "post"
-      comments: true  # add comments to all blog posts
-      social-share: true # add social media sharing buttons to all blog posts
-  -
-    scope:
-      path: "" # all files
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true  # 블로그 댓글 기능 true
+      share: true
+      related: true
+
+  # _pages
+  - scope:
+      path: ""
+      type: pages
     values:
-      layout: "page"
-      show-avatar: true
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: true
+      related: false
 
 # Use tags index page and make tags on each post clickable
 link-tags: true
