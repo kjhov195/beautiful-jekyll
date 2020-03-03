@@ -10,8 +10,6 @@ The loss function extremely affects the performance of a model. How the loss fun
 
 This paper proposes an extended cross-entropy loss function that complements the crossentropy loss function.
 
-<br>
-
 <center><img src = '/research_img/K-001.png' width="550"/></center>
 
 For SVHN, CIFAR-10, CIFAR-100, and STL-10 dataset, we evaluated the accuracy of convolutional neural networks with various structures. In most cases, assuming all the other conditions in same state, the results of the extended cross-entropy loss function were found to increase the classification accuracy
