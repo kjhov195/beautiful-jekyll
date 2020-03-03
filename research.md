@@ -12,7 +12,7 @@ This paper proposes an extended cross-entropy loss function that complements the
 
 <center><img src = '/research_img/image1.png' width="550"/></center>
 
-For SVHN, CIFAR-10, CIFAR-100, and STL-10 dataset, we evaluated the accuracy of convolutional neural networks with various structures. In most cases, assuming all the other conditions in same state, the results of the extended cross-entropy loss function were found to increase the classification accuracy
+For SVHN, CIFAR-10, CIFAR-100, and STL-10 dataset, we evaluated test accuracies of convolutional neural networks with various structures. In most cases, assuming all the other conditions in same state, the results of the extended cross-entropy loss function were found to increase the classification accuracy
 compared to the existing cross-entropy loss function applied.
 
 <br>
