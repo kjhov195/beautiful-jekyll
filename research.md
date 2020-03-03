@@ -17,16 +17,24 @@ compared to the existing cross-entropy loss function applied.
 
 <br>
 
+### SVHN
+
 <center><img src = '/research_img/K-002.png' width="750"/></center>
 
 <br>
+
+### CIFAR-10
 
 <center><img src = '/research_img/K-003.png' width="750"/></center>
 
 <br>
 
+### CIFAR-100
+
 <center><img src = '/research_img/K-004.png' width="750"/></center>
 
 <br>
+
+### STL-10
 
 <center><img src = '/research_img/K-005.png' width="750"/></center>
