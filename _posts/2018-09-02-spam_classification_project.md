@@ -38,12 +38,19 @@ KT에서 마지막 프로젝트를 부여받고 발산역에 위치한 후후앤
 <br>
 ## 실시간 스팸 발신자 식별 예측 정확도 개선 프로젝트
 
-후후 프로젝트의 목표는 기존의 실시간 스팸문자 분류 알고리즘을 Deep Learning을 활용하여 개선하는 것이었다. 실제 매출과 연관되는 프로젝트는 처음 맡아봤기에 상당히 흥미로운 프로젝트였다. 프로젝트에서 내가 맡은 역할은 데이터 전처리 및 모델링이었다.
+후후 프로젝트의 목표는 기존의 실시간 스팸문자 분류 알고리즘을 Deep Learning을 활용하여 개선하는 것이었다. 실제 매출과 연관되는 프로젝트는 처음 맡아봤기에 상당히 흥미로운 프로젝트였다. 이번 프로젝트에서 내가 맡은 역할은 데이터 전처리 및 모델링이다.
 
-기존에는 heuristic한 규칙을 통한 rule-based 모델을 사용하였다. 이번 프로젝트는 경험적인 정보를 기반으로 한 예측이 아닌, 데이터 분석을 통해 새로운 insight를 얻고, 이를 기반으로 deep learning based 모델 또한 같이 활용하고자 시작되었다.
+기존에는 heuristic한 규칙을 통한 rule-based 모델을 사용하였다. 이번 프로젝트는 경험적인 정보를 기반으로 한 예측이 아닌, 데이터 분석을 통해 새로운 insight를 얻고, 이를 기반으로 deep learning based 모델 또한 같이 활용하여 앙상블 모델을 만드는 것이 폭표이다.
 
-DNN 기반으로 모델링 하였으며, 기존의 모델과 앙상블한 모델을 사용하여 스팸 분류의 정확도를 높이고자 하였다. 우리가 만든 모형은 데이터분석과 각종 알고리즘을 통해 선별된 37가지 변수를 input으로 사용하며, 스팸문자일 확률을 예측하여 최종적으로 스팸문자 여부를 분류하는 binary classification 문제로 접근하였다. Tensorflow 1.0을 사용하여 모델링하였으며, architecture에 관한 정보는 다음과 같다.
+<br>
+<br>
+## DeepLearning-based model
 
+DNN 기반으로 모델링 하였으며, 기존의 모델과 앙상블한 모델을 사용하여 스팸 분류의 정확도를 높이고자 하였다. 우리가 만든 모형은 데이터분석과 각종 알고리즘을 통해 선별된 37가지 변수를 input으로 사용하며, 스팸문자일 확률을 예측하여 최종적으로 스팸문자 여부를 분류하는 binary classification 문제로 접근하였다.
+
+Tensorflow 1.0을 사용하였으며, architecture에 관한 정보는 다음과 같다.
+
+```
 Input shape: [None, 37]
 Output shape: [None, 1]
 Architecture: FClayer-BN-sigmoid-FClayer-BN-sigmoid
@@ -51,8 +58,14 @@ Dropout: p=0.7
 Optimizer: Adam with decay rate = 0.9
 Initializer: Xavier
 Batch size: 100,000
+```
+
+input으로 사용되는 데이터는 후후의 DB 서버에서 실시간으로 받아온 후, 전처리를 거쳐 사용되도록 설계하였다. 모델을 거쳐 나온 output은 다시 후후 서버로 전달되고, 기존의 모델과 앙상블되어 최종 스팸 여부를 판단할 수 있도록 모델을 제작했다.
 
 
+
+
+<br>
 <br>
 ## 데이터 정제 및 전처리
 
@@ -72,6 +85,5 @@ Batch size: 100,000
 
 ___<center>WHOWHO&COMPANY, August 1, 2018</center>___
 
-<br>
 <br>
 <br>
