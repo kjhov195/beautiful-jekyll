@@ -19,14 +19,14 @@ __Generative Adversarial Networks__ 는 2014년 NIPS에 발표된 논문으로�
 
 <br>
 
-<center><img src = '/post_img/200112/image.png' width="450"/></center>
+<center><img src = '/post_img/200309/image.png' width="450"/></center>
 
 
 __GAN__(Generative Adversarial Networks)이라는 이름은 실제 데이터의 분포와 유사한 분포(__"Generative"__ model)를 추정(Estimate)하기 위해 D(Discriminator)와 G(Generator)라는 두 모델을 적대적인(__"Adversarial"__) 방식을 통하여 모델을 Training시키기 때문에 붙여진 이름이다.
 
 <br>
 
-<center><img src = '/post_img/200112/image1.png' width="600"/></center>
+<center><img src = '/post_img/200309/image1.png' width="600"/></center>
 
 GAN의 최종적인 목적은 Training data과 비교하였을 때 구분할 수 없을 정도로 유사한 가짜 데이터를 생성해낼 수 있도록 Training data의 분포 $P_{data}(x)$를 추정하는 가짜 데이터의 분포 $P_{model}(x)$를 찾는 것이다.
 
@@ -38,7 +38,7 @@ GAN의 경우 두 개의 네트워크가 사용되어 조금은 복잡한 구조
 
 <br>
 
-<center><img src = '/post_img/200112/image2.png' width="700"/></center>
+<center><img src = '/post_img/200309/image2.png' width="700"/></center>
 
 우선 D(Discriminator)부터 살펴보자. D의 역할은 주어진 input이 real data인지 구별하는 것이다. Data $x$가 input으로 주어졌을 때, D의 output __$D(x)$는 $x$가 real data일 확률__ 을 return한다.
 
@@ -166,13 +166,13 @@ $$ \min_{ G }{ V\left( G \right)  } = { E }_{ z\sim { p }_{ z }\left( z \right) 
 
 <br>
 
-<center><img src = '/post_img/200112/image3.png' width="450"/></center>
+<center><img src = '/post_img/200309/image3.png' width="450"/></center>
 
 $log(1-x)$ 함수의 그래프이다. 우리는 GAN의 학습 초기에 $G$의 성능이 좋지 않아, $D(G(z))$의 값이 0에 가까운 값이 나올 것이라는 것을 예상할 수 있다. 즉, 초기 학습 과정에서 $log(1-x)$ 함수 상의 $x=0$ 근방에서 gradient를 구하여 weight을 update하게 되는데, 그림에서 볼 수 있듯이 해당 영역에서는 Gradient가 매우 작은 것을 확인할 수 있다. 즉, 학습이 매우 더디게 이루어질 것이라는 것을 알 수 있다.
 
 <br>
 
-<center><img src = '/post_img/200112/image4.png' width="450"/></center>
+<center><img src = '/post_img/200309/image4.png' width="450"/></center>
 
 반면, $log(x)$ 함수의 경우는 이야기가 다르다. $log(x)$ 함수의 경우 $x=0$ 근방에서의 gradient가 매우 커서 학습 초기에 training이 매우 잘 될 것이라는 것을 유추할 수 있다. 또한, 학습이 진행됨에 따라 $G$가 가짜 데이터를 잘 만들 수 있도록 학습될 것이고, 이에 따라 $D(G(z))$의 값이 점점 더 1에 가까워지게 될 것이다. $log(x)$ 함수를 보면 $x=0$ 근방에서는 Gradient가 매우 크다가 $x=1$에 가까워 질수록 Gradient가 점점 줄어든다는 것을 확인할 수 있다.
 
@@ -205,7 +205,7 @@ $$
 
 <br>
 
-<center><img src = '/post_img/200112/image5.png' width="300"/></center>
+<center><img src = '/post_img/200309/image5.png' width="300"/></center>
 
 
 
@@ -353,9 +353,9 @@ for epoch in range(n_epochs):
 
 <br>
 
-<center><img src = '/post_img/200112/fake_0.png' width="200"/>
-<img src = '/post_img/200112/fake_20.png' width="200"/>
-<img src = '/post_img/200112/fake_199.png' width="200"/></center>
+<center><img src = '/post_img/200309/fake_0.png' width="200"/>
+<img src = '/post_img/200309/fake_20.png' width="200"/>
+<img src = '/post_img/200309/fake_199.png' width="200"/></center>
 
 Training이 진행되면서 실제 데이터와 유사한 데이터를 생성해내는 것을 확인할 수 있다.
 
