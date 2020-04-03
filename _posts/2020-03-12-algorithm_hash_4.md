@@ -29,7 +29,7 @@ def solution(genres, plays):
     d1_sort = sorted(d1.items(), key = lambda x:x[1], reverse = True)
 
     d2 = {}
-    for x,y,z in total:
+    for x,y,z in total_sort:
         d2[y] = d2.get(y,0) + z
     d2_sort = sorted(d2.items(), key = lambda x:x[1], reverse = True)
 
