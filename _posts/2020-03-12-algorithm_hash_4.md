@@ -25,14 +25,15 @@ def solution(genres, plays):
 
     d1 = {}
     for x,y,z in total_sort:
-        d1[y] = d1.get(y,0)+1
+        d1[y] = d1.get(y,0) + 1
     d1_sort = sorted(d1.items(), key = lambda x:x[1], reverse = True)
-    d1_dict = dict(d1_sort)
 
     d2 = {}
     for x,y,z in total:
         d2[y] = d2.get(y,0) + z
-    d2_sort = sorted(d2.items(), key = lambda x : x[1], reverse = True)
+    d2_sort = sorted(d2.items(), key = lambda x:x[1], reverse = True)
+
+    d1_dict = dict(d1_sort)
 
     answer = []
     for k, v in d2_sort:
