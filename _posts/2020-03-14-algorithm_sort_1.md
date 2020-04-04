@@ -35,6 +35,8 @@ def solution(array, commands):
     return [sorted(array[i-1:j])[k-1] for i,j,k in commands]
 ```
 
+<br>
+
 반면 C++로 풀 경우, 다음과 같이 풀어야 한다.
 
 ```
