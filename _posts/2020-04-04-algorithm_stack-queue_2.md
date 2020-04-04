@@ -13,9 +13,9 @@ use_math: true
 <center><img src = '/post_img/200404/image4.png' width="600"/></center>
 
 <br>
-### 풀이 1
+### 오답
 
-이 풀이는 케이스 하나에서 시간초과가 떴다. 캐치하지 못한 특이 케이스가 하나 있는 것 같은데 못찾았다.(ㅠㅠ) 역시 스택/큐 문제답게 스택/큐를 사용해야 했나보다.
+이 풀이는 케이스 하나에서 시간초과가 떴다. 그 이유를 한참 찾았는데, 이유는 ```sum()```함수 때문이었다.
 
 ```
 def solution(bridge_length, weight, truck_weights):
@@ -42,51 +42,32 @@ def solution(bridge_length, weight, truck_weights):
 ```
 
 <br>
-### 풀이 2
 
-[여기](https://gurumee92.tistory.com/168?category=782306)에서 찾은 스택/큐를 잘 활용한 풀이다.
+초기 s 값을 0으로 두고, 큐에서 pop할 때마다 s에서 빼주고, 큐에 추가할 때마다 s에 더해주는 방식으로 합을 구했다. 앞서 오답처리 되었던 케이스도 이제는 정답처리가 된다.
 
 ```
 def solution(bridge_length, weight, truck_weights):
-    answer = 0
-    curr_weight = 0
-    # 1. 스택 생성
-    st = truck_weights[::-1]
-    # 2. 큐 생성
-    q = []
-    # 3. 진행 거리 배열 생성
-    dist = [0] * len(truck_weights)
-    # 4. 마지막 트럭이 다리를 지날때까지 다음을 반복합니다.
-    while st:
-        # 1. 출발해야 할 트럭 top을 구합니다. 즉, st에서 데이터를 빼옵니다.
-        top = st.pop()
-
-        # 2. 현재 다리를 지나는 트럭들의 무게와, top의 무게를 더한 값이 weight보다 큰지 확인 합니다.
-        # 2-1. 크다면, 현재 트럭은 다리를 지나지 않습니다. 다시 스택으로 되돌립니다.
-        # 2-2. 그렇지 않다면, 트럭은 다리를 지납니다. 즉 큐에 데이터를 넣고 다리를 지나는 트럭의 무게를 더합니다.
-        if curr_weight + top > weight:
-            st.append(top)
+    n = len(truck_weights) #트럭 수
+    q = [0]*bridge_length  #큐(길이 n)
+    t = 0                  #시간
+    s = 0                  #다리 위 무게 합
+    idx = 0                #트럭 index
+    while True:
+        t+=1
+        w = truck_weights[idx]
+        temp = q.pop(0)
+        s -= temp
+        if s+w<=weight:
+            q.append(w)
+            s += w
+            idx += 1
         else:
-            curr_weight += top
-            q.append(top)
+            q.append(0)
 
-        # 3. 현재 다리에 들어선 트럭들을 움직입니다. 즉, 각 진행 거리를 나타내는 dist를 q의 길이만큼 순회하여 1씩 더해줍니다.
-        for i in range(len(q)):
-            dist[i] += 1
+        if idx == n:
+            break
 
-        # 4. 다리를 지난 트럭을 제거합니다. 진행 거리가, 입력 bridge_length보다 큰지 확인합니다.
-        # 4-1. curr_weight에서 q의 첫 원소만큼 빼주고, q에서 그 데이터를 제거합니다.
-        # 4-2. dist 역시 첫 원소를 제거해주어야 합니다.
-        if dist[0] >= bridge_length:
-            curr_weight -= q.pop(0)
-            dist.pop(0)
-
-        answer += 1
-
-    # 5. 마지막 트럭의 진행한 거리를 구합니다.
-    length = dist.pop()
-    # 6. answer 에 마지막 트럭이 다리를 지나는 시간 (다리 길이 - 현재 진행한 길이 + 1)을 더합니다.
-    answer += (bridge_length - length + 1)
+    answer = t+bridge_length
     return answer
 ```
 
@@ -94,5 +75,3 @@ def solution(bridge_length, weight, truck_weights):
 ### Reference
 
 http://icpckorea.org/2016/ONLINE/problem.pdf
-
-https://gurumee92.tistory.com/168?category=782306
