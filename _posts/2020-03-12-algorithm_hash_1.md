@@ -9,7 +9,6 @@ use_math: true
 <br>
 ### 문제
 
-<br>
 <center><img src = '/post_img/200312/image2.png' width="600"/></center>
 <center><img src = '/post_img/200312/image1.png' width="600"/></center>
 
