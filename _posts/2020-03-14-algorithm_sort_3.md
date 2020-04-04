@@ -12,12 +12,20 @@ use_math: true
 <center><img src = '/post_img/200314/image6.png' width="600"/></center>
 
 <br>
-### 이해
-
-
-<br>
 ### 풀이
 
+```
+def solution(citations):
+    h = len(citations)
+
+    while True:
+        if len([x for x in citations if x>=h])>=h:
+            break
+        else:
+            h -= 1
+    answer = h
+    return answer
+```
 
 <br>
 ### Reference
