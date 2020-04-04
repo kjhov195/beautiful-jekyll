@@ -15,6 +15,8 @@ use_math: true
 <br>
 ### 풀이 1
 
+이 풀이는 케이스 하나에서 시간초과가 떴다. 캐치하지 못한 특이 케이스가 하나 있는 것 같은데 못찾았다.(ㅠㅠ) 역시 스택/큐 문제답게 스택/큐를 사용해야 했나보다.
+
 ```
 def solution(bridge_length, weight, truck_weights):
     n = len(truck_weights)
@@ -41,6 +43,8 @@ def solution(bridge_length, weight, truck_weights):
 
 <br>
 ### 풀이 2
+
+[여기](https://gurumee92.tistory.com/168?category=782306)에서 찾은 스택/큐를 잘 활용한 풀이다.
 
 ```
 def solution(bridge_length, weight, truck_weights):
