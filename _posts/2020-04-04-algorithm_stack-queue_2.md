@@ -16,7 +16,27 @@ use_math: true
 ### 풀이
 
 ```
-.
+def solution(bridge_length, weight, truck_weights):
+    n = len(truck_weights)
+    q = [0]*bridge_length
+    t = 0
+    idx = 0
+
+    while True:
+        t+=1
+        w = truck_weights[idx]
+        q.pop(0)
+        if sum(q)+w<=weight:
+            q.append(w)
+            idx += 1
+        else:
+            q.append(0)
+
+        if idx == n:
+            break
+
+    answer = t+bridge_length
+    return answer
 ```
 
 <br>
