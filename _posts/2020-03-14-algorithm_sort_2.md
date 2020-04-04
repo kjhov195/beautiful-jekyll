@@ -59,7 +59,6 @@ def solution(numbers):
 
     numbersStr = [str(x) for x in numbers]
     l = sorted(numbersStr, key=lambda x:(x*4)[:4], reverse=True)
-    #numbersStr.sort(key=lambda x:(x*4)[:4], reverse=True)
 
     if l[0] == '0':
         answer = '0'
