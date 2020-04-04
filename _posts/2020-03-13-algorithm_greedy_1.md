@@ -32,8 +32,29 @@ Greedy Algorithm으로 최적의 해를 찾을 수 있는 경우는 __현재의 
 
 이 문제의 경우, 빌려줄 학생들을 __정해진 순서__ 로 살펴야 하고, 이 __정해진 순서__ 에 따라 우선하여 __빌려줄 방향__ 을 정해야 한다.
 
+문제를 풀기위해 빌려줄 수 있는 사람들(```canGive```)와 필요한 사람들(```need```)를 따로 나누었다. 그 후, ```canGive```의 각 원소들을 기준으로 바로 앞을 먼저 확인하여 필요한 사람인지 확인하고, 필요한 사람이라면 그 필요한 사람을 ```need```에서 삭제한다.(빌려주었다고 생각하면, ```need```에 있을 필요가 없으므로.) 만약 바로 앞 사람이 필요한 사람이 아니라면, 바로 뒷 사람을 확인하여 필요한 사람인지 확인하고, 필요한 사람이라면 그 필요한 사람을 ```need```에서 삭제한다.
 
+처음 이 문제를 풀 때 한 가지 실수를 했었는데, ```need```에서만 삭제하면 된다는 것이다. 처음에는 빌려주었으니까 빌려줄 수 있는 사람들(```canGive```)에서도 remove해주었었고, 당연히 이러한 알고리즘은 오답이다. for문이 ```canGive``` 안에서 돌고 있으므로, for문 안에서 ```canGive```를 수정할 경우, for문이 돌고 있는 범위 자체가 달라지기 때문에 건드리면 안된다. 이 점을 주의하자.
 
+```
+def solution(n, lost, reserve):
+    l = set(lost)
+    r = set(reserve)
+
+    canGive = r - l
+    need = l - r
+
+    for x in canGive:
+        if x-1 in need:
+            need.remove(x-1)
+        elif x+1 in need:
+            need.remove(x+1)
+        else:
+            pass
+
+    answer = n-len(need)
+    return answer
+```
 
 <br>
 ### Reference
