@@ -10,8 +10,8 @@ use_math: true
 ### 문제
 
 <br>
-<center><img src = '/post_img/200312/image3.png' width="450"/></center>
-<center><img src = '/post_img/200312/image4.png' width="450"/></center>
+<center><img src = '/post_img/200312/image3.png' width="600"/></center>
+<center><img src = '/post_img/200312/image4.png' width="600"/></center>
 
 <br>
 ### 이해
