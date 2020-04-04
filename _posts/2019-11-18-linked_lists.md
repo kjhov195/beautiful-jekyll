@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 이진탐색(Binary Search)
+title: 연결 리스트(Linked Lists)
 subtitle: Data Structure, Algorithm
 category: Data Structure, Algorithm
 use_math: true
