@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 이진 탐색 트리(Binary Search Trees)
+title: 이진 탐색 트리(Binary Search Trees)(1)
 subtitle: Data Structure, Algorithm
 category: Data Structure, Algorithm
 use_math: true
