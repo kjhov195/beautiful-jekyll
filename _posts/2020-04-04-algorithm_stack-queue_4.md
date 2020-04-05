@@ -84,14 +84,15 @@ def solution(priorities, location):
 <br>
 ### 풀이 1과 풀이 2의 효율성 비교
 
+<br>
 #### 풀이 1의 결과
 
-<center><img src = '/post_img/200404/image13.png' width="600"/></center>
+<center><img src = '/post_img/200404/image13.png' width="750"/></center>
 
 <br>
 #### 풀이 2의 결과
 
-<center><img src = '/post_img/200404/image14.png' width="600"/></center>
+<center><img src = '/post_img/200404/image14.png' width="750"/></center>
 
 
 <br>
