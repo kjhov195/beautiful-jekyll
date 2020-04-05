@@ -49,7 +49,7 @@ def solution(priorities, location):
 
 데크(Deque: Double-ended queue)는 양방향(앞과 뒤)에서 데이터를 처리할 수 있는 queue형 자료구조이다. 다음 그림은 Deque의 구조를 나타낸다.
 
-<center><img src = '/post_img/200404/Dequeue.png' width="600"/></center>
+<center><img src = '/post_img/200404/Deque.png' width="600"/></center>
 
 <br>
 
@@ -86,12 +86,12 @@ def solution(priorities, location):
 
 #### 풀이 1의 결과
 
-<center><img src = '/post_img/200404/image7.png' width="600"/></center>
+<center><img src = '/post_img/200404/image13.png' width="600"/></center>
 
 <br>
 #### 풀이 2의 결과
 
-<center><img src = '/post_img/200404/image8.png' width="600"/></center>
+<center><img src = '/post_img/200404/image14.png' width="600"/></center>
 
 
 <br>
