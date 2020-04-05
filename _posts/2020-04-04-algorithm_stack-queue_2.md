@@ -43,7 +43,7 @@ def solution(bridge_length, weight, truck_weights):
 
 <br>
 
-초기 s 값을 0으로 두고, 큐에서 pop할 때마다 s에서 빼주고, 큐에 추가할 때마다 s에 더해주는 방식으로 합을 구했다. 앞서 오답처리 되었던 케이스도 이제는 정답처리가 된다.
+초기 s 값을 0으로 두고, 큐에서 pop할 때마다 s에서 w를 빼주고, 큐에 추가할 때마다 s에 w를 더해주는 방식으로 합을 구했다. 앞서 오답처리 되었던 케이스도 이제는 정답처리가 된다.
 
 ```
 def solution(bridge_length, weight, truck_weights):
