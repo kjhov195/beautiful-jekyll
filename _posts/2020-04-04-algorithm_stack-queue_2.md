@@ -13,7 +13,7 @@ use_math: true
 <center><img src = '/post_img/200404/image4.png' width="600"/></center>
 
 <br>
-### 오답
+### 풀이(오답)
 
 이 풀이는 케이스 하나에서 시간초과가 떴다. 그 이유를 한참 찾았는데, 이유는 ```sum()```함수 때문이었다.
 
@@ -42,6 +42,7 @@ def solution(bridge_length, weight, truck_weights):
 ```
 
 <br>
+### 풀이
 
 초기 s 값을 0으로 두고, 큐에서 pop할 때마다 s에서 w를 빼주고, 큐에 추가할 때마다 s에 w를 더해주는 방식으로 합을 구했다. 앞서 오답처리 되었던 케이스도 이제는 정답처리가 된다.
 
