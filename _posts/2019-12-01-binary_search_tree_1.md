@@ -23,7 +23,7 @@ use_math: true
 
 이진 탐색 트리를 가지고 있다면, 쉽게 데이터를 찾을 수 있다. 다음 이진 탐색 트리를 예시로 살펴보자.
 
-<center><img src = '/post_img/191201/image1.png' width="600"/></center>
+<center><img src = '/post_img/191201/image1.png' width="400"/></center>
 
 만약 여기서 5를 찾고자 한다면, 이진 탐색 트리는 아주 빠르게 찾아낼 수 있다.
 
@@ -54,7 +54,13 @@ use_math: true
 <br>
 ### 이진 탐색 트리의 추상적 자료구조
 
+이진 탐색 트리의 연산 정의는 다음과 같다.
 
+- insert(key, data): 트리에 주어진 데이터 원소를 추가
+- remove(key): 특정 원소를 트리로부터 삭제
+- lookup(key): 특정 원소를 검색
+- inorder(): 키의 순서대로 데이터 원소를 나열
+- min(), max(): 최소 키, 최대 키를 가지는 원소를 각각 탐색
 
 <br>
 <br>
