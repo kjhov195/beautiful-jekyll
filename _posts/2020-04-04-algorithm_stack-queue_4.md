@@ -94,6 +94,7 @@ def solution(priorities, location):
 
 <center><img src = '/post_img/200404/image14.png' width="750"/></center>
 
+그저 ```list.pop(0)```에서 ```deque.leftpop()```으로만 바꿨을 뿐인데 효율성이 개선되었다.
 
 <br>
 <br>
