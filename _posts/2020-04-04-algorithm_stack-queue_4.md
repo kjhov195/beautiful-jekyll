@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithm-프린터(1)
+title: Algorithm-프린터
 subtitle: Algorithm, Stack/Queue
 category: Data Structure, Algorithm
 use_math: true
