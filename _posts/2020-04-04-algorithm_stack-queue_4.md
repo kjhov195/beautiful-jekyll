@@ -98,7 +98,7 @@ def solution(priorities, location):
 <br>
 ### 풀이 3
 
-deque의 ```deque.rotate()```를 활용하면 다음과 같이 알고리즘을 짤 수도 있다.
+다음과 같이 ```deque.rotate()```를 활용할 수도 있다.
 
 <br>
 ```
@@ -127,8 +127,6 @@ def solution(priorities, location):
                 break
     return answer
 ```
-
-
 
 <br>
 ### Reference
