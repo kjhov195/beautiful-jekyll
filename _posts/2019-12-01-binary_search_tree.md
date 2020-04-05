@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 이진 탐색 트리(Binary Search Trees)(1)
+title: 이진 탐색 트리(Binary Search Trees)
 subtitle: Data Structure, Algorithm
 category: Data Structure, Algorithm
 use_math: true
@@ -48,7 +48,7 @@ use_math: true
 <br>
 - 이진 탐색 트리의 경우 공간 소요가 크다는 단점이 존재한다.
 
-- 이진 탐색 트리는 탐색시에 시간 복잡도 __O(logn)__ 을 보장하지 못한다.
+- 이진 탐색 트리는 탐색시에 시간 복잡도 __O(logn)__ 을 보장하지 못할 수도 있다.
 
 <br>
 ### 이진 탐색 트리의 추상적 자료구조
@@ -60,6 +60,11 @@ use_math: true
 - lookup(key): 특정 원소를 검색
 - inorder(): 키의 순서대로 데이터 원소를 나열
 - min(), max(): 최소 키, 최대 키를 가지는 원소를 각각 탐색
+
+<br>
+### 보다 나은 성능을 보이는 이진 탐색 트리
+
+높이의 균형을 유지함으로써 __O(logn)__ 의 턈색 복잡도를 보장하는 이진 탐색 트리도 있다.(이 경우, 삽입/삭제 연산이 보다 복잡하다.) 대표적인 예로 AVL tree, Red-black tree 등이 있다.
 
 <br>
 <br>
