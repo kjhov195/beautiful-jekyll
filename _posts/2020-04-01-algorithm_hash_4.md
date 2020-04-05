@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithm-베스트앨범
+title: 프로그래머스(Algorithm)-베스트앨범
 subtitle: Algorithm, Hash
 category: Data Structure, Algorithm
 use_math: true

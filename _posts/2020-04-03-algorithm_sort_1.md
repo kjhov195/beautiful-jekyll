@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithm-K번째수
+title: 프로그래머스(Algorithm)-K번째수
 subtitle: Algorithm, Sort
 category: Data Structure, Algorithm
 use_math: true

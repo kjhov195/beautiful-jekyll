@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithm-기능개발
+title: 프로그래머스(Algorithm)-기능개발
 subtitle: Algorithm, Stack/Queue
 category: Data Structure, Algorithm
 use_math: true

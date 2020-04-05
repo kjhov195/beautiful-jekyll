@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithm-전화번호 목록
+title: 프로그래머스(Algorithm)-전화번호 목록
 subtitle: Algorithm, Hash
 category: Data Structure, Algorithm
 use_math: true

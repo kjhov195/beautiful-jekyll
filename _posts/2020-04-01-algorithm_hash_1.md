@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithm-완주하지 못한 선수
+title: 프로그래머스(Algorithm)-완주하지 못한 선수
 subtitle: Algorithm, Hash
 category: Data Structure, Algorithm
 use_math: true

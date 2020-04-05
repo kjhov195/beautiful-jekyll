@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithm-가장 큰 수
+title: 프로그래머스(Algorithm)-가장 큰 수
 subtitle: Algorithm, Sort
 category: Data Structure, Algorithm
 use_math: true

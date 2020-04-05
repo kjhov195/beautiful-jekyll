@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithm-H-Index
+title: 프로그래머스(Algorithm)-H-Index
 subtitle: Algorithm, Sort
 category: Data Structure, Algorithm
 use_math: true
