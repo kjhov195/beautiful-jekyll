@@ -14,7 +14,7 @@ use_math: true
 <br>
 ### 풀이
 
-list에서 가장 앞의 element를 반복적으로 지워나가야 하는 작업을 할 때는, ```list.pop(0)```를 사용한다거나, list slicing을 활용(예를들어 ```list[1:]```)하면 안된다. ```deque.popleft()```를 적극적으로 활용하자.
+list에서 가장 앞의 element를 반복적으로 지워나가야 하는 작업을 할 때는, ```list.pop(0)```를 사용한다거나, list slicing을 활용(예를들어 ```list[1:]```)하지 말고, ```deque.popleft()```를 적극적으로 활용하자.
 
 ```
 from collections import deque
