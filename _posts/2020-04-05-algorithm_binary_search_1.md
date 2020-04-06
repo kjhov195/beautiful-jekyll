@@ -70,6 +70,7 @@ def solution(budgets, M):
 테스트 5 〉	통과 (3.84ms, 11.5MB)
 ```
 
+<br>
 ##### int를 쓴 경우
 ```
 테스트 1 〉	통과 (0.10ms, 10.7MB)
