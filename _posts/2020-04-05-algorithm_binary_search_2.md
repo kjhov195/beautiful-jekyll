@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 프로그래머스(Algorithm)-입국심사
+title: 프로그래머스(Algorithm)-입국심사(Binary Search)
 subtitle: Algorithm, Binary Search
 category: Data Structure, Algorithm
 use_math: true
