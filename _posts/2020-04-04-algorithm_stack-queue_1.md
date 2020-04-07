@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 프로그래머스(Algorithm)-탑
+title: 프로그래머스(Algorithm)-탑(Queue)
 subtitle: Algorithm, Stack/Queue
 category: Data Structure, Algorithm
 use_math: true

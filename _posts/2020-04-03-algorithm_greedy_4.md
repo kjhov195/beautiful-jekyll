@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 프로그래머스(Algorithm)-구명보트
+title: 프로그래머스(Algorithm)-구명보트(Greedy)
 subtitle: Algorithm, Greedy
 category: Data Structure, Algorithm
 use_math: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 프로그래머스(Algorithm)-위장
+title: 프로그래머스(Algorithm)-위장(Hash)
 subtitle: Algorithm, Hash
 category: Data Structure, Algorithm
 use_math: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 프로그래머스(Algorithm)-다리를 지나는 트럭
+title: 프로그래머스(Algorithm)-다리를 지나는 트럭(Queue)
 subtitle: Algorithm, Stack/Queue
 category: Data Structure, Algorithm
 use_math: true
