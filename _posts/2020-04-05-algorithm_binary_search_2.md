@@ -26,23 +26,19 @@ use_math: true
 
 ```
 def solution(n, times):
-    timesSort = sorted(times)
+    times = sorted(times)
     left = 1
-    right = timesSort[-1]*n
-
-    midMin = right
+    right = times[-1]*n
+    answer = right
     while left<=right:
         mid = int((left+right)/2)
-        finished = 0
-        for x in times:
-            finished += int(mid/x)
-        if finished>=n:
-            right = mid-1
-            if mid<midMin:
-                midMin = mid
-        else:
+        total = sum([int(mid/x) for x in times])
+        if total<n:
             left = mid+1
-    answer = midMin
+        else:
+            if mid<answer:
+                answer = mid
+            right = mid-1
     return answer
 ```
 
