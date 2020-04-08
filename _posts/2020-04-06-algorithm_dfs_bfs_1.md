@@ -14,7 +14,7 @@ use_math: true
 <br>
 ### 풀이
 
-이 문제는 DFS를 활용하여 푸는 문제다. Recursive하게 풀고 싶었는데, 잘 안돼서 다르게 풀었다.
+DFS를 활용하여 푸는 문제다. 재귀함수로 푸는 방법은 잘 이해가 안돼서.. 스택을 활용하여 풀어보았다.
 
 ```
 def solution(numbers, target):
