@@ -14,8 +14,6 @@ use_math: true
 <br>
 ### 풀이
 
-DFS를 활용하여 푸는 문제다. 재귀함수로 푸는 방법은 잘 이해가 안돼서.. 스택을 활용하여 풀어보았다.
-
 ```
 def solution(numbers, target):
     stack = [[0]]
@@ -31,4 +29,18 @@ def solution(numbers, target):
         level += 1
     answer = sum([1 for x in stack if sum(x)==target])
     return answer
+```
+
+<br>
+
+다른 분께서 푼 방법인데, 다음과 같이 재귀를 활용하여 DFS를 구현하여 풀 수도 있다. 출제자의 의도를 잘 반영하여 푼 것 같다.
+
+```
+def solution(numbers, target):
+    if not numbers and target==0:
+        return 1
+    elif not numbers:
+        return 0
+    else:
+        return solution(numbers[1:],target-numbers[0])+solution(numbers[1:],target+numbers[0])
 ```
