@@ -56,7 +56,7 @@ GLM의 대표적인 예시인 Logistic regression의 경우 link function은 다
 $$
 \begin{align*}
 E[y_i] &= \mu_i\\
-g(\mu_i) &= logit(\mu_i) = {\mu_i \over 1-\mu_i} = x_i' \beta
+g(\mu_i) &= logit(\mu_i) = \log ({\mu_i \over 1-\mu_i}) = x_i' \beta
 \end{align*}
 $$
 
