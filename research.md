@@ -25,22 +25,22 @@ function.
 
 ### SVHN
 
-<center><img src = '/research_img/image_2.png' width="750"/></center>
+<center><img src = '/research_img/image2.png' width="750"/></center>
 
 <br>
 
 ### CIFAR-10
 
-<center><img src = '/research_img/image_3.png' width="750"/></center>
+<center><img src = '/research_img/image3.png' width="750"/></center>
 
 <br>
 
 ### CIFAR-100
 
-<center><img src = '/research_img/image_4.png' width="750"/></center>
+<center><img src = '/research_img/image4.png' width="750"/></center>
 
 <br>
 
 ### STL-10
 
-<center><img src = '/research_img/image_5.png' width="750"/></center>
+<center><img src = '/research_img/image5.png' width="750"/></center>
