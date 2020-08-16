@@ -25,7 +25,7 @@ Ctrl + Shift + P > install package > SideBarEnhancements
 
 <br>
 
-### SideBarEnhancements
+### Anaconda
 
 Ctrl + Shift + P > install package > Anaconda
 
