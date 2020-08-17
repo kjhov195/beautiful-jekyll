@@ -16,11 +16,12 @@ I'm broadly interested in __Statistics, machine learning and deep learning__.
 
 My research involves statistical models, computer vision, machine learning and prediction model using deep neural networks.
 
-I worked as an intern at __LG CNS__ in 2017, and as an trainee at __KT__ in 2018.
+I worked as an intern at __NAVER__ in 2020, __LG CNS__ in 2017, and as an trainee at __KT__ in 2018.
 
 I am currently a Research Scientist of __YIDS, Yonsei University Institute of Data Science__.
 
-I completed my Bachelor's degree at Yonsei University. And I am studying for a Master's degree advised by Prof. Hyunjoong Kim. At Yonsei, I co-taught STA1001 as a TA, Teaching Assistant: Introduction to Statistics in 2018, 2019, and 2020.
+After completing my Bachelor's degree at Yonsei University, I finished my master's degreeadvised by Prof. Hyunjoong Kim at Yonsei University.
+
 
 <br>
 ### Awards
@@ -29,10 +30,13 @@ I completed my Bachelor's degree at Yonsei University. And I am studying for a M
 <br>
 ### Experience
 
-Intern, LG CNS(2017.06.26 ~ 2017.07.28)
+Intern, NAVER WEBTOON - AI T&C(2017.06.26 ~ 2017.07.28)
 
-Trainee, KT AI Tech Center(2018.02.26 ~ 2018.08.03)
+Researcher, YIDS(Yonsei Institute of Data Science)(2018.09.01 ~ 2020.06.21)
 
-Researcher, YIDS(Yonsei Institute of Data Science)(2018.09.01 ~ )
+Trainee, KT-AI Tech Center(2018.02.26 ~ 2018.08.03)
 
-Data Engineering team member, YBIGTA(2019.02.01 ~)
+Intern, LG CNS - Manufacturing Big Data Team(2017.06.26 ~ 2017.07.28)
+
+
+
