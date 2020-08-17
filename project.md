@@ -5,7 +5,7 @@ title: Project
 
 ## 네이버 웹툰 project
 
-<img src = '/post_img/project/naver_webtoon.png' width="400"/>
+<img src = '/post_img/project/naver_webtoon.png' width="200"/>
 
 - 소속: NAVER WEBTOON
 - 기간: 26 June 2020 ~ 7 August 2020
