@@ -3,6 +3,18 @@ layout: page
 title: Project
 ---
 
+## 네이버 웹툰 project
+
+<img src = '/post_img/project/naver_webtoon.png' width="400"/>
+
+- 소속: NAVER WEBTOON
+- 기간: 26 June 2020 ~ 7 August 2020
+- 역할: 모델링, DB 설계 및 구축, 그리고 웹 제작
+- 관련기술: Python, MySQL, html, Flask, Bootstrap
+
+<br>
+<br>
+
 ## 리니지 유저 이탈 예측 모형 project
 
 <img src = '/post_img/project/bigcontest_main.png' width="400"/>
@@ -17,6 +29,7 @@ title: Project
 
 <br>
 <br>
+
 ## Animation Generation Project
 
 <img src = '/post_img/190702/Edge_detection_3.gif' width="320"/>
