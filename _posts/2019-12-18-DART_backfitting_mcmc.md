@@ -7,11 +7,11 @@ use_math: true
 ---
 
 ### Related Post
-[BART(Bayesian Additive Regression Trees)](https://kjhov195.github.io/2019-11-24-BART/)
+[BART(Bayesian Additive Regression Trees)](https://kjhov195.github.io/2019-12-16-BART/)
 
-[DART(Dirichlet Additive Regression Trees)](https://kjhov195.github.io/2019-11-25-DART/)
+[DART(Dirichlet Additive Regression Trees)](https://kjhov195.github.io/2019-12-17-DART/)
 
-[DART(2)-Backfitting MCMC](https://kjhov195.github.io/2019-11-26-DART_backfitting_mcmc/)
+[DART(2)-Backfitting MCMC](https://kjhov195.github.io/2019-12-18-DART_backfitting_mcmc/)
 
 ---
 
@@ -26,7 +26,7 @@ $$ p((T_1, M_1), \dots, (T_m,M_m), \sigma \vert y)$$
 At a general level, our algorithm is a Gibbs sampler.
 
 Let
-$$
+
 \begin{align*}
 \begin{cases}
 T_{(j)} &:\text{ the set of all trees in the sum except  } T_j\\
@@ -34,18 +34,15 @@ T_{(j)} &:\text{ the set of all trees in the sum except  } T_j\\
 M_{(j)} &: \text{the associated terminal node parameter}
 \end{cases}
 \end{align*}
-$$
 
 <br>
 
-$$
 \begin{align*}
 \Rightarrow \text{Conditional Posterior distribution:}\\\\
 (T_j,M_j)\vert T_{(j)},M_{(j)},\sigma,y\;\;\;\;\cdots(1)\\
 \sigma \vert T_1,\cdots,T_m,M_1,\cdots,M_m,y\;\;\;\;\cdots(2)\\\\
 where\;j=1,2,\cdots,m
 \end{align*}
-$$
 
 <br>
 
@@ -61,11 +58,9 @@ drawing from $\;(T_j,M_j)\vert R_j,\sigma,\;\;j=1,2,\cdots,m$
 
 <br>
 
-$$
 \begin{align*}
 P((T_j,M_j)\vert R_j,\sigma) = P(T_j \vert R_j, \sigma) P(M_j \vert T_j, R_j, \sigma)
 \end{align*}
-$$
 
 <br>
 
