@@ -15,6 +15,11 @@ use_math: true
 
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
 <br>
 <br>
 ### Backfitting MCMC in DART
@@ -26,7 +31,7 @@ $$ p((T_1, M_1), \dots, (T_m,M_m), \sigma \vert y)$$
 At a general level, our algorithm is a Gibbs sampler.
 
 Let
-
+$$
 \begin{align*}
 \begin{cases}
 T_{(j)} &:\text{ the set of all trees in the sum except  } T_j\\
@@ -34,15 +39,18 @@ T_{(j)} &:\text{ the set of all trees in the sum except  } T_j\\
 M_{(j)} &: \text{the associated terminal node parameter}
 \end{cases}
 \end{align*}
+$$
 
 <br>
 
+$$
 \begin{align*}
 \Rightarrow \text{Conditional Posterior distribution:}\\\\
 (T_j,M_j)\vert T_{(j)},M_{(j)},\sigma,y\;\;\;\;\cdots(1)\\
 \sigma \vert T_1,\cdots,T_m,M_1,\cdots,M_m,y\;\;\;\;\cdots(2)\\\\
 where\;j=1,2,\cdots,m
 \end{align*}
+$$
 
 <br>
 
@@ -58,9 +66,11 @@ drawing from $\;(T_j,M_j)\vert R_j,\sigma,\;\;j=1,2,\cdots,m$
 
 <br>
 
+$$
 \begin{align*}
 P((T_j,M_j)\vert R_j,\sigma) = P(T_j \vert R_j, \sigma) P(M_j \vert T_j, R_j, \sigma)
 \end{align*}
+$$
 
 <br>
 
