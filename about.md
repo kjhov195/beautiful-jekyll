@@ -30,7 +30,7 @@ After completing my Bachelor's degree at Yonsei University, I finished my master
 <br>
 ### Experience
 
-Intern, NAVER WEBTOON - AI T&C(2017.06.26 ~ 2017.07.28)
+Intern, NAVER WEBTOON - AI T&C(2020.06.22 ~ 2020.08.07)
 
 Researcher, YIDS(Yonsei Institute of Data Science)(2018.09.01 ~ 2020.06.21)
 
